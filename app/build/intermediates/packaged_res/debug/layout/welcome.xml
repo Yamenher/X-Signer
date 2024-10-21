@@ -1,0 +1,88 @@
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/_coordinator"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical">
+	<TextView
+		android:id="@+id/Title"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:paddingLeft="8dp"
+		android:paddingTop="8dp"
+		android:paddingRight="8dp"
+		android:gravity="center_vertical"
+		android:text="Welcome to X-Signer"
+		android:textSize="25sp"
+		android:layout_gravity="center_horizontal"
+		android:fontFamily="@font/product_sans_regular"
+		android:textColor="@color/colorTextMain" />
+	<TextView
+		android:id="@+id/TypeDesc"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:paddingLeft="8dp"
+		android:paddingTop="4dp"
+		android:paddingRight="8dp"
+		android:paddingBottom="8dp"
+		android:text="Signing has become easier than ever!"
+		android:textSize="16sp"
+		android:layout_gravity="center_horizontal"
+		android:fontFamily="@font/product_sans_regular"
+		android:textColor="@color/colorTextSecondary" />
+	<LinearLayout
+		android:id="@+id/MainContainer"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:padding="8dp"
+		android:orientation="vertical"
+		android:layout_weight="1">
+		<TextView
+			android:id="@+id/Description"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="65dp"
+			android:padding="8dp"
+			android:gravity="center_vertical"
+			android:text="Hello, and thank you for choosing X-Signer, the first ad-free Signing app ever!\nBefore you continue, the app has to load some internal data from server needed for the app to run, we just want you to get the most out of X-Signer\n\nThe process won't consume much data (10mo. max)"
+			android:textSize="18sp"
+			android:fontFamily="@font/product_sans_regular"
+			android:textColor="@color/colorTextMain" />
+	</LinearLayout>
+	<com.google.android.material.progressindicator.LinearProgressIndicator
+		android:id="@+id/progress"
+		android:layout_width="match_parent"
+		android:layout_height="55dp"
+		android:layout_marginLeft="15dp"
+		android:layout_marginTop="10dp"
+		android:layout_marginRight="15dp"
+		android:layout_marginBottom="10dp"
+		android:padding="8dp"
+		android:indeterminate="true"
+		app:trackThickness="4dp"
+		app:indicatorColor="@color/colorAccent"
+		app:trackColor="@color/colorTrack"
+		android:visibility="gone" />
+	<com.google.android.material.button.MaterialButton
+		android:id="@+id/Button"
+		android:layout_width="match_parent"
+		android:layout_height="55dp"
+		android:layout_marginLeft="8dp"
+		android:layout_marginTop="10dp"
+		android:layout_marginRight="8dp"
+		android:layout_marginBottom="10dp"
+		android:padding="8dp"
+		android:gravity="center_horizontal|center_vertical"
+		android:text="Initialize"
+		android:textSize="16sp"
+		android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+		app:backgroundTint="@color/colorAccent"
+		app:cornerRadius="100dp"
+		style="@style/Widget.MaterialComponents.Button"
+		app:textAllCaps="false"
+		android:letterSpacing="0.0"
+		app:rippleColor="@color/colorAccentDark"
+		android:textColor="@color/colorTextButton" />
+</LinearLayout>

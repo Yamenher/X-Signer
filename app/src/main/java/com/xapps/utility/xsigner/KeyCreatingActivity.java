@@ -523,7 +523,6 @@ getWindow().setAllowEnterTransitionOverlap(true);
 				            if (actionId == EditorInfo.IME_ACTION_NEXT) {
 					    KeyTypeE.requestFocus();
 					KeyTypeE.performClick();
-					SketchwareUtil.hideKeyboard(getApplicationContext());
 					    }
 				            return true;
 				            }
@@ -542,7 +541,7 @@ getWindow().setAllowEnterTransitionOverlap(true);
 			    @Override
 			        public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
 				            if (actionId == EditorInfo.IME_ACTION_NEXT) {
-					    KeyValidityE.requestFocus();
+					    SketchwareUtil.hideKeyboard(getApplicationContext());
 					    }
 				            return true;
 				            }

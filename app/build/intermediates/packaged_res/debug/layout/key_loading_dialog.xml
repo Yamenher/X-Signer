@@ -1,0 +1,45 @@
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical">
+	<LinearLayout
+		android:id="@+id/BG"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="30dp"
+		android:layout_marginTop="10dp"
+		android:layout_marginRight="30dp"
+		android:layout_marginBottom="10dp"
+		android:paddingLeft="8dp"
+		android:paddingTop="15dp"
+		android:paddingRight="8dp"
+		android:paddingBottom="15dp"
+		android:gravity="center_horizontal|center_vertical"
+		android:orientation="vertical"
+		android:background="@drawable/drawable_dialog">
+		<com.google.android.material.progressindicator.CircularProgressIndicator
+			android:id="@+id/progress"
+			android:focusable="false"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:padding="8dp"
+			android:indeterminate="true" 
+			app:indicatorSize="40dp"
+			app:trackThickness="4dp"
+			app:indicatorColor="@color/colorAccent"
+			app:trackColor="#FFFFFFFF" />
+		<TextView
+			android:id="@+id/textview"
+			android:focusable="false"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:padding="8dp"
+			android:text="Loading key..."
+			android:textSize="20sp"
+			android:fontFamily="@font/product_sans_regular"
+			android:textColor="@color/colorTextMain" />
+	</LinearLayout>
+</LinearLayout>
