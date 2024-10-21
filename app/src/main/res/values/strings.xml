@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><resources>
+    <string name="stringKeyPass">Alias password</string>
+    <string name="stringKeyStore">Keystore password</string>
+    <string name="stringAlias">Key alias</string>
+    <string name="stringKeyType">Keystore type</string>
+    <string name="stringKeySize">Key size</string>
+    <string name="stringKeyValidity">Key validity (in years)</string>
+    <string name="stringNameDetails">First &amp; last Name</string>
+    <string name="stringOrganizationalUnit">Organizational Unit</string>
+    <string name="stringOrganizationName">Organization name</string>
+    <string name="stringCity">City or locality</string>
+    <string name="stringCountry">Country Code (XX)</string>
+    <string name="stringState">State or Province</string>
+    <string name="app_name">X-Signer</string>
+    <string-array name="keyTypes" translatable="false">
+        <item>JKS</item>
+        <item>BKS</item>
+        <item>PKCS12</item>
+    </string-array>
+    <string-array name="keySizes" translatable="false">
+        <item>2048</item>
+        <item>3072</item>
+        <item>4096</item>
+    </string-array>
+</resources>

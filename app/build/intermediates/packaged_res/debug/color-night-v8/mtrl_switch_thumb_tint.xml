@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+  <!-- State Disabled, Unchecked -->
+  <item
+    android:alpha="@dimen/m3_comp_switch_disabled_unselected_handle_opacity"
+    android:color="@macro/m3_comp_switch_disabled_unselected_handle_color"
+    android:state_enabled="false" android:state_checked="false"/>
+
+  <!-- State Disabled, Checked -->
+  <item
+    android:alpha="@dimen/m3_comp_switch_disabled_selected_handle_opacity"
+    android:color="@macro/m3_comp_switch_disabled_selected_handle_color"
+    android:state_enabled="false" android:state_checked="true"/>
+
+  <!-- State Checked, Pressed -->
+  <item android:color="#004C6E" android:state_checked="true" android:state_pressed="true"/>
+
+  <!-- State Checked -->
+  <item android:color="#00334E" android:state_checked="true"/>
+
+  <!-- State Unchecked, Pressed -->
+  <item android:color="#A6B4BF" android:state_pressed="true"/>
+
+  <!-- State Unchecked -->
+  <item android:color="#84929F"/>
+</selector>

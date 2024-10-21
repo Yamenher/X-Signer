@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     xmlns:tools="http://schemas.android.com/tools"
+     android:layout_height="match_parent"
+     android:layout_width="match_parent"
+     android:transitionGroup="true"
+     android:id="@+id/_coordinator">
+
+    <com.google.android.material.appbar.AppBarLayout
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         android:id="@+id/_app_bar">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+             android:layout_height="175dp"
+             android:layout_width="match_parent"
+             app:contentScrim="#006591"
+             app:expandedTitleTextAppearance="@style/TextAppearance.M3.Sys.Typescale.HeadlineLarge"
+             android:background="#FFFFFF"
+             app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+             android:fitsSystemWindows="true"
+             app:titleCollapseMode="scale"
+             android:id="@+id/collapsingtoolbar">
+
+            <androidx.appcompat.widget.Toolbar
+                 android:layout_height="?attr/actionBarSize"
+                 android:layout_width="match_parent"
+                 android:background="?attr/colorPrimary"
+                 app:theme="@style/Theme.Base.Main"
+                 app:layout_collapseMode="pin"
+                 android:id="@+id/_toolbar" />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+         android:layout_height="match_parent"
+         android:layout_width="match_parent"
+         app:layout_behavior="@string/appbar_scrolling_view_behavior"
+         android:orientation="vertical">
+
+        <LinearLayout
+             android:layout_height="match_parent"
+             android:layout_width="match_parent"
+             android:gravity="center_horizontal|center_vertical"
+             android:padding="8dp"
+             android:orientation="vertical"
+             android:id="@+id/LoadingLinear">
+
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                 android:layout_height="wrap_content"
+                 android:layout_width="wrap_content"
+                 android:indeterminate="true"
+                 app:indicatorSize="40dp"
+                 android:padding="8dp"
+                 app:trackColor="#FFFFFFFF"
+                 app:trackThickness="4dp"
+                 android:id="@+id/progressbar1"
+                 app:indicatorColor="@color/colorAccent" />
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+             android:layout_height="match_parent"
+             android:layout_width="match_parent"
+             app:layout_behavior="@string/appbar_scrolling_view_behavior"
+             android:visibility="gone"
+             android:id="@+id/recyclerview" />
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+         android:layout_height="wrap_content"
+         android:layout_width="wrap_content"
+         app:icon="@drawable/ic_add_white"
+         android:layout_margin="16dp"
+         app:cornerRadius="16dp"
+         android:id="@+id/_fab2"
+         android:text="Create a key"
+         android:layout_gravity="right|bottom" />
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+         android:layout_height="wrap_content"
+         android:layout_width="wrap_content"
+         app:icon="@drawable/ic_file_add_black"
+         android:layout_marginBottom="86dp"
+         android:layout_marginLeft="16dp"
+         android:layout_marginRight="16dp"
+         android:layout_marginTop="16dp"
+         android:id="@+id/_fab"
+         android:text="Import key"
+         android:layout_gravity="right|bottom" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

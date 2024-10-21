@@ -1,0 +1,48 @@
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical">
+	<LinearLayout
+		android:id="@+id/ItemLayout"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="5dp"
+		android:layout_marginBottom="5dp"
+		android:paddingLeft="8dp"
+		android:paddingTop="4dp"
+		android:paddingRight="8dp"
+		android:paddingBottom="4dp"
+		android:orientation="vertical"
+		android:background="@drawable/legacy_item_background">
+		<TextView
+			android:id="@+id/KeyName"
+			android:focusable="false"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:paddingLeft="8dp"
+			android:paddingTop="8dp"
+			android:paddingRight="8dp"
+			android:gravity="center_vertical"
+			android:text="Loading..."
+			android:textSize="18sp"
+			android:fontFamily="@font/product_sans_regular"
+			android:textColor="@color/colorTextMain" />
+		<TextView
+			android:id="@+id/KeyType"
+			android:focusable="false"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:paddingLeft="8dp"
+			android:paddingTop="3dp"
+			android:paddingRight="8dp"
+			android:paddingBottom="8dp"
+			android:text="Loading..."
+			android:textSize="14sp"
+			android:layout_gravity="center_vertical"
+			android:fontFamily="@font/product_sans_regular"
+			android:textColor="@color/colorTextSecondary" />
+	</LinearLayout>
+</LinearLayout>

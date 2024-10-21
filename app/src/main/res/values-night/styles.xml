@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><resources>
+    <style name="Theme.Base.Main" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorControlHighlight">@color/colorControlHighlight</item>
+        <item name="colorControlNormal">@color/colorControlNormal</item>
+        <item name="fontFamily">@font/product_sans_regular</item>
+        <item name="android:windowBackground">@color/colorPrimaryDark</item>
+        <item name="android:windowContentTransitions">true</item>
+    </style>
+</resources>
