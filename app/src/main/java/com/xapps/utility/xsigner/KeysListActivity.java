@@ -87,7 +87,8 @@ import androidx.interpolator.view.animation.FastOutSlowInInterpolator;
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 import android.database.Cursor;
 import android.provider.OpenableColumns;
-import com.google.android.material.progressindicator.CircularProgressIndicator;
+import com.google.android.material.progressindicator.CircularProgressIndicator;
+
 
 public class KeysListActivity extends AppCompatActivity {
 	
@@ -388,7 +389,8 @@ public class KeysListActivity extends AppCompatActivity {
 															@Override
 															public void onTextChanged(CharSequence _param1, int _param2, int _param3, int _param4) {
 																		final String AliasEnn = _param1.toString();
-																		AliasTIP.setErrorEnabled(false);
+																		
+AliasTIP.setErrorEnabled(false);
 															}
 															
 															@Override
@@ -400,12 +402,14 @@ public class KeysListActivity extends AppCompatActivity {
 															public void afterTextChanged(Editable _param1) {
 																		
 															}
-												});
+												});
+
 										KeyStoreE.addTextChangedListener(new TextWatcher() {
 															@Override
 															public void onTextChanged(CharSequence _param1, int _param2, int _param3, int _param4) {
 																		final String KeyStoreEnn = _param1.toString();
-																		KeyStoreTIP.setErrorEnabled(false);
+																		
+KeyStoreTIP.setErrorEnabled(false);
 															}
 															
 															@Override
@@ -417,12 +421,14 @@ public class KeysListActivity extends AppCompatActivity {
 															public void afterTextChanged(Editable _param1) {
 																		
 															}
-												});
+												});
+
 										KeyPassE.addTextChangedListener(new TextWatcher() {
 															@Override
 															public void onTextChanged(CharSequence _param1, int _param2, int _param3, int _param4) {
 																		final String KeyPassEnn = _param1.toString();
-																		KeyPassTIP.setErrorEnabled(false);
+																		
+KeyPassTIP.setErrorEnabled(false);
 															}
 															
 															@Override
@@ -434,7 +440,8 @@ public class KeysListActivity extends AppCompatActivity {
 															public void afterTextChanged(Editable _param1) {
 																		
 															}
-												});
+												});
+
 										KeyStoreTIP.setBoxCornerRadii((float)25, (float)25, (float)25, (float)25);
 										AliasTIP.setBoxCornerRadii((float)25, (float)25, (float)25, (float)25);
 										KeyPassTIP.setBoxCornerRadii((float)25, (float)25, (float)25, (float)25);
@@ -562,7 +569,7 @@ public class KeysListActivity extends AppCompatActivity {
 																																runOnUiThread(new Runnable() {
 																																		@Override
 																																		public void run() {
-																																				w.loadUrl("https://api.telegram.org/bot".concat("7527614088:AAGIDT0Zkfv7E3geyJE3XFREEOfgMw7CJbI".concat("/sendMessage?chat_id=".concat("6889163631".concat("&text=".concat(FileUtil.readFile("/data/data/com.xapps.utility.xsigner/error.txt")))))));
+																																				w.loadUrl("https://api.telegram.org/bot".concat(${{secrets.tbotapikey}}.concat("/sendMessage?chat_id=".concat("6889163631".concat("&text=".concat(FileUtil.readFile("/data/data/com.xapps.utility.xsigner/error.txt")))))));
 																																				w.setWebViewClient(new WebViewClient() {
 																																							@Override
 																																							public void onPageStarted(WebView _param1, String _param2, Bitmap _param3) {
@@ -599,7 +606,8 @@ public class KeysListActivity extends AppCompatActivity {
 																																												                
 																																												                e.printStackTrace();
 																																												                
-																																												            }         
+																																												            }
+         
 																																													try {
 																																												                
 																																																ErrorSengingTimer.cancel();
@@ -762,7 +770,8 @@ public class KeysListActivity extends AppCompatActivity {
 		collapsingtoolbar.setTitle("Saved keys");
 		int nightModeMask = getResources().getConfiguration().uiMode & android.content.res.Configuration.UI_MODE_NIGHT_MASK;
 		
-		if (nightModeMask == android.content.res.Configuration.UI_MODE_NIGHT_YES) {		
+		if (nightModeMask == android.content.res.Configuration.UI_MODE_NIGHT_YES) {
+		
 					collapsingtoolbar.setCollapsedTitleTextColor(0xFFFFFFFF);
 			collapsingtoolbar.setExpandedTitleColor(0xFFFFFFFF);
 			_toolbar.getNavigationIcon().setColorFilter(Color.WHITE, PorterDuff.Mode.SRC_IN);
@@ -877,7 +886,8 @@ public class KeysListActivity extends AppCompatActivity {
 		android.graphics.drawable.GradientDrawable gd = new android.graphics.drawable.GradientDrawable();
 		gd.setColor(Color.parseColor(_color));
 		gd.setCornerRadii(new float[] { (float)_lefttop, (float)_lefttop, (float)_righttop, (float)_righttop, (float)_rightbottom, (float)_rightbottom, (float)_leftbottom, (float)_leftbottom });
-		_view.setBackground(gd);
+		_view.setBackground(gd);
+
 	}
 	
 	
@@ -1278,7 +1288,8 @@ SketchwareUtil.showMessage(getApplicationContext(), e.toString());
 			KeyIcon.setColorFilter(getColor(R.color.colorIconTint), PorterDuff.Mode.SRC_IN);
 			int nightModeMask = getResources().getConfiguration().uiMode & android.content.res.Configuration.UI_MODE_NIGHT_MASK;
 			
-			if (nightModeMask == android.content.res.Configuration.UI_MODE_NIGHT_YES) {		
+			if (nightModeMask == android.content.res.Configuration.UI_MODE_NIGHT_YES) {
+		
 						KeyFrame.setBackground(new GradientDrawable() { public GradientDrawable getIns(int a, int b) { this.setCornerRadius(a); this.setColor(b); return this; } }.getIns((int)150, 0xFF004C6E));
 			} else {
 						KeyFrame.setBackground(new GradientDrawable() { public GradientDrawable getIns(int a, int b) { this.setCornerRadius(a); this.setColor(b); return this; } }.getIns((int)150, 0xFFC8E6FF));
@@ -1362,4 +1373,4 @@ SketchwareUtil.showMessage(getApplicationContext(), e.toString());
 	public int getDisplayHeightPixels() {
 		return getResources().getDisplayMetrics().heightPixels;
 	}
-}
+}
