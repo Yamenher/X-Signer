@@ -92,8 +92,8 @@ jobs:
         if: success()
         continue-on-error: true
         run: |
-          curl -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendDocument" \
-            -F chat_id="${{ secrets.TELEGRAM_CHAT_ID }}" \
-            -F message_thread_id="11" \
+          curl -X POST "https://api.telegram.org/bot${{ secrets.bot_token }}/sendDocument" \
+            -F chat_id="-1002479736701" \
+            -F message_thread_id="4" \
             -F document=@"xsigner-app-debug.apk" \
             -F caption="${{ github.event.head_commit.message }} by ${{ github.actor }}"
