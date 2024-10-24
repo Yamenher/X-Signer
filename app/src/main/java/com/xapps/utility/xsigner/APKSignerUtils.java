@@ -23,7 +23,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class APKSignerUtils {
-    private static KeyStore keyStore; 
+    private static KeyStore keyStore;
 
     public static void signFile(String inputFile, String outputFile, String keyFile, String keyAlias, String keystorePassword, String keyPassword, boolean v1, boolean v2, boolean v3, boolean v4, boolean zipalign, String type) {
         File errorLogFile = new File("/data/data/com.xapps.utility.xsigner/error.txt");
