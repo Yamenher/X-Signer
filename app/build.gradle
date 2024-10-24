@@ -26,9 +26,6 @@ android {
 
 dependencies {
 	implementation fileTree(dir: 'libs', include: ['*.jar'])
-	implementation 'com.google.firebase:firebase-auth:19.0.0'
-	implementation 'com.google.firebase:firebase-database:19.0.0'
-	implementation 'com.google.firebase:firebase-storage:19.0.0'
 	implementation 'com.google.code.gson:gson:2.8.7'
 	implementation 'de.hdodenhof:circleimageview:3.1.0'
     implementation 'androidx.core:core-splashscreen:1.0.0'

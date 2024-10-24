@@ -65,7 +65,6 @@ import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.google.android.material.button.*;
 import com.google.android.material.snackbar.Snackbar;
-import com.google.firebase.FirebaseApp;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.mursaat.extendedtextview.*;
@@ -220,7 +219,6 @@ public class MainActivity extends AppCompatActivity {
 		super.onCreate(_savedInstanceState);
 		setContentView(R.layout.main);
 		initialize(_savedInstanceState);
-		FirebaseApp.initializeApp(this);
 		initializeLogic();
 	}
 	
@@ -837,11 +835,11 @@ public class MainActivity extends AppCompatActivity {
 			  				output.close();
 			  				input.close();
 			  				
-			  				SketchwareUtil.showMessage(getApplicationContext(), "success");
+			  				XUtil.showMessage(getApplicationContext(), "success");
 							 
 			  		}catch(Exception e){
 			  				
-			  		FileUtil.writeFile("/sdcard/log.txt", "\n"+ "3   " +e.toString());		SketchwareUtil.showMessage(getApplicationContext(), e.toString());
+			  		FileUtil.writeFile("/sdcard/log.txt", "\n"+ "3   " +e.toString());		XUtil.showMessage(getApplicationContext(), e.toString());
 							  return false;
 			  		}
 		
@@ -904,12 +902,12 @@ public class MainActivity extends AppCompatActivity {
 							        
 							        if (copyAsset(_folder+"/"+fileName, mUri)) {
 										    
-						if (nn >= sizeList){				    SketchwareUtil.showMessage(getApplicationContext(), "️😎✔️");       
+						if (nn >= sizeList){				    XUtil.showMessage(getApplicationContext(), "️😎✔️");       
 					}					        
 						} else {
 										            
 										        
-								SketchwareUtil.showMessage(getApplicationContext(), "😓❌");
+								XUtil.showMessage(getApplicationContext(), "😓❌");
 								break;
 						}
 							
@@ -1303,7 +1301,7 @@ public class MainActivity extends AppCompatActivity {
 		try {
 			TestKeySigner.signWithTestkey(_input, _output, _pem, _pk8, _v1, _v2, _v3, _v4, _zipalign);
 		} catch (Exception e) {
-			SketchwareUtil.showMessage(getApplicationContext(), e.toString());
+			XUtil.showMessage(getApplicationContext(), e.toString());
 		}
 	}
 	
@@ -1320,7 +1318,7 @@ public class MainActivity extends AppCompatActivity {
     try {
 APKSignerUtils.signFile(_input, _output, _keypath, _alias, _keystorepass, _keypass, _v1, _v2, _v3, _v4, _zipalign, _type);
 } catch (Exception e) {
-SketchwareUtil.showMessage(getApplicationContext(), e.toString());
+XUtil.showMessage(getApplicationContext(), e.toString());
 }
 	}
 	
@@ -1329,7 +1327,7 @@ SketchwareUtil.showMessage(getApplicationContext(), e.toString());
 		try {
 			TestKeySigner.signWithTestkey(_input, _output, _pem, _pk8, _v1, _v2, _v3, _v4, _zipalign);
 		} catch (Exception e) {
-			SketchwareUtil.showMessage(getApplicationContext(), e.toString());
+			XUtil.showMessage(getApplicationContext(), e.toString());
 		}
 	}
 	
@@ -1838,6 +1836,7 @@ SketchwareUtil.showMessage(getApplicationContext(), e.toString());
 	
 	public void _InfoActivity() {
 		ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(this);
+		
 		    Intent intent = new Intent(this, InfoActivity.class);
 		    startActivity(intent, options.toBundle());
 	}

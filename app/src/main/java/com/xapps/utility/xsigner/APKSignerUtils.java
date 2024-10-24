@@ -61,7 +61,6 @@ public class APKSignerUtils {
             List<SignerConfig> signerConfigs = Collections.singletonList(signerConfig);
 
             File outputApkFile = new File(outputFile);
-            System.out.println("Output APK File Path: " + outputApkFile.getAbsolutePath());
 
             try (FileChannel inputChannel = new FileInputStream(new File(inputFile)).getChannel()) {
                 ApkSigner.Builder builder = new ApkSigner.Builder(signerConfigs);
@@ -75,16 +74,11 @@ public class APKSignerUtils {
                     builder.setV4SignatureOutputFile(new File(outputFile + ".idsig"));
                     builder.setV4SigningEnabled(true);
                 }
-                Log.i("info", "signing is starting...");
                 builder.setAlignFileSize(zipalign);
                 ApkSigner apkSigner = builder.build();
                 apkSigner.sign();
                 
             }
-
-        }catch (FileNotFoundException e1) {
-            
-            return;
         
         }catch (Exception e) {
             try (FileOutputStream fos = new FileOutputStream(errorLogFile, true);

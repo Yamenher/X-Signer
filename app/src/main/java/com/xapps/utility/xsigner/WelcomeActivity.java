@@ -53,15 +53,10 @@ import androidx.profileinstaller.*;
 import androidx.savedstate.*;
 import androidx.startup.*;
 import androidx.transition.*;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
 import com.google.android.material.*;
 import com.google.android.material.button.*;
 import com.google.android.material.snackbar.Snackbar;
-import com.google.firebase.FirebaseApp;
-import com.google.firebase.auth.AuthResult;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
+
 import com.mursaat.extendedtextview.*;
 import java.io.*;
 import java.io.InputStream;
@@ -95,17 +90,6 @@ public class WelcomeActivity extends AppCompatActivity {
 	private TextView Description;
 	
 	private Intent StartIntent = new Intent();
-	private FirebaseAuth Login;
-	private OnCompleteListener<AuthResult> _Login_create_user_listener;
-	private OnCompleteListener<AuthResult> _Login_sign_in_listener;
-	private OnCompleteListener<Void> _Login_reset_password_listener;
-	private OnCompleteListener<Void> Login_updateEmailListener;
-	private OnCompleteListener<Void> Login_updatePasswordListener;
-	private OnCompleteListener<Void> Login_emailVerificationSentListener;
-	private OnCompleteListener<Void> Login_deleteUserListener;
-	private OnCompleteListener<Void> Login_updateProfileListener;
-	private OnCompleteListener<AuthResult> Login_phoneAuthListener;
-	private OnCompleteListener<AuthResult> Login_googleSignInListener;
 	
 	private TimerTask SignInChecker;
 	private ObjectAnimator FadeIn = new ObjectAnimator();
@@ -119,7 +103,6 @@ public class WelcomeActivity extends AppCompatActivity {
 		super.onCreate(_savedInstanceState);
 		setContentView(R.layout.welcome);
 		initialize(_savedInstanceState);
-		FirebaseApp.initializeApp(this);
 		initializeLogic();
 	}
 	
@@ -131,7 +114,6 @@ public class WelcomeActivity extends AppCompatActivity {
 		progress = findViewById(R.id.progress);
 		Button = findViewById(R.id.Button);
 		Description = findViewById(R.id.Description);
-		Login = FirebaseAuth.getInstance();
 		
 		Button.setOnClickListener(new View.OnClickListener() {
 			@Override
@@ -155,86 +137,6 @@ public class WelcomeActivity extends AppCompatActivity {
 					FadeOut.setFloatValues((float)(0));
 					FadeOut.setDuration((int)(300));
 					FadeOut.start();
-					InternetTimer = new TimerTask() {
-						@Override
-						public void run() {
-							runOnUiThread(new Runnable() {
-								@Override
-								public void run() {
-									if (IsInternetWorking) {
-										SignInChecker = new TimerTask() {
-											@Override
-											public void run() {
-												runOnUiThread(new Runnable() {
-													@Override
-													public void run() {
-														Login.signInWithEmailAndPassword("xsignerapp@default.com", "E10FC67B894EE30A2C916D355ABCC4969F40277CC84FDD45F5A02F9D3F6C52C5").addOnCompleteListener(WelcomeActivity.this, _Login_sign_in_listener);
-														if ((FirebaseAuth.getInstance().getCurrentUser() != null)) {
-															SignInChecker.cancel();
-															SignInChecker = new TimerTask() {
-																@Override
-																public void run() {
-																	runOnUiThread(new Runnable() {
-																		@Override
-																		public void run() {
-																			status = "SUCCESS";
-																			FadeOut.setTarget(progress);
-																			FadeOut.setPropertyName("alpha");
-																			FadeOut.setFloatValues((float)(0));
-																			FadeOut.setDuration((int)(300));
-																			FadeOut.start();
-																			SketchwareUtil.showMessage(getApplicationContext(), "Loaded data from server successfully");
-																			Button.setText("Continue");
-																			IsInitialized = true;
-																		}
-																	});
-																}
-															};
-															_timer.schedule(SignInChecker, (int)(2000));
-														}
-														else {
-															
-														}
-													}
-												});
-											}
-										};
-										_timer.scheduleAtFixedRate(SignInChecker, (int)(0), (int)(500));
-									}
-									else {
-										try {
-											TimeOut.cancel();
-										} catch (Exception e) {
-											 
-										}
-										status = "FAIL";
-										FadeOut.setTarget(progress);
-										FadeOut.setPropertyName("alpha");
-										FadeOut.setFloatValues((float)(0));
-										FadeOut.setDuration((int)(300));
-										FadeOut.start();
-										View SnackBarView = getLayoutInflater().inflate(R.layout.premium_snackbar, null);
-										SnackBar = com.google.android.material.snackbar.Snackbar.make(_coordinator, "", Snackbar.LENGTH_LONG);
-										final LinearLayout SBG = (LinearLayout)
-										SnackBarView.findViewById(R.id.BG);
-										final TextView Message = (TextView)
-										SnackBarView.findViewById(R.id.Message);
-										final ImageView Icon = (ImageView)
-										SnackBarView.findViewById(R.id.Icon);
-										Icon.setImageResource(R.drawable.ic_error_white);
-										Message.setText("You're offline, make sure you're connected to internet to continue");
-										SBG.setBackground(new GradientDrawable() { public GradientDrawable getIns(int a, int b) { this.setCornerRadius(a); this.setColor(b); return this; } }.getIns((int)_DpToPx(10), 0xFF27313A));
-										Message.setTextColor(0xFFFFFFFF);
-										SnackBar.getView().setBackgroundColor(Color.TRANSPARENT);
-										Snackbar.SnackbarLayout SnackBarView2 = (Snackbar.SnackbarLayout) SnackBar.getView(); 
-										SnackBarView2.addView(SnackBarView, 0);
-										SnackBar.show();
-									}
-								}
-							});
-						}
-					};
-					_timer.schedule(InternetTimer, (int)(2000));
 					TimeOut = new TimerTask() {
 						@Override
 						public void run() {
@@ -343,95 +245,6 @@ public class WelcomeActivity extends AppCompatActivity {
 				
 			}
 		});
-		
-		Login_updateEmailListener = new OnCompleteListener<Void>() {
-			@Override
-			public void onComplete(Task<Void> _param1) {
-				final boolean _success = _param1.isSuccessful();
-				final String _errorMessage = _param1.getException() != null ? _param1.getException().getMessage() : "";
-				
-			}
-		};
-		
-		Login_updatePasswordListener = new OnCompleteListener<Void>() {
-			@Override
-			public void onComplete(Task<Void> _param1) {
-				final boolean _success = _param1.isSuccessful();
-				final String _errorMessage = _param1.getException() != null ? _param1.getException().getMessage() : "";
-				
-			}
-		};
-		
-		Login_emailVerificationSentListener = new OnCompleteListener<Void>() {
-			@Override
-			public void onComplete(Task<Void> _param1) {
-				final boolean _success = _param1.isSuccessful();
-				final String _errorMessage = _param1.getException() != null ? _param1.getException().getMessage() : "";
-				
-			}
-		};
-		
-		Login_deleteUserListener = new OnCompleteListener<Void>() {
-			@Override
-			public void onComplete(Task<Void> _param1) {
-				final boolean _success = _param1.isSuccessful();
-				final String _errorMessage = _param1.getException() != null ? _param1.getException().getMessage() : "";
-				
-			}
-		};
-		
-		Login_phoneAuthListener = new OnCompleteListener<AuthResult>() {
-			@Override
-			public void onComplete(Task<AuthResult> task) {
-				final boolean _success = task.isSuccessful();
-				final String _errorMessage = task.getException() != null ? task.getException().getMessage() : "";
-				
-			}
-		};
-		
-		Login_updateProfileListener = new OnCompleteListener<Void>() {
-			@Override
-			public void onComplete(Task<Void> _param1) {
-				final boolean _success = _param1.isSuccessful();
-				final String _errorMessage = _param1.getException() != null ? _param1.getException().getMessage() : "";
-				
-			}
-		};
-		
-		Login_googleSignInListener = new OnCompleteListener<AuthResult>() {
-			@Override
-			public void onComplete(Task<AuthResult> task) {
-				final boolean _success = task.isSuccessful();
-				final String _errorMessage = task.getException() != null ? task.getException().getMessage() : "";
-				
-			}
-		};
-		
-		_Login_create_user_listener = new OnCompleteListener<AuthResult>() {
-			@Override
-			public void onComplete(Task<AuthResult> _param1) {
-				final boolean _success = _param1.isSuccessful();
-				final String _errorMessage = _param1.getException() != null ? _param1.getException().getMessage() : "";
-				
-			}
-		};
-		
-		_Login_sign_in_listener = new OnCompleteListener<AuthResult>() {
-			@Override
-			public void onComplete(Task<AuthResult> _param1) {
-				final boolean _success = _param1.isSuccessful();
-				final String _errorMessage = _param1.getException() != null ? _param1.getException().getMessage() : "";
-				
-			}
-		};
-		
-		_Login_reset_password_listener = new OnCompleteListener<Void>() {
-			@Override
-			public void onComplete(Task<Void> _param1) {
-				final boolean _success = _param1.isSuccessful();
-				
-			}
-		};
 	}
 	
 	private void initializeLogic() {

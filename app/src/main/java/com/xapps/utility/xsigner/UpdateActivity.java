@@ -57,30 +57,9 @@ import androidx.startup.*;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout.OnRefreshListener;
 import androidx.transition.*;
-import com.google.android.gms.tasks.Continuation;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.gms.tasks.Task;
 import com.google.android.material.*;
 import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.snackbar.Snackbar;
-import com.google.firebase.FirebaseApp;
-import com.google.firebase.auth.AuthResult;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.ChildEventListener;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.GenericTypeIndicator;
-import com.google.firebase.database.ValueEventListener;
-import com.google.firebase.storage.FileDownloadTask;
-import com.google.firebase.storage.FirebaseStorage;
-import com.google.firebase.storage.OnProgressListener;
-import com.google.firebase.storage.StorageReference;
-import com.google.firebase.storage.UploadTask;
 import com.mursaat.extendedtextview.*;
 import java.io.*;
 import java.io.File;
@@ -106,8 +85,6 @@ import androidx.core.widget.NestedScrollView;
 public class UpdateActivity extends AppCompatActivity {
 	
 	private Timer _timer = new Timer();
-	private FirebaseDatabase _firebase = FirebaseDatabase.getInstance();
-	private FirebaseStorage _firebase_storage = FirebaseStorage.getInstance();
 	
 	private Toolbar _toolbar;
 	private AppBarLayout _app_bar;
@@ -163,20 +140,7 @@ public class UpdateActivity extends AppCompatActivity {
 	
 	private TimerTask LiftTimer;
 	private com.google.android.material.snackbar.Snackbar OfflineSnackbar;
-	private DatabaseReference UpdateChecker = _firebase.getReference("UpdateData");
-	private ChildEventListener _UpdateChecker_child_listener;
 	private TimerTask RefreshTimer;
-	private FirebaseAuth LoginData;
-	private OnCompleteListener<AuthResult> _LoginData_create_user_listener;
-	private OnCompleteListener<AuthResult> _LoginData_sign_in_listener;
-	private OnCompleteListener<Void> _LoginData_reset_password_listener;
-	private OnCompleteListener<Void> LoginData_updateEmailListener;
-	private OnCompleteListener<Void> LoginData_updatePasswordListener;
-	private OnCompleteListener<Void> LoginData_emailVerificationSentListener;
-	private OnCompleteListener<Void> LoginData_deleteUserListener;
-	private OnCompleteListener<Void> LoginData_updateProfileListener;
-	private OnCompleteListener<AuthResult> LoginData_phoneAuthListener;
-	private OnCompleteListener<AuthResult> LoginData_googleSignInListener;
 	
 	private TimerTask FailureTimer;
 	private TimerTask RetardTimer;
@@ -190,13 +154,6 @@ public class UpdateActivity extends AppCompatActivity {
 	private ObjectAnimator TextFader6 = new ObjectAnimator();
 	private ObjectAnimator TextFader7 = new ObjectAnimator();
 	private ObjectAnimator TextFader8 = new ObjectAnimator();
-	private StorageReference Downloader = _firebase_storage.getReference("/");
-	private OnCompleteListener<Uri> _Downloader_upload_success_listener;
-	private OnSuccessListener<FileDownloadTask.TaskSnapshot> _Downloader_download_success_listener;
-	private OnSuccessListener _Downloader_delete_success_listener;
-	private OnProgressListener _Downloader_upload_progress_listener;
-	private OnProgressListener _Downloader_download_progress_listener;
-	private OnFailureListener _Downloader_failure_listener;
 	
 	
 	@Override
@@ -205,7 +162,6 @@ public class UpdateActivity extends AppCompatActivity {
 		super.onCreate(_savedInstanceState);
 		setContentView(R.layout.update);
 		initialize(_savedInstanceState);
-		FirebaseApp.initializeApp(this);
 		initializeLogic();
 	}
 	
@@ -259,7 +215,6 @@ public class UpdateActivity extends AppCompatActivity {
 		StatusContainer = findViewById(R.id.StatusContainer);
 		LatestPhaseTitle = findViewById(R.id.LatestPhaseTitle);
 		StatusTitle = findViewById(R.id.StatusTitle);
-		LoginData = FirebaseAuth.getInstance();
 		
 		swiperefreshlayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
 			@Override
@@ -290,26 +245,6 @@ public class UpdateActivity extends AppCompatActivity {
 							@Override
 							public void run() {
 								if (IsInternetWorking) {
-									UpdateChecker.addListenerForSingleValueEvent(new ValueEventListener() {
-										@Override
-										public void onDataChange(DataSnapshot _dataSnapshot) {
-											UpdateDataMap = new ArrayList<>();
-											try {
-												GenericTypeIndicator<HashMap<String, Object>> _ind = new GenericTypeIndicator<HashMap<String, Object>>() {};
-												for (DataSnapshot _data : _dataSnapshot.getChildren()) {
-													HashMap<String, Object> _map = _data.getValue(_ind);
-													UpdateDataMap.add(_map);
-												}
-											}
-											catch (Exception _e) {
-												_e.printStackTrace();
-											}
-											DataFetched = true;
-										}
-										@Override
-										public void onCancelled(DatabaseError _databaseError) {
-										}
-									});
 									RefreshTimer = new TimerTask() {
 										@Override
 										public void run() {
@@ -318,7 +253,7 @@ public class UpdateActivity extends AppCompatActivity {
 												public void run() {
 													swiperefreshlayout.setRefreshing(false);
 													if (DataFetched) {
-														SketchwareUtil.showMessage(getApplicationContext(), UpdateDataMap.get((int)0).get("Latest").toString());
+														XUtil.showMessage(getApplicationContext(), UpdateDataMap.get((int)0).get("Latest").toString());
 													}
 													else {
 														View OfflineSnackbarView = getLayoutInflater().inflate(R.layout.premium_snackbar, null);
@@ -397,194 +332,13 @@ public class UpdateActivity extends AppCompatActivity {
 				return true;
 			}
 		});
-		
-		_UpdateChecker_child_listener = new ChildEventListener() {
-			@Override
-			public void onChildAdded(DataSnapshot _param1, String _param2) {
-				GenericTypeIndicator<HashMap<String, Object>> _ind = new GenericTypeIndicator<HashMap<String, Object>>() {};
-				final String _childKey = _param1.getKey();
-				final HashMap<String, Object> _childValue = _param1.getValue(_ind);
-				
-			}
-			
-			@Override
-			public void onChildChanged(DataSnapshot _param1, String _param2) {
-				GenericTypeIndicator<HashMap<String, Object>> _ind = new GenericTypeIndicator<HashMap<String, Object>>() {};
-				final String _childKey = _param1.getKey();
-				final HashMap<String, Object> _childValue = _param1.getValue(_ind);
-				
-			}
-			
-			@Override
-			public void onChildMoved(DataSnapshot _param1, String _param2) {
-				
-			}
-			
-			@Override
-			public void onChildRemoved(DataSnapshot _param1) {
-				GenericTypeIndicator<HashMap<String, Object>> _ind = new GenericTypeIndicator<HashMap<String, Object>>() {};
-				final String _childKey = _param1.getKey();
-				final HashMap<String, Object> _childValue = _param1.getValue(_ind);
-				
-			}
-			
-			@Override
-			public void onCancelled(DatabaseError _param1) {
-				final int _errorCode = _param1.getCode();
-				final String _errorMessage = _param1.getMessage();
-				
-			}
-		};
-		UpdateChecker.addChildEventListener(_UpdateChecker_child_listener);
-		
-		_Downloader_upload_progress_listener = new OnProgressListener<UploadTask.TaskSnapshot>() {
-			@Override
-			public void onProgress(UploadTask.TaskSnapshot _param1) {
-				double _progressValue = (100.0 * _param1.getBytesTransferred()) / _param1.getTotalByteCount();
-				
-			}
-		};
-		
-		_Downloader_download_progress_listener = new OnProgressListener<FileDownloadTask.TaskSnapshot>() {
-			@Override
-			public void onProgress(FileDownloadTask.TaskSnapshot _param1) {
-				double _progressValue = (100.0 * _param1.getBytesTransferred()) / _param1.getTotalByteCount();
-				
-			}
-		};
-		
-		_Downloader_upload_success_listener = new OnCompleteListener<Uri>() {
-			@Override
-			public void onComplete(Task<Uri> _param1) {
-				final String _downloadUrl = _param1.getResult().toString();
-				
-			}
-		};
-		
-		_Downloader_download_success_listener = new OnSuccessListener<FileDownloadTask.TaskSnapshot>() {
-			@Override
-			public void onSuccess(FileDownloadTask.TaskSnapshot _param1) {
-				final long _totalByteCount = _param1.getTotalByteCount();
-				DataFetched = true;
-				SketchwareUtil.showMessage(getApplicationContext(), FileUtil.readFile("/storage/emulated/0/test"));
-				Map = FileUtil.readFile("/storage/emulated/0/test");
-				String[] hi = Map.split(",");
-				for (int i = 0; i < (int)(hi.length); i++) {
-					SketchwareUtil.showMessage(getApplicationContext(), hi[i]);
-				}
-			}
-		};
-		
-		_Downloader_delete_success_listener = new OnSuccessListener() {
-			@Override
-			public void onSuccess(Object _param1) {
-				
-			}
-		};
-		
-		_Downloader_failure_listener = new OnFailureListener() {
-			@Override
-			public void onFailure(Exception _param1) {
-				final String _message = _param1.getMessage();
-				
-			}
-		};
-		
-		LoginData_updateEmailListener = new OnCompleteListener<Void>() {
-			@Override
-			public void onComplete(Task<Void> _param1) {
-				final boolean _success = _param1.isSuccessful();
-				final String _errorMessage = _param1.getException() != null ? _param1.getException().getMessage() : "";
-				
-			}
-		};
-		
-		LoginData_updatePasswordListener = new OnCompleteListener<Void>() {
-			@Override
-			public void onComplete(Task<Void> _param1) {
-				final boolean _success = _param1.isSuccessful();
-				final String _errorMessage = _param1.getException() != null ? _param1.getException().getMessage() : "";
-				
-			}
-		};
-		
-		LoginData_emailVerificationSentListener = new OnCompleteListener<Void>() {
-			@Override
-			public void onComplete(Task<Void> _param1) {
-				final boolean _success = _param1.isSuccessful();
-				final String _errorMessage = _param1.getException() != null ? _param1.getException().getMessage() : "";
-				
-			}
-		};
-		
-		LoginData_deleteUserListener = new OnCompleteListener<Void>() {
-			@Override
-			public void onComplete(Task<Void> _param1) {
-				final boolean _success = _param1.isSuccessful();
-				final String _errorMessage = _param1.getException() != null ? _param1.getException().getMessage() : "";
-				
-			}
-		};
-		
-		LoginData_phoneAuthListener = new OnCompleteListener<AuthResult>() {
-			@Override
-			public void onComplete(Task<AuthResult> task) {
-				final boolean _success = task.isSuccessful();
-				final String _errorMessage = task.getException() != null ? task.getException().getMessage() : "";
-				
-			}
-		};
-		
-		LoginData_updateProfileListener = new OnCompleteListener<Void>() {
-			@Override
-			public void onComplete(Task<Void> _param1) {
-				final boolean _success = _param1.isSuccessful();
-				final String _errorMessage = _param1.getException() != null ? _param1.getException().getMessage() : "";
-				
-			}
-		};
-		
-		LoginData_googleSignInListener = new OnCompleteListener<AuthResult>() {
-			@Override
-			public void onComplete(Task<AuthResult> task) {
-				final boolean _success = task.isSuccessful();
-				final String _errorMessage = task.getException() != null ? task.getException().getMessage() : "";
-				
-			}
-		};
-		
-		_LoginData_create_user_listener = new OnCompleteListener<AuthResult>() {
-			@Override
-			public void onComplete(Task<AuthResult> _param1) {
-				final boolean _success = _param1.isSuccessful();
-				final String _errorMessage = _param1.getException() != null ? _param1.getException().getMessage() : "";
-				
-			}
-		};
-		
-		_LoginData_sign_in_listener = new OnCompleteListener<AuthResult>() {
-			@Override
-			public void onComplete(Task<AuthResult> _param1) {
-				final boolean _success = _param1.isSuccessful();
-				final String _errorMessage = _param1.getException() != null ? _param1.getException().getMessage() : "";
-				
-			}
-		};
-		
-		_LoginData_reset_password_listener = new OnCompleteListener<Void>() {
-			@Override
-			public void onComplete(Task<Void> _param1) {
-				final boolean _success = _param1.isSuccessful();
-				
-			}
-		};
 	}
 	
 	private void initializeLogic() {
 		Map = FileUtil.readFile("/storage/emulated/0/test");
 		String[] hi = Map.split("NEXTITEM");
 		for(int _repeat151 = 0; _repeat151 < (int)(hi.length); _repeat151++) {
-			SketchwareUtil.showMessage(getApplicationContext(), hi[_repeat151]);
+			XUtil.showMessage(getApplicationContext(), hi[_repeat151]);
 		}
 		setTitle("Check for updates");
 		_SetupUi();
@@ -595,7 +349,6 @@ public class UpdateActivity extends AppCompatActivity {
 		        .build();
 		ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(ConnectivityManager.class);
 		connectivityManager.requestNetwork(networkRequest, networkCallback);
-		_firebase_storage.getReferenceFromUrl("gs://x-signer-xapps.appspot.com/wow.txt").getFile(new File("/storage/emulated/0/test")).addOnSuccessListener(_Downloader_download_success_listener).addOnFailureListener(_Downloader_failure_listener).addOnProgressListener(_Downloader_download_progress_listener);
 		RefreshTimer = new TimerTask() {
 			@Override
 			public void run() {
@@ -756,8 +509,6 @@ public class UpdateActivity extends AppCompatActivity {
 		    transform.addTarget(android.R.id.content);
 		return transform;
 	}
-	{
-	}
 	
 	
 	public void _SetMargins(final View _layout, final int _leftMargin, final int _TopMargin, final int _RightMargin, final int _BottomMargin) {
@@ -779,9 +530,6 @@ public class UpdateActivity extends AppCompatActivity {
 				        }
 			    });
 		    colorAnimation.start();
-	}
-	
-	{
 	}
 	
 	

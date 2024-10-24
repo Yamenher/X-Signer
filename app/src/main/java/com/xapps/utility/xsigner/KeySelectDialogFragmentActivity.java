@@ -50,7 +50,6 @@ import androidx.savedstate.*;
 import androidx.startup.*;
 import androidx.transition.*;
 import com.google.android.material.*;
-import com.google.firebase.FirebaseApp;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.mursaat.extendedtextview.*;
@@ -96,7 +95,6 @@ public class KeySelectDialogFragmentActivity extends DialogFragment {
 	public View onCreateView(@NonNull LayoutInflater _inflater, @Nullable ViewGroup _container, @Nullable Bundle _savedInstanceState) {
 		View _view = _inflater.inflate(R.layout.key_select_dialog_fragment, _container, false);
 		initialize(_savedInstanceState, _view);
-		FirebaseApp.initializeApp(getContext());
 		initializeLogic();
 		return _view;
 	}
@@ -131,7 +129,7 @@ public class KeySelectDialogFragmentActivity extends DialogFragment {
 					int height = ViewGroup.LayoutParams.WRAP_CONTENT; 
 					 getDialog().getWindow().setLayout(width, height);
 		} catch (Exception e) {
-			SketchwareUtil.showMessage(getContext().getApplicationContext(), "error");
+			XUtil.showMessage(getContext().getApplicationContext(), "error");
 		}
 		_TryToLoad();
 	}
@@ -231,7 +229,7 @@ public class KeySelectDialogFragmentActivity extends DialogFragment {
 				KeyName.setText(KeysList.get((int)_position).get("keyname").toString());
 				KeyType.setText("Type : ".concat(KeysList.get((int)_position).get("type").toString()));
 			} catch (Exception e) {
-				SketchwareUtil.showMessage(getContext().getApplicationContext(), "An Unknown Error has occurred");
+				XUtil.showMessage(getContext().getApplicationContext(), "An Unknown Error has occurred");
 			}
 			ItemLayout.setOnClickListener(new View.OnClickListener() {
 				@Override

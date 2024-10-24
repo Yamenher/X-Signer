@@ -65,7 +65,6 @@ import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
-import com.google.firebase.FirebaseApp;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.mursaat.extendedtextview.*;
@@ -176,8 +175,7 @@ public class KeysListActivity extends AppCompatActivity {
 		super.onCreate(_savedInstanceState);
 		setContentView(R.layout.keys_list);
 		initialize(_savedInstanceState);
-		FirebaseApp.initializeApp(this);
-			initializeLogic(); 
+		initializeLogic(); 
     
     }
 	
@@ -467,7 +465,7 @@ KeyPassTIP.setErrorEnabled(false);
 																public void onDismiss(DialogInterface dialogInterface) {
 																		if (FileUtil.isExistFile("/data/data/com.xapps.utility.xsigner/error.txt")) {
 																				if (FileUtil.readFile("/data/data/com.xapps.utility.xsigner/error.txt").equals("")) {
-																						SketchwareUtil.showMessage(getApplicationContext(), "Signature imported successfully");
+																						XUtil.showMessage(getApplicationContext(), "Signature imported successfully");
 																						AsyncTask.execute(new Runnable() {
 																								   @Override
 																								   public void run() {
@@ -502,12 +500,12 @@ KeyPassTIP.setErrorEnabled(false);
 																								KnownError = true;
 																						}
 																						if (FileUtil.readFile("/data/data/com.xapps.utility.xsigner/error.txt").equals("java.io.FileNotFoundException: /data/data/com.xapps.utility.xsigner/") && FileUtil.readFile("/data/data/com.xapps.utility.xsigner/error.txt").contains("open failed: ENOENT (No such file or directory)")) {
-																								SketchwareUtil.showMessage(getApplicationContext(), "The key is not longer accessible, please re-import it again");
+																								XUtil.showMessage(getApplicationContext(), "The key is not longer accessible, please re-import it again");
 																								KeyImportDialog.dismiss();
 																								KnownError = true;
 																						}
 																						if (FileUtil.readFile("/data/data/com.xapps.utility.xsigner/error.txt").contains("java.io.FileNotFoundException: /data/data/com.xapps.utility.xsigner/") && FileUtil.readFile("/data/data/com.xapps.utility.xsigner/error.txt").contains("open failed: EACCES (Permission denied)")) {
-																								SketchwareUtil.showMessage(getApplicationContext(), "Insufficient permissions to read the key file, please re-import it again");
+																								XUtil.showMessage(getApplicationContext(), "Insufficient permissions to read the key file, please re-import it again");
 																								KeyImportDialog.dismiss();
 																								KnownError = true;
 																								try {
@@ -517,7 +515,7 @@ KeyPassTIP.setErrorEnabled(false);
 																								}
 																						}
 																						if (FileUtil.readFile("/data/data/com.xapps.utility.xsigner/error.txt").contains("java.io.IOException: Invalid keystore format")) {
-																								SketchwareUtil.showMessage(getApplicationContext(), "Failed to load key : the key is not a valid keystore");
+																								XUtil.showMessage(getApplicationContext(), "Failed to load key : the key is not a valid keystore");
 																								KeyImportDialog.dismiss();
 																								KnownError = true;
 																								try {
@@ -527,7 +525,7 @@ KeyPassTIP.setErrorEnabled(false);
 																								}
 																						}
 																						if (FileUtil.readFile("/data/data/com.xapps.utility.xsigner/error.txt").contains("Exception: java.io.IOException: Wrong version of key store")) {
-																								SketchwareUtil.showMessage(getApplicationContext(), "Renamed key detected, please rename keystore extension back to original.");
+																								XUtil.showMessage(getApplicationContext(), "Renamed key detected, please rename keystore extension back to original.");
 																								KeyImportDialog.dismiss();
 																								KnownError = true;
 																								try {
@@ -617,7 +615,7 @@ KeyPassTIP.setErrorEnabled(false);
 																																																eee.printStackTrace();
 																																												                
 																																													}
-																																													SketchwareUtil.showMessage(getApplicationContext(), "Error message was sent successfully");
+																																													XUtil.showMessage(getApplicationContext(), "Error message was sent successfully");
 																																										}
 																																										else {
 																																													try {
@@ -638,7 +636,7 @@ KeyPassTIP.setErrorEnabled(false);
 																																												                ee2.printStackTrace();
 																																												                
 																																												            }
-																																													SketchwareUtil.showMessage(getApplicationContext(), "Failed to send error message");
+																																													XUtil.showMessage(getApplicationContext(), "Failed to send error message");
 																																										}
 																																										super.onPageFinished(_param1, _param2);
 																																							}
@@ -651,7 +649,7 @@ KeyPassTIP.setErrorEnabled(false);
 																																										@Override
 																																										public void run() {
 																																												SimpleLoaderDialog.dismiss();
-																																												SketchwareUtil.showMessage(getApplicationContext(), "Error message sending timeout, verify your internet connection and try again");
+																																												XUtil.showMessage(getApplicationContext(), "Error message sending timeout, verify your internet connection and try again");
 																																										}
 																																								});
 																																						}
@@ -672,7 +670,7 @@ KeyPassTIP.setErrorEnabled(false);
 																				}
 																		}
 																		else {
-																				SketchwareUtil.showMessage(getApplicationContext(), "Signature imported successfully");
+																				XUtil.showMessage(getApplicationContext(), "Signature imported successfully");
 																				AsyncTask.execute(new Runnable() {
 																						   @Override
 																						   public void run() {
@@ -902,7 +900,7 @@ KeyPassTIP.setErrorEnabled(false);
     try {
 APKSignerUtils.signFile(_input, _output, _keypath, _alias, _keystorepass, _keypass, _v1, _v2, _v3, _v4, _zipalign, _type);
 } catch (Exception e) {
-SketchwareUtil.showMessage(getApplicationContext(), e.toString());
+XUtil.showMessage(getApplicationContext(), e.toString());
 }
 	}
 	
@@ -911,7 +909,7 @@ SketchwareUtil.showMessage(getApplicationContext(), e.toString());
 		try {
 			TestKeySigner.signWithTestkey(_input, _output, _pem, _pk8, _v1, _v2, _v3, _v4, _zipalign);
 		} catch (Exception e) {
-			SketchwareUtil.showMessage(getApplicationContext(), e.toString());
+			XUtil.showMessage(getApplicationContext(), e.toString());
 		}
 	}
 	

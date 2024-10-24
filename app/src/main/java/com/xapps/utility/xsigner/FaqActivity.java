@@ -1,61 +1,21 @@
 package com.xapps.utility.xsigner;
 
-import android.animation.*;
 import android.text.SpannableString;
 import android.text.SpannableStringBuilder;
 import android.text.Spanned;
-import android.app.*;
-import android.content.*;
-import android.content.res.*;
-import android.graphics.*;
-import android.graphics.drawable.*;
-import android.media.*;
-import android.net.*;
-import android.os.*;
-import android.sun.security.*;
-import android.text.*;
-import android.text.style.*;
-import android.util.*;
-import android.view.*;
-import android.view.View.*;
-import android.view.animation.*;
-import android.webkit.*;
+import android.content.res.Resources;
 import android.widget.*;
+import android.graphics.Color;
+import android.graphics.PorterDuff;
+import android.view.*;
+import android.graphics.drawable.GradientDrawable;
+import android.os.Bundle;
 import android.widget.LinearLayout;
-import androidx.activity.*;
-import androidx.annotation.*;
-import androidx.appcompat.*;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.resources.*;
 import androidx.appcompat.widget.Toolbar;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
-import androidx.core.*;
 import androidx.core.content.ContextCompat;
-import androidx.core.ktx.*;
-import androidx.core.splashscreen.*;
-import androidx.emoji2.*;
-import androidx.emoji2.viewsintegration.*;
-import androidx.fragment.app.DialogFragment;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.lifecycle.livedata.core.*;
-import androidx.lifecycle.process.*;
-import androidx.lifecycle.runtime.*;
-import androidx.lifecycle.viewmodel.*;
-import androidx.lifecycle.viewmodel.savedstate.*;
-import androidx.profileinstaller.*;
-import androidx.savedstate.*;
-import androidx.startup.*;
-import androidx.transition.*;
-import com.google.android.material.*;
 import com.google.android.material.appbar.AppBarLayout;
-import com.google.firebase.FirebaseApp;
-import com.mursaat.extendedtextview.*;
-import java.io.*;
-import java.text.*;
-import java.util.*;
-import java.util.regex.*;
-import org.json.*;
 import androidx.core.content.ContextCompat;
 import androidx.core.widget.NestedScrollView;
 import com.google.android.material.transition.platform.MaterialSharedAxis;
@@ -97,7 +57,6 @@ public class FaqActivity extends AppCompatActivity {
 		super.onCreate(_savedInstanceState);
 		setContentView(R.layout.faq);
 		initialize(_savedInstanceState);
-		FirebaseApp.initializeApp(this);
 		initializeLogic();
 	}
 	
@@ -173,7 +132,7 @@ public class FaqActivity extends AppCompatActivity {
 	
 	
 	public void _MakeRipple(final View _view, final double _shadow, final double _radius, final String _color, final String _ripple) {
-		android.graphics.drawable.GradientDrawable gd = new android.graphics.drawable.GradientDrawable();
+		GradientDrawable gd = new android.graphics.drawable.GradientDrawable();
 		gd.setColor(Color.parseColor(_color));
 		gd.setCornerRadius((int)_radius);
 		_view.setElevation((int)_shadow);
@@ -205,44 +164,4 @@ public class FaqActivity extends AppCompatActivity {
 		    colorAnimation.start();
 	}
 	
-	@Deprecated
-	public void showMessage(String _s) {
-		Toast.makeText(getApplicationContext(), _s, Toast.LENGTH_SHORT).show();
-	}
-	
-	@Deprecated
-	public int getLocationX(View _v) {
-		int _location[] = new int[2];
-		_v.getLocationInWindow(_location);
-		return _location[0];
-	}
-	
-	@Deprecated
-	public int getLocationY(View _v) {
-		int _location[] = new int[2];
-		_v.getLocationInWindow(_location);
-		return _location[1];
-	}
-	
-	@Deprecated
-	public int getRandom(int _min, int _max) {
-		Random random = new Random();
-		return random.nextInt(_max - _min + 1) + _min;
-	}
-	
-	@Deprecated
-	public ArrayList<Double> getCheckedItemPositionsToArray(ListView _list) {
-		ArrayList<Double> _result = new ArrayList<Double>();
-		SparseBooleanArray _arr = _list.getCheckedItemPositions();
-		for (int _iIdx = 0; _iIdx < _arr.size(); _iIdx++) {
-			if (_arr.valueAt(_iIdx))
-			_result.add((double)_arr.keyAt(_iIdx));
-		}
-		return _result;
-	}
-	
-	@Deprecated
-	public float getDp(int _input) {
-		return TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, _input, getResources().getDisplayMetrics());
-	}
 }

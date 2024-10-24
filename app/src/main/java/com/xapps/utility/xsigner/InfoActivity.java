@@ -1,66 +1,38 @@
 package com.xapps.utility.xsigner;
 
-import android.animation.*;
-import android.app.*;
-import android.content.*;
+import android.animation.ArgbEvaluator;
 import android.content.Intent;
 import android.content.res.*;
+import android.os.Build;
+import android.window.OnBackInvokedDispatcher;
+import androidx.activity.OnBackPressedCallback;
+import androidx.activity.OnBackPressedDispatcher;
 import android.graphics.*;
-import android.graphics.drawable.*;
-import android.media.*;
-import android.net.*;
 import android.net.Uri;
-import android.os.*;
+import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
-import android.sun.security.*;
-import android.text.*;
-import android.text.style.*;
-import android.util.*;
 import android.view.*;
 import android.view.View;
-import android.view.View.*;
-import android.view.animation.*;
-import android.webkit.*;
+import androidx.core.content.pm.PackageInfoCompat;
+import java.util.Random;
+import java.util.ArrayList;
+import android.util.DisplayMetrics;
 import android.widget.*;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.activity.*;
-import androidx.annotation.*;
-import androidx.appcompat.*;
+import android.util.TypedValue;
+import android.util.SparseBooleanArray;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.resources.*;
 import androidx.appcompat.widget.Toolbar;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
-import androidx.core.*;
-import androidx.core.ktx.*;
-import androidx.core.splashscreen.*;
-import androidx.emoji2.*;
-import androidx.emoji2.viewsintegration.*;
-import androidx.fragment.app.DialogFragment;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.lifecycle.livedata.core.*;
-import androidx.lifecycle.process.*;
-import androidx.lifecycle.runtime.*;
-import androidx.lifecycle.viewmodel.*;
-import androidx.lifecycle.viewmodel.savedstate.*;
-import androidx.profileinstaller.*;
-import androidx.savedstate.*;
-import androidx.startup.*;
-import androidx.transition.*;
-import com.google.android.material.*;
 import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
-import com.google.firebase.FirebaseApp;
 import com.mursaat.extendedtextview.*;
-import de.hdodenhof.circleimageview.*;
-import java.io.*;
+import de.hdodenhof.circleimageview.*; 
 import java.io.InputStream;
-import java.text.*;
-import java.util.*;
-import java.util.regex.*;
-import org.json.*;
 import androidx.core.widget.NestedScrollView;
 import com.google.android.material.transition.platform.MaterialSharedAxis;
 import com.google.android.material.internal.EdgeToEdgeUtils;
@@ -134,24 +106,22 @@ public class InfoActivity extends AppCompatActivity {
 	
 	private Intent UserViewIntent = new Intent();
 	
-    	@Override
+          @Override
 	protected void onCreate(Bundle _savedInstanceState) {
-        getWindow().requestFeature(Window.FEATURE_ACTIVITY_TRANSITIONS);
-        setExitSharedElementCallback(new MaterialContainerTransformSharedElementCallback());
         getWindow().setAllowEnterTransitionOverlap(true);
-        findViewById(android.R.id.content).setTransitionName("transition");
         MaterialSharedAxis enterTransition = new MaterialSharedAxis(MaterialSharedAxis.Y, true);
-        enterTransition.addTarget(android.R.id.content);
+        enterTransition.addTarget(R.id._coordinator);
+        enterTransition.setDuration(300L);
         getWindow().setEnterTransition(enterTransition);
         MaterialSharedAxis returnTransition = new MaterialSharedAxis(MaterialSharedAxis.Y, false);
-        returnTransition.addTarget(android.R.id.content);
+        returnTransition.setDuration(300L);
+        returnTransition.addTarget(R.id._coordinator);
         getWindow().setReturnTransition(returnTransition);
 		super.onCreate(_savedInstanceState);
 		setContentView(R.layout.info);
 		initialize(_savedInstanceState);
-		FirebaseApp.initializeApp(this);
 		initializeLogic();
-	}
+    }
 	
 	private void initialize(Bundle _savedInstanceState) {
 		_app_bar = findViewById(R.id._app_bar);
@@ -163,7 +133,7 @@ public class InfoActivity extends AppCompatActivity {
 		_toolbar.setNavigationOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View _v) {
-				onBackPressed();
+				getOnBackPressedDispatcher().onBackPressed();
 			}
 		});
 		collapsingtoolbar = findViewById(R.id.collapsingtoolbar);
@@ -225,7 +195,7 @@ public class InfoActivity extends AppCompatActivity {
 					_MakeTransition();
 				}
 				else {
-					SketchwareUtil.showMessage(getApplicationContext(), "It's a nightly bruh, don't expect everything in one update");
+					XUtil.showMessage(getApplicationContext(), "It's a nightly bruh, don't expect everything in one update");
 				}
 			}
 		});
@@ -235,15 +205,23 @@ public class InfoActivity extends AppCompatActivity {
 		EdgeToEdgeUtils.applyEdgeToEdge(getWindow(), true);
 		
 		try {
-			android.content.pm.PackageInfo packageInfo = InfoActivity.this.getPackageManager().getPackageInfo(getPackageName(), 0);
+		    android.content.pm.PackageInfo packageInfo = InfoActivity.this.getPackageManager().getPackageInfo(getPackageName(), 0);
 			versionName = packageInfo.versionName;
-			versionCode = Integer.toString(packageInfo.versionCode);
+            if (Build.VERSION.SDK_INT >= 28){
+                versionCode = Long.toString(PackageInfoCompat.getLongVersionCode(packageInfo));
+            } else {
+		    	versionCode = Integer.toString(packageInfo.versionCode);
+            }   
 		} catch (android.content.pm.PackageManager.NameNotFoundException e) {
 			e.printStackTrace();
 		}
-		
-		_toolbar.getNavigationIcon().setColorFilter(getColor(R.color.colorTextMain), PorterDuff.Mode.SRC_IN);
-		UpdateIcon.setColorFilter(getColor(R.color.colorTextMain), PorterDuff.Mode.SRC_IN);
+		if (Build.VERSION.SDK_INT >= 29) {
+            _toolbar.getNavigationIcon().setColorFilter(new BlendModeColorFilter(getColor(R.color.colorTextMain), BlendMode.SRC_ATOP));
+            UpdateIcon.setColorFilter(new BlendModeColorFilter(getColor(R.color.colorTextMain), BlendMode.SRC_ATOP));
+        } else {
+		    _toolbar.getNavigationIcon().setColorFilter(getColor(R.color.colorTextMain), PorterDuff.Mode.SRC_IN);
+	    	UpdateIcon.setColorFilter(getColor(R.color.colorTextMain), PorterDuff.Mode.SRC_IN);
+        }
 		
 		_toolbar.setTitleCentered(true);
 		collapsingtoolbar.setTitle("About X-Signer");
@@ -397,57 +375,5 @@ public class InfoActivity extends AppCompatActivity {
 		ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation(
 		    this, UpdateLinear, "transition2");
 		startActivity(intent, options.toBundle());
-	}
-	
-	
-	@Deprecated
-	public void showMessage(String _s) {
-		Toast.makeText(getApplicationContext(), _s, Toast.LENGTH_SHORT).show();
-	}
-	
-	@Deprecated
-	public int getLocationX(View _v) {
-		int _location[] = new int[2];
-		_v.getLocationInWindow(_location);
-		return _location[0];
-	}
-	
-	@Deprecated
-	public int getLocationY(View _v) {
-		int _location[] = new int[2];
-		_v.getLocationInWindow(_location);
-		return _location[1];
-	}
-	
-	@Deprecated
-	public int getRandom(int _min, int _max) {
-		Random random = new Random();
-		return random.nextInt(_max - _min + 1) + _min;
-	}
-	
-	@Deprecated
-	public ArrayList<Double> getCheckedItemPositionsToArray(ListView _list) {
-		ArrayList<Double> _result = new ArrayList<Double>();
-		SparseBooleanArray _arr = _list.getCheckedItemPositions();
-		for (int _iIdx = 0; _iIdx < _arr.size(); _iIdx++) {
-			if (_arr.valueAt(_iIdx))
-			_result.add((double)_arr.keyAt(_iIdx));
-		}
-		return _result;
-	}
-	
-	@Deprecated
-	public float getDip(int _input) {
-		return TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, _input, getResources().getDisplayMetrics());
-	}
-	
-	@Deprecated
-	public int getDisplayWidthPixels() {
-		return getResources().getDisplayMetrics().widthPixels;
-	}
-	
-	@Deprecated
-	public int getDisplayHeightPixels() {
-		return getResources().getDisplayMetrics().heightPixels;
 	}
 }

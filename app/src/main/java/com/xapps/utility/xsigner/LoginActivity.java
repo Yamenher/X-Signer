@@ -44,7 +44,6 @@ import androidx.startup.*;
 import androidx.transition.*;
 import com.google.android.material.*;
 import com.google.android.material.appbar.AppBarLayout;
-import com.google.firebase.FirebaseApp;
 import com.mursaat.extendedtextview.*;
 import java.io.*;
 import java.text.*;
@@ -63,7 +62,6 @@ public class LoginActivity extends AppCompatActivity {
 		super.onCreate(_savedInstanceState);
 		setContentView(R.layout.login);
 		initialize(_savedInstanceState);
-		FirebaseApp.initializeApp(this);
 		initializeLogic();
 	}
 	

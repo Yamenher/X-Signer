@@ -1,5 +1,7 @@
 R_DEF: Internal format may change without notice
 local
+anim slide_in_up
+anim slide_out_down
 array keySizes
 array keyTypes
 array logo_colors

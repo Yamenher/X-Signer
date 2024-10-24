@@ -103,27 +103,6 @@
 			android:screenOrientation="portrait"
 			android:theme="@style/Theme.Base.Main"
 			android:windowSoftInputMode="stateHidden" />
-		<meta-data
-			android:name="com.google.android.gms.version"
-			android:value="@integer/google_play_services_version" />
-		<provider
-			android:name="com.google.firebase.provider.FirebaseInitProvider"
-			android:authorities="com.xapps.utility.xsigner.firebaseinitprovider"
-			android:exported="false"
-			android:initOrder="100" />
-		<service
-			android:name="com.google.firebase.components.ComponentDiscoveryService"
-			android:exported="false">
-			<meta-data
-				android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
-				android:value="com.google.firebase.components.ComponentRegistrar" />
-			<meta-data
-				android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
-				android:value="com.google.firebase.components.ComponentRegistrar" />
-			<meta-data
-				android:name="com.google.firebase.components:com.google.firebase.storage.StorageRegistrar"
-				android:value="com.google.firebase.components.ComponentRegistrar" />
-		</service>
 		<uses-library
 			android:name="org.apache.http.legacy"
 			android:required="false" />

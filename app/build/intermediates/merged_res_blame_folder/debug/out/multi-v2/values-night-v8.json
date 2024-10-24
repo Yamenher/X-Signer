@@ -1,10 +1,27 @@
 {
     "logs": [
         {
-            "outputFile": "com.xapps.utility.xsigner.app-mergeDebugResources-35:/values-night-v8/values-night-v8.xml",
+            "outputFile": "com.xapps.utility.xsigner.app-mergeDebugResources-33:/values-night-v8/values-night-v8.xml",
             "map": [
                 {
-                    "source": "/data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/feca9a0d7220b66f0f90934c778c24a2/transformed/appcompat-1.6.1/res/values-night-v8/values-night-v8.xml",
+                    "source": "/data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/f47a8cb2585f29cfa5e23b3e0239b59f/transformed/core-splashscreen-1.0.0/res/values-night-v8/values-night-v8.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "85",
+                        "endOffsets": "136"
+                    },
+                    "to": {
+                        "startLines": "29",
+                        "startColumns": "4",
+                        "startOffsets": "1541",
+                        "endColumns": "85",
+                        "endOffsets": "1622"
+                    }
+                },
+                {
+                    "source": "/data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/2e66ae34071e55fd5eb82f84649bffc4/transformed/appcompat-1.6.1/res/values-night-v8/values-night-v8.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",
@@ -21,7 +38,7 @@
                     }
                 },
                 {
-                    "source": "/data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/0a0db496d47887f21190aa211d48bb6a/transformed/material-1.13.0-alpha06/res/values-night-v8/values-night-v8.xml",
+                    "source": "/data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/1f1618a001a7564f01c781dce33e8004/transformed/material-1.13.0-alpha06/res/values-night-v8/values-night-v8.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -35,23 +52,6 @@
                         "startOffsets": "2899,2974,3085,3174,3275,3382,3489,3588,3695,3798,3925,4013,4137,4239,4341,4457,4559,4673,4801,4917,5039,5175,5295,5429,5549,5661,5876,5993,6117,6247,6369,6507,6641,6757",
                         "endColumns": "74,110,88,100,106,106,98,106,102,126,87,123,101,101,115,101,113,127,115,121,135,119,133,119,111,125,116,123,129,121,137,133,115,119",
                         "endOffsets": "2969,3080,3169,3270,3377,3484,3583,3690,3793,3920,4008,4132,4234,4336,4452,4554,4668,4796,4912,5034,5170,5290,5424,5544,5656,5782,5988,6112,6242,6364,6502,6636,6752,6872"
-                    }
-                },
-                {
-                    "source": "/data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/84c19c3ad4d233a9a24fab267d5792dc/transformed/core-splashscreen-1.0.0/res/values-night-v8/values-night-v8.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "85",
-                        "endOffsets": "136"
-                    },
-                    "to": {
-                        "startLines": "29",
-                        "startColumns": "4",
-                        "startOffsets": "1541",
-                        "endColumns": "85",
-                        "endOffsets": "1622"
                     }
                 },
                 {

@@ -61,7 +61,6 @@ import com.google.android.material.*;
 import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.button.*;
 import com.google.android.material.textfield.*;
-import com.google.firebase.FirebaseApp;
 import com.mursaat.extendedtextview.*;
 import java.io.*;
 import java.text.*;
@@ -173,9 +172,7 @@ getWindow().setAllowEnterTransitionOverlap(true);
 		super.onCreate(_savedInstanceState);
 		setContentView(R.layout.key_creating);
 		initialize(_savedInstanceState);
-		FirebaseApp.initializeApp(this);
-		
-					initializeLogic();
+		initializeLogic();
 	}
 	
 	@Override
@@ -541,7 +538,7 @@ getWindow().setAllowEnterTransitionOverlap(true);
 			    @Override
 			        public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
 				            if (actionId == EditorInfo.IME_ACTION_NEXT) {
-					    SketchwareUtil.hideKeyboard(getApplicationContext());
+					    XUtil.hideKeyboard(getApplicationContext());
 					    }
 				            return true;
 				            }
@@ -604,7 +601,7 @@ getWindow().setAllowEnterTransitionOverlap(true);
 			    @Override
 			        public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
 				            if (actionId == EditorInfo.IME_ACTION_DONE) {
-					    SketchwareUtil.hideKeyboard(getApplicationContext());
+					    XUtil.hideKeyboard(getApplicationContext());
 					    }
 				            return true;
 				            }
