@@ -17,6 +17,7 @@
 		android:label="@string/app_name"
 		android:requestLegacyExternalStorage="true"
 		android:usesCleartextTraffic="true"
+        android:name="XApplication"
 		android:theme="@style/AppTheme"
 		android:enableOnBackInvokedCallback="true">
 		<activity
