@@ -1,9 +1,5 @@
 [
     {
-        "merged": "com.xapps.utility.xsigner.app-merged_res-35:/color_m3_highlighted_text.xml.flat",
-        "source": "com.xapps.utility.xsigner.app-main-37:/color/m3_highlighted_text.xml"
-    },
-    {
         "merged": "com.xapps.utility.xsigner.app-merged_res-35:/drawable-xhdpi_ic_tester_1.png.flat",
         "source": "com.xapps.utility.xsigner.app-main-37:/drawable-xhdpi/ic_tester_1.png"
     },
@@ -12,12 +8,12 @@
         "source": "com.xapps.utility.xsigner.app-main-37:/layout/key_delete_dialog.xml"
     },
     {
-        "merged": "com.xapps.utility.xsigner.app-merged_res-35:/drawable_legacy_top_item_ripple.xml.flat",
-        "source": "com.xapps.utility.xsigner.app-main-37:/drawable/legacy_top_item_ripple.xml"
+        "merged": "com.xapps.utility.xsigner.app-merged_res-35:/drawable-night_legacy_drawer_item_ripple.xml.flat",
+        "source": "com.xapps.utility.xsigner.app-main-37:/drawable-night/legacy_drawer_item_ripple.xml"
     },
     {
-        "merged": "com.xapps.utility.xsigner.app-merged_res-35:/color_mtrl_switch_thumb_tint.xml.flat",
-        "source": "com.xapps.utility.xsigner.app-main-37:/color/mtrl_switch_thumb_tint.xml"
+        "merged": "com.xapps.utility.xsigner.app-merged_res-35:/drawable_legacy_top_item_ripple.xml.flat",
+        "source": "com.xapps.utility.xsigner.app-main-37:/drawable/legacy_top_item_ripple.xml"
     },
     {
         "merged": "com.xapps.utility.xsigner.app-merged_res-35:/drawable-xhdpi_ic_info_white.png.flat",
@@ -32,8 +28,12 @@
         "source": "com.xapps.utility.xsigner.app-main-37:/drawable-xhdpi/ic_arrow_right.png"
     },
     {
-        "merged": "com.xapps.utility.xsigner.app-merged_res-35:/color-night_mtrl_switch_track_decoration_tint.xml.flat",
-        "source": "com.xapps.utility.xsigner.app-main-37:/color-night/mtrl_switch_track_decoration_tint.xml"
+        "merged": "com.xapps.utility.xsigner.app-merged_res-35:/drawable-night_legacy_item_ripple.xml.flat",
+        "source": "com.xapps.utility.xsigner.app-main-37:/drawable-night/legacy_item_ripple.xml"
+    },
+    {
+        "merged": "com.xapps.utility.xsigner.app-merged_res-35:/drawable-night_drawer_highlight_item.xml.flat",
+        "source": "com.xapps.utility.xsigner.app-main-37:/drawable-night/drawer_highlight_item.xml"
     },
     {
         "merged": "com.xapps.utility.xsigner.app-merged_res-35:/drawable_drawable_progress_dialog.xml.flat",
@@ -48,6 +48,10 @@
         "source": "com.xapps.utility.xsigner.app-main-37:/layout/splash_screen.xml"
     },
     {
+        "merged": "com.xapps.utility.xsigner.app-merged_res-35:/drawable-night_legacy_top_item_ripple.xml.flat",
+        "source": "com.xapps.utility.xsigner.app-main-37:/drawable-night/legacy_top_item_ripple.xml"
+    },
+    {
         "merged": "com.xapps.utility.xsigner.app-merged_res-35:/drawable_drawable_drawer.xml.flat",
         "source": "com.xapps.utility.xsigner.app-main-37:/drawable/drawable_drawer.xml"
     },
@@ -56,8 +60,8 @@
         "source": "com.xapps.utility.xsigner.app-main-37:/drawable/legacy_item_ripple.xml"
     },
     {
-        "merged": "com.xapps.utility.xsigner.app-merged_res-35:/drawable_splash_compact_drawable.xml.flat",
-        "source": "com.xapps.utility.xsigner.app-main-37:/drawable/splash_compact_drawable.xml"
+        "merged": "com.xapps.utility.xsigner.app-merged_res-35:/drawable_main_bg_drawable.xml.flat",
+        "source": "com.xapps.utility.xsigner.app-main-37:/drawable/main_bg_drawable.xml"
     },
     {
         "merged": "com.xapps.utility.xsigner.app-merged_res-35:/drawable-xhdpi_ic_tester_4.png.flat",
@@ -84,10 +88,6 @@
         "source": "com.xapps.utility.xsigner.app-main-37:/layout/faq.xml"
     },
     {
-        "merged": "com.xapps.utility.xsigner.app-merged_res-35:/color_m3_dark_highlighted_text.xml.flat",
-        "source": "com.xapps.utility.xsigner.app-main-37:/color/m3_dark_highlighted_text.xml"
-    },
-    {
         "merged": "com.xapps.utility.xsigner.app-merged_res-35:/layout_key_select_dialog_fragment.xml.flat",
         "source": "com.xapps.utility.xsigner.app-main-37:/layout/key_select_dialog_fragment.xml"
     },
@@ -98,14 +98,6 @@
     {
         "merged": "com.xapps.utility.xsigner.app-merged_res-35:/drawable_legacy_bottom_item_ripple.xml.flat",
         "source": "com.xapps.utility.xsigner.app-main-37:/drawable/legacy_bottom_item_ripple.xml"
-    },
-    {
-        "merged": "com.xapps.utility.xsigner.app-merged_res-35:/drawable_ic_launcher_white.png.flat",
-        "source": "com.xapps.utility.xsigner.app-main-37:/drawable/ic_launcher_white.png"
-    },
-    {
-        "merged": "com.xapps.utility.xsigner.app-merged_res-35:/layout_welcome.xml.flat",
-        "source": "com.xapps.utility.xsigner.app-main-37:/layout/welcome.xml"
     },
     {
         "merged": "com.xapps.utility.xsigner.app-merged_res-35:/drawable_vector_home.xml.flat",
@@ -136,8 +128,8 @@
         "source": "com.xapps.utility.xsigner.app-main-37:/layout/key_creating.xml"
     },
     {
-        "merged": "com.xapps.utility.xsigner.app-merged_res-35:/drawable_ic_launcher_adaptive.png.flat",
-        "source": "com.xapps.utility.xsigner.app-main-37:/drawable/ic_launcher_adaptive.png"
+        "merged": "com.xapps.utility.xsigner.app-merged_res-35:/drawable-night_ic_container_main.xml.flat",
+        "source": "com.xapps.utility.xsigner.app-main-37:/drawable-night/ic_container_main.xml"
     },
     {
         "merged": "com.xapps.utility.xsigner.app-merged_res-35:/layout_key_import_dialog.xml.flat",
@@ -146,6 +138,14 @@
     {
         "merged": "com.xapps.utility.xsigner.app-merged_res-35:/drawable-xhdpi_ic_done_white.png.flat",
         "source": "com.xapps.utility.xsigner.app-main-37:/drawable-xhdpi/ic_done_white.png"
+    },
+    {
+        "merged": "com.xapps.utility.xsigner.app-merged_res-35:/drawable-xhdpi_ic_background_adaptive.png.flat",
+        "source": "com.xapps.utility.xsigner.app-main-37:/drawable-xhdpi/ic_background_adaptive.png"
+    },
+    {
+        "merged": "com.xapps.utility.xsigner.app-merged_res-35:/drawable-night_legacy_bottom_item_ripple.xml.flat",
+        "source": "com.xapps.utility.xsigner.app-main-37:/drawable-night/legacy_bottom_item_ripple.xml"
     },
     {
         "merged": "com.xapps.utility.xsigner.app-merged_res-35:/layout_info.xml.flat",
@@ -180,16 +180,12 @@
         "source": "com.xapps.utility.xsigner.app-main-37:/drawable/drawable_dialog.xml"
     },
     {
+        "merged": "com.xapps.utility.xsigner.app-merged_res-35:/drawable-xhdpi_ic_themed_adaptive.png.flat",
+        "source": "com.xapps.utility.xsigner.app-main-37:/drawable-xhdpi/ic_themed_adaptive.png"
+    },
+    {
         "merged": "com.xapps.utility.xsigner.app-merged_res-35:/drawable_ic_qm.xml.flat",
         "source": "com.xapps.utility.xsigner.app-main-37:/drawable/ic_qm.xml"
-    },
-    {
-        "merged": "com.xapps.utility.xsigner.app-merged_res-35:/color-night_mtrl_switch_track_tint.xml.flat",
-        "source": "com.xapps.utility.xsigner.app-main-37:/color-night/mtrl_switch_track_tint.xml"
-    },
-    {
-        "merged": "com.xapps.utility.xsigner.app-merged_res-35:/drawable_ic_themed_adaptive.png.flat",
-        "source": "com.xapps.utility.xsigner.app-main-37:/drawable/ic_themed_adaptive.png"
     },
     {
         "merged": "com.xapps.utility.xsigner.app-merged_res-35:/drawable-xhdpi_ic_create_white.png.flat",
@@ -204,12 +200,16 @@
         "source": "com.xapps.utility.xsigner.app-main-37:/drawable/ic_android.xml"
     },
     {
-        "merged": "com.xapps.utility.xsigner.app-merged_res-35:/color-night_m3_checkbox_button_tint.xml.flat",
-        "source": "com.xapps.utility.xsigner.app-main-37:/color-night/m3_checkbox_button_tint.xml"
+        "merged": "com.xapps.utility.xsigner.app-merged_res-35:/drawable-night_legacy_item_background.xml.flat",
+        "source": "com.xapps.utility.xsigner.app-main-37:/drawable-night/legacy_item_background.xml"
     },
     {
         "merged": "com.xapps.utility.xsigner.app-merged_res-35:/drawable_legacy_dialog_positive_ripple.xml.flat",
         "source": "com.xapps.utility.xsigner.app-main-37:/drawable/legacy_dialog_positive_ripple.xml"
+    },
+    {
+        "merged": "com.xapps.utility.xsigner.app-merged_res-35:/drawable-xhdpi_ic_info_outline_white.png.flat",
+        "source": "com.xapps.utility.xsigner.app-main-37:/drawable-xhdpi/ic_info_outline_white.png"
     },
     {
         "merged": "com.xapps.utility.xsigner.app-merged_res-35:/layout_file_signing_progress.xml.flat",
@@ -220,24 +220,16 @@
         "source": "com.xapps.utility.xsigner.app-main-37:/drawable-xhdpi/ic_create_black.png"
     },
     {
-        "merged": "com.xapps.utility.xsigner.app-merged_res-35:/color_m3_checkbox_button_tint.xml.flat",
-        "source": "com.xapps.utility.xsigner.app-main-37:/color/m3_checkbox_button_tint.xml"
-    },
-    {
         "merged": "com.xapps.utility.xsigner.app-merged_res-35:/drawable-xhdpi_ic_file_black.png.flat",
         "source": "com.xapps.utility.xsigner.app-main-37:/drawable-xhdpi/ic_file_black.png"
     },
     {
-        "merged": "com.xapps.utility.xsigner.app-merged_res-35:/color_mtrl_switch_track_tint.xml.flat",
-        "source": "com.xapps.utility.xsigner.app-main-37:/color/mtrl_switch_track_tint.xml"
+        "merged": "com.xapps.utility.xsigner.app-merged_res-35:/drawable-night_main_bg_drawable.xml.flat",
+        "source": "com.xapps.utility.xsigner.app-main-37:/drawable-night/main_bg_drawable.xml"
     },
     {
-        "merged": "com.xapps.utility.xsigner.app-merged_res-35:/color-night_mtrl_switch_thumb_tint.xml.flat",
-        "source": "com.xapps.utility.xsigner.app-main-37:/color-night/mtrl_switch_thumb_tint.xml"
-    },
-    {
-        "merged": "com.xapps.utility.xsigner.app-merged_res-35:/color-night_mtrl_outlined_stroke_color.xml.flat",
-        "source": "com.xapps.utility.xsigner.app-main-37:/color-night/mtrl_outlined_stroke_color.xml"
+        "merged": "com.xapps.utility.xsigner.app-merged_res-35:/drawable_ic_container_main.xml.flat",
+        "source": "com.xapps.utility.xsigner.app-main-37:/drawable/ic_container_main.xml"
     },
     {
         "merged": "com.xapps.utility.xsigner.app-merged_res-35:/layout__drawer_main.xml.flat",
@@ -252,16 +244,8 @@
         "source": "com.xapps.utility.xsigner.app-main-37:/drawable/logo_anonymous.xml"
     },
     {
-        "merged": "com.xapps.utility.xsigner.app-merged_res-35:/drawable_ic_background_adaptive.png.flat",
-        "source": "com.xapps.utility.xsigner.app-main-37:/drawable/ic_background_adaptive.png"
-    },
-    {
         "merged": "com.xapps.utility.xsigner.app-merged_res-35:/layout_key_loading_dialog.xml.flat",
         "source": "com.xapps.utility.xsigner.app-main-37:/layout/key_loading_dialog.xml"
-    },
-    {
-        "merged": "com.xapps.utility.xsigner.app-merged_res-35:/color_mtrl_indicator_text_color.xml.flat",
-        "source": "com.xapps.utility.xsigner.app-main-37:/color/mtrl_indicator_text_color.xml"
     },
     {
         "merged": "com.xapps.utility.xsigner.app-merged_res-35:/layout_material_dialog_layout_custom.xml.flat",
@@ -272,16 +256,12 @@
         "source": "com.xapps.utility.xsigner.app-main-37:/layout/permission_bottom_sheet.xml"
     },
     {
-        "merged": "com.xapps.utility.xsigner.app-merged_res-35:/drawable_ic_foreground_adaptive.png.flat",
-        "source": "com.xapps.utility.xsigner.app-main-37:/drawable/ic_foreground_adaptive.png"
+        "merged": "com.xapps.utility.xsigner.app-merged_res-35:/drawable_drawer_highlight_item.xml.flat",
+        "source": "com.xapps.utility.xsigner.app-main-37:/drawable/drawer_highlight_item.xml"
     },
     {
         "merged": "com.xapps.utility.xsigner.app-merged_res-35:/drawable-xhdpi_ic_error_white.png.flat",
         "source": "com.xapps.utility.xsigner.app-main-37:/drawable-xhdpi/ic_error_white.png"
-    },
-    {
-        "merged": "com.xapps.utility.xsigner.app-merged_res-35:/drawable_ic_launcher.png.flat",
-        "source": "com.xapps.utility.xsigner.app-main-37:/drawable/ic_launcher.png"
     },
     {
         "merged": "com.xapps.utility.xsigner.app-merged_res-35:/drawable-xhdpi_default_image.png.flat",
@@ -292,16 +272,16 @@
         "source": "com.xapps.utility.xsigner.app-main-37:/font/product_sans_regular.ttf"
     },
     {
-        "merged": "com.xapps.utility.xsigner.app-merged_res-35:/color_mtrl_switch_track_decoration_tint.xml.flat",
-        "source": "com.xapps.utility.xsigner.app-main-37:/color/mtrl_switch_track_decoration_tint.xml"
-    },
-    {
         "merged": "com.xapps.utility.xsigner.app-merged_res-35:/layout_login.xml.flat",
         "source": "com.xapps.utility.xsigner.app-main-37:/layout/login.xml"
     },
     {
         "merged": "com.xapps.utility.xsigner.app-merged_res-35:/anim_slide_out_down.xml.flat",
         "source": "com.xapps.utility.xsigner.app-main-37:/anim/slide_out_down.xml"
+    },
+    {
+        "merged": "com.xapps.utility.xsigner.app-merged_res-35:/drawable-xhdpi_ic_container_main.xml.flat",
+        "source": "com.xapps.utility.xsigner.app-main-37:/drawable-xhdpi/ic_container_main.xml"
     },
     {
         "merged": "com.xapps.utility.xsigner.app-merged_res-35:/layout_key_select_list.xml.flat",
@@ -312,20 +292,20 @@
         "source": "com.xapps.utility.xsigner.app-main-37:/layout/update.xml"
     },
     {
-        "merged": "com.xapps.utility.xsigner.app-merged_res-35:/drawable-xhdpi_ic_vpn_key_black.png.flat",
-        "source": "com.xapps.utility.xsigner.app-main-37:/drawable-xhdpi/ic_vpn_key_black.png"
+        "merged": "com.xapps.utility.xsigner.app-merged_res-35:/drawable-xhdpi_ic_launcher.png.flat",
+        "source": "com.xapps.utility.xsigner.app-main-37:/drawable-xhdpi/ic_launcher.png"
     },
     {
-        "merged": "com.xapps.utility.xsigner.app-merged_res-35:/drawable-xhdpi-v26_app_icon.xml.flat",
-        "source": "com.xapps.utility.xsigner.app-main-37:/drawable-xhdpi-v26/app_icon.xml"
+        "merged": "com.xapps.utility.xsigner.app-merged_res-35:/drawable-xhdpi_ic_vpn_key_black.png.flat",
+        "source": "com.xapps.utility.xsigner.app-main-37:/drawable-xhdpi/ic_vpn_key_black.png"
     },
     {
         "merged": "com.xapps.utility.xsigner.app-merged_res-35:/layout_custom_material_dialog_signing_options.xml.flat",
         "source": "com.xapps.utility.xsigner.app-main-37:/layout/custom_material_dialog_signing_options.xml"
     },
     {
-        "merged": "com.xapps.utility.xsigner.app-merged_res-35:/color_mtrl_outlined_stroke_color.xml.flat",
-        "source": "com.xapps.utility.xsigner.app-main-37:/color/mtrl_outlined_stroke_color.xml"
+        "merged": "com.xapps.utility.xsigner.app-merged_res-35:/drawable-night_legacy_dialog_positive_ripple.xml.flat",
+        "source": "com.xapps.utility.xsigner.app-main-37:/drawable-night/legacy_dialog_positive_ripple.xml"
     },
     {
         "merged": "com.xapps.utility.xsigner.app-merged_res-35:/drawable-xhdpi_ic_restore_black.png.flat",

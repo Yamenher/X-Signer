@@ -28,7 +28,9 @@ import com.google.android.material.shape.ShapeAppearanceModel;
 import com.google.android.material.shape.CornerFamily;
 import com.google.android.material.transition.platform.MaterialContainerTransformSharedElementCallback;
 import androidx.core.app.ActivityOptionsCompat;
-import com.google.android.material.appbar.MaterialToolbar;
+import com.google.android.material.appbar.MaterialToolbar;
+
+
 
 public class FaqActivity extends AppCompatActivity {
 	
@@ -82,13 +84,13 @@ public class FaqActivity extends AppCompatActivity {
 			public void onScrollChange(View v, int _scrollX, int _scrollY, int _oldScrollX, int _oldScrollY) {
 				if (_scrollY == 0) {
 					if (isLifted) {
-						animateColorChange(getColor(R.color.colorToolbarLifted), getColor(R.color.colorPrimaryDark));
+						animateColorChange(getColor(R.color.md_theme_secondary), getColor(R.color.md_theme_surface));
 						isLifted = false;
 					}
 				}
 				else {
 					if (!isLifted) {
-						animateColorChange(getColor(R.color.colorPrimaryDark), getColor(R.color.colorToolbarLifted));
+						animateColorChange(getColor(R.color.md_theme_surface), getColor(R.color.md_theme_secondary));
 						isLifted = true;
 					}
 				}
@@ -110,18 +112,18 @@ public class FaqActivity extends AppCompatActivity {
 			    statusBarHeight = getResources().getDimensionPixelSize(r2);
 		}
 		_SetMargins(_toolbar, 0, statusBarHeight, 0, 0);
-		_coordinator.setBackgroundColor(getColor(R.color.colorPrimaryDark));
-		_toolbar.getNavigationIcon().setColorFilter(getColor(R.color.colorTextMain), PorterDuff.Mode.SRC_IN);
-		_toolbar.setBackgroundColor(getColor(R.color.colorPrimaryDark));
-		_app_bar.setBackgroundColor(getColor(R.color.colorPrimaryDark));
-		_toolbar.setTitleTextColor(getColor(R.color.colorTextMain));
+		_coordinator.setBackgroundColor(getColor(R.color.md_theme_surface));
+		_toolbar.getNavigationIcon().setColorFilter(getColor(R.color.md_theme_textMain), PorterDuff.Mode.SRC_IN);
+		_toolbar.setBackgroundColor(getColor(R.color.md_theme_surface));
+		_app_bar.setBackgroundColor(getColor(R.color.md_theme_surface));
+		_toolbar.setTitleTextColor(getColor(R.color.md_theme_textMain));
         String keysInfo = "Q : What's the differnce between JKS, BKS, and PKCS12 keys? \n\nA : In the realm of cryptographic key management, three prominent keystore formats are commonly utilized: JKS (Java KeyStore), BKS (Bouncy Castle KeyStore), and PKCS12 (Public-Key Cryptography Standards #12). Each of these formats serves unique purposes and offers different features tailored to specific application needs.\n\n" +
         "JKS (Java KeyStore) is the default keystore format in Java, primarily used for storing private keys, public keys, and certificates. While it is straightforward and convenient for Java applications, it is less secure due to its proprietary format and limited encryption support, making it suitable for simple applications where high security is not a primary concern.\n\n" +
         "BKS (Bouncy Castle KeyStore) is part of the Bouncy Castle library and is designed for enhanced security, supporting various encryption algorithms. This makes it an excellent choice for mobile applications, especially on Android, where robust security measures are essential.\n\n" +
         "PKCS12 (Public-Key Cryptography Standards #12) is a widely recognized standard that provides strong encryption and password protection, making it ideal for cross-platform compatibility. It is suitable for both personal and enterprise use, especially in scenarios where secure key management and interoperability between different systems are crucial.\n\n" +
         "Each keystore type serves specific needs, so choosing the right one depends on the application's requirements and security considerations.";
-        SpannableStringBuilder firstInfo = TextFormatter.formatText(keysInfo, "Q : What's the differnce between JKS, BKS, and PKCS12 keys?", "BC", getColor(R.color.colorAccent));
-        firstInfo = TextFormatter.formatText(firstInfo, "A :","BC", getColor(R.color.colorAccent));
+        SpannableStringBuilder firstInfo = TextFormatter.formatText(keysInfo, "Q : What's the differnce between JKS, BKS, and PKCS12 keys?", "BC", getColor(R.color.md_theme_primaryContainer));
+        firstInfo = TextFormatter.formatText(firstInfo, "A :","BC", getColor(R.color.md_theme_primaryContainer));
         firstInfo = TextFormatter.formatText(firstInfo, "JKS (Java KeyStore)","bold", 0);
         firstInfo = TextFormatter.formatText(firstInfo, "BKS (Bouncy Castle KeyStore)","bold", 0);
         firstInfo = TextFormatter.formatText(firstInfo, "PKCS12 (Public-Key Cryptography Standards #12)","bold", 0);
@@ -164,4 +166,4 @@ public class FaqActivity extends AppCompatActivity {
 		    colorAnimation.start();
 	}
 	
-}
+}

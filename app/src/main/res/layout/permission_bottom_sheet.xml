@@ -32,7 +32,7 @@
 			android:textSize="25sp"
 			android:layout_gravity="center_horizontal"
 			android:fontFamily="@font/product_sans_regular"
-			android:textColor="@color/colorTextMain" />
+			android:textColor="@color/md_theme_textMain" />
 		<TextView
 			android:id="@+id/Description"
 			android:focusable="false"
@@ -56,13 +56,10 @@
 			android:text="Allow"
 			android:textSize="18sp"
 			android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
-			app:backgroundTint="@color/colorAccent"
 			app:cornerRadius="100dp"
 			style="@style/Widget.MaterialComponents.Button"
 			app:textAllCaps="false"
 			android:letterSpacing="0.0"
-			app:rippleColor="@color/colorAccentDark"
-			android:fontFamily="@font/product_sans_regular"
-			android:textColor="@color/colorTextButton" />
+			android:fontFamily="@font/product_sans_regular" />
 	</LinearLayout>
 </LinearLayout>

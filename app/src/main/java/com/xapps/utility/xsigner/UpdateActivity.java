@@ -80,7 +80,9 @@ import com.google.android.material.internal.EdgeToEdgeUtils;
 import androidx.core.widget.NestedScrollView;
 import android.animation.ArgbEvaluator;
 import android.animation.ValueAnimator;
-import androidx.core.widget.NestedScrollView;
+import androidx.core.widget.NestedScrollView;
+
+
 
 public class UpdateActivity extends AppCompatActivity {
 	
@@ -312,13 +314,13 @@ public class UpdateActivity extends AppCompatActivity {
 			public void onScrollChange(View v, int _scrollX, int _scrollY, int _oldScrollX, int _oldScrollY) {
 				if (_scrollY == 0) {
 					if (isLifted) {
-						animateColorChange(getColor(R.color.colorToolbarLifted), getColor(R.color.colorPrimaryDark));
+						animateColorChange(getColor(R.color.md_theme_secondary), getColor(R.color.md_theme_surface));
 						isLifted = false;
 					}
 				}
 				else {
 					if (!isLifted) {
-						animateColorChange(getColor(R.color.colorPrimaryDark), getColor(R.color.colorToolbarLifted));
+						animateColorChange(getColor(R.color.md_theme_surface), getColor(R.color.md_theme_secondary));
 						isLifted = true;
 					}
 				}
@@ -450,19 +452,20 @@ public class UpdateActivity extends AppCompatActivity {
 	
 	
 	public void _SetupUi() {
-		_coordinator.setBackgroundColor(getColor(R.color.colorPrimaryDark));
+		_coordinator.setBackgroundColor(getColor(R.color.md_theme_surface));
 		
-		swiperefreshlayout.setColorSchemeColors(getColor(R.color.colorAccent));
+		swiperefreshlayout.setColorSchemeColors(getColor(R.color.md_theme_primary));
 		
-		swiperefreshlayout.setProgressBackgroundColorSchemeColor(getColor(R.color.colorToolbarLifted));
+		swiperefreshlayout.setProgressBackgroundColorSchemeColor(getColor(R.color.md_theme_secondary));
 		
-		_toolbar.setTitleTextColor(getColor(R.color.colorTextMain));
-		_app_bar.setBackgroundColor(getColor(R.color.colorPrimaryDark));
-		_toolbar.setBackgroundColor(getColor(R.color.colorPrimaryDark));
-		_toolbar.getNavigationIcon().setColorFilter(getColor(R.color.colorTextMain), PorterDuff.Mode.SRC_IN);
+		_toolbar.setTitleTextColor(getColor(R.color.md_theme_textMain));
+		_app_bar.setBackgroundColor(getColor(R.color.md_theme_surface));
+		_toolbar.setBackgroundColor(getColor(R.color.md_theme_surface));
+		_toolbar.getNavigationIcon().setColorFilter(getColor(R.color.md_theme_textMain), PorterDuff.Mode.SRC_IN);
 		int nightModeMask = getResources().getConfiguration().uiMode & android.content.res.Configuration.UI_MODE_NIGHT_MASK;
 		
-		if (nightModeMask == android.content.res.Configuration.UI_MODE_NIGHT_YES) {		
+		if (nightModeMask == android.content.res.Configuration.UI_MODE_NIGHT_YES) {
+		
 					_Radius(VersionRelatedLinear, _DpToPx(20), _DpToPx(20), _DpToPx(20), _DpToPx(20), "#17242D");
 			_Radius(NewLatestLinear, _DpToPx(20), _DpToPx(20), _DpToPx(20), _DpToPx(20), "#17242D");
 		} else {
@@ -482,7 +485,7 @@ public class UpdateActivity extends AppCompatActivity {
 		if (r2 > 0) {
 			    statusBarHeight = getResources().getDimensionPixelSize(r2);
 		}
-		WhatsNewContainer.setBackground(new GradientDrawable() { public GradientDrawable getIns(int a, int b) { this.setCornerRadius(a); this.setColor(b); return this; } }.getIns((int)500, getColor(R.color.colorDrawerSelected)));
+		WhatsNewContainer.setBackground(new GradientDrawable() { public GradientDrawable getIns(int a, int b) { this.setCornerRadius(a); this.setColor(b); return this; } }.getIns((int)500, getColor(R.color.md_theme_primaryContainer)));
 		_SetMargins(_toolbar, 0, statusBarHeight, 0, 0);
 	}
 	
@@ -504,8 +507,8 @@ public class UpdateActivity extends AppCompatActivity {
 			    transform.setFadeMode(MaterialContainerTransform.FADE_MODE_OUT); 
 			    transform.setDuration(400L);
 		}
-		    transform.setAllContainerColors(getColor(R.color.colorPrimaryDark));
-		    transform.setScrimColor(getColor(R.color.colorPrimaryDark));
+		    transform.setAllContainerColors(getColor(R.color.md_theme_surface));
+		    transform.setScrimColor(getColor(R.color.md_theme_surface));
 		    transform.addTarget(android.R.id.content);
 		return transform;
 	}
@@ -958,7 +961,9 @@ public class UpdateActivity extends AppCompatActivity {
 		android.graphics.drawable.GradientDrawable gd = new android.graphics.drawable.GradientDrawable();
 		gd.setColor(Color.parseColor(_color));
 		gd.setCornerRadii(new float[] { (float)_lefttop, (float)_lefttop, (float)_righttop, (float)_righttop, (float)_rightbottom, (float)_rightbottom, (float)_leftbottom, (float)_leftbottom });
-		_view.setBackground(gd);
+		_view.setBackground(gd);
+
+
 	}
 	
 	
@@ -1032,4 +1037,4 @@ public class UpdateActivity extends AppCompatActivity {
 	public int getDisplayHeightPixels() {
 		return getResources().getDisplayMetrics().heightPixels;
 	}
-}
+}

@@ -4,7 +4,24 @@
             "outputFile": "com.xapps.utility.xsigner.app-mergeDebugResources-33:/values-pt-rBR/values-pt-rBR.xml",
             "map": [
                 {
-                    "source": "/data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/2e66ae34071e55fd5eb82f84649bffc4/transformed/appcompat-1.6.1/res/values-pt-rBR/values-pt-rBR.xml",
+                    "source": "/data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/bfebdccffa02b738d6bbc9119166892e/transformed/core-1.13.0/res/values-pt-rBR/values-pt-rBR.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,152,254,353,453,560,670,790",
+                        "endColumns": "96,101,98,99,106,109,119,100",
+                        "endOffsets": "147,249,348,448,555,665,785,886"
+                    },
+                    "to": {
+                        "startLines": "38,39,40,41,42,43,44,119",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "3488,3585,3687,3786,3886,3993,4103,10184",
+                        "endColumns": "96,101,98,99,106,109,119,100",
+                        "endOffsets": "3580,3682,3781,3881,3988,4098,4218,10280"
+                    }
+                },
+                {
+                    "source": "/data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/7f4302dd7aa34ec04957c8acd405625d/transformed/appcompat-1.6.1/res/values-pt-rBR/values-pt-rBR.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -21,7 +38,7 @@
                     }
                 },
                 {
-                    "source": "/data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/1f1618a001a7564f01c781dce33e8004/transformed/material-1.13.0-alpha06/res/values-pt-rBR/values-pt-rBR.xml",
+                    "source": "/data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/1e408c64d6a70466260fa427504d2627/transformed/material-1.13.0-alpha06/res/values-pt-rBR/values-pt-rBR.xml",
                     "from": {
                         "startLines": "2,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -37,23 +54,6 @@
                         "endLines": "5,33,34,35,36,37,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,116,117,118",
                         "endColumns": "12,80,77,83,94,88,100,119,80,59,63,91,78,59,89,63,70,62,74,63,70,75,55,53,126,57,61,53,78,140,86,75,94,80,81,138,82,83,138,86,79,55,50,65,73,79,70,82,72,76,68,73,101,87,76,92,95,73,79,96,51,83,65,86,87,61,63,62,67,108,110,103,109,59,54,76,82,76,78",
                         "endOffsets": "318,3137,3215,3299,3394,3483,4319,4439,4520,4580,4644,4736,4815,4875,4965,5029,5100,5163,5238,5302,5373,5449,5505,5559,5686,5744,5806,5860,5939,6080,6167,6243,6338,6419,6501,6640,6723,6807,6946,7033,7113,7169,7220,7286,7360,7440,7511,7594,7667,7744,7813,7887,7989,8077,8154,8247,8343,8417,8497,8594,8646,8730,8796,8883,8971,9033,9097,9160,9228,9337,9448,9552,9662,9722,9777,9854,10023,10100,10179"
-                    }
-                },
-                {
-                    "source": "/data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/e348573f5054306bb7610d95829db87b/transformed/core-1.13.0/res/values-pt-rBR/values-pt-rBR.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,152,254,353,453,560,670,790",
-                        "endColumns": "96,101,98,99,106,109,119,100",
-                        "endOffsets": "147,249,348,448,555,665,785,886"
-                    },
-                    "to": {
-                        "startLines": "38,39,40,41,42,43,44,119",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "3488,3585,3687,3786,3886,3993,4103,10184",
-                        "endColumns": "96,101,98,99,106,109,119,100",
-                        "endOffsets": "3580,3682,3781,3881,3988,4098,4218,10280"
                     }
                 }
             ]

@@ -96,7 +96,9 @@ import java.io.File;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.OnApplyWindowInsetsListener;
 import android.view.inputmethod.InputMethodManager;
-import android.view.inputmethod.EditorInfo;
+import android.view.inputmethod.EditorInfo;
+
+
 
 public class KeyCreatingActivity extends AppCompatActivity {
 	
@@ -235,13 +237,13 @@ getWindow().setAllowEnterTransitionOverlap(true);
 			public void onScrollChange(View v, int _scrollX, int _scrollY, int _oldScrollX, int _oldScrollY) {
 				if (_scrollY == 0) {
 					if (isLifted) {
-						animateColorChange(getColor(R.color.colorToolbarLifted), getColor(R.color.colorPrimaryDark));
+						animateColorChange(getColor(R.color.md_theme_secondary), getColor(R.color.md_theme_surface));
 						isLifted = false;
 					}
 				}
 				else {
 					if (!isLifted) {
-						animateColorChange(getColor(R.color.colorPrimaryDark), getColor(R.color.colorToolbarLifted));
+						animateColorChange(getColor(R.color.md_theme_surface), getColor(R.color.md_theme_secondary));
 						isLifted = true;
 					}
 				}
@@ -388,13 +390,17 @@ getWindow().setAllowEnterTransitionOverlap(true);
 							};
 							_timer.scheduleAtFixedRate(FinishTimer, (int)(1000), (int)(100));
 							return ;
-						}
+						}
+
+
 						protected Void doInBackground(Void... arg0) {
 							
 							_CreateSigningKey(KeyTypeE.getText().toString(), OutputPath, KeyStorePassE.getText().toString().trim(), AliasE.getText().toString().trim(), AliasPassE.getText().toString().trim(), "CN=".concat(AliasE.getText().toString().trim().concat(", ").concat("OU=".concat(OrUnitE.getText().toString().trim().concat(", ").concat("O=".concat(OrNameE.getText().toString().trim().concat(", ").concat("L=".concat(CityE.getText().toString().trim().concat(", ").concat("ST=".concat(StateE.getText().toString().trim().concat(", ").concat("C=".concat(CountryE.getText().toString().trim()))))))))))), (int)ValidityYears, (int)KeySizeBits);
 							
 							return null;
-							 }
+							 }
+
+
 						protected void onPostExecute(Void result) {
 							IsCreated = true;
 											return ;
@@ -613,15 +619,16 @@ getWindow().setAllowEnterTransitionOverlap(true);
 	
 	
 	public void _SetupUI() {
-		_coordinator.setBackgroundColor(getColor(R.color.colorPrimaryDark));
+		_coordinator.setBackgroundColor(getColor(R.color.md_theme_surface));
 		
-		_toolbar.setTitleTextColor(getColor(R.color.colorTextMain));
-		_app_bar.setBackgroundColor(getColor(R.color.colorPrimaryDark));
-		_toolbar.setBackgroundColor(getColor(R.color.colorPrimaryDark));
-		_toolbar.getNavigationIcon().setColorFilter(getColor(R.color.colorTextMain), PorterDuff.Mode.SRC_IN);
+		_toolbar.setTitleTextColor(getColor(R.color.md_theme_textMain));
+		_app_bar.setBackgroundColor(getColor(R.color.md_theme_surface));
+		_toolbar.setBackgroundColor(getColor(R.color.md_theme_surface));
+		_toolbar.getNavigationIcon().setColorFilter(getColor(R.color.md_theme_textMain), PorterDuff.Mode.SRC_IN);
 		int nightModeMask = getResources().getConfiguration().uiMode & android.content.res.Configuration.UI_MODE_NIGHT_MASK;
 		
-		if (nightModeMask == android.content.res.Configuration.UI_MODE_NIGHT_YES) {		
+		if (nightModeMask == android.content.res.Configuration.UI_MODE_NIGHT_YES) {
+		
 					_toolbar.getNavigationIcon().setColorFilter(Color.WHITE, PorterDuff.Mode.SRC_IN);
 		} else {
 					getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR);
@@ -761,4 +768,4 @@ getWindow().setAllowEnterTransitionOverlap(true);
 	public int getDisplayHeightPixels() {
 		return getResources().getDisplayMetrics().heightPixels;
 	}
-}
+}

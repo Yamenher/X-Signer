@@ -42,7 +42,9 @@ import com.google.android.material.shape.ShapeAppearanceModel;
 import com.google.android.material.shape.CornerFamily;
 import com.google.android.material.transition.platform.MaterialContainerTransformSharedElementCallback;
 import androidx.core.app.ActivityOptionsCompat;
-import com.google.android.material.appbar.MaterialToolbar;
+import com.google.android.material.appbar.MaterialToolbar;
+
+
 
 public class InfoActivity extends AppCompatActivity {
 	
@@ -216,11 +218,11 @@ public class InfoActivity extends AppCompatActivity {
 			e.printStackTrace();
 		}
 		if (Build.VERSION.SDK_INT >= 29) {
-            _toolbar.getNavigationIcon().setColorFilter(new BlendModeColorFilter(getColor(R.color.colorTextMain), BlendMode.SRC_ATOP));
-            UpdateIcon.setColorFilter(new BlendModeColorFilter(getColor(R.color.colorTextMain), BlendMode.SRC_ATOP));
+            _toolbar.getNavigationIcon().setColorFilter(new BlendModeColorFilter(getColor(R.color.md_theme_textMain), BlendMode.SRC_ATOP));
+            UpdateIcon.setColorFilter(new BlendModeColorFilter(getColor(R.color.md_theme_textMain), BlendMode.SRC_ATOP));
         } else {
-		    _toolbar.getNavigationIcon().setColorFilter(getColor(R.color.colorTextMain), PorterDuff.Mode.SRC_IN);
-	    	UpdateIcon.setColorFilter(getColor(R.color.colorTextMain), PorterDuff.Mode.SRC_IN);
+		    _toolbar.getNavigationIcon().setColorFilter(getColor(R.color.md_theme_textMain), PorterDuff.Mode.SRC_IN);
+	    	UpdateIcon.setColorFilter(getColor(R.color.md_theme_textMain), PorterDuff.Mode.SRC_IN);
         }
 		
 		_toolbar.setTitleCentered(true);
@@ -230,36 +232,14 @@ public class InfoActivity extends AppCompatActivity {
 		collapsingtoolbar.setExpandedTitleTypeface(tf); 
 		int nightModeMask = getResources().getConfiguration().uiMode & android.content.res.Configuration.UI_MODE_NIGHT_MASK;
 		
-		if (nightModeMask == android.content.res.Configuration.UI_MODE_NIGHT_YES) {		
+		if (nightModeMask == android.content.res.Configuration.UI_MODE_NIGHT_YES) {
+		
 					collapsingtoolbar.setCollapsedTitleTextColor(0xFFFFFFFF);
 			collapsingtoolbar.setExpandedTitleColor(0xFFFFFFFF);
-			_MakeRipple(VersionCodeLinear, 0, 0, "#1F2D38", "#3D4952");
-			_MakeRipple(ProductionPhaseLinear, 0, 0, "#1F2D38", "#3D4952");
-			_MakeRipple(User1, 0, 0, "#1F2D38", "#3D4952");
-			_MakeRipple(User2, 0, 0, "#1F2D38", "#3D4952");
-			_MakeRipple(User4, 0, 0, "#1F2D38", "#3D4952");
 		} else {
 					collapsingtoolbar.setCollapsedTitleTextColor(0xFF000000);
 			collapsingtoolbar.setExpandedTitleColor(0xFF000000);
-			_MakeRipple(VersionCodeLinear, 0, 0, "#E9F2FB", "#CFD7DA");
-			_MakeRipple(ProductionPhaseLinear, 0, 0, "#E9F2FB", "#CFD7DA");
-			_MakeRipple(User1, 0, 0, "#E9F2FB", "#CFD7DA");
-			_MakeRipple(User2, 0, 0, "#E9F2FB", "#CFD7DA");
-			_MakeRipple(User4, 0, 0, "#E9F2FB", "#CFD7DA");
 		}
-		_app_bar.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
-			            @Override
-			            public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
-				                int totalScrollRange = appBarLayout.getTotalScrollRange();
-				                float scrollPercentage = Math.abs(verticalOffset) / (float) totalScrollRange;
-				
-				ArgbEvaluator argbEvaluator = new ArgbEvaluator();                
-				                int toolbarColor = (int) argbEvaluator.evaluate(scrollPercentage, getColor(R.color.colorPrimaryDark), getColor(R.color.colorToolbarLifted));                
-				_toolbar.setBackgroundColor(toolbarColor);
-				collapsingtoolbar.setBackgroundColor(toolbarColor);
-				collapsingtoolbar.setContentScrimColor(toolbarColor);
-				            }
-			        });
 		int navigationBarHeight = 0;
 		int statusBarHeight= 0;
 		int r1 = getResources().getIdentifier("navigation_bar_height", "dimen", "android");
@@ -357,12 +337,12 @@ public class InfoActivity extends AppCompatActivity {
 	}
 	
 	
-	public void _MakeRipple(final View _view, final double _shadow, final double _radius, final String _color, final String _ripple) {
+	public void _MakeRipple(final View _view, final double _shadow, final double _radius, final int _color, final int _ripple) {
 		android.graphics.drawable.GradientDrawable gd = new android.graphics.drawable.GradientDrawable();
-		gd.setColor(Color.parseColor(_color));
+		gd.setColor(_color);
 		gd.setCornerRadius((int)_radius);
 		_view.setElevation((int)_shadow);
-		android.content.res.ColorStateList clrb = new android.content.res.ColorStateList(new int[][]{new int[]{}}, new int[]{Color.parseColor(_ripple)});
+		android.content.res.ColorStateList clrb = new android.content.res.ColorStateList(new int[][]{new int[]{}}, new int[]{_ripple});
 		android.graphics.drawable.RippleDrawable ripdrb = new android.graphics.drawable.RippleDrawable(clrb , gd, null);
 		_view.setClickable(true);
 		_view.setBackground(ripdrb);
@@ -376,4 +356,4 @@ public class InfoActivity extends AppCompatActivity {
 		    this, UpdateLinear, "transition2");
 		startActivity(intent, options.toBundle());
 	}
-}
+}

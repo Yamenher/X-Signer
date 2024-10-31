@@ -9,16 +9,12 @@
 		android:id="@+id/_app_bar"
 		android:layout_height="wrap_content"
 		android:layout_width="match_parent"
-		android:theme="@style/Widget.Material3.AppBarLayout.Custom"
-		app:liftOnScroll="true"
-		app:liftOnScrollColor="@color/colorToolbarLifted"
-		android:background="@color/colorPrimaryDark">
+		android:background="?colorSurface">
 		<androidx.appcompat.widget.Toolbar
 			android:id="@+id/_toolbar"
 			android:layout_height="?attr/actionBarSize"
 			android:layout_width="match_parent"
-			android:transitionName="transition"
-			app:theme="@style/Theme.Base.Main" />
+			android:transitionName="transition"/>
 	</com.google.android.material.appbar.AppBarLayout>
 	<LinearLayout
 		android:layout_width="match_parent"
@@ -67,7 +63,7 @@
 								android:text="Version details"
 								android:textSize="25sp"
 								android:fontFamily="@font/product_sans_regular"
-								android:textColor="@color/colorTextMain" />
+								android:textColor="@color/md_theme_textMain" />
 						</LinearLayout>
 						<LinearLayout
 							android:id="@+id/CurrentLinear"
@@ -88,7 +84,7 @@
 								android:textSize="18sp"
 								android:layout_weight="1"
 								android:fontFamily="@font/product_sans_regular"
-								android:textColor="@color/colorTextMain" />
+								android:textColor="@color/md_theme_textMain" />
 							<TextView
 								android:id="@+id/VRDetail"
 								android:layout_width="wrap_content"
@@ -120,7 +116,7 @@
 								android:textSize="18sp"
 								android:layout_weight="1"
 								android:fontFamily="@font/product_sans_regular"
-								android:textColor="@color/colorTextMain" />
+								android:textColor="@color/md_theme_textMain" />
 							<TextView
 								android:id="@+id/StatusDetail"
 								android:layout_width="wrap_content"
@@ -159,7 +155,7 @@
 								android:text="Latest update details"
 								android:textSize="25sp"
 								android:fontFamily="@font/product_sans_regular"
-								android:textColor="@color/colorTextMain" />
+								android:textColor="@color/md_theme_textMain" />
 						</LinearLayout>
 						<LinearLayout
 							android:id="@+id/LatestLinear"
@@ -180,7 +176,7 @@
 								android:textSize="18sp"
 								android:layout_weight="1"
 								android:fontFamily="@font/product_sans_regular"
-								android:textColor="@color/colorTextMain" />
+								android:textColor="@color/md_theme_textMain" />
 							<TextView
 								android:id="@+id/LatestDetail"
 								android:layout_width="wrap_content"
@@ -253,7 +249,7 @@
 										android:text="N/A"
 										android:textSize="16sp"
 										android:fontFamily="@font/product_sans_regular"
-										android:textColor="@color/colorTextMain" />
+										android:textColor="@color/md_theme_textMain" />
 								</LinearLayout>
 								<LinearLayout
 									android:id="@+id/Space"
@@ -280,7 +276,7 @@
 										android:text="N/A"
 										android:textSize="16sp"
 										android:fontFamily="@font/product_sans_regular"
-										android:textColor="@color/colorTextMain" />
+										android:textColor="@color/md_theme_textMain" />
 								</LinearLayout>
 							</LinearLayout>
 							<TextView
@@ -294,7 +290,7 @@
 								android:text="Loading"
 								android:textSize="16sp"
 								android:fontFamily="@font/product_sans_regular"
-								android:textColor="@color/colorTextMain" />
+								android:textColor="@color/md_theme_textMain" />
 						</LinearLayout>
 					</LinearLayout>
 				</LinearLayout>

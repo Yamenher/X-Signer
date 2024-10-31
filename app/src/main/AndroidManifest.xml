@@ -18,7 +18,7 @@
 		android:requestLegacyExternalStorage="true"
 		android:usesCleartextTraffic="true"
         android:name="XApplication"
-		android:theme="@style/AppTheme"
+		android:theme="@style/Theme.XSigner.Base.Main"
 		android:enableOnBackInvokedCallback="true">
 		<activity
 			android:name=".MainActivity"
@@ -26,7 +26,7 @@
 			android:hardwareAccelerated="true"
 			android:supportsPictureInPicture="true"
 			android:screenOrientation="portrait"
-			android:theme="@style/Theme.Base.Main"
+			android:theme="@style/Theme.XSigner.Base.Main"
 			android:windowSoftInputMode="stateHidden" />
 		<activity
 			android:name=".SplashScreenActivity"
@@ -34,7 +34,7 @@
 			android:hardwareAccelerated="true"
 			android:supportsPictureInPicture="true"
 			android:screenOrientation="portrait"
-			android:theme="@style/Base.Theme.XSigner.Splash"
+			android:theme="@style/Theme.XSigner.Base.Splash"
 			android:windowSoftInputMode="stateHidden"
 			android:exported="true">
 			<intent-filter>
@@ -54,7 +54,7 @@
 			android:hardwareAccelerated="true"
 			android:supportsPictureInPicture="true"
 			android:screenOrientation="portrait"
-			android:theme="@style/Theme.Base.Main"
+			android:theme="@style/Theme.XSigner.Base.Main"
 			android:windowSoftInputMode="stateHidden" />
 		<activity
 			android:name=".DebugActivity"
@@ -62,7 +62,7 @@
 			android:hardwareAccelerated="true"
 			android:supportsPictureInPicture="true"
 			android:screenOrientation="portrait"
-			android:theme="@style/Theme.Base.Main"
+			android:theme="@style/Theme.XSigner.Base.Main"
 			android:windowSoftInputMode="stateHidden" />
         <activity
 			android:name=".FaqActivity"
@@ -70,7 +70,7 @@
 			android:hardwareAccelerated="true"
 			android:supportsPictureInPicture="true"
 			android:screenOrientation="portrait"
-			android:theme="@style/Theme.Base.Main"
+			android:theme="@style/Theme.XSigner.Base.Main"
 			android:windowSoftInputMode="stateHidden" />
         <activity
 			android:name=".InfoActivity"
@@ -78,7 +78,7 @@
 			android:hardwareAccelerated="true"
 			android:supportsPictureInPicture="true"
 			android:screenOrientation="portrait"
-			android:theme="@style/Theme.Base.Main"
+			android:theme="@style/Theme.XSigner.Base.Main"
 			android:windowSoftInputMode="stateHidden" />
 		<activity
 			android:name=".UpdateActivity"
@@ -86,15 +86,7 @@
 			android:hardwareAccelerated="true"
 			android:supportsPictureInPicture="true"
 			android:screenOrientation="portrait"
-			android:theme="@style/Theme.Base.Main"
-			android:windowSoftInputMode="stateHidden" />
-		<activity
-			android:name=".WelcomeActivity"
-			android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
-			android:hardwareAccelerated="true"
-			android:supportsPictureInPicture="true"
-			android:screenOrientation="portrait"
-			android:theme="@style/Theme.Base.Main"
+			android:theme="@style/Theme.XSigner.Base.Main"
 			android:windowSoftInputMode="stateHidden" />
 		<activity
 			android:name=".KeyCreatingActivity"
@@ -102,7 +94,7 @@
 			android:hardwareAccelerated="true"
 			android:supportsPictureInPicture="true"
 			android:screenOrientation="portrait"
-			android:theme="@style/Theme.Base.Main"
+			android:theme="@style/Theme.XSigner.Base.Main"
 			android:windowSoftInputMode="stateHidden" />
 		<uses-library
 			android:name="org.apache.http.legacy"

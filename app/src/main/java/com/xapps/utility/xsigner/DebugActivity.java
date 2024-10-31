@@ -19,7 +19,9 @@ import com.google.android.material.internal.EdgeToEdgeUtils;
 import android.animation.ArgbEvaluator;
 import android.util.DisplayMetrics;
 import androidx.core.widget.NestedScrollView;
-import com.google.android.material.appbar.MaterialToolbar;
+import com.google.android.material.appbar.MaterialToolbar;
+
+
 
 public class DebugActivity extends AppCompatActivity {
 	
@@ -65,13 +67,13 @@ public class DebugActivity extends AppCompatActivity {
 			public void onScrollChange(View v, int _scrollX, int _scrollY, int _oldScrollX, int _oldScrollY) {
 				if (_scrollY == 0) {
 					if (isLifted) {
-						animateColorChange(getColor(R.color.colorToolbarLifted), getColor(R.color.colorPrimaryDark));
+						animateColorChange(getColor(R.color.md_theme_secondary), getColor(R.color.md_theme_surface));
 						isLifted = false;
 					}
 				}
 				else {
 					if (!isLifted) {
-						animateColorChange(getColor(R.color.colorPrimaryDark), getColor(R.color.colorToolbarLifted));
+						animateColorChange(getColor(R.color.md_theme_surface), getColor(R.color.md_theme_secondary));
 						isLifted = true;
 					}
 				}
@@ -88,12 +90,12 @@ public class DebugActivity extends AppCompatActivity {
 	
 	private void initializeLogic() {
 		setTitle("X-Signer Crashed");
-		Scroller.setBackground(new GradientDrawable() { public GradientDrawable getIns(int a, int b) { this.setCornerRadius(a); this.setColor(b); return this; } }.getIns((int)_DpToPx(20), getColor(R.color.colorToolbarLifted)));
+		Scroller.setBackground(new GradientDrawable() { public GradientDrawable getIns(int a, int b) { this.setCornerRadius(a); this.setColor(b); return this; } }.getIns((int)_DpToPx(20), getColor(R.color.md_theme_secondary)));
 		EdgeToEdgeUtils.applyEdgeToEdge(getWindow(), true);
 		ErrorText.setTextIsSelectable(true);
-		_toolbar.setBackgroundColor(getColor(R.color.colorPrimaryDark));
-		_app_bar.setBackgroundColor(getColor(R.color.colorPrimaryDark));
-		_toolbar.setTitleTextColor(getColor(R.color.colorTextMain));
+		_toolbar.setBackgroundColor(getColor(R.color.md_theme_surface));
+		_app_bar.setBackgroundColor(getColor(R.color.md_theme_surface));
+		_toolbar.setTitleTextColor(getColor(R.color.md_theme_textMain));
 		
 		_toolbar.setTitleCentered(true);
 		ErrorText.setText(getIntent().getStringExtra("error"));
@@ -164,4 +166,4 @@ public class DebugActivity extends AppCompatActivity {
 			    });
 		    colorAnimation.start();
 	}
-}
+}

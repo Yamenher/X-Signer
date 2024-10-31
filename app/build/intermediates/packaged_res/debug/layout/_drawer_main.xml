@@ -31,7 +31,7 @@
 			android:text="Guest"
 			android:textSize="20sp"
 			android:fontFamily="@font/product_sans_regular"
-			android:textColor="@color/colorTextMain" />
+			android:textColor="@color/md_theme_textMain" />
 		<TextView
 			android:id="@+id/EmailAdress"
 			android:layout_width="wrap_content"
@@ -64,6 +64,7 @@
 			android:paddingTop="6dp"
 			android:paddingRight="8dp"
 			android:paddingBottom="6dp"
+            android:background="@drawable/drawer_highlight_item"
 			android:gravity="center_vertical"
 			android:orientation="horizontal">
 			<ImageView
@@ -71,7 +72,8 @@
 				android:layout_width="24dp"
 				android:layout_height="26dp"
 				android:layout_marginLeft="10dp"
-				android:src="@drawable/default_image"
+				android:src="@drawable/vector_home"
+                android:tint="?colorPrimary"
 				android:scaleType="fitCenter" />
 			<TextView
 				android:id="@+id/HomeText"
@@ -83,7 +85,7 @@
 				android:textSize="16sp"
 				android:textStyle="bold"
 				android:fontFamily="@font/product_sans_regular"
-				android:textColor="@color/colorAccent" />
+				android:textColor="?colorPrimary" />
 		</LinearLayout>
 		<LinearLayout
 			android:id="@+id/KeysLinear"
@@ -114,7 +116,7 @@
 				android:textSize="16sp"
 				android:textStyle="bold"
 				android:fontFamily="@font/product_sans_regular"
-				android:textColor="@color/colorDrawerText" />
+				android:textColor="@color/md_theme_onSurfaceVariant" />
 		</LinearLayout>
 		<LinearLayout
 			android:id="@+id/FaqLinear"
@@ -145,7 +147,7 @@
 				android:textSize="16sp"
 				android:textStyle="bold"
 				android:fontFamily="@font/product_sans_regular"
-				android:textColor="@color/colorDrawerText" />
+				android:textColor="@color/md_theme_onSurfaceVariant" />
 		</LinearLayout>
 		<LinearLayout
 			android:id="@+id/AboutLinear"
@@ -176,7 +178,7 @@
 				android:textSize="16sp"
 				android:textStyle="bold"
 				android:fontFamily="@font/product_sans_regular"
-				android:textColor="@color/colorDrawerText" />
+				android:textColor="@color/md_theme_onSurfaceVariant" />
 		</LinearLayout>
 	</LinearLayout>
 </LinearLayout>

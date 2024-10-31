@@ -243,8 +243,8 @@ public class KeysListActivity extends AppCompatActivity {
 	}
 	
 	private void initializeLogic() {
-		getWindow().setBackgroundDrawable(new ColorDrawable(getColor(R.color.colorPrimaryDark)));
-		_coordinator.setBackgroundColor(getColor(R.color.colorPrimaryDark));
+		getWindow().setBackgroundDrawable(new ColorDrawable(getColor(R.color.md_theme_surface)));
+		_coordinator.setBackgroundColor(getColor(R.color.md_theme_surface));
 		_SetupUI();
 		getWindow().setStatusBarColor(Color.TRANSPARENT);
 		try {
@@ -795,7 +795,7 @@ KeyPassTIP.setErrorEnabled(false);
 				progressbar1.setTranslationY(neededY);
 				
 				ArgbEvaluator argbEvaluator = new ArgbEvaluator();                
-				                int toolbarColor = (int) argbEvaluator.evaluate(scrollPercentage, getColor(R.color.colorPrimaryDark), getColor(R.color.colorToolbarLifted));                
+				                int toolbarColor = (int) argbEvaluator.evaluate(scrollPercentage, getColor(R.color.md_theme_surface), getColor(R.color.md_theme_secondary));                
 				_toolbar.setBackgroundColor(toolbarColor);
 				collapsingtoolbar.setBackgroundColor(toolbarColor);
 				collapsingtoolbar.setContentScrimColor(toolbarColor);
@@ -1283,7 +1283,7 @@ XUtil.showMessage(getApplicationContext(), e.toString());
 					_timer.scheduleAtFixedRate(UITimer, (int)(0), (int)(50));
 					   }
 			});
-			KeyIcon.setColorFilter(getColor(R.color.colorIconTint), PorterDuff.Mode.SRC_IN);
+			KeyIcon.setColorFilter(getColor(R.color.md_theme_onPrimaryContainer), PorterDuff.Mode.SRC_IN);
 			int nightModeMask = getResources().getConfiguration().uiMode & android.content.res.Configuration.UI_MODE_NIGHT_MASK;
 			
 			if (nightModeMask == android.content.res.Configuration.UI_MODE_NIGHT_YES) {

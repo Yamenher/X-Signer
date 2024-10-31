@@ -2,6 +2,7 @@ package com.xapps.utility.xsigner;
 
 import com.xapps.utility.xsigner.SplashScreenActivity;
 import android.Manifest;
+import com.xapps.utility.xsigner.R;
 import android.animation.*;
 import android.app.*;
 import android.app.Activity;
@@ -101,7 +102,9 @@ import android.content.pm.PackageManager;
 import androidx.core.content.ContextCompat;
 import java.io.File;
 import androidx.core.view.ViewCompat;
-import androidx.core.view.OnApplyWindowInsetsListener;
+import androidx.core.view.OnApplyWindowInsetsListener;
+
+
 
 public class MainActivity extends AppCompatActivity {
 	
@@ -239,7 +242,7 @@ public class MainActivity extends AppCompatActivity {
 		_toolbar.setNavigationOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View _v) {
-				onBackPressed();
+	            getOnBackPressedDispatcher().onBackPressed();
 			}
 	    	});
 		_drawer = findViewById(R.id._drawer);
@@ -450,7 +453,8 @@ public class MainActivity extends AppCompatActivity {
 				CanAccessStorage = false;
 			}
 		} else {
-			if (ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
+			if (ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)
+ == PackageManager.PERMISSION_GRANTED) {
 				CanAccessStorage = true;
 				if (!FileUtil.isExistFile("/data/data/com.xapps.utility.xsigner/testkey.pk8")) {
 					try{
@@ -613,7 +617,8 @@ public class MainActivity extends AppCompatActivity {
 				CanAccessStorage = false;
 			}
 		} else {
-			if (ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
+			if (ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)
+ == PackageManager.PERMISSION_GRANTED) {
 				CanAccessStorage = true;
 			}
 			else {
@@ -659,7 +664,9 @@ public class MainActivity extends AppCompatActivity {
 		android.graphics.drawable.GradientDrawable gd = new android.graphics.drawable.GradientDrawable();
 		gd.setColor(Color.parseColor(_color));
 		gd.setCornerRadii(new float[] { (float)_lefttop, (float)_lefttop, (float)_righttop, (float)_righttop, (float)_rightbottom, (float)_rightbottom, (float)_leftbottom, (float)_leftbottom });
-		_view.setBackground(gd);
+		_view.setBackground(gd);
+
+
 	}
 	
 	
@@ -1106,7 +1113,8 @@ public class MainActivity extends AppCompatActivity {
 				final LinearLayout MBSBG = (LinearLayout) BSV.findViewById(R.id.MBSBG);
 				int nightModeMask2 = getResources().getConfiguration().uiMode & android.content.res.Configuration.UI_MODE_NIGHT_MASK;
 				
-				if (nightModeMask2 == android.content.res.Configuration.UI_MODE_NIGHT_YES) {		
+				if (nightModeMask2 == android.content.res.Configuration.UI_MODE_NIGHT_YES) {
+		
 							Handle.setBackground(new GradientDrawable() { public GradientDrawable getIns(int a, int b) { this.setCornerRadius(a); this.setColor(b); return this; } }.getIns((int)100, 0xFFBBC8D4));
 					_Radius(BSBG, _DpToPx(35), _DpToPx(35), 0, 0, "#131E24");
 				} else {
@@ -1130,7 +1138,7 @@ public class MainActivity extends AppCompatActivity {
 				BSD.setCancelable(false);
 				BSD.show();
 				IsBSBeingShow = true;
-				BSD.getWindow().setNavigationBarColor(getColor(R.color.colorPrimaryDark));
+				BSD.getWindow().setNavigationBarColor(getColor(R.color.md_theme_surface));
 			}
 		}
 	}
@@ -1153,67 +1161,18 @@ public class MainActivity extends AppCompatActivity {
 		collapsingtoolbar.setTitle("X-Signer");
 		int nightModeMask = getResources().getConfiguration().uiMode & android.content.res.Configuration.UI_MODE_NIGHT_MASK;
 		
-		if (nightModeMask == android.content.res.Configuration.UI_MODE_NIGHT_YES) {		
-					_toolbar.getNavigationIcon().setColorFilter(Color.WHITE, PorterDuff.Mode.SRC_IN);
-			_Radius(_drawer_HomeLinear, 0, 100, 0, 100, "#2E4859");
-			collapsingtoolbar.setCollapsedTitleTextColor(0xFFFFFFFF);
-			collapsingtoolbar.setExpandedTitleColor(0xFFFFFFFF);
-			_Radius(vscroll, _DpToPx(10), _DpToPx(10), _DpToPx(10), _DpToPx(10), "#131E24");
-			_Radius(StorageSignLinear, _DpToPx(20), _DpToPx(20), _DpToPx(20), _DpToPx(20), "#17242D");
-			SSIconLinear.setBackground(new GradientDrawable() { public GradientDrawable getIns(int a, int b) { this.setCornerRadius(a); this.setColor(b); return this; } }.getIns((int)150, 0xFF004C6E));
-			SSTopTitle.setTextColor(0xFFFFFFFF);
-			SSDesc.setTextColor(0xFFBBC8D4);
-			_Radius(RecentsLinear, _DpToPx(20), _DpToPx(20), _DpToPx(20), _DpToPx(20), "#17242D");
-			RecentsIconLinear.setBackground(new GradientDrawable() { public GradientDrawable getIns(int a, int b) { this.setCornerRadius(a); this.setColor(b); return this; } }.getIns((int)150, 0xFF004C6E));
-			RecentsTitle.setTextColor(0xFFFFFFFF);
-			RecentsText.setTextColor(0xFFBBC8D4);
+		if (nightModeMask == android.content.res.Configuration.UI_MODE_NIGHT_YES) {
+		
+			_toolbar.getNavigationIcon().setColorFilter(Color.WHITE, PorterDuff.Mode.SRC_IN);
 		} else {
-					getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
+			getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
 			getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR);
-			_Radius(_drawer_HomeLinear, 0, 100, 0, 100, "#BDD6E3");
-			collapsingtoolbar.setCollapsedTitleTextColor(0xFF000000);
-			collapsingtoolbar.setExpandedTitleColor(0xFF000000);
-			_Radius(vscroll, _DpToPx(10), _DpToPx(10), _DpToPx(10), _DpToPx(10), "#FCFCFF");
-			_Radius(StorageSignLinear, _DpToPx(20), _DpToPx(20), _DpToPx(20), _DpToPx(20), "#EFF4F8");
-			SSIconLinear.setBackground(new GradientDrawable() { public GradientDrawable getIns(int a, int b) { this.setCornerRadius(a); this.setColor(b); return this; } }.getIns((int)150, 0xFFC8E6FF));
-			SSTopTitle.setTextColor(0xFF000000);
-			SSDesc.setTextColor(0xFF3D4952);
-			_Radius(RecentsLinear, _DpToPx(20), _DpToPx(20), _DpToPx(20), _DpToPx(20), "#EFF4F8");
-			RecentsIconLinear.setBackground(new GradientDrawable() { public GradientDrawable getIns(int a, int b) { this.setCornerRadius(a); this.setColor(b); return this; } }.getIns((int)150, 0xFFC8E6FF));
-			RecentsTitle.setTextColor(0xFF000000);
-			RecentsText.setTextColor(0xFF3D4952);
 			_toolbar.getNavigationIcon().setColorFilter(Color.BLACK, PorterDuff.Mode.SRC_IN);
 		}
-		_drawer_HomeIcon.setImageResource(R.drawable.vector_home);
 		_drawer_FaqIcon.setImageResource(R.drawable.ic_qm);
-		_drawer_HomeIcon.setColorFilter(getColor(R.color.colorAccent), PorterDuff.Mode.SRC_IN);
-		RecentsIcon.setColorFilter(getColor(R.color.colorIconTint), PorterDuff.Mode.SRC_IN);
-		StorageSignIcon.setColorFilter(getColor(R.color.colorIconTint), PorterDuff.Mode.SRC_IN);
-		_drawer_KeysIcon.setColorFilter(getColor(R.color.colorDrawerText), PorterDuff.Mode.SRC_IN);
-		_drawer_AboutIcon.setColorFilter(getColor(R.color.colorDrawerText), PorterDuff.Mode.SRC_IN);
+		_drawer_KeysIcon.setColorFilter(getColor(R.color.md_theme_onSurfaceVariant), PorterDuff.Mode.SRC_IN);
+		_drawer_AboutIcon.setColorFilter(getColor(R.color.md_theme_onSurfaceVariant), PorterDuff.Mode.SRC_IN);
 		_toolbar.setElevation((float)0);
-		SSDesc.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/product_sans.ttf"), 0);
-		SSTopTitle.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/product_sans.ttf"), 0);
-		SSPickButton.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/product_sans.ttf"), 0);
-		Typeface tf = Typeface.createFromAsset(getAssets(), "fonts/product_sans.ttf"); 
-		collapsingtoolbar.setCollapsedTitleTypeface(tf); 
-		collapsingtoolbar.setExpandedTitleTypeface(tf); 
-		_coordinator.setBackgroundColor(getColor(R.color.colorPrimaryDark));
-		
-		
-		_app_bar.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
-			            @Override
-			            public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
-				                int totalScrollRange = appBarLayout.getTotalScrollRange();
-				                float scrollPercentage = Math.abs(verticalOffset) / (float) totalScrollRange;
-				
-				ArgbEvaluator argbEvaluator = new ArgbEvaluator();                
-				                int toolbarColor = (int) argbEvaluator.evaluate(scrollPercentage, getColor(R.color.colorPrimaryDark), getColor(R.color.colorToolbarLifted));                
-				_toolbar.setBackgroundColor(toolbarColor);
-				collapsingtoolbar.setBackgroundColor(toolbarColor);
-				collapsingtoolbar.setContentScrimColor(toolbarColor);
-				            }
-			        });
 		EdgeToEdgeUtils.applyEdgeToEdge(getWindow(), true);
 	}
 	
@@ -1909,4 +1868,4 @@ XUtil.showMessage(getApplicationContext(), e.toString());
 	public int getDisplayHeightPixels() {
 		return getResources().getDisplayMetrics().heightPixels;
 	}
-}
+}

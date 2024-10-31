@@ -36,7 +36,7 @@
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
                     android:textSize="18dp"
-                    android:textColor="@color/colorTextMain"
+                    android:textColor="@color/md_theme_textMain"
                     android:fontFamily="@font/product_sans_regular" />
             
             </LinearLayout>

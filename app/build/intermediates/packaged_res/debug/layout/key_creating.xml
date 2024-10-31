@@ -13,9 +13,8 @@
 		<androidx.appcompat.widget.Toolbar
 			android:id="@+id/_toolbar"
 			android:layout_width="match_parent"
-			android:layout_height="?attr/actionBarSize"
-			android:background="?attr/colorPrimary"
-			app:theme="@style/Theme.Base.Main" />
+			android:layout_height="?actionBarSize"
+			android:background="?colorPrimary" />
 	</com.google.android.material.appbar.AppBarLayout>
 	<LinearLayout
 		android:layout_width="match_parent"
@@ -71,7 +70,7 @@
 						android:textColorHint="#607D8B"
 						android:imeOptions="actionNext"
 						android:focusable="true"
-						android:textColor="@color/colorTextMain"
+						android:textColor="@color/md_theme_textMain"
 						android:singleLine="true" />
 				</com.google.android.material.textfield.TextInputLayout>
 				<com.google.android.material.textfield.TextInputLayout
@@ -96,7 +95,7 @@
 						android:textSize="16sp"
 						android:textColorHint="#607D8B"
 						android:focusable="true"
-						android:textColor="@color/colorTextMain"
+						android:textColor="@color/md_theme_textMain"
 						android:imeOptions="actionNext"
 						android:singleLine="true" />
 				</com.google.android.material.textfield.TextInputLayout>
@@ -122,7 +121,7 @@
 						android:textSize="16sp"
 						android:textColorHint="#607D8B"
 						android:focusable="true"
-						android:textColor="@color/colorTextMain"
+						android:textColor="@color/md_theme_textMain"
 						android:imeOptions="actionNext"
 						android:singleLine="true" />
 				</com.google.android.material.textfield.TextInputLayout>
@@ -162,7 +161,7 @@
 						app:simpleItems="@array/keyTypes"
 						style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox"
 						android:inputType="none"
-						android:textColor="@color/colorTextMain"
+						android:textColor="@color/md_theme_textMain"
 						android:imeOptions="actionNext"
 						android:singleLine="true" />
 				</com.google.android.material.textfield.TextInputLayout>
@@ -190,7 +189,7 @@
 						app:simpleItems="@array/keySizes"
 						style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox"
 						android:inputType="none"
-						android:textColor="@color/colorTextMain"
+						android:textColor="@color/md_theme_textMain"
 						android:imeOptions="actionNext"
 						android:singleLine="true" />
 				</com.google.android.material.textfield.TextInputLayout>
@@ -217,7 +216,7 @@
 						android:textColorHint="#607D8B"
 						android:inputType="numberSigned"
 						android:focusable="true"
-						android:textColor="@color/colorTextMain"
+						android:textColor="@color/md_theme_textMain"
 						android:imeOptions="actionNext"
 						android:singleLine="true" />
 				</com.google.android.material.textfield.TextInputLayout>
@@ -255,7 +254,7 @@
 						android:textSize="16sp"
 						android:textColorHint="#607D8B"
 						android:focusable="true"
-						android:textColor="@color/colorTextMain"
+						android:textColor="@color/md_theme_textMain"
 						android:imeOptions="actionNext"
 						android:singleLine="true" />
 				</com.google.android.material.textfield.TextInputLayout>
@@ -287,7 +286,7 @@
 							android:textSize="16sp"
 							android:textColorHint="#607D8B"
 							android:focusable="true"
-							android:textColor="@color/colorTextMain"
+							android:textColor="@color/md_theme_textMain"
 							android:imeOptions="actionNext"
 							android:singleLine="true" />
 					</com.google.android.material.textfield.TextInputLayout>
@@ -314,7 +313,7 @@
 							android:textSize="16sp"
 							android:textColorHint="#607D8B"
 							android:focusable="true"
-							android:textColor="@color/colorTextMain"
+							android:textColor="@color/md_theme_textMain"
 							android:imeOptions="actionNext"
 							android:singleLine="true" />
 					</com.google.android.material.textfield.TextInputLayout>
@@ -347,7 +346,7 @@
 							android:textSize="16sp"
 							android:textColorHint="#607D8B"
 							android:focusable="true"
-							android:textColor="@color/colorTextMain"
+							android:textColor="@color/md_theme_textMain"
 							android:imeOptions="actionNext"
 							android:singleLine="true" />
 					</com.google.android.material.textfield.TextInputLayout>
@@ -374,7 +373,7 @@
 							android:textSize="16sp"
 							android:textColorHint="#607D8B"
 							android:focusable="true"
-							android:textColor="@color/colorTextMain"
+							android:textColor="@color/md_theme_textMain"
 							android:imeOptions="actionNext"
 							android:singleLine="true" />
 					</com.google.android.material.textfield.TextInputLayout>
@@ -401,7 +400,7 @@
 						android:textSize="16sp"
 						android:textColorHint="#607D8B"
 						android:focusable="true"
-						android:textColor="@color/colorTextMain"
+						android:textColor="@color/md_theme_textMain"
 						android:imeOptions="actionDone"
 						android:singleLine="true" />
 				</com.google.android.material.textfield.TextInputLayout>
@@ -418,12 +417,9 @@
 			android:text="Create"
 			android:textSize="16sp"
 			android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
-			app:backgroundTint="@color/colorAccent"
 			app:cornerRadius="100dp"
-			style="@style/Widget.MaterialComponents.Button"
+			style="@style/Widget.Material3.Button"
 			app:textAllCaps="false"
-			android:letterSpacing="0.0"
-			app:rippleColor="@color/colorAccentDark"
-			android:textColor="@color/colorTextButton" />
+			android:letterSpacing="0.0"/>
 	</LinearLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -37,7 +37,7 @@
 				android:text="Loading..."
 				android:textSize="16sp"
 				android:fontFamily="@font/product_sans_regular"
-				android:textColor="@color/colorTextMain" />
+				android:textColor="@color/md_theme_textMain" />
 		</androidx.core.widget.NestedScrollView>
 		<LinearLayout
 			android:id="@+id/linear1"
@@ -56,13 +56,10 @@
 				android:textSize="18sp"
 				android:layout_weight="1"
 				android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
-				app:backgroundTint="@color/colorAccent"
 				app:cornerRadius="100dp"
 				style="@style/Widget.MaterialComponents.Button"
 				app:textAllCaps="false"
-				android:letterSpacing="0.0"
-				app:rippleColor="@color/colorAccentDark"
-				android:textColor="@color/colorTextButton" />
+				android:letterSpacing="0.0" />
 		</LinearLayout>
 	</LinearLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

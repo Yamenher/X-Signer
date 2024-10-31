@@ -40,6 +40,6 @@
 			android:text="Loading key..."
 			android:textSize="20sp"
 			android:fontFamily="@font/product_sans_regular"
-			android:textColor="@color/colorTextMain" />
+			android:textColor="@color/md_theme_textMain" />
 	</LinearLayout>
 </LinearLayout>

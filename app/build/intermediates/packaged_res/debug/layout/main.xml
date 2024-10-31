@@ -10,6 +10,7 @@
 		android:id="@+id/_coordinator"
 		android:layout_height="match_parent"
 		android:layout_width="match_parent"
+        android:background="?colorSurface"
 		android:transitionGroup="true">
 		<com.google.android.material.appbar.AppBarLayout
 			android:id="@+id/_app_bar"
@@ -22,13 +23,12 @@
 				android:fitsSystemWindows="true"
 				app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
 				app:titleCollapseMode="scale"
-				app:expandedTitleTextAppearance="@style/TextAppearance.M3.Sys.Typescale.DisplaySmall">
+				style="@style/Style.XSigner.CollapsingToolbar">
 				<androidx.appcompat.widget.Toolbar
 					android:id="@+id/_toolbar"
 					android:layout_height="?attr/actionBarSize"
 					android:layout_width="match_parent"
-					app:layout_collapseMode="pin"
-					app:theme="@style/Theme.Base.Main" />
+					app:layout_collapseMode="pin"/>
 			</com.google.android.material.appbar.CollapsingToolbarLayout>
 		</com.google.android.material.appbar.AppBarLayout>
 		<LinearLayout
@@ -55,6 +55,7 @@
 						android:layout_marginRight="15dp"
 						android:layout_marginBottom="15dp"
 						android:padding="8dp"
+                        android:background="@drawable/main_bg_drawable"
 						android:orientation="vertical">
 						<LinearLayout
 							android:id="@+id/SSTopLinear"
@@ -67,12 +68,14 @@
 								android:layout_width="wrap_content"
 								android:layout_height="wrap_content"
 								android:layout_marginLeft="5dp"
+                                android:background="@drawable/ic_container_main"
 								android:padding="5dp"
 								android:orientation="vertical">
 								<ImageView
 									android:id="@+id/StorageSignIcon"
-									android:layout_width="24dp"
-									android:layout_height="24dp"
+									android:layout_width="22dp"
+                                    android:tint="?colorPrimary"
+									android:layout_height="22dp"
 									android:src="@drawable/ic_file_black"
 									android:scaleType="fitCenter" />
 							</LinearLayout>
@@ -91,8 +94,7 @@
 							android:layout_height="wrap_content"
 							android:padding="8dp"
 							android:text="Pick an APK/AAB file from your device's internal storage to sign it (No access to 'Android/data' and 'Android/obb' folders is available)"
-							android:textSize="14sp"
-							android:textColor="#000000" />
+							android:textSize="14sp" />
 						<com.google.android.material.button.MaterialButton
 							android:id="@+id/SSPickButton"
 							android:layout_width="wrap_content"
@@ -108,13 +110,10 @@
 							android:textSize="16sp"
 							android:layout_gravity="right"
 							android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
-							app:backgroundTint="@color/colorAccent"
 							app:cornerRadius="100dp"
 							style="@style/Widget.MaterialComponents.Button"
 							app:textAllCaps="false"
-							android:letterSpacing="0.0"
-							app:rippleColor="@color/colorAccentDark"
-							android:textColor="@color/colorTextButton" />
+							android:letterSpacing="0.0" />
 					</LinearLayout>
 					<LinearLayout
 						android:id="@+id/RecentsLinear"
@@ -125,6 +124,7 @@
 						android:layout_marginRight="15dp"
 						android:layout_marginBottom="15dp"
 						android:padding="8dp"
+                        android:background="@drawable/main_bg_drawable"
 						android:orientation="vertical">
 						<LinearLayout
 							android:id="@+id/TopRecentsLinear"
@@ -137,12 +137,14 @@
 								android:layout_width="wrap_content"
 								android:layout_height="wrap_content"
 								android:layout_marginLeft="5dp"
+                                android:background="@drawable/ic_container_main"
 								android:padding="5dp"
 								android:orientation="vertical">
 								<ImageView
 									android:id="@+id/RecentsIcon"
-									android:layout_width="24dp"
-									android:layout_height="24dp"
+									android:layout_width="22dp"
+									android:layout_height="22dp"
+                                    android:tint="?colorPrimary"
 									android:src="@drawable/ic_restore_black"
 									android:scaleType="fitCenter" />
 							</LinearLayout>
@@ -178,13 +180,10 @@
 							android:textSize="16sp"
 							android:layout_gravity="right"
 							android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
-							app:backgroundTint="@color/colorAccent"
 							app:cornerRadius="100dp"
-							style="@style/Widget.MaterialComponents.Button"
+							style="@style/Widget.Material3.Button"
 							app:textAllCaps="false"
-							android:letterSpacing="0.0"
-							app:rippleColor="@color/colorAccentDark"
-							android:textColor="@color/colorTextButton" />
+							android:letterSpacing="0.0" />
 					</LinearLayout>
 				</LinearLayout>
 			</androidx.core.widget.NestedScrollView>
