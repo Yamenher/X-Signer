@@ -93,7 +93,7 @@ jobs:
         continue-on-error: true
         run: |
           curl -X POST "https://api.telegram.org/bot${{ secrets.bot_token }}/sendDocument" \
-            -F chat_id="-1002479736701" \
+            -F chat_id="-2479736701" \
             -F message_thread_id="4" \
             -F document=@"xsigner-app-debug.apk" \
             -F caption="${{ github.event.head_commit.message }} by ${{ github.actor }}"
