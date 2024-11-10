@@ -20,8 +20,8 @@ public class XApplication extends Application {
     @Override
     public void onCreate() {
         mApplicationContext = getApplicationContext();
-        this.uncaughtExceptionHandler = Thread.getDefaultUncaughtExceptionHandler();
         DynamicColors.applyToActivitiesIfAvailable(this);
+        this.uncaughtExceptionHandler = Thread.getDefaultUncaughtExceptionHandler();
 
         Thread.setDefaultUncaughtExceptionHandler(
             new Thread.UncaughtExceptionHandler() {

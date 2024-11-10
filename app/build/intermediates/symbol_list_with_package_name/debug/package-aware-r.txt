@@ -2189,6 +2189,7 @@ color mtrl_textinput_focused_box_stroke_color
 color mtrl_textinput_hovered_box_stroke_color
 color notification_action_color_filter
 color notification_icon_bg_color
+color primary_color
 color primary_dark_material_dark
 color primary_dark_material_light
 color primary_material_dark

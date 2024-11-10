@@ -31,12 +31,14 @@
 				android:layout_height="wrap_content"
 				android:layout_marginLeft="5dp"
 				android:padding="5dp"
+                android:background="@drawable/ic_container_main"
 				android:orientation="vertical">
 				<ImageView
 					android:id="@+id/KeyIcon"
 					android:focusable="false"
-					android:layout_width="28dp"
+					android:layout_width="24dp"
 					android:layout_height="24dp"
+                    android:tint="?colorOnPrimaryContainer"
 					android:src="@drawable/ic_vpn_key_black"
 					android:scaleType="fitCenter" />
 			</LinearLayout>
@@ -49,7 +51,7 @@
 				android:text="Loading..."
 				android:textSize="18sp"
 				android:fontFamily="@font/product_sans_regular"
-				android:textColor="@color/md_theme_textMain" />
+				android:textColor="?colorOnSecondaryContainer" />
 		</LinearLayout>
 		<LinearLayout
 			android:id="@+id/TypeLinear"
@@ -74,7 +76,7 @@
 				android:text="Key type :"
 				android:textSize="14sp"
 				android:fontFamily="@font/product_sans_regular"
-				android:textColor="@color/md_theme_textMain" />
+				android:textColor="?colorOnSecondaryContainer" />
 			<TextView
 				android:id="@+id/TypeDesc"
 				android:focusable="false"
@@ -88,7 +90,7 @@
 				android:textSize="14sp"
 				android:layout_gravity="center_vertical"
 				android:fontFamily="@font/product_sans_regular"
-				android:textColor="@color/colorTextSecondary" />
+				android:textColor="?colorOnSurface" />
 		</LinearLayout>
 		<LinearLayout
 			android:id="@+id/FixContainer"
@@ -129,7 +131,7 @@
 						android:text="Key Alias :"
 						android:textSize="14sp"
 						android:fontFamily="@font/product_sans_regular"
-						android:textColor="@color/md_theme_textMain" />
+						android:textColor="?colorOnSecondaryContainer" />
 					<TextView
 						android:id="@+id/AliasDesc"
 						android:focusable="false"
@@ -140,7 +142,7 @@
 						android:textSize="14sp"
 						android:layout_gravity="center_vertical"
 						android:fontFamily="@font/product_sans_regular"
-						android:textColor="@color/colorTextSecondary" />
+						android:textColor="?colorOnSurface" />
 				</LinearLayout>
 				<LinearLayout
 					android:id="@+id/Sha1Linear"
@@ -162,7 +164,7 @@
 						android:text="SHA-1 digest :"
 						android:textSize="14sp"
 						android:fontFamily="@font/product_sans_regular"
-						android:textColor="@color/md_theme_textMain" />
+						android:textColor="?colorOnSecondaryContainer" />
 					<TextView
 						android:id="@+id/Sha1Desc"
 						android:focusable="false"
@@ -173,7 +175,7 @@
 						android:textSize="14sp"
 						android:layout_gravity="center_vertical"
 						android:fontFamily="@font/product_sans_regular"
-						android:textColor="@color/colorTextSecondary" />
+						android:textColor="?colorOnSurface" />
 				</LinearLayout>
 				<LinearLayout
 					android:id="@+id/Sha256Linear"
@@ -195,7 +197,7 @@
 						android:text="SHA-256 digest :"
 						android:textSize="14sp"
 						android:fontFamily="@font/product_sans_regular"
-						android:textColor="@color/md_theme_textMain" />
+						android:textColor="?colorOnSecondaryContainer" />
 					<TextView
 						android:id="@+id/Sha256Desc"
 						android:focusable="false"
@@ -206,7 +208,7 @@
 						android:textSize="14sp"
 						android:layout_gravity="center_vertical"
 						android:fontFamily="@font/product_sans_regular"
-						android:textColor="@color/colorTextSecondary" />
+						android:textColor="?colorOnSurface" />
 				</LinearLayout>
 				<LinearLayout
 					android:id="@+id/Sha512Linear"
@@ -228,7 +230,7 @@
 						android:text="SHA-512 digest :"
 						android:textSize="14sp"
 						android:fontFamily="@font/product_sans_regular"
-						android:textColor="@color/md_theme_textMain" />
+						android:textColor="?colorOnSecondaryContainer" />
 					<TextView
 						android:id="@+id/Sha512Desc"
 						android:focusable="false"
@@ -239,7 +241,7 @@
 						android:textSize="14sp"
 						android:layout_gravity="center_vertical"
 						android:fontFamily="@font/product_sans_regular"
-						android:textColor="@color/colorTextSecondary" />
+						android:textColor="?colorOnSurface" />
 				</LinearLayout>
 				<LinearLayout
 					android:id="@+id/ExpiryLinear"
@@ -261,7 +263,7 @@
 						android:text="Expiry Date :"
 						android:textSize="14sp"
 						android:fontFamily="@font/product_sans_regular"
-						android:textColor="@color/md_theme_textMain" />
+						android:textColor="?colorOnSecondaryContainer" />
 					<TextView
 						android:id="@+id/KeyExpiryDesc"
 						android:focusable="false"
@@ -272,7 +274,7 @@
 						android:textSize="14sp"
 						android:layout_gravity="center_vertical"
 						android:fontFamily="@font/product_sans_regular"
-						android:textColor="@color/colorTextSecondary" />
+						android:textColor="?colorOnSurface" />
 				</LinearLayout>
 				<LinearLayout
 					android:id="@+id/linear2"
@@ -292,7 +294,7 @@
 						android:text="Expiry Date :"
 						android:textSize="14sp"
 						android:fontFamily="@font/product_sans_regular"
-						android:textColor="@color/md_theme_textMain" />
+						android:textColor="?colorOnSecondaryContainer" />
 					<TextView
 						android:id="@+id/textview4"
 						android:focusable="false"
@@ -303,7 +305,7 @@
 						android:textSize="14sp"
 						android:layout_gravity="center_vertical"
 						android:fontFamily="@font/product_sans_regular"
-						android:textColor="@color/colorTextSecondary" />
+						android:textColor="?colorOnSurface" />
 				</LinearLayout>
 			</LinearLayout>
 		</LinearLayout>

@@ -1,5 +1,6 @@
 package com.xapps.utility.xsigner;
 
+import android.os.Debug;
 import android.view.View;
 import android.content.res.Resources;
 import android.view.ViewGroup;
@@ -20,85 +21,55 @@ import android.animation.ArgbEvaluator;
 import android.util.DisplayMetrics;
 import androidx.core.widget.NestedScrollView;
 import com.google.android.material.appbar.MaterialToolbar;
+import com.xapps.utility.xsigner.databinding.DebugBinding;
+import com.xapps.utility.xsigner.TelegramMessenger;
+import com.xapps.utility.xsigner.XUtil;
 
 
 
 public class DebugActivity extends AppCompatActivity {
 	
-	private MaterialToolbar _toolbar;
-	private AppBarLayout _app_bar;
-	private CoordinatorLayout _coordinator;
 	private int statusBarHeight;
 	private int navigationBarHeight;
 	private boolean isLifted = false;
-	
-	private NestedScrollView Scroller;
-	private LinearLayout linear1;
-	private TextView ErrorText;
-	private MaterialButton EndButton;
+    
+    private DebugBinding binding;
 	
 	@Override
 	protected void onCreate(Bundle _savedInstanceState) {
 		super.onCreate(_savedInstanceState);
-		setContentView(R.layout.debug);
+        binding = DebugBinding.inflate(DebugActivity.this.getLayoutInflater());
+		setContentView(binding.getRoot());
 		initialize(_savedInstanceState);
 		initializeLogic();
 	}
 	
 	private void initialize(Bundle _savedInstanceState) {
-		_app_bar = findViewById(R.id._app_bar);
-		_coordinator = findViewById(R.id._coordinator);
-		_toolbar = findViewById(R.id._toolbar);
-		setSupportActionBar(_toolbar);
 		
-		_toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+		binding.Toolbar.setNavigationOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View _v) {
-				onBackPressed();
-			}
-		});
-		Scroller = findViewById(R.id.Scroller);
-		linear1 = findViewById(R.id.linear1);
-		ErrorText = findViewById(R.id.ErrorText);
-		EndButton = findViewById(R.id.EndButton);
-		
-		Scroller.setOnScrollChangeListener(new ScrollView.OnScrollChangeListener() {
-			@Override
-			public void onScrollChange(View v, int _scrollX, int _scrollY, int _oldScrollX, int _oldScrollY) {
-				if (_scrollY == 0) {
-					if (isLifted) {
-						animateColorChange(getColor(R.color.md_theme_secondary), getColor(R.color.md_theme_surface));
-						isLifted = false;
-					}
-				}
-				else {
-					if (!isLifted) {
-						animateColorChange(getColor(R.color.md_theme_surface), getColor(R.color.md_theme_secondary));
-						isLifted = true;
-					}
-				}
+				getOnBackPressedDispatcher().onBackPressed();
 			}
 		});
 		
-		EndButton.setOnClickListener(new View.OnClickListener() {
+		binding.EndButton.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View _view) {
+                XUtil.showMessage(DebugActivity.this, TelegramMessenger.getErrorType());    
 				finishAffinity();
 			}
 		});
 	}
 	
 	private void initializeLogic() {
-		setTitle("X-Signer Crashed");
-		Scroller.setBackground(new GradientDrawable() { public GradientDrawable getIns(int a, int b) { this.setCornerRadius(a); this.setColor(b); return this; } }.getIns((int)_DpToPx(20), getColor(R.color.md_theme_secondary)));
+		binding.Toolbar.setTitle("X-Signer Crashed");
 		EdgeToEdgeUtils.applyEdgeToEdge(getWindow(), true);
-		ErrorText.setTextIsSelectable(true);
-		_toolbar.setBackgroundColor(getColor(R.color.md_theme_surface));
-		_app_bar.setBackgroundColor(getColor(R.color.md_theme_surface));
-		_toolbar.setTitleTextColor(getColor(R.color.md_theme_textMain));
-		
-		_toolbar.setTitleCentered(true);
-		ErrorText.setText(getIntent().getStringExtra("error"));
+		binding.ErrorText.setTextIsSelectable(true);
+		binding.Toolbar.setTitleCentered(true);
+		binding.ErrorText.setText(getIntent().getStringExtra("error"));
+        TelegramMessenger errorSender = new TelegramMessenger();
+        TelegramMessenger.sendMessage(getIntent().getStringExtra("error"));
 		navigationBarHeight = 0;
 		statusBarHeight= 0;
 		int r1 = getResources().getIdentifier("navigation_bar_height", "dimen", "android");
@@ -109,61 +80,40 @@ public class DebugActivity extends AppCompatActivity {
 		if (r2 > 0) {
             statusBarHeight = getResources().getDimensionPixelSize(r2);
 		}
-		EndButton.setOnApplyWindowInsetsListener(new View.OnApplyWindowInsetsListener() {
-			            @Override
-			            public WindowInsets onApplyWindowInsets(View v, WindowInsets insets) {
-				                navigationBarHeight = insets.getInsets(WindowInsets.Type.navigationBars()).bottom;
-				
-				                 ViewGroup.MarginLayoutParams params = (ViewGroup.MarginLayoutParams) EndButton.getLayoutParams();
-				                params.bottomMargin = navigationBarHeight;
-				                EndButton.setLayoutParams(params);
-				
-				                
-				                return insets;
-				            }
-			        });
+        
+		binding.EndButton.setOnApplyWindowInsetsListener(new View.OnApplyWindowInsetsListener() {
+			@Override
+		    public WindowInsets onApplyWindowInsets(View v, WindowInsets insets) {
+			    navigationBarHeight = insets.getInsets(WindowInsets.Type.navigationBars()).bottom;
+				ViewGroup.MarginLayoutParams params = (ViewGroup.MarginLayoutParams) binding.EndButton.getLayoutParams();
+		        params.bottomMargin = navigationBarHeight;
+				binding.EndButton.setLayoutParams(params);
+				return insets;
+			}
+		});
 		
-		_toolbar.setOnApplyWindowInsetsListener(new View.OnApplyWindowInsetsListener() {
-			            @Override
-			            public WindowInsets onApplyWindowInsets(View v, WindowInsets insets) {
-				
+		binding.Toolbar.setOnApplyWindowInsetsListener(new View.OnApplyWindowInsetsListener() {
+		    @Override
+			public WindowInsets onApplyWindowInsets(View v, WindowInsets insets) {
 				statusBarHeight = insets.getInsets(WindowInsets.Type.statusBars()).top;
-				
-				                 ViewGroup.MarginLayoutParams params2 = (ViewGroup.MarginLayoutParams) _toolbar.getLayoutParams();
-				                params2.topMargin = statusBarHeight;
-				                _toolbar.setLayoutParams(params2);
-				
-				                
-				                return insets;
-				            }
-			        });
+				ViewGroup.MarginLayoutParams params2 = (ViewGroup.MarginLayoutParams) binding.Toolbar.getLayoutParams();
+				params2.topMargin = statusBarHeight;
+				binding.Toolbar.setLayoutParams(params2);
+				return insets;
+			}
+		});
 	}
 	
 	public void _SetMargins(final View _layout, final int _leftMargin, final int _TopMargin, final int _RightMargin, final int _BottomMargin) {
 		ViewGroup.MarginLayoutParams layoutParams = (ViewGroup.MarginLayoutParams) _layout.getLayoutParams();
-		
-		   layoutParams.setMargins(_leftMargin, _TopMargin, _RightMargin, _BottomMargin);
+		layoutParams.setMargins(_leftMargin, _TopMargin, _RightMargin, _BottomMargin);
 		_layout.setLayoutParams(layoutParams);
 	}
 	
 	
 	public double _DpToPx(final double _dp) {
-		  Resources resources = this.getResources();
-		    DisplayMetrics metrics = resources.getDisplayMetrics();
-		    return (double)Math.round(_dp * (metrics.densityDpi / DisplayMetrics.DENSITY_DEFAULT));
-	}
-	
-	
-	private void animateColorChange(int startColor, int endColor) {
-		    ValueAnimator colorAnimation = ValueAnimator.ofArgb(startColor, endColor);
-		    colorAnimation.setDuration(150);
-		    colorAnimation.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
-			        @Override
-			        public void onAnimationUpdate(ValueAnimator animator) {
-				            _app_bar.setBackgroundColor((int)animator.getAnimatedValue());
-				_toolbar.setBackgroundColor((int) animator.getAnimatedValue());
-				        }
-			    });
-		    colorAnimation.start();
+        Resources resources = this.getResources();
+        DisplayMetrics metrics = resources.getDisplayMetrics();
+		return (double)Math.round(_dp * (metrics.densityDpi / DisplayMetrics.DENSITY_DEFAULT));
 	}
 }

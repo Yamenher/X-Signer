@@ -212,6 +212,10 @@
         "source": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-main-46:/layout/keys_list_custom_view.xml"
     },
     {
+        "merged": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-merged_res-44:/color_primary_color.xml.flat",
+        "source": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-main-46:/color/primary_color.xml"
+    },
+    {
         "merged": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-merged_res-44:/drawable_legacy_bottom_item_ripple.xml.flat",
         "source": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-main-46:/drawable/legacy_bottom_item_ripple.xml"
     },
@@ -280,6 +284,10 @@
         "source": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-main-46:/drawable-xhdpi/ic_arrow_right.png"
     },
     {
+        "merged": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-merged_res-44:/drawable-night_color_selector.xml.flat",
+        "source": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-main-46:/drawable-night/color_selector.xml"
+    },
+    {
         "merged": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-merged_res-44:/layout_faq.xml.flat",
         "source": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-main-46:/layout/faq.xml"
     },
@@ -298,10 +306,6 @@
     {
         "merged": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-merged_res-44:/layout_info.xml.flat",
         "source": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-main-46:/layout/info.xml"
-    },
-    {
-        "merged": "com.xapps.utility.xsigner.app-merged_res-44:/layout_key_creating.xml.flat",
-        "source": "com.xapps.utility.xsigner.app-main-46:/layout/key_creating.xml"
     },
     {
         "merged": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-merged_res-44:/drawable-xhdpi_ic_create_white.png.flat",

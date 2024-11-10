@@ -149,6 +149,7 @@ color md_theme_tertiaryFixed_mediumContrast
 color md_theme_tertiary_highContrast
 color md_theme_tertiary_mediumContrast
 color md_theme_textMain
+color primary_color
 drawable app_logo
 drawable avd_splashanim
 drawable color_selector

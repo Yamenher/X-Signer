@@ -29,8 +29,7 @@
 				android:paddingBottom="5dp"
 				android:text="Select a key for signing                                        "
 				android:textSize="25sp"
-				android:fontFamily="@font/product_sans_regular"
-				android:textColor="@color/md_theme_textMain"
+				android:textColor="?colorOnSurface"
 				android:maxLines="1" />
 		</LinearLayout>
 		<LinearLayout
@@ -55,7 +54,7 @@
 				android:paddingLeft="8dp"
 				android:paddingTop="30dp"
 				android:paddingRight="8dp"
-				android:paddingBottom="30dp"
+				android:paddingBottom="20dp"
 				android:gravity="center_horizontal|center_vertical"
 				android:orientation="vertical">
 				<com.google.android.material.progressindicator.CircularProgressIndicator
@@ -66,8 +65,7 @@
 					android:indeterminate="true" 
 					app:indicatorSize="40dp"
 					app:trackThickness="4dp"
-					app:indicatorColor="@color/colorAccent"
-					app:trackColor="#FFFFFFFF" />
+					app:indicatorColor="?colorPrimary" />
 			</LinearLayout>
 		</LinearLayout>
 		<LinearLayout
@@ -78,7 +76,7 @@
 			android:layout_marginRight="20dp"
 			android:layout_marginBottom="8dp"
 			android:paddingLeft="10dp"
-			android:paddingTop="10dp"
+			android:paddingTop="2dp"
 			android:gravity="right|center_vertical"
 			android:orientation="horizontal">
 			<LinearLayout
@@ -97,8 +95,7 @@
 					android:paddingBottom="13dp"
 					android:text="Cancel"
 					android:textSize="14sp"
-					android:textColor="@color/colorAccent"
-					android:fontFamily="@font/product_sans_regular" />
+					android:textColor="?colorPrimary"/>
 			</LinearLayout>
 		</LinearLayout>
 	</LinearLayout>

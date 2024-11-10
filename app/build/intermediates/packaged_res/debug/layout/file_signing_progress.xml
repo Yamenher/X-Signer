@@ -27,7 +27,7 @@
 			android:text="Working..."
 			android:textSize="18sp"
 			android:fontFamily="@font/product_sans_regular"
-			android:textColor="@color/md_theme_textMain" />
+			android:textColor="?colorOnSurface" />
 		<com.google.android.material.progressindicator.LinearProgressIndicator
 			android:id="@+id/progress"
 			android:focusable="false"
@@ -37,6 +37,7 @@
 			android:layout_marginRight="15dp"
 			android:layout_marginBottom="10dp"
 			android:padding="8dp"
+            app:trackStopIndicatorSize="0dp"
 			android:indeterminate="true" 
 			app:trackThickness="4dp"
 			app:indicatorColor="?colorPrimary"

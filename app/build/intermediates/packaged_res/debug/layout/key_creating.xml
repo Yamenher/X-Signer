@@ -10,6 +10,7 @@
 		android:id="@+id/_app_bar"
 		android:layout_width="match_parent"
         style="@style/Widget.Material3.AppBarLayout"
+        app:liftOnScroll="false"
 		android:layout_height="wrap_content">
 		<androidx.appcompat.widget.Toolbar
 			android:id="@+id/_toolbar"
@@ -25,15 +26,14 @@
 			android:id="@+id/Scroller"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
 			android:layout_weight="1">
 			<LinearLayout
 				android:id="@+id/BG"
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
-				android:paddingLeft="18dp"
-				android:paddingTop="8dp"
-				android:paddingRight="18dp"
-				android:paddingBottom="8dp"
+				android:paddingHorizontal="18dp"
+				android:paddingVertical="8dp"
 				android:orientation="vertical">
 				<TextView
 					android:id="@+id/TopTitle"
@@ -52,12 +52,14 @@
 					android:layout_width="match_parent"
 					android:layout_height="wrap_content"
 					android:layout_marginRight="8dp"
-					android:paddingTop="5dp"
-					android:paddingBottom="5dp"
-					style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+					android:paddingVertical="5dp"
+					style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                    android:textColorHint="?colorOutline"
+                    app:placeholderTextColor="?colorOutline"
 					app:hintEnabled="true"
 					app:hintAnimationEnabled="true"
-					android:hint="@string/stringAlias">
+                    app:placeholderText="E.g : Company name"
+					android:hint="Key alias">
 					<com.google.android.material.textfield.TextInputEditText
 						android:id="@+id/AliasE"
 						android:layout_width="match_parent"
@@ -67,10 +69,8 @@
 						android:paddingRight="20dp"
 						android:paddingBottom="18dp"
 						android:textSize="16sp"
-						android:textColorHint="#607D8B"
 						android:imeOptions="actionNext"
 						android:focusable="true"
-						android:textColor="@color/md_theme_textMain"
 						android:singleLine="true" />
 				</com.google.android.material.textfield.TextInputLayout>
 				<com.google.android.material.textfield.TextInputLayout
@@ -88,12 +88,9 @@
 						android:id="@+id/AliasPassE"
 						android:layout_width="match_parent"
 						android:layout_height="wrap_content"
-						android:paddingLeft="20dp"
-						android:paddingTop="18dp"
-						android:paddingRight="20dp"
-						android:paddingBottom="18dp"
+						android:paddingHorizontal="20dp"
+						android:paddingVertical="18dp"
 						android:textSize="16sp"
-						android:textColorHint="#607D8B"
 						android:focusable="true"
 						android:textColor="@color/md_theme_textMain"
 						android:imeOptions="actionNext"

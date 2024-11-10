@@ -54,7 +54,7 @@
 			android:supportsPictureInPicture="true"
 			android:screenOrientation="portrait"
 			android:theme="@style/Theme.XSigner.Base.Main"
-			android:windowSoftInputMode="stateHidden" />
+		    android:windowSoftInputMode="adjustPan" />
 		<activity
 			android:name=".DebugActivity"
             android:launchMode="singleTask"

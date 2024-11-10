@@ -198,7 +198,7 @@ public class KeysListActivity extends AppCompatActivity {
 		_toolbar.setNavigationOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View _v) {
-				onBackPressed();
+				getOnBackPressedDispatcher().onBackPressed();
 			}
 		});
 		_fab = findViewById(R.id._fab);
@@ -209,21 +209,26 @@ public class KeysListActivity extends AppCompatActivity {
 		progressbar1 = findViewById(R.id.progressbar1);
 		KeyManager = getSharedPreferences("KeysData", Activity.MODE_PRIVATE);
 		
-        /*Handler handler = new Handler(Looper.getMainLooper());
-        Runnable runnable = new Runnable() {
+        recyclerview.addOnScrollListener(new RecyclerView.OnScrollListener() {
+            private int lastDy = 0;  // To track previous scroll direction
             @Override
-            public void run() {
-                if (_app_bar.isLifted()) {
+            public void onScrolled(@NonNull RecyclerView recyclerView, int dx, int dy) {
+                super.onScrolled(recyclerView, dx, dy);
+                if (recyclerView.canScrollVertically(-1)) {
+                    _app_bar.setLifted(true);
+                } else {
+                    _app_bar.setLifted(false);
+                }
+                    
+                if (dy > 10) {
                     _fab.shrink();
                     _fab2.shrink();
-                } else {
+                } else if (dy < -10) {
                     _fab.extend();
                     _fab2.extend();
                 }
-                handler.postDelayed(this, 100);
             }
-        };
-        handler.post(runnable);*/
+        });
 		
 		_fab.setOnClickListener(new View.OnClickListener() {
 			@Override
@@ -1151,7 +1156,7 @@ KeyPassTIP.setErrorEnabled(false);
 			final TextView textview4 = _view.findViewById(R.id.textview4);
 			
 			KeyInfoLayout.measure(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-			    targetHeight = KeyInfoLayout.getMeasuredHeight();
+		    targetHeight = KeyInfoLayout.getMeasuredHeight();
 			KeyInfoLayout.setOnClickListener(new View.OnClickListener() {
 				@Override
 				public void onClick(View _view) {
@@ -1224,15 +1229,6 @@ KeyPassTIP.setErrorEnabled(false);
 					_timer.scheduleAtFixedRate(UITimer, (int)(0), (int)(50));
 					   }
 			});
-			KeyIcon.setColorFilter(getColor(R.color.md_theme_onPrimaryContainer), PorterDuff.Mode.SRC_IN);
-			int nightModeMask = getResources().getConfiguration().uiMode & android.content.res.Configuration.UI_MODE_NIGHT_MASK;
-			
-			if (nightModeMask == android.content.res.Configuration.UI_MODE_NIGHT_YES) {
-		
-						KeyFrame.setBackground(new GradientDrawable() { public GradientDrawable getIns(int a, int b) { this.setCornerRadius(a); this.setColor(b); return this; } }.getIns((int)150, 0xFF004C6E));
-			} else {
-						KeyFrame.setBackground(new GradientDrawable() { public GradientDrawable getIns(int a, int b) { this.setCornerRadius(a); this.setColor(b); return this; } }.getIns((int)150, 0xFFC8E6FF));
-			}
 			try {
 				KeyName.setText(KeysMap.get((int)_position).get("keyname").toString());
 				TypeDesc.setText(KeysMap.get((int)_position).get("type").toString());
