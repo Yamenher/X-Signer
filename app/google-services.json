@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "847200943221",
+    "firebase_url": "https://x-signer-xapps-default-rtdb.firebaseio.com",
+    "project_id": "x-signer-xapps",
+    "storage_bucket": "x-signer-xapps.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:847200943221:android:88c54cf71dabe355e0cc3c",
+        "android_client_info": {
+          "package_name": "com.xapps.utility.xsigner"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCjXjarXeMYeVJHkfBRTz85dlQ_jcY1YDE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

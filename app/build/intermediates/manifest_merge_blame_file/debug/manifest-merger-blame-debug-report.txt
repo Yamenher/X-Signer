@@ -1,7 +1,7 @@
 1<?xml version="1.0" encoding="utf-8"?>
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
 3    package="com.xapps.utility.xsigner"
-4    android:versionCode="448"
+4    android:versionCode="700"
 5    android:versionName="0.7.0 Alpha" >
 6
 7    <uses-sdk
@@ -9,292 +9,502 @@
 9        android:targetSdkVersion="35" />
 10
 11    <uses-permission android:name="android.permission.INTERNET" />
-11-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:5:2-64
-11-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:5:19-61
+11-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:4:2-64
+11-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:4:19-61
 12    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-12-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:6:2-76
-12-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:6:19-73
+12-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:5:2-76
+12-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:5:19-73
 13    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-13-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:7:2-77
-13-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:7:19-74
+13-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:6:2-77
+13-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:6:19-74
 14    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-14-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:8:2-78
-14-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:8:19-75
+14-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:7:2-78
+14-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:7:19-75
 15    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
-15-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:9:2-79
-15-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:9:19-76
+15-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:8:2-79
+15-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:8:19-76
 16    <uses-permission android:name="android.permission.WRITE_MEDIA_STORAGE" />
-16-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:10:2-75
-16-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:10:19-72
+16-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:9:2-75
+16-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:9:19-72
 17    <uses-permission android:name="android.permission.ACCESS_NETWORK_CONDITIONS" />
-17-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:11:2-81
-17-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:11:19-78
+17-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:10:2-81
+17-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:10:19-78
 18    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
-18-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:12:2-76
-18-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:12:19-73
+18-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:11:2-76
+18-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:11:19-73
 19    <uses-permission android:name="android.permission.CONNECTIVITY_USE_RESTRICTED_NETWORKS" />
-19-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:13:2-92
-19-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:13:19-89
-20
-21    <permission
-21-->[androidx.core:core:1.13.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/bfebdccffa02b738d6bbc9119166892e/transformed/core-1.13.0/AndroidManifest.xml:22:5-24:47
-22        android:name="com.xapps.utility.xsigner.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-22-->[androidx.core:core:1.13.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/bfebdccffa02b738d6bbc9119166892e/transformed/core-1.13.0/AndroidManifest.xml:23:9-81
-23        android:protectionLevel="signature" />
-23-->[androidx.core:core:1.13.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/bfebdccffa02b738d6bbc9119166892e/transformed/core-1.13.0/AndroidManifest.xml:24:9-44
-24
-25    <uses-permission android:name="com.xapps.utility.xsigner.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-25-->[androidx.core:core:1.13.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/bfebdccffa02b738d6bbc9119166892e/transformed/core-1.13.0/AndroidManifest.xml:26:5-97
-25-->[androidx.core:core:1.13.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/bfebdccffa02b738d6bbc9119166892e/transformed/core-1.13.0/AndroidManifest.xml:26:22-94
-26
-27    <application
-27-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:14:2-102:16
-28        android:name="com.xapps.utility.xsigner.XApplication"
-28-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:20:9-36
-29        android:allowBackup="true"
-29-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:15:3-29
-30        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-30-->[androidx.core:core:1.13.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/bfebdccffa02b738d6bbc9119166892e/transformed/core-1.13.0/AndroidManifest.xml:28:18-86
-31        android:debuggable="true"
-32        android:enableOnBackInvokedCallback="true"
-32-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:22:3-45
-33        android:extractNativeLibs="false"
-34        android:icon="@mipmap/launcher_icon"
-34-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:16:3-39
-35        android:label="@string/app_name"
-35-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:17:3-35
-36        android:requestLegacyExternalStorage="true"
-36-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:18:3-46
-37        android:theme="@style/Theme.XSigner.Base.Main"
-37-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:21:3-49
-38        android:usesCleartextTraffic="true" >
-38-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:19:3-38
-39        <activity
-39-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:23:3-30:48
-40            android:name="com.xapps.utility.xsigner.MainActivity"
-40-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:24:4-32
-41            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
-41-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:25:4-97
-42            android:hardwareAccelerated="true"
-42-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:26:4-38
-43            android:screenOrientation="portrait"
-43-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:28:4-40
-44            android:supportsPictureInPicture="true"
-44-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:27:4-43
-45            android:theme="@style/Theme.XSigner.Base.Main"
-45-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:29:4-50
-46            android:windowSoftInputMode="stateHidden" />
-46-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:30:4-45
-47        <activity
-47-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:31:3-44:14
-48            android:name="com.xapps.utility.xsigner.SplashScreenActivity"
-48-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:32:4-40
-49            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
-49-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:33:4-97
-50            android:exported="true"
-50-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:39:4-27
-51            android:hardwareAccelerated="true"
-51-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:34:4-38
-52            android:screenOrientation="portrait"
-52-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:36:4-40
-53            android:supportsPictureInPicture="true"
-53-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:35:4-43
-54            android:theme="@style/Theme.XSigner.Base.Splash"
-54-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:37:4-52
-55            android:windowSoftInputMode="stateHidden" >
-55-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:38:4-45
-56            <intent-filter>
-56-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:40:4-43:20
-57                <action android:name="android.intent.action.MAIN" />
-57-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:41:5-57
-57-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:41:13-54
-58
-59                <category android:name="android.intent.category.LAUNCHER" />
-59-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:42:5-65
-59-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:42:15-62
-60            </intent-filter>
-61        </activity>
-62        <activity
-62-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:45:3-50:43
-63            android:name="com.xapps.utility.xsigner.LoginActivity"
-63-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:46:4-33
-64            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
-64-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:47:4-97
-65            android:hardwareAccelerated="true"
-65-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:48:4-38
-66            android:screenOrientation="portrait"
-66-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:50:4-40
-67            android:supportsPictureInPicture="true" />
-67-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:49:4-43
-68        <activity
-68-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:51:3-58:48
-69            android:name="com.xapps.utility.xsigner.KeysListActivity"
-69-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:52:4-36
-70            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
-70-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:53:4-97
-71            android:hardwareAccelerated="true"
-71-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:54:4-38
-72            android:screenOrientation="portrait"
-72-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:56:4-40
-73            android:supportsPictureInPicture="true"
-73-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:55:4-43
-74            android:theme="@style/Theme.XSigner.Base.Main"
-74-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:57:4-50
-75            android:windowSoftInputMode="stateHidden" />
-75-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:58:4-45
-76        <activity
-76-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:59:3-66:48
-77            android:name="com.xapps.utility.xsigner.DebugActivity"
-77-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:60:4-33
-78            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
-78-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:61:4-97
-79            android:hardwareAccelerated="true"
-79-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:62:4-38
-80            android:screenOrientation="portrait"
-80-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:64:4-40
-81            android:supportsPictureInPicture="true"
-81-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:63:4-43
-82            android:theme="@style/Theme.XSigner.Base.Main"
-82-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:65:4-50
-83            android:windowSoftInputMode="stateHidden" />
-83-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:66:4-45
-84        <activity
-84-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:67:9-74:48
-85            android:name="com.xapps.utility.xsigner.FaqActivity"
-85-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:68:4-31
-86            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
-86-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:69:4-97
-87            android:hardwareAccelerated="true"
-87-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:70:4-38
-88            android:screenOrientation="portrait"
-88-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:72:4-40
-89            android:supportsPictureInPicture="true"
-89-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:71:4-43
-90            android:theme="@style/Theme.XSigner.Base.Main"
-90-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:73:4-50
-91            android:windowSoftInputMode="stateHidden" />
-91-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:74:4-45
-92        <activity
-92-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:75:9-82:48
-93            android:name="com.xapps.utility.xsigner.InfoActivity"
-93-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:76:4-32
-94            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
-94-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:77:4-97
-95            android:hardwareAccelerated="true"
-95-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:78:4-38
-96            android:screenOrientation="portrait"
-96-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:80:4-40
-97            android:supportsPictureInPicture="true"
-97-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:79:4-43
-98            android:theme="@style/Theme.XSigner.Base.Main"
-98-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:81:4-50
-99            android:windowSoftInputMode="stateHidden" />
-99-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:82:4-45
-100        <activity
-100-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:83:3-90:48
-101            android:name="com.xapps.utility.xsigner.UpdateActivity"
-101-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:84:4-34
-102            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
-102-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:85:4-97
-103            android:hardwareAccelerated="true"
-103-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:86:4-38
-104            android:screenOrientation="portrait"
-104-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:88:4-40
-105            android:supportsPictureInPicture="true"
-105-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:87:4-43
-106            android:theme="@style/Theme.XSigner.Base.Main"
-106-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:89:4-50
-107            android:windowSoftInputMode="stateHidden" />
-107-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:90:4-45
-108        <activity
-108-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:91:3-98:48
-109            android:name="com.xapps.utility.xsigner.KeyCreatingActivity"
-109-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:92:4-39
-110            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
-110-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:93:4-97
-111            android:hardwareAccelerated="true"
-111-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:94:4-38
-112            android:screenOrientation="portrait"
-112-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:96:4-40
-113            android:supportsPictureInPicture="true"
-113-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:95:4-43
-114            android:theme="@style/Theme.XSigner.Base.Main"
-114-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:97:4-50
-115            android:windowSoftInputMode="stateHidden" />
-115-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:98:4-45
-116
-117        <uses-library
-117-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:99:3-101:31
-118            android:name="org.apache.http.legacy"
-118-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:100:4-41
-119            android:required="false" />
-119-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:101:4-28
-120
-121        <provider
-121-->[androidx.emoji2:emoji2:1.2.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/34246dd98c4c1fdf8240a2573b71e6c3/transformed/emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
-122            android:name="androidx.startup.InitializationProvider"
-122-->[androidx.emoji2:emoji2:1.2.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/34246dd98c4c1fdf8240a2573b71e6c3/transformed/emoji2-1.2.0/AndroidManifest.xml:25:13-67
-123            android:authorities="com.xapps.utility.xsigner.androidx-startup"
-123-->[androidx.emoji2:emoji2:1.2.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/34246dd98c4c1fdf8240a2573b71e6c3/transformed/emoji2-1.2.0/AndroidManifest.xml:26:13-68
-124            android:exported="false" >
-124-->[androidx.emoji2:emoji2:1.2.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/34246dd98c4c1fdf8240a2573b71e6c3/transformed/emoji2-1.2.0/AndroidManifest.xml:27:13-37
-125            <meta-data
-125-->[androidx.emoji2:emoji2:1.2.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/34246dd98c4c1fdf8240a2573b71e6c3/transformed/emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
-126                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-126-->[androidx.emoji2:emoji2:1.2.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/34246dd98c4c1fdf8240a2573b71e6c3/transformed/emoji2-1.2.0/AndroidManifest.xml:30:17-75
-127                android:value="androidx.startup" />
-127-->[androidx.emoji2:emoji2:1.2.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/34246dd98c4c1fdf8240a2573b71e6c3/transformed/emoji2-1.2.0/AndroidManifest.xml:31:17-49
-128            <meta-data
-128-->[androidx.lifecycle:lifecycle-process:2.6.2] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/8261aef4d208086be3aec60ce59ff36c/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:29:13-31:52
-129                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-129-->[androidx.lifecycle:lifecycle-process:2.6.2] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/8261aef4d208086be3aec60ce59ff36c/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:30:17-78
-130                android:value="androidx.startup" />
-130-->[androidx.lifecycle:lifecycle-process:2.6.2] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/8261aef4d208086be3aec60ce59ff36c/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:31:17-49
-131            <meta-data
-131-->[androidx.profileinstaller:profileinstaller:1.3.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/2c8cfc0e0f760918f58cd43869b0fefe/transformed/profileinstaller-1.3.0/AndroidManifest.xml:29:13-31:52
-132                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-132-->[androidx.profileinstaller:profileinstaller:1.3.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/2c8cfc0e0f760918f58cd43869b0fefe/transformed/profileinstaller-1.3.0/AndroidManifest.xml:30:17-85
-133                android:value="androidx.startup" />
-133-->[androidx.profileinstaller:profileinstaller:1.3.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/2c8cfc0e0f760918f58cd43869b0fefe/transformed/profileinstaller-1.3.0/AndroidManifest.xml:31:17-49
-134        </provider>
-135
-136        <receiver
-136-->[androidx.profileinstaller:profileinstaller:1.3.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/2c8cfc0e0f760918f58cd43869b0fefe/transformed/profileinstaller-1.3.0/AndroidManifest.xml:34:9-52:20
-137            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-137-->[androidx.profileinstaller:profileinstaller:1.3.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/2c8cfc0e0f760918f58cd43869b0fefe/transformed/profileinstaller-1.3.0/AndroidManifest.xml:35:13-76
-138            android:directBootAware="false"
-138-->[androidx.profileinstaller:profileinstaller:1.3.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/2c8cfc0e0f760918f58cd43869b0fefe/transformed/profileinstaller-1.3.0/AndroidManifest.xml:36:13-44
-139            android:enabled="true"
-139-->[androidx.profileinstaller:profileinstaller:1.3.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/2c8cfc0e0f760918f58cd43869b0fefe/transformed/profileinstaller-1.3.0/AndroidManifest.xml:37:13-35
-140            android:exported="true"
-140-->[androidx.profileinstaller:profileinstaller:1.3.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/2c8cfc0e0f760918f58cd43869b0fefe/transformed/profileinstaller-1.3.0/AndroidManifest.xml:38:13-36
-141            android:permission="android.permission.DUMP" >
-141-->[androidx.profileinstaller:profileinstaller:1.3.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/2c8cfc0e0f760918f58cd43869b0fefe/transformed/profileinstaller-1.3.0/AndroidManifest.xml:39:13-57
-142            <intent-filter>
-142-->[androidx.profileinstaller:profileinstaller:1.3.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/2c8cfc0e0f760918f58cd43869b0fefe/transformed/profileinstaller-1.3.0/AndroidManifest.xml:40:13-42:29
-143                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-143-->[androidx.profileinstaller:profileinstaller:1.3.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/2c8cfc0e0f760918f58cd43869b0fefe/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:17-91
-143-->[androidx.profileinstaller:profileinstaller:1.3.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/2c8cfc0e0f760918f58cd43869b0fefe/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:25-88
-144            </intent-filter>
-145            <intent-filter>
-145-->[androidx.profileinstaller:profileinstaller:1.3.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/2c8cfc0e0f760918f58cd43869b0fefe/transformed/profileinstaller-1.3.0/AndroidManifest.xml:43:13-45:29
-146                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-146-->[androidx.profileinstaller:profileinstaller:1.3.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/2c8cfc0e0f760918f58cd43869b0fefe/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:17-85
-146-->[androidx.profileinstaller:profileinstaller:1.3.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/2c8cfc0e0f760918f58cd43869b0fefe/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:25-82
-147            </intent-filter>
-148            <intent-filter>
-148-->[androidx.profileinstaller:profileinstaller:1.3.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/2c8cfc0e0f760918f58cd43869b0fefe/transformed/profileinstaller-1.3.0/AndroidManifest.xml:46:13-48:29
-149                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
-149-->[androidx.profileinstaller:profileinstaller:1.3.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/2c8cfc0e0f760918f58cd43869b0fefe/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:17-88
-149-->[androidx.profileinstaller:profileinstaller:1.3.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/2c8cfc0e0f760918f58cd43869b0fefe/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:25-85
-150            </intent-filter>
-151            <intent-filter>
-151-->[androidx.profileinstaller:profileinstaller:1.3.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/2c8cfc0e0f760918f58cd43869b0fefe/transformed/profileinstaller-1.3.0/AndroidManifest.xml:49:13-51:29
-152                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
-152-->[androidx.profileinstaller:profileinstaller:1.3.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/2c8cfc0e0f760918f58cd43869b0fefe/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:17-95
-152-->[androidx.profileinstaller:profileinstaller:1.3.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/2c8cfc0e0f760918f58cd43869b0fefe/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:25-92
-153            </intent-filter>
-154        </receiver>
-155    </application>
-156
-157</manifest>
+19-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:12:2-92
+19-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:12:19-89
+20    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+20-->[com.google.android.recaptcha:recaptcha:18.5.1] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/cf9f1373f17884de674fe191bd05f91f/transformed/recaptcha-18.5.1/AndroidManifest.xml:9:5-98
+20-->[com.google.android.recaptcha:recaptcha:18.5.1] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/cf9f1373f17884de674fe191bd05f91f/transformed/recaptcha-18.5.1/AndroidManifest.xml:9:22-95
+21
+22    <permission
+22-->[androidx.core:core:1.13.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/4a96a0e96d29d8a6cf0caa15a5ca44c2/transformed/core-1.13.0/AndroidManifest.xml:22:5-24:47
+23        android:name="com.xapps.utility.xsigner.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+23-->[androidx.core:core:1.13.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/4a96a0e96d29d8a6cf0caa15a5ca44c2/transformed/core-1.13.0/AndroidManifest.xml:23:9-81
+24        android:protectionLevel="signature" />
+24-->[androidx.core:core:1.13.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/4a96a0e96d29d8a6cf0caa15a5ca44c2/transformed/core-1.13.0/AndroidManifest.xml:24:9-44
+25
+26    <uses-permission android:name="com.xapps.utility.xsigner.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+26-->[androidx.core:core:1.13.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/4a96a0e96d29d8a6cf0caa15a5ca44c2/transformed/core-1.13.0/AndroidManifest.xml:26:5-97
+26-->[androidx.core:core:1.13.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/4a96a0e96d29d8a6cf0caa15a5ca44c2/transformed/core-1.13.0/AndroidManifest.xml:26:22-94
+27
+28    <application
+28-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:13:2-102:16
+29        android:name="com.xapps.utility.xsigner.XApplication"
+29-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:19:9-36
+30        android:allowBackup="true"
+30-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:14:3-29
+31        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+31-->[androidx.core:core:1.13.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/4a96a0e96d29d8a6cf0caa15a5ca44c2/transformed/core-1.13.0/AndroidManifest.xml:28:18-86
+32        android:debuggable="true"
+33        android:enableOnBackInvokedCallback="true"
+33-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:21:3-45
+34        android:extractNativeLibs="false"
+35        android:icon="@mipmap/launcher_icon"
+35-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:15:3-39
+36        android:label="@string/app_name"
+36-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:16:3-35
+37        android:requestLegacyExternalStorage="true"
+37-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:17:3-46
+38        android:theme="@style/Theme.XSigner.Base.Main"
+38-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:20:3-49
+39        android:usesCleartextTraffic="true" >
+39-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:18:3-38
+40        <activity
+40-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:22:3-29:48
+41            android:name="com.xapps.utility.xsigner.MainActivity"
+41-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:23:4-32
+42            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+42-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:24:4-97
+43            android:hardwareAccelerated="true"
+43-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:25:4-38
+44            android:screenOrientation="portrait"
+44-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:27:4-40
+45            android:supportsPictureInPicture="true"
+45-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:26:4-43
+46            android:theme="@style/Theme.XSigner.Base.Main"
+46-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:28:4-50
+47            android:windowSoftInputMode="stateHidden" />
+47-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:29:4-45
+48        <activity
+48-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:30:3-43:14
+49            android:name="com.xapps.utility.xsigner.SplashScreenActivity"
+49-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:31:4-40
+50            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+50-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:32:4-97
+51            android:exported="true"
+51-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:38:4-27
+52            android:hardwareAccelerated="true"
+52-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:33:4-38
+53            android:screenOrientation="portrait"
+53-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:35:4-40
+54            android:supportsPictureInPicture="true"
+54-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:34:4-43
+55            android:theme="@style/Theme.XSigner.Base.Splash"
+55-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:36:4-52
+56            android:windowSoftInputMode="stateHidden" >
+56-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:37:4-45
+57            <intent-filter>
+57-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:39:4-42:20
+58                <action android:name="android.intent.action.MAIN" />
+58-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:40:5-57
+58-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:40:13-54
+59
+60                <category android:name="android.intent.category.LAUNCHER" />
+60-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:41:5-65
+60-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:41:15-62
+61            </intent-filter>
+62        </activity>
+63        <activity
+63-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:44:3-49:43
+64            android:name="com.xapps.utility.xsigner.LoginActivity"
+64-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:45:4-33
+65            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+65-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:46:4-97
+66            android:hardwareAccelerated="true"
+66-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:47:4-38
+67            android:screenOrientation="portrait"
+67-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:49:4-40
+68            android:supportsPictureInPicture="true" />
+68-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:48:4-43
+69        <activity
+69-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:50:3-57:48
+70            android:name="com.xapps.utility.xsigner.KeysListActivity"
+70-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:51:4-36
+71            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+71-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:52:4-97
+72            android:hardwareAccelerated="true"
+72-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:53:4-38
+73            android:screenOrientation="portrait"
+73-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:55:4-40
+74            android:supportsPictureInPicture="true"
+74-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:54:4-43
+75            android:theme="@style/Theme.XSigner.Base.Main"
+75-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:56:4-50
+76            android:windowSoftInputMode="stateHidden" />
+76-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:57:4-45
+77        <activity
+77-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:58:3-66:48
+78            android:name="com.xapps.utility.xsigner.DebugActivity"
+78-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:59:4-33
+79            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+79-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:61:4-97
+80            android:hardwareAccelerated="true"
+80-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:62:4-38
+81            android:launchMode="singleTask"
+81-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:60:13-44
+82            android:screenOrientation="portrait"
+82-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:64:4-40
+83            android:supportsPictureInPicture="true"
+83-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:63:4-43
+84            android:theme="@style/Theme.XSigner.Base.Main"
+84-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:65:4-50
+85            android:windowSoftInputMode="stateHidden" />
+85-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:66:4-45
+86        <activity
+86-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:67:9-74:48
+87            android:name="com.xapps.utility.xsigner.FaqActivity"
+87-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:68:4-31
+88            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+88-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:69:4-97
+89            android:hardwareAccelerated="true"
+89-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:70:4-38
+90            android:screenOrientation="portrait"
+90-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:72:4-40
+91            android:supportsPictureInPicture="true"
+91-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:71:4-43
+92            android:theme="@style/Theme.XSigner.Base.Main"
+92-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:73:4-50
+93            android:windowSoftInputMode="stateHidden" />
+93-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:74:4-45
+94        <activity
+94-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:75:9-82:48
+95            android:name="com.xapps.utility.xsigner.InfoActivity"
+95-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:76:4-32
+96            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+96-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:77:4-97
+97            android:hardwareAccelerated="true"
+97-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:78:4-38
+98            android:screenOrientation="portrait"
+98-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:80:4-40
+99            android:supportsPictureInPicture="true"
+99-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:79:4-43
+100            android:theme="@style/Theme.XSigner.Base.Main"
+100-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:81:4-50
+101            android:windowSoftInputMode="stateHidden" />
+101-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:82:4-45
+102        <activity
+102-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:83:3-90:48
+103            android:name="com.xapps.utility.xsigner.UpdateActivity"
+103-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:84:4-34
+104            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+104-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:85:4-97
+105            android:hardwareAccelerated="true"
+105-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:86:4-38
+106            android:screenOrientation="portrait"
+106-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:88:4-40
+107            android:supportsPictureInPicture="true"
+107-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:87:4-43
+108            android:theme="@style/Theme.XSigner.Base.Main"
+108-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:89:4-50
+109            android:windowSoftInputMode="stateHidden" />
+109-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:90:4-45
+110        <activity
+110-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:91:3-98:48
+111            android:name="com.xapps.utility.xsigner.KeyCreatingActivity"
+111-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:92:4-39
+112            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+112-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:93:4-97
+113            android:hardwareAccelerated="true"
+113-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:94:4-38
+114            android:screenOrientation="portrait"
+114-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:96:4-40
+115            android:supportsPictureInPicture="true"
+115-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:95:4-43
+116            android:theme="@style/Theme.XSigner.Base.Main"
+116-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:97:4-50
+117            android:windowSoftInputMode="stateHidden" />
+117-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:98:4-45
+118
+119        <uses-library
+119-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:99:3-101:31
+120            android:name="org.apache.http.legacy"
+120-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:100:4-41
+121            android:required="false" />
+121-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:101:4-28
+122
+123        <activity
+123-->[com.google.firebase:firebase-auth:23.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:29:9-46:20
+124            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
+124-->[com.google.firebase:firebase-auth:23.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:30:13-80
+125            android:excludeFromRecents="true"
+125-->[com.google.firebase:firebase-auth:23.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:31:13-46
+126            android:exported="true"
+126-->[com.google.firebase:firebase-auth:23.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:32:13-36
+127            android:launchMode="singleTask"
+127-->[com.google.firebase:firebase-auth:23.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:33:13-44
+128            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+128-->[com.google.firebase:firebase-auth:23.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:34:13-72
+129            <intent-filter>
+129-->[com.google.firebase:firebase-auth:23.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:35:13-45:29
+130                <action android:name="android.intent.action.VIEW" />
+130-->[com.google.firebase:firebase-auth:23.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:36:17-69
+130-->[com.google.firebase:firebase-auth:23.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:36:25-66
+131
+132                <category android:name="android.intent.category.DEFAULT" />
+132-->[com.google.firebase:firebase-auth:23.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:38:17-76
+132-->[com.google.firebase:firebase-auth:23.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:38:27-73
+133                <category android:name="android.intent.category.BROWSABLE" />
+133-->[com.google.firebase:firebase-auth:23.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:39:17-78
+133-->[com.google.firebase:firebase-auth:23.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:39:27-75
+134
+135                <data
+135-->[com.google.firebase:firebase-auth:23.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:41:17-44:51
+136                    android:host="firebase.auth"
+136-->[com.google.firebase:firebase-auth:23.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:42:21-49
+137                    android:path="/"
+137-->[com.google.firebase:firebase-auth:23.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:43:21-37
+138                    android:scheme="genericidp" />
+138-->[com.google.firebase:firebase-auth:23.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:44:21-48
+139            </intent-filter>
+140        </activity>
+141        <activity
+141-->[com.google.firebase:firebase-auth:23.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:47:9-64:20
+142            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
+142-->[com.google.firebase:firebase-auth:23.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:48:13-79
+143            android:excludeFromRecents="true"
+143-->[com.google.firebase:firebase-auth:23.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:49:13-46
+144            android:exported="true"
+144-->[com.google.firebase:firebase-auth:23.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:50:13-36
+145            android:launchMode="singleTask"
+145-->[com.google.firebase:firebase-auth:23.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:51:13-44
+146            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+146-->[com.google.firebase:firebase-auth:23.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:52:13-72
+147            <intent-filter>
+147-->[com.google.firebase:firebase-auth:23.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:53:13-63:29
+148                <action android:name="android.intent.action.VIEW" />
+148-->[com.google.firebase:firebase-auth:23.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:36:17-69
+148-->[com.google.firebase:firebase-auth:23.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:36:25-66
+149
+150                <category android:name="android.intent.category.DEFAULT" />
+150-->[com.google.firebase:firebase-auth:23.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:38:17-76
+150-->[com.google.firebase:firebase-auth:23.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:38:27-73
+151                <category android:name="android.intent.category.BROWSABLE" />
+151-->[com.google.firebase:firebase-auth:23.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:39:17-78
+151-->[com.google.firebase:firebase-auth:23.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:39:27-75
+152
+153                <data
+153-->[com.google.firebase:firebase-auth:23.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:41:17-44:51
+154                    android:host="firebase.auth"
+154-->[com.google.firebase:firebase-auth:23.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:42:21-49
+155                    android:path="/"
+155-->[com.google.firebase:firebase-auth:23.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:43:21-37
+156                    android:scheme="recaptcha" />
+156-->[com.google.firebase:firebase-auth:23.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:44:21-48
+157            </intent-filter>
+158        </activity>
+159
+160        <service
+160-->[com.google.firebase:firebase-auth:23.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:66:9-72:19
+161            android:name="com.google.firebase.components.ComponentDiscoveryService"
+161-->[com.google.firebase:firebase-auth:23.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:67:13-84
+162            android:directBootAware="true"
+162-->[com.google.firebase:firebase-common:21.0.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/66b0f33c7c10062a45669237b77cf5af/transformed/firebase-common-21.0.0/AndroidManifest.xml:32:13-43
+163            android:exported="false" >
+163-->[com.google.firebase:firebase-auth:23.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:68:13-37
+164            <meta-data
+164-->[com.google.firebase:firebase-auth:23.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:69:13-71:85
+165                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+165-->[com.google.firebase:firebase-auth:23.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:70:17-109
+166                android:value="com.google.firebase.components.ComponentRegistrar" />
+166-->[com.google.firebase:firebase-auth:23.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:71:17-82
+167            <meta-data
+167-->[com.google.firebase:firebase-database:21.0.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/ac5e8519b8e057263bf9360deceb1f20/transformed/firebase-database-21.0.0/AndroidManifest.xml:29:13-31:85
+168                android:name="com.google.firebase.components:com.google.firebase.database.FirebaseDatabaseKtxRegistrar"
+168-->[com.google.firebase:firebase-database:21.0.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/ac5e8519b8e057263bf9360deceb1f20/transformed/firebase-database-21.0.0/AndroidManifest.xml:30:17-120
+169                android:value="com.google.firebase.components.ComponentRegistrar" />
+169-->[com.google.firebase:firebase-database:21.0.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/ac5e8519b8e057263bf9360deceb1f20/transformed/firebase-database-21.0.0/AndroidManifest.xml:31:17-82
+170            <meta-data
+170-->[com.google.firebase:firebase-database:21.0.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/ac5e8519b8e057263bf9360deceb1f20/transformed/firebase-database-21.0.0/AndroidManifest.xml:32:13-34:85
+171                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
+171-->[com.google.firebase:firebase-database:21.0.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/ac5e8519b8e057263bf9360deceb1f20/transformed/firebase-database-21.0.0/AndroidManifest.xml:33:17-109
+172                android:value="com.google.firebase.components.ComponentRegistrar" />
+172-->[com.google.firebase:firebase-database:21.0.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/ac5e8519b8e057263bf9360deceb1f20/transformed/firebase-database-21.0.0/AndroidManifest.xml:34:17-82
+173            <meta-data
+173-->[com.google.firebase:firebase-common-ktx:21.0.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/1a0199e12977048f63670632acbcc33f/transformed/firebase-common-ktx-21.0.0/AndroidManifest.xml:12:13-14:85
+174                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar"
+174-->[com.google.firebase:firebase-common-ktx:21.0.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/1a0199e12977048f63670632acbcc33f/transformed/firebase-common-ktx-21.0.0/AndroidManifest.xml:13:17-116
+175                android:value="com.google.firebase.components.ComponentRegistrar" />
+175-->[com.google.firebase:firebase-common-ktx:21.0.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/1a0199e12977048f63670632acbcc33f/transformed/firebase-common-ktx-21.0.0/AndroidManifest.xml:14:17-82
+176            <meta-data
+176-->[com.google.firebase:firebase-common:21.0.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/66b0f33c7c10062a45669237b77cf5af/transformed/firebase-common-21.0.0/AndroidManifest.xml:35:13-37:85
+177                android:name="com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar"
+177-->[com.google.firebase:firebase-common:21.0.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/66b0f33c7c10062a45669237b77cf5af/transformed/firebase-common-21.0.0/AndroidManifest.xml:36:17-109
+178                android:value="com.google.firebase.components.ComponentRegistrar" />
+178-->[com.google.firebase:firebase-common:21.0.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/66b0f33c7c10062a45669237b77cf5af/transformed/firebase-common-21.0.0/AndroidManifest.xml:37:17-82
+179        </service>
+180        <service
+180-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/3b15a8cfc93bb38d03834cbcea114d33/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:24:9-32:19
+181            android:name="androidx.credentials.playservices.CredentialProviderMetadataHolder"
+181-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/3b15a8cfc93bb38d03834cbcea114d33/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:25:13-94
+182            android:enabled="true"
+182-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/3b15a8cfc93bb38d03834cbcea114d33/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:26:13-35
+183            android:exported="false" >
+183-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/3b15a8cfc93bb38d03834cbcea114d33/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:27:13-37
+184            <meta-data
+184-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/3b15a8cfc93bb38d03834cbcea114d33/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:29:13-31:104
+185                android:name="androidx.credentials.CREDENTIAL_PROVIDER_KEY"
+185-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/3b15a8cfc93bb38d03834cbcea114d33/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:30:17-76
+186                android:value="androidx.credentials.playservices.CredentialProviderPlayServicesImpl" />
+186-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/3b15a8cfc93bb38d03834cbcea114d33/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:31:17-101
+187        </service>
+188
+189        <activity
+189-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/3b15a8cfc93bb38d03834cbcea114d33/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:34:9-41:20
+190            android:name="androidx.credentials.playservices.HiddenActivity"
+190-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/3b15a8cfc93bb38d03834cbcea114d33/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:35:13-76
+191            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
+191-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/3b15a8cfc93bb38d03834cbcea114d33/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:36:13-87
+192            android:enabled="true"
+192-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/3b15a8cfc93bb38d03834cbcea114d33/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:37:13-35
+193            android:exported="false"
+193-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/3b15a8cfc93bb38d03834cbcea114d33/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:38:13-37
+194            android:fitsSystemWindows="true"
+194-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/3b15a8cfc93bb38d03834cbcea114d33/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:39:13-45
+195            android:theme="@style/Theme.Hidden" >
+195-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/3b15a8cfc93bb38d03834cbcea114d33/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:40:13-48
+196        </activity>
+197        <activity
+197-->[com.google.android.gms:play-services-auth:20.7.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/57b4712966d81eefe3a314866edd7205/transformed/play-services-auth-20.7.0/AndroidManifest.xml:23:9-27:75
+198            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+198-->[com.google.android.gms:play-services-auth:20.7.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/57b4712966d81eefe3a314866edd7205/transformed/play-services-auth-20.7.0/AndroidManifest.xml:24:13-93
+199            android:excludeFromRecents="true"
+199-->[com.google.android.gms:play-services-auth:20.7.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/57b4712966d81eefe3a314866edd7205/transformed/play-services-auth-20.7.0/AndroidManifest.xml:25:13-46
+200            android:exported="false"
+200-->[com.google.android.gms:play-services-auth:20.7.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/57b4712966d81eefe3a314866edd7205/transformed/play-services-auth-20.7.0/AndroidManifest.xml:26:13-37
+201            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+201-->[com.google.android.gms:play-services-auth:20.7.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/57b4712966d81eefe3a314866edd7205/transformed/play-services-auth-20.7.0/AndroidManifest.xml:27:13-72
+202        <!--
+203            Service handling Google Sign-In user revocation. For apps that do not integrate with
+204            Google Sign-In, this service will never be started.
+205        -->
+206        <service
+206-->[com.google.android.gms:play-services-auth:20.7.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/57b4712966d81eefe3a314866edd7205/transformed/play-services-auth-20.7.0/AndroidManifest.xml:33:9-37:51
+207            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+207-->[com.google.android.gms:play-services-auth:20.7.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/57b4712966d81eefe3a314866edd7205/transformed/play-services-auth-20.7.0/AndroidManifest.xml:34:13-89
+208            android:exported="true"
+208-->[com.google.android.gms:play-services-auth:20.7.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/57b4712966d81eefe3a314866edd7205/transformed/play-services-auth-20.7.0/AndroidManifest.xml:35:13-36
+209            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
+209-->[com.google.android.gms:play-services-auth:20.7.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/57b4712966d81eefe3a314866edd7205/transformed/play-services-auth-20.7.0/AndroidManifest.xml:36:13-107
+210            android:visibleToInstantApps="true" />
+210-->[com.google.android.gms:play-services-auth:20.7.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/57b4712966d81eefe3a314866edd7205/transformed/play-services-auth-20.7.0/AndroidManifest.xml:37:13-48
+211
+212        <provider
+212-->[com.google.firebase:firebase-common:21.0.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/66b0f33c7c10062a45669237b77cf5af/transformed/firebase-common-21.0.0/AndroidManifest.xml:23:9-28:39
+213            android:name="com.google.firebase.provider.FirebaseInitProvider"
+213-->[com.google.firebase:firebase-common:21.0.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/66b0f33c7c10062a45669237b77cf5af/transformed/firebase-common-21.0.0/AndroidManifest.xml:24:13-77
+214            android:authorities="com.xapps.utility.xsigner.firebaseinitprovider"
+214-->[com.google.firebase:firebase-common:21.0.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/66b0f33c7c10062a45669237b77cf5af/transformed/firebase-common-21.0.0/AndroidManifest.xml:25:13-72
+215            android:directBootAware="true"
+215-->[com.google.firebase:firebase-common:21.0.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/66b0f33c7c10062a45669237b77cf5af/transformed/firebase-common-21.0.0/AndroidManifest.xml:26:13-43
+216            android:exported="false"
+216-->[com.google.firebase:firebase-common:21.0.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/66b0f33c7c10062a45669237b77cf5af/transformed/firebase-common-21.0.0/AndroidManifest.xml:27:13-37
+217            android:initOrder="100" />
+217-->[com.google.firebase:firebase-common:21.0.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/66b0f33c7c10062a45669237b77cf5af/transformed/firebase-common-21.0.0/AndroidManifest.xml:28:13-36
+218
+219        <activity
+219-->[com.google.android.gms:play-services-base:18.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/5a973faa43e1245f07cc58353c88e0b4/transformed/play-services-base-18.1.0/AndroidManifest.xml:20:9-22:45
+220            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+220-->[com.google.android.gms:play-services-base:18.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/5a973faa43e1245f07cc58353c88e0b4/transformed/play-services-base-18.1.0/AndroidManifest.xml:20:19-85
+221            android:exported="false"
+221-->[com.google.android.gms:play-services-base:18.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/5a973faa43e1245f07cc58353c88e0b4/transformed/play-services-base-18.1.0/AndroidManifest.xml:22:19-43
+222            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+222-->[com.google.android.gms:play-services-base:18.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/5a973faa43e1245f07cc58353c88e0b4/transformed/play-services-base-18.1.0/AndroidManifest.xml:21:19-78
+223
+224        <provider
+224-->[androidx.emoji2:emoji2:1.2.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/9624e31c87251539e8b33940da4c4235/transformed/emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+225            android:name="androidx.startup.InitializationProvider"
+225-->[androidx.emoji2:emoji2:1.2.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/9624e31c87251539e8b33940da4c4235/transformed/emoji2-1.2.0/AndroidManifest.xml:25:13-67
+226            android:authorities="com.xapps.utility.xsigner.androidx-startup"
+226-->[androidx.emoji2:emoji2:1.2.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/9624e31c87251539e8b33940da4c4235/transformed/emoji2-1.2.0/AndroidManifest.xml:26:13-68
+227            android:exported="false" >
+227-->[androidx.emoji2:emoji2:1.2.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/9624e31c87251539e8b33940da4c4235/transformed/emoji2-1.2.0/AndroidManifest.xml:27:13-37
+228            <meta-data
+228-->[androidx.emoji2:emoji2:1.2.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/9624e31c87251539e8b33940da4c4235/transformed/emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+229                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+229-->[androidx.emoji2:emoji2:1.2.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/9624e31c87251539e8b33940da4c4235/transformed/emoji2-1.2.0/AndroidManifest.xml:30:17-75
+230                android:value="androidx.startup" />
+230-->[androidx.emoji2:emoji2:1.2.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/9624e31c87251539e8b33940da4c4235/transformed/emoji2-1.2.0/AndroidManifest.xml:31:17-49
+231            <meta-data
+231-->[androidx.lifecycle:lifecycle-process:2.6.2] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/91152f9242e440658c3815c264c5a1f0/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:29:13-31:52
+232                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+232-->[androidx.lifecycle:lifecycle-process:2.6.2] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/91152f9242e440658c3815c264c5a1f0/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:30:17-78
+233                android:value="androidx.startup" />
+233-->[androidx.lifecycle:lifecycle-process:2.6.2] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/91152f9242e440658c3815c264c5a1f0/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:31:17-49
+234            <meta-data
+234-->[androidx.profileinstaller:profileinstaller:1.3.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/a3dc8dd193e7649ea2e426b887130cb5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:29:13-31:52
+235                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+235-->[androidx.profileinstaller:profileinstaller:1.3.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/a3dc8dd193e7649ea2e426b887130cb5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:30:17-85
+236                android:value="androidx.startup" />
+236-->[androidx.profileinstaller:profileinstaller:1.3.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/a3dc8dd193e7649ea2e426b887130cb5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:31:17-49
+237        </provider>
+238
+239        <meta-data
+239-->[com.google.android.gms:play-services-basement:18.4.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/3ce93d61e01504dfd8ea849b9c6dd3b0/transformed/play-services-basement-18.4.0/AndroidManifest.xml:6:9-122
+240            android:name="com.google.android.gms.version"
+240-->[com.google.android.gms:play-services-basement:18.4.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/3ce93d61e01504dfd8ea849b9c6dd3b0/transformed/play-services-basement-18.4.0/AndroidManifest.xml:6:20-65
+241            android:value="@integer/google_play_services_version" />
+241-->[com.google.android.gms:play-services-basement:18.4.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/3ce93d61e01504dfd8ea849b9c6dd3b0/transformed/play-services-basement-18.4.0/AndroidManifest.xml:6:66-119
+242
+243        <receiver
+243-->[androidx.profileinstaller:profileinstaller:1.3.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/a3dc8dd193e7649ea2e426b887130cb5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:34:9-52:20
+244            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+244-->[androidx.profileinstaller:profileinstaller:1.3.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/a3dc8dd193e7649ea2e426b887130cb5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:35:13-76
+245            android:directBootAware="false"
+245-->[androidx.profileinstaller:profileinstaller:1.3.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/a3dc8dd193e7649ea2e426b887130cb5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:36:13-44
+246            android:enabled="true"
+246-->[androidx.profileinstaller:profileinstaller:1.3.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/a3dc8dd193e7649ea2e426b887130cb5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:37:13-35
+247            android:exported="true"
+247-->[androidx.profileinstaller:profileinstaller:1.3.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/a3dc8dd193e7649ea2e426b887130cb5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:38:13-36
+248            android:permission="android.permission.DUMP" >
+248-->[androidx.profileinstaller:profileinstaller:1.3.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/a3dc8dd193e7649ea2e426b887130cb5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:39:13-57
+249            <intent-filter>
+249-->[androidx.profileinstaller:profileinstaller:1.3.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/a3dc8dd193e7649ea2e426b887130cb5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:40:13-42:29
+250                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+250-->[androidx.profileinstaller:profileinstaller:1.3.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/a3dc8dd193e7649ea2e426b887130cb5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:17-91
+250-->[androidx.profileinstaller:profileinstaller:1.3.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/a3dc8dd193e7649ea2e426b887130cb5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:25-88
+251            </intent-filter>
+252            <intent-filter>
+252-->[androidx.profileinstaller:profileinstaller:1.3.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/a3dc8dd193e7649ea2e426b887130cb5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:43:13-45:29
+253                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+253-->[androidx.profileinstaller:profileinstaller:1.3.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/a3dc8dd193e7649ea2e426b887130cb5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:17-85
+253-->[androidx.profileinstaller:profileinstaller:1.3.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/a3dc8dd193e7649ea2e426b887130cb5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:25-82
+254            </intent-filter>
+255            <intent-filter>
+255-->[androidx.profileinstaller:profileinstaller:1.3.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/a3dc8dd193e7649ea2e426b887130cb5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:46:13-48:29
+256                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+256-->[androidx.profileinstaller:profileinstaller:1.3.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/a3dc8dd193e7649ea2e426b887130cb5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:17-88
+256-->[androidx.profileinstaller:profileinstaller:1.3.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/a3dc8dd193e7649ea2e426b887130cb5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:25-85
+257            </intent-filter>
+258            <intent-filter>
+258-->[androidx.profileinstaller:profileinstaller:1.3.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/a3dc8dd193e7649ea2e426b887130cb5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:49:13-51:29
+259                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+259-->[androidx.profileinstaller:profileinstaller:1.3.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/a3dc8dd193e7649ea2e426b887130cb5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:17-95
+259-->[androidx.profileinstaller:profileinstaller:1.3.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/a3dc8dd193e7649ea2e426b887130cb5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:25-92
+260            </intent-filter>
+261        </receiver> <!-- The activities will be merged into the manifest of the hosting app. -->
+262        <activity
+262-->[com.google.android.play:core-common:2.0.3] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/fa53c24836cf657849631b5e5410820e/transformed/core-common-2.0.3/AndroidManifest.xml:14:9-18:65
+263            android:name="com.google.android.play.core.common.PlayCoreDialogWrapperActivity"
+263-->[com.google.android.play:core-common:2.0.3] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/fa53c24836cf657849631b5e5410820e/transformed/core-common-2.0.3/AndroidManifest.xml:15:13-93
+264            android:exported="false"
+264-->[com.google.android.play:core-common:2.0.3] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/fa53c24836cf657849631b5e5410820e/transformed/core-common-2.0.3/AndroidManifest.xml:16:13-37
+265            android:stateNotNeeded="true"
+265-->[com.google.android.play:core-common:2.0.3] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/fa53c24836cf657849631b5e5410820e/transformed/core-common-2.0.3/AndroidManifest.xml:17:13-42
+266            android:theme="@style/Theme.PlayCore.Transparent" />
+266-->[com.google.android.play:core-common:2.0.3] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/fa53c24836cf657849631b5e5410820e/transformed/core-common-2.0.3/AndroidManifest.xml:18:13-62
+267    </application>
+268
+269</manifest>

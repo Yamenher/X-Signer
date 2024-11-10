@@ -1,7 +1,6 @@
 
 <manifest
-	xmlns:android="http://schemas.android.com/apk/res/android"
-	package="com.xapps.utility.xsigner">
+	xmlns:android="http://schemas.android.com/apk/res/android">
 	<uses-permission android:name="android.permission.INTERNET" />
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -58,6 +57,7 @@
 			android:windowSoftInputMode="stateHidden" />
 		<activity
 			android:name=".DebugActivity"
+            android:launchMode="singleTask"
 			android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
 			android:hardwareAccelerated="true"
 			android:supportsPictureInPicture="true"

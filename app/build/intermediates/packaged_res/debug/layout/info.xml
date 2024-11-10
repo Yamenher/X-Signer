@@ -5,15 +5,15 @@
      xmlns:tools="http://schemas.android.com/tools"
      android:layout_height="match_parent"
      android:layout_width="match_parent"
-     android:transitionGroup="true"
      android:background="?colorSurface"
+     android:transitionGroup="true"
      android:id="@+id/_coordinator">
 
     <com.google.android.material.appbar.AppBarLayout
          android:layout_height="wrap_content"
          android:layout_width="match_parent"
-         style="@style/Widget.Material3.AppBarLayout"
          app:layout_behavior="com.google.android.material.appbar.AppBarLayout$Behavior"
+         style="@style/Widget.Material3.AppBarLayout"
          android:id="@+id/_app_bar">
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
@@ -24,12 +24,21 @@
              app:titleCollapseMode="scale"
              style="@style/Widget.Material3.CollapsingToolbar"
              android:id="@+id/collapsingtoolbar">
+
             <com.google.android.material.appbar.MaterialToolbar
                  android:layout_height="?attr/actionBarSize"
                  android:layout_width="match_parent"
-                 app:layout_collapseMode="pin"
                  app:liftOnScrollColor="?colorOnSurfaceInverse"
+                 app:layout_collapseMode="pin"
                  android:id="@+id/_toolbar" />
+
+            <ImageView
+                 android:layout_height="80dp"
+                 android:layout_width="80dp"
+                 android:scaleType="fitCenter"
+                 android:src="@mipmap/launcher_icon"
+                 android:id="@+id/idk"
+                 android:layout_gravity="bottom|left" />
 
         </com.google.android.material.appbar.CollapsingToolbarLayout>
 
@@ -194,7 +203,7 @@
                              android:layout_gravity="center_vertical" />
 
                     </LinearLayout>
-                    
+
                     <LinearLayout
                          android:layout_height="1dp"
                          android:layout_width="match_parent"
@@ -370,12 +379,12 @@
                          android:layout_height="wrap_content"
                          android:layout_width="match_parent"
                          android:gravity="center_vertical"
+                         android:background="@drawable/legacy_item_ripple"
                          android:paddingRight="8dp"
                          android:orientation="horizontal"
                          android:paddingBottom="3dp"
                          android:paddingLeft="8dp"
                          android:id="@+id/User1"
-                         android:background="@drawable/legacy_item_ripple"
                          android:paddingTop="3dp">
 
                         <de.hdodenhof.circleimageview.CircleImageView
@@ -642,7 +651,7 @@
                                  android:id="@+id/Role3"
                                  android:paddingTop="1dp"
                                  android:text="Special tester"
-                                 android:layout_gravity="center_vertical"/>
+                                 android:layout_gravity="center_vertical" />
 
                         </LinearLayout>
 

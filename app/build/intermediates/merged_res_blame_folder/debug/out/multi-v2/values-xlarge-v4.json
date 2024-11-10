@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.xapps.utility.xsigner.app-mergeDebugResources-33:/values-xlarge-v4/values-xlarge-v4.xml",
+            "outputFile": "com.xapps.utility.xsigner.app-mergeDebugResources-42:/values-xlarge-v4/values-xlarge-v4.xml",
             "map": [
                 {
-                    "source": "/data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/7f4302dd7aa34ec04957c8acd405625d/transformed/appcompat-1.6.1/res/values-xlarge-v4/values-xlarge-v4.xml",
+                    "source": "/data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/f8df54b1c78df95846ede98b7a1ba0b7/transformed/appcompat-1.6.1/res/values-xlarge-v4/values-xlarge-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7",
                         "startColumns": "4,4,4,4,4,4",

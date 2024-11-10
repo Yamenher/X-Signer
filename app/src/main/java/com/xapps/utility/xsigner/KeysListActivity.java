@@ -209,26 +209,21 @@ public class KeysListActivity extends AppCompatActivity {
 		progressbar1 = findViewById(R.id.progressbar1);
 		KeyManager = getSharedPreferences("KeysData", Activity.MODE_PRIVATE);
 		
-		recyclerview.addOnScrollListener(new RecyclerView.OnScrollListener() {
-			@Override
-			public void onScrollStateChanged(RecyclerView recyclerView, int _scrollState) {
-				super.onScrollStateChanged(recyclerView, _scrollState);
-				
-			}
-			
-			@Override
-			public void onScrolled(RecyclerView recyclerView, int _offsetX, int _offsetY) {
-				super.onScrolled(recyclerView, _offsetX, _offsetY);
-				if (_offsetY < -10) {
-					_fab.extend();
-					_fab2.extend();
-				}
-				if (_offsetY > 10) {
-					_fab.shrink();
-					_fab2.shrink();
-				}
-			}
-		});
+        /*Handler handler = new Handler(Looper.getMainLooper());
+        Runnable runnable = new Runnable() {
+            @Override
+            public void run() {
+                if (_app_bar.isLifted()) {
+                    _fab.shrink();
+                    _fab2.shrink();
+                } else {
+                    _fab.extend();
+                    _fab2.extend();
+                }
+                handler.postDelayed(this, 100);
+            }
+        };
+        handler.post(runnable);*/
 		
 		_fab.setOnClickListener(new View.OnClickListener() {
 			@Override
@@ -243,8 +238,6 @@ public class KeysListActivity extends AppCompatActivity {
 	}
 	
 	private void initializeLogic() {
-		getWindow().setBackgroundDrawable(new ColorDrawable(getColor(R.color.md_theme_surface)));
-		_coordinator.setBackgroundColor(getColor(R.color.md_theme_surface));
 		_SetupUI();
 		getWindow().setStatusBarColor(Color.TRANSPARENT);
 		try {
@@ -746,8 +739,8 @@ KeyPassTIP.setErrorEnabled(false);
 	@Override
 	public void onDestroy() {
 		super.onDestroy();
-		for (int i = 0; i < (int)(KeysMap.size()); i++) {
-			KeysMap.get((int)i).put("expansion", "false");
+		for (int i = 0; i < (KeysMap.size()); i++) {
+			KeysMap.get(i).put("expansion", "false");
 		}
 		KeyManager.edit().putString("KeysData", new Gson().toJson(KeysMap)).commit();
 	}
@@ -767,40 +760,6 @@ KeyPassTIP.setErrorEnabled(false);
 	public void _SetupUI() {
 		collapsingtoolbar.setTitle("Saved keys");
 		int nightModeMask = getResources().getConfiguration().uiMode & android.content.res.Configuration.UI_MODE_NIGHT_MASK;
-		
-		if (nightModeMask == android.content.res.Configuration.UI_MODE_NIGHT_YES) {
-		
-					collapsingtoolbar.setCollapsedTitleTextColor(0xFFFFFFFF);
-			collapsingtoolbar.setExpandedTitleColor(0xFFFFFFFF);
-			_toolbar.getNavigationIcon().setColorFilter(Color.WHITE, PorterDuff.Mode.SRC_IN);
-		} else {
-					collapsingtoolbar.setCollapsedTitleTextColor(0xFF000000);
-			collapsingtoolbar.setExpandedTitleColor(0xFF000000);
-			getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
-			_toolbar.getNavigationIcon().setColorFilter(Color.BLACK, PorterDuff.Mode.SRC_IN);
-		}
-		_toolbar.setElevation((float)0);
-		_app_bar.setElevation((float)0);
-		collapsingtoolbar.setElevation((float)0);
-		Typeface tf = Typeface.createFromAsset(getAssets(), "fonts/product_sans.ttf"); 
-		collapsingtoolbar.setCollapsedTitleTypeface(tf); 
-		collapsingtoolbar.setExpandedTitleTypeface(tf); 
-		_app_bar.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
-			            @Override
-			            public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
-				                int totalScrollRange = appBarLayout.getTotalScrollRange();
-				                float scrollPercentage = Math.abs(verticalOffset) / (float) totalScrollRange;
-				
-				float neededY = 0 - (((1.01f - scrollPercentage)*(_app_bar.getHeight() - _toolbar.getHeight())));
-				progressbar1.setTranslationY(neededY);
-				
-				ArgbEvaluator argbEvaluator = new ArgbEvaluator();                
-				                int toolbarColor = (int) argbEvaluator.evaluate(scrollPercentage, getColor(R.color.md_theme_surface), getColor(R.color.md_theme_secondary));                
-				_toolbar.setBackgroundColor(toolbarColor);
-				collapsingtoolbar.setBackgroundColor(toolbarColor);
-				collapsingtoolbar.setContentScrimColor(toolbarColor);
-				            }
-			        });
 		navigationBarHeight = 0;
 		statusBarHeight= 0;
 		int r1 = getResources().getIdentifier("navigation_bar_height", "dimen", "android");
@@ -814,48 +773,34 @@ KeyPassTIP.setErrorEnabled(false);
 		_SetMargins(_toolbar, 0, statusBarHeight, 0, 0);
 		EdgeToEdgeUtils.applyEdgeToEdge(getWindow(), true);
 		_fab.setOnApplyWindowInsetsListener(new View.OnApplyWindowInsetsListener() {
-			            @Override
-			            public WindowInsets onApplyWindowInsets(View v, WindowInsets insets) {
-				                navigationBarHeight = insets.getInsets(WindowInsets.Type.navigationBars()).bottom;
-				
-				                 ViewGroup.MarginLayoutParams params = (ViewGroup.MarginLayoutParams) _fab.getLayoutParams();
-				
-				if (!isApplied) {
-					
-					FabMarginToUse = params.bottomMargin;
-					
-					NeededMargin = params.bottomMargin*2 + _fab.getHeight() + navigationBarHeight;
-					isApplied = true;
-					
-					
-					params.bottomMargin = navigationBarHeight + params.bottomMargin;
-				}
-				                _fab.setLayoutParams(params);
-				
-				                
-				                return insets;
-				            }
-			        });
+			@Override
+			public WindowInsets onApplyWindowInsets(View v, WindowInsets insets) {
+		    	navigationBarHeight = insets.getInsets(WindowInsets.Type.navigationBars()).bottom;
+		    	ViewGroup.MarginLayoutParams params = (ViewGroup.MarginLayoutParams) _fab.getLayoutParams();
+		    	if (!isApplied) {
+		    		FabMarginToUse = params.bottomMargin;
+	    			NeededMargin = params.bottomMargin*2 + _fab.getHeight() + navigationBarHeight;
+	    			isApplied = true;
+		    		params.bottomMargin = navigationBarHeight + params.bottomMargin;
+	    		}
+                _fab.setLayoutParams(params);
+		    	return insets;
+		    }
+		});
 		_fab2.setOnApplyWindowInsetsListener(new View.OnApplyWindowInsetsListener() {
-			            @Override
-			            public WindowInsets onApplyWindowInsets(View v, WindowInsets insets) {
-				                navigationBarHeight = insets.getInsets(WindowInsets.Type.navigationBars()).bottom;
-				
-				                 ViewGroup.MarginLayoutParams params3 = (ViewGroup.MarginLayoutParams) _fab2.getLayoutParams();
-				
+			@Override
+			public WindowInsets onApplyWindowInsets(View v, WindowInsets insets) {
+			    navigationBarHeight = insets.getInsets(WindowInsets.Type.navigationBars()).bottom;
+				ViewGroup.MarginLayoutParams params3 = (ViewGroup.MarginLayoutParams) _fab2.getLayoutParams();
 				if (!isApplied2) {
-					
-					                params3.bottomMargin = params3.bottomMargin + navigationBarHeight;
-					
-					NeededMargin = FabMarginToUse*3 + _fab.getHeight()*2 + navigationBarHeight;
+					params3.bottomMargin = params3.bottomMargin + navigationBarHeight;
+				    NeededMargin = FabMarginToUse*3 + _fab.getHeight()*2 + navigationBarHeight;
 					isApplied2 = true;
 				}
-				                _fab2.setLayoutParams(params3);
-				
-				                
-				                return insets;
-				            }
-			        });
+				_fab2.setLayoutParams(params3);
+				return insets;
+			}
+	    });
 		_SetMargins(recyclerview, 0, 0, 0, OldMargin*2 + _fab.getHeight());
 	}
 	
@@ -897,11 +842,11 @@ KeyPassTIP.setErrorEnabled(false);
 	
 	
 	public void _SignWithReleaseKey(final String _input, final String _output, final String _keypath, final String _alias, final String _keystorepass, final String _keypass, final String _type, final boolean _v1, final boolean _v2, final boolean _v3, final boolean _v4, final boolean _zipalign) {
-    try {
-APKSignerUtils.signFile(_input, _output, _keypath, _alias, _keystorepass, _keypass, _v1, _v2, _v3, _v4, _zipalign, _type);
-} catch (Exception e) {
-XUtil.showMessage(getApplicationContext(), e.toString());
-}
+        try {
+            APKSignerUtils.signFile(_input, _output, _keypath, _alias, _keystorepass, _keypass, _v1, _v2, _v3, _v4, _zipalign, _type);
+        } catch (Exception e) {
+            XUtil.showMessage(getApplicationContext(), e.toString());
+        }
 	}
 	
 	
@@ -1119,10 +1064,6 @@ XUtil.showMessage(getApplicationContext(), e.toString());
 		
 		    animator.start();
 	}
-	
-	{
-	}
-	
 	
 	public void _AnimateHeight(final View _view, final int _start, final int _end, final long _duration) {
 		animator = ValueAnimator.ofInt(_start, _end);

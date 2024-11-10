@@ -15,7 +15,8 @@
 		<com.google.android.material.appbar.AppBarLayout
 			android:id="@+id/_app_bar"
 			android:layout_height="wrap_content"
-			android:layout_width="match_parent">
+			android:layout_width="match_parent"
+            style="@style/Widget.Material3.AppBarLayout">
 			<com.google.android.material.appbar.CollapsingToolbarLayout
 				android:id="@+id/collapsingtoolbar"
 				android:layout_width="match_parent"
@@ -74,7 +75,7 @@
 								<ImageView
 									android:id="@+id/StorageSignIcon"
 									android:layout_width="22dp"
-                                    android:tint="?colorPrimary"
+                                    android:tint="?colorOnPrimaryContainer"
 									android:layout_height="22dp"
 									android:src="@drawable/ic_file_black"
 									android:scaleType="fitCenter" />
@@ -85,8 +86,7 @@
 								android:layout_height="wrap_content"
 								android:padding="8dp"
 								android:text="Sign from storage"
-								android:textSize="20sp"
-								android:textColor="#000000" />
+								android:textSize="20sp" />
 						</LinearLayout>
 						<TextView
 							android:id="@+id/SSDesc"
@@ -97,21 +97,18 @@
 							android:textSize="14sp" />
 						<com.google.android.material.button.MaterialButton
 							android:id="@+id/SSPickButton"
-							android:layout_width="wrap_content"
-							android:layout_height="47dp"
-							android:layout_marginTop="10dp"
-							android:layout_marginRight="5dp"
-							android:paddingLeft="23dp"
-							android:paddingTop="8dp"
-							android:paddingRight="23dp"
-							android:paddingBottom="8dp"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:layout_marginHorizontal="15dp"
+							android:layout_marginVertical="7dp"
+							android:paddingVertical="8dp"
 							android:gravity="center_horizontal|center_vertical"
 							android:text="Pick file"
 							android:textSize="16sp"
 							android:layout_gravity="right"
 							android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
 							app:cornerRadius="100dp"
-							style="@style/Widget.MaterialComponents.Button"
+							style="@style/Widget.Material3.Button"
 							app:textAllCaps="false"
 							android:letterSpacing="0.0" />
 					</LinearLayout>
@@ -144,7 +141,7 @@
 									android:id="@+id/RecentsIcon"
 									android:layout_width="22dp"
 									android:layout_height="22dp"
-                                    android:tint="?colorPrimary"
+                                    android:tint="?colorOnPrimaryContainer"
 									android:src="@drawable/ic_restore_black"
 									android:scaleType="fitCenter" />
 							</LinearLayout>
@@ -154,8 +151,7 @@
 								android:layout_height="wrap_content"
 								android:padding="8dp"
 								android:text="Recently signed files"
-								android:textSize="20sp"
-								android:textColor="#000000" />
+								android:textSize="20sp" />
 						</LinearLayout>
 						<TextView
 							android:id="@+id/RecentsText"
@@ -163,18 +159,14 @@
 							android:layout_height="wrap_content"
 							android:padding="8dp"
 							android:text="View your recently signed apk/aab files with all details you may need like Signing time, used signing key and signed apk signature digests."
-							android:textSize="14sp"
-							android:textColor="#000000" />
+							android:textSize="14sp" />
 						<com.google.android.material.button.MaterialButton
 							android:id="@+id/ViewRecentsButton"
-							android:layout_width="wrap_content"
-							android:layout_height="47dp"
-							android:layout_marginTop="10dp"
-							android:layout_marginRight="5dp"
-							android:paddingLeft="23dp"
-							android:paddingTop="8dp"
-							android:paddingRight="23dp"
-							android:paddingBottom="8dp"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:layout_marginVertical="7dp"
+							android:layout_marginHorizontal="15dp"
+							android:paddingVertical="8dp"
 							android:gravity="center_horizontal|center_vertical"
 							android:text="View"
 							android:textSize="16sp"

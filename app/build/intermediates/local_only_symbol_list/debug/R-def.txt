@@ -151,6 +151,7 @@ color md_theme_tertiary_mediumContrast
 color md_theme_textMain
 drawable app_logo
 drawable avd_splashanim
+drawable color_selector
 drawable default_image
 drawable drawable_dialog
 drawable drawable_drawer
@@ -387,6 +388,7 @@ id _toolbar
 id appbar
 id collapsingtoolbar
 id coordinator
+id idk
 id linear1
 id linear2
 id linear3
@@ -434,11 +436,17 @@ layout material_dialog_layout_custom
 layout permission_bottom_sheet
 layout premium_snackbar
 layout simple_loader_dialog
-layout splash_screen
 layout unhandled_error_dialog
 layout update
 mipmap launcher_icon
 string app_name
+string firebase_database_url
+string gcm_defaultSenderId
+string google_api_key
+string google_app_id
+string google_crash_reporting_api_key
+string google_storage_bucket
+string project_id
 string stringAlias
 string stringCity
 string stringCountry

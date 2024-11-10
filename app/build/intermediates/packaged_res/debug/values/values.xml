@@ -160,6 +160,13 @@
     <color name="md_theme_tertiary_mediumContrast">#483D5E</color>
     <color name="md_theme_textMain">#000000</color>
     <string name="app_name">X-Signer</string>
+    <string name="firebase_database_url" translatable="false">https://x-signer-xapps-default-rtdb.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">847200943221</string>
+    <string name="google_api_key" translatable="false">AIzaSyCjXjarXeMYeVJHkfBRTz85dlQ_jcY1YDE</string>
+    <string name="google_app_id" translatable="false">1:847200943221:android:88c54cf71dabe355e0cc3c</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCjXjarXeMYeVJHkfBRTz85dlQ_jcY1YDE</string>
+    <string name="google_storage_bucket" translatable="false">x-signer-xapps.appspot.com</string>
+    <string name="project_id" translatable="false">x-signer-xapps</string>
     <string name="stringAlias">Key alias</string>
     <string name="stringCity">City or locality</string>
     <string name="stringCountry">Country Code (XX)</string>

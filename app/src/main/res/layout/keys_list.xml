@@ -4,6 +4,7 @@
      xmlns:app="http://schemas.android.com/apk/res-auto"
      xmlns:tools="http://schemas.android.com/tools"
      android:layout_height="match_parent"
+     android:background="?colorSurface"
      android:layout_width="match_parent"
      android:transitionGroup="true"
      android:id="@+id/_coordinator">
@@ -11,23 +12,20 @@
     <com.google.android.material.appbar.AppBarLayout
          android:layout_height="wrap_content"
          android:layout_width="match_parent"
+         style="@style/Widget.Material3.AppBarLayout"
          android:id="@+id/_app_bar">
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
              android:layout_height="175dp"
              android:layout_width="match_parent"
-             app:contentScrim="#006591"
-             app:expandedTitleTextAppearance="@style/TextAppearance.M3.Sys.Typescale.HeadlineLarge"
-             android:background="#FFFFFF"
              app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
-             android:fitsSystemWindows="true"
+             style="@style/Style.XSigner.CollapsingToolbar"
              app:titleCollapseMode="scale"
              android:id="@+id/collapsingtoolbar">
 
             <androidx.appcompat.widget.Toolbar
                  android:layout_height="?actionBarSize"
                  android:layout_width="match_parent"
-                 android:background="?colorPrimary"
                  app:layout_collapseMode="pin"
                  android:id="@+id/_toolbar" />
 
@@ -65,7 +63,6 @@
         <androidx.recyclerview.widget.RecyclerView
              android:layout_height="match_parent"
              android:layout_width="match_parent"
-             app:layout_behavior="@string/appbar_scrolling_view_behavior"
              android:visibility="gone"
              android:id="@+id/recyclerview" />
 
@@ -79,6 +76,7 @@
          app:cornerRadius="16dp"
          android:id="@+id/_fab2"
          android:text="Create a key"
+         app:behavior_autoShrink="true"
          android:layout_gravity="right|bottom" />
 
     <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton

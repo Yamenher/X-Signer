@@ -231,25 +231,6 @@ getWindow().setAllowEnterTransitionOverlap(true);
 		StateE = findViewById(R.id.StateE);
 		CountryE = findViewById(R.id.CountryE);
 		
-		//ScrollChange2
-		Scroller.setOnScrollChangeListener(new ScrollView.OnScrollChangeListener() {
-			@Override
-			public void onScrollChange(View v, int _scrollX, int _scrollY, int _oldScrollX, int _oldScrollY) {
-				if (_scrollY == 0) {
-					if (isLifted) {
-						animateColorChange(getColor(R.color.md_theme_secondary), getColor(R.color.md_theme_surface));
-						isLifted = false;
-					}
-				}
-				else {
-					if (!isLifted) {
-						animateColorChange(getColor(R.color.md_theme_surface), getColor(R.color.md_theme_secondary));
-						isLifted = true;
-					}
-				}
-			}
-		});
-		
 		CreateButton.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View _view) {
@@ -544,7 +525,7 @@ getWindow().setAllowEnterTransitionOverlap(true);
 			    @Override
 			        public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
 				            if (actionId == EditorInfo.IME_ACTION_NEXT) {
-					    XUtil.hideKeyboard(getApplicationContext());
+					    XUtil.hideKeyboard(KeyCreatingActivity.this);
 					    }
 				            return true;
 				            }
@@ -607,7 +588,7 @@ getWindow().setAllowEnterTransitionOverlap(true);
 			    @Override
 			        public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
 				            if (actionId == EditorInfo.IME_ACTION_DONE) {
-					    XUtil.hideKeyboard(getApplicationContext());
+					    XUtil.hideKeyboard(KeyCreatingActivity.this);
 					    }
 				            return true;
 				            }
@@ -619,22 +600,6 @@ getWindow().setAllowEnterTransitionOverlap(true);
 	
 	
 	public void _SetupUI() {
-		_coordinator.setBackgroundColor(getColor(R.color.md_theme_surface));
-		
-		_toolbar.setTitleTextColor(getColor(R.color.md_theme_textMain));
-		_app_bar.setBackgroundColor(getColor(R.color.md_theme_surface));
-		_toolbar.setBackgroundColor(getColor(R.color.md_theme_surface));
-		_toolbar.getNavigationIcon().setColorFilter(getColor(R.color.md_theme_textMain), PorterDuff.Mode.SRC_IN);
-		int nightModeMask = getResources().getConfiguration().uiMode & android.content.res.Configuration.UI_MODE_NIGHT_MASK;
-		
-		if (nightModeMask == android.content.res.Configuration.UI_MODE_NIGHT_YES) {
-		
-					_toolbar.getNavigationIcon().setColorFilter(Color.WHITE, PorterDuff.Mode.SRC_IN);
-		} else {
-					getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR);
-			getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
-			_toolbar.getNavigationIcon().setColorFilter(Color.BLACK, PorterDuff.Mode.SRC_IN);
-		}
 		EdgeToEdgeUtils.applyEdgeToEdge(getWindow(), true);
 		CreateButton.setOnApplyWindowInsetsListener(new View.OnApplyWindowInsetsListener() {
 			            @Override
@@ -682,24 +647,6 @@ getWindow().setAllowEnterTransitionOverlap(true);
 		   layoutParams.setMargins(_leftMargin, _TopMargin, _RightMargin, _BottomMargin);
 		_layout.setLayoutParams(layoutParams);
 	}
-	
-	
-	private void animateColorChange(int startColor, int endColor) {
-		    ValueAnimator colorAnimation = ValueAnimator.ofArgb(startColor, endColor);
-		    colorAnimation.setDuration(150);
-		    colorAnimation.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
-			        @Override
-			        public void onAnimationUpdate(ValueAnimator animator) {
-				            _app_bar.setBackgroundColor((int)animator.getAnimatedValue());
-				_toolbar.setBackgroundColor((int) animator.getAnimatedValue());
-				        }
-			    });
-		    colorAnimation.start();
-	}
-	
-	{
-	}
-	
 	
 	public void _CreateSigningKey(final String _type, final String _path, final String _keystorepass, final String _alias, final String _aliaspass, final String _dn, final int _validity, final int _keysize) {
 		try {

@@ -307,7 +307,7 @@ public class MainActivity extends AppCompatActivity {
 			@Override
 			public void onClick(View _view) {
 				if (CanAccessStorage) {
-					
+					throw new RuntimeException("Congrats! You crashed your app.");
 				}
 			}
 		});
@@ -1111,16 +1111,6 @@ public class MainActivity extends AppCompatActivity {
 				final LinearLayout Handle = (LinearLayout) BSV.findViewById(R.id.Handle);
 				final LinearLayout BSBG = (LinearLayout) BSV.findViewById(R.id.BG);
 				final LinearLayout MBSBG = (LinearLayout) BSV.findViewById(R.id.MBSBG);
-				int nightModeMask2 = getResources().getConfiguration().uiMode & android.content.res.Configuration.UI_MODE_NIGHT_MASK;
-				
-				if (nightModeMask2 == android.content.res.Configuration.UI_MODE_NIGHT_YES) {
-		
-							Handle.setBackground(new GradientDrawable() { public GradientDrawable getIns(int a, int b) { this.setCornerRadius(a); this.setColor(b); return this; } }.getIns((int)100, 0xFFBBC8D4));
-					_Radius(BSBG, _DpToPx(35), _DpToPx(35), 0, 0, "#131E24");
-				} else {
-							Handle.setBackground(new GradientDrawable() { public GradientDrawable getIns(int a, int b) { this.setCornerRadius(a); this.setColor(b); return this; } }.getIns((int)100, 0x8827313A));
-					_Radius(BSBG, _DpToPx(35), _DpToPx(35), 0, 0, "#FCFCFF");
-				}
 				Button.setOnClickListener(new View.OnClickListener() {
 					@Override
 					public void onClick(View _view) {
@@ -1157,25 +1147,12 @@ public class MainActivity extends AppCompatActivity {
 		}
 		_SetMargins(_toolbar, 0, statusBarHeight, 0, 0);
 		_SetMargins(_drawer_UserIcon, (int)_DpToPx(23), statusBarHeight, 0, 0);
-		_drawer_UserIcon.setImageResource(R.drawable.logo_anonymous);
 		collapsingtoolbar.setTitle("X-Signer");
-		int nightModeMask = getResources().getConfiguration().uiMode & android.content.res.Configuration.UI_MODE_NIGHT_MASK;
-		
-		if (nightModeMask == android.content.res.Configuration.UI_MODE_NIGHT_YES) {
-		
-			_toolbar.getNavigationIcon().setColorFilter(Color.WHITE, PorterDuff.Mode.SRC_IN);
-		} else {
-			getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
-			getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR);
-			_toolbar.getNavigationIcon().setColorFilter(Color.BLACK, PorterDuff.Mode.SRC_IN);
-		}
-		_drawer_FaqIcon.setImageResource(R.drawable.ic_qm);
-		_drawer_KeysIcon.setColorFilter(getColor(R.color.md_theme_onSurfaceVariant), PorterDuff.Mode.SRC_IN);
-		_drawer_AboutIcon.setColorFilter(getColor(R.color.md_theme_onSurfaceVariant), PorterDuff.Mode.SRC_IN);
 		_toolbar.setElevation((float)0);
 		EdgeToEdgeUtils.applyEdgeToEdge(getWindow(), true);
-	}
-	
+    	
+    }    
+        
 	
 	public void _KeyActivity() {
 		ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(this);
@@ -1274,11 +1251,11 @@ public class MainActivity extends AppCompatActivity {
 	
 	
 	public void _SignWithRelease(final String _input, final String _output, final String _keypath, final String _alias, final String _keystorepass, final String _keypass, final String _type, final boolean _v1, final boolean _v2, final boolean _v3, final boolean _v4, final boolean _zipalign) {
-    try {
-APKSignerUtils.signFile(_input, _output, _keypath, _alias, _keystorepass, _keypass, _v1, _v2, _v3, _v4, _zipalign, _type);
-} catch (Exception e) {
-XUtil.showMessage(getApplicationContext(), e.toString());
-}
+        try {
+            APKSignerUtils.signFile(_input, _output, _keypath, _alias, _keystorepass, _keypass, _v1, _v2, _v3, _v4, _zipalign, _type);
+        } catch (Exception e) {
+            XUtil.showMessage(getApplicationContext(), e.toString());
+        }
 	}
 	
 	
@@ -1295,10 +1272,10 @@ XUtil.showMessage(getApplicationContext(), e.toString());
 		try {
 			if (SelectedKey == 0) {
 				if (Uri.parse(LowercaseFilerPath).getLastPathSegment().substring((int)(Uri.parse(LowercaseFilerPath).getLastPathSegment().length() - ".".concat("apk").length()), (int)(Uri.parse(LowercaseFilerPath).getLastPathSegment().length())).equals(".".concat("apk"))) {
-					_SignWithTestKey(filePath, OutputApk, "/data/data/com.xapps.utility.xsigner/testkey.x509.pem", "/data/data/com.xapps.utility.xsigner/testkey.pk8", true, true, true, false, true);
+					_SignWithTestKey(filePath, OutputApk, "/data/data/com.xapps.utility.xsigner/testkey.x509.pem", "/data/data/com.xapps.utility.xsigner/testkey.pk8", true, true, true, true, true);
 				}
 				if (Uri.parse(LowercaseFilerPath).getLastPathSegment().substring((int)(Uri.parse(LowercaseFilerPath).getLastPathSegment().length() - ".".concat("aab").length()), (int)(Uri.parse(LowercaseFilerPath).getLastPathSegment().length())).equals(".".concat("aab"))) {
-					_SignWithTestKey(filePath, OutputAab, "/data/data/com.xapps.utility.xsigner/testkey.x509.pem", "/data/data/com.xapps.utility.xsigner/testkey.pk8", true, true, false, false, true);
+					_SignWithTestKey(filePath, OutputAab, "/data/data/com.xapps.utility.xsigner/testkey.x509.pem", "/data/data/com.xapps.utility.xsigner/testkey.pk8", true, true, false, true, true);
 				}
 			}
 			else {

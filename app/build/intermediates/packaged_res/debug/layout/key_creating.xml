@@ -9,12 +9,12 @@
 	<com.google.android.material.appbar.AppBarLayout
 		android:id="@+id/_app_bar"
 		android:layout_width="match_parent"
+        style="@style/Widget.Material3.AppBarLayout"
 		android:layout_height="wrap_content">
 		<androidx.appcompat.widget.Toolbar
 			android:id="@+id/_toolbar"
 			android:layout_width="match_parent"
-			android:layout_height="?actionBarSize"
-			android:background="?colorPrimary" />
+			android:layout_height="?actionBarSize"/>
 	</com.google.android.material.appbar.AppBarLayout>
 	<LinearLayout
 		android:layout_width="match_parent"
@@ -46,7 +46,7 @@
 					android:textSize="20sp"
 					android:textStyle="bold"
 					android:fontFamily="@font/product_sans_regular"
-					android:textColor="@color/colorAccent" />
+					android:textColor="?colorPrimary" />
 				<com.google.android.material.textfield.TextInputLayout
 					android:id="@+id/AliasTIP"
 					android:layout_width="match_parent"
@@ -119,9 +119,7 @@
 						android:paddingRight="20dp"
 						android:paddingBottom="18dp"
 						android:textSize="16sp"
-						android:textColorHint="#607D8B"
 						android:focusable="true"
-						android:textColor="@color/md_theme_textMain"
 						android:imeOptions="actionNext"
 						android:singleLine="true" />
 				</com.google.android.material.textfield.TextInputLayout>
@@ -136,7 +134,7 @@
 					android:textSize="20sp"
 					android:textStyle="bold"
 					android:fontFamily="@font/product_sans_regular"
-					android:textColor="@color/colorAccent" />
+					android:textColor="?colorPrimary" />
 				<com.google.android.material.textfield.TextInputLayout
 					android:id="@+id/KeyTypeTIP"
 					android:layout_width="match_parent"
@@ -231,7 +229,7 @@
 					android:textSize="20sp"
 					android:textStyle="bold"
 					android:fontFamily="@font/product_sans_regular"
-					android:textColor="@color/colorAccent" />
+					android:textColor="?colorPrimary" />
 				<com.google.android.material.textfield.TextInputLayout
 					android:id="@+id/NameTIP"
 					android:layout_width="match_parent"

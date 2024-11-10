@@ -1,15 +1,12 @@
 package com.xapps.utility.xsigner;
 
-import android.app.AlarmManager;
 import android.app.Application;
-import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Process;
 import android.util.Log;
 import com.xapps.utility.xsigner.XLogger;
 import com.google.android.material.color.DynamicColors;
-import com.google.android.material.color.DynamicColorsOptions;
 
 public class XApplication extends Application {
 
@@ -31,21 +28,13 @@ public class XApplication extends Application {
                 @Override
                 public void uncaughtException(Thread thread, Throwable throwable) {
                     Intent intent = new Intent(getApplicationContext(), DebugActivity.class);
-                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     intent.putExtra("error", Log.getStackTraceString(throwable));
 
-                    PendingIntent pendingIntent =
-                        PendingIntent.getActivity(
-                            getApplicationContext(),
-                            11111,
-                            intent,
-                            PendingIntent.FLAG_ONE_SHOT
-                        );
-
-                    AlarmManager am = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
-                    am.set(AlarmManager.ELAPSED_REALTIME_WAKEUP, 1000, pendingIntent);
+                    getApplicationContext().startActivity(intent);
 
                     XLogger.broadcastLog(Log.getStackTraceString(throwable));
+
                     Process.killProcess(Process.myPid());
                     System.exit(1);
 

@@ -1,5 +1,6 @@
 plugins {
 	id 'com.android.application'
+    id 'com.google.gms.google-services'
 }
 
 android {
@@ -12,7 +13,7 @@ android {
 		namespace "com.xapps.utility.xsigner"
 		minSdkVersion 26
 		targetSdkVersion 35
-		versionCode 00700
+		versionCode 700
 		versionName "0.7.0 Alpha"
 	}
 	
@@ -34,7 +35,7 @@ dependencies {
 	implementation 'com.google.code.gson:gson:2.8.7'
 	implementation 'de.hdodenhof:circleimageview:3.1.0'
     implementation 'androidx.core:core-splashscreen:1.0.0'
-    implementation 'com.google.android.material:material:1.13.0-alpha06'
+    implementation 'com.google.android.material:material:1.12.0'
     implementation 'androidx.activity:activity:1.8.0'
     implementation 'com.github.Mursaat:AnimatedGradientTextView:v0.0.6'
     implementation 'com.github.MuntashirAkon:apksig-android:4.4.0'
@@ -42,4 +43,7 @@ dependencies {
     implementation files('libs/bcprov-jdk18on-1.78.1.jar')
     implementation 'com.github.MuntashirAkon:sun-security-android:1.0'
     implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.2.0-alpha01'
-}
+    implementation platform('com.google.firebase:firebase-bom:33.5.1')
+    implementation 'com.google.firebase:firebase-auth'
+    implementation 'com.google.firebase:firebase-database'    
+}        

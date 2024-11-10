@@ -108,7 +108,7 @@ public class InfoActivity extends AppCompatActivity {
 	
 	private Intent UserViewIntent = new Intent();
 	
-          @Override
+    @Override
 	protected void onCreate(Bundle _savedInstanceState) {
         getWindow().setAllowEnterTransitionOverlap(true);
         MaterialSharedAxis enterTransition = new MaterialSharedAxis(MaterialSharedAxis.Y, true);
@@ -205,7 +205,7 @@ public class InfoActivity extends AppCompatActivity {
 	
 	private void initializeLogic() {
 		EdgeToEdgeUtils.applyEdgeToEdge(getWindow(), true);
-		
+		collapsingtoolbar.setTitleEnabled(false);
 		try {
 		    android.content.pm.PackageInfo packageInfo = InfoActivity.this.getPackageManager().getPackageInfo(getPackageName(), 0);
 			versionName = packageInfo.versionName;
@@ -225,7 +225,6 @@ public class InfoActivity extends AppCompatActivity {
 	    	UpdateIcon.setColorFilter(getColor(R.color.md_theme_textMain), PorterDuff.Mode.SRC_IN);
         }
 		
-		_toolbar.setTitleCentered(true);
 		collapsingtoolbar.setTitle("About X-Signer");
 		Typeface tf = Typeface.createFromAsset(getAssets(), "fonts/product_sans.ttf"); 
 		collapsingtoolbar.setCollapsedTitleTypeface(tf); 
