@@ -23,7 +23,7 @@
 			android:indeterminate="true" 
 			app:indicatorSize="40dp"
 			app:trackThickness="3dp"
-			app:indicatorColor="@color/colorAccent"
+			app:indicatorColor="?colorPrimary"
 			app:trackColor="#FFFFFFFF" />
 	</LinearLayout>
 </LinearLayout>

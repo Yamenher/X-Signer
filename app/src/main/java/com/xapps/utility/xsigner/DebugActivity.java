@@ -56,7 +56,6 @@ public class DebugActivity extends AppCompatActivity {
 		binding.EndButton.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View _view) {
-                XUtil.showMessage(DebugActivity.this, TelegramMessenger.getErrorType());    
 				finishAffinity();
 			}
 		});
@@ -68,8 +67,6 @@ public class DebugActivity extends AppCompatActivity {
 		binding.ErrorText.setTextIsSelectable(true);
 		binding.Toolbar.setTitleCentered(true);
 		binding.ErrorText.setText(getIntent().getStringExtra("error"));
-        TelegramMessenger errorSender = new TelegramMessenger();
-        TelegramMessenger.sendMessage(getIntent().getStringExtra("error"));
 		navigationBarHeight = 0;
 		statusBarHeight= 0;
 		int r1 = getResources().getIdentifier("navigation_bar_height", "dimen", "android");

@@ -33,7 +33,7 @@
 				android:text="Import a new key"
 				android:textSize="25sp"
 				android:fontFamily="@font/product_sans_regular"
-				android:textColor="@color/md_theme_textMain" />
+				android:textColor="?colorOnSurface" />
 		</LinearLayout>
 		<LinearLayout
 			android:id="@+id/linear3"
@@ -61,7 +61,7 @@
 					android:layout_height="wrap_content"
 					android:padding="16dp"
 					android:textSize="16sp"
-					android:textColorHint="#607D8B"
+					android:textColorHint="?colorOutline"
 					android:focusable="true"
 					android:textColor="@color/md_theme_textMain"
 					android:drawableTint="@color/colorAccent" />
@@ -104,8 +104,7 @@
 					android:padding="16dp"
 					android:textSize="16sp"
 					android:textColorHint="#607D8B"
-					android:focusable="true"
-					android:textColor="@color/md_theme_textMain" />
+					android:focusable="true"/>
 			</com.google.android.material.textfield.TextInputLayout>
 			<TextView
 				android:id="@+id/note"
@@ -118,7 +117,7 @@
 				android:textSize="14sp"
 				android:layout_gravity="center_vertical"
 				android:fontFamily="@font/product_sans_regular"
-				android:textColor="@color/colorTextSecondary" />
+				android:textColor="?colorOnSecondaryContainer" />
 		</LinearLayout>
 		<LinearLayout
 			android:id="@+id/linear4"
@@ -149,7 +148,7 @@
 					android:paddingBottom="13dp"
 					android:text="Cancel"
 					android:textSize="14sp"
-					android:textColor="@color/colorAccent"
+					android:textColor="?colorPrimary"
 					android:fontFamily="@font/product_sans_regular" />
 			</LinearLayout>
 			<LinearLayout
@@ -170,7 +169,7 @@
 					android:paddingBottom="13dp"
 					android:text="Import"
 					android:textSize="14sp"
-					android:textColor="@color/colorAccent"
+					android:textColor="?colorPrimary"
 					android:fontFamily="@font/product_sans_regular" />
 			</LinearLayout>
 		</LinearLayout>
