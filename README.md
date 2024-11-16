@@ -57,4 +57,4 @@ Tap the 'Sign' button to sign your file. The signed file will be saved locally.
 
 License
 
-This project is licensed under the custom License - see the [LICENSE](https://github.com/Yamenher/X-Signer?tab=License-1-ov-file#) file for details.
+This project is licensed under the custom License - see the [LICENSE](https://github.com/Yamenher/X-Signer/blob/nightly/LICENSE) file for details.
