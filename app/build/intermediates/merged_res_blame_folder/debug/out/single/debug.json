@@ -1,11 +1,11 @@
 [
     {
-        "merged": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-merged_res-44:/drawable-xhdpi_ic_tester_2.png.flat",
-        "source": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-main-46:/drawable-xhdpi/ic_tester_2.png"
-    },
-    {
         "merged": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-merged_res-44:/drawable_logo_anonymous.xml.flat",
         "source": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-main-46:/drawable/logo_anonymous.xml"
+    },
+    {
+        "merged": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-merged_res-44:/drawable-xhdpi_ic_tester_2.png.flat",
+        "source": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-main-46:/drawable-xhdpi/ic_tester_2.png"
     },
     {
         "merged": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-merged_res-44:/anim_slide_in_up.xml.flat",
@@ -32,6 +32,10 @@
         "source": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-main-46:/drawable-xhdpi/ic_key.png"
     },
     {
+        "merged": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-merged_res-44:/drawable-xhdpi_telegram.png.flat",
+        "source": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-main-46:/drawable-xhdpi/telegram.png"
+    },
+    {
         "merged": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-merged_res-44:/drawable-night_legacy_drawer_item_ripple.xml.flat",
         "source": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-main-46:/drawable-night/legacy_drawer_item_ripple.xml"
     },
@@ -42,6 +46,14 @@
     {
         "merged": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-merged_res-44:/drawable_drawable_drawer.xml.flat",
         "source": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-main-46:/drawable/drawable_drawer.xml"
+    },
+    {
+        "merged": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-merged_res-44:/drawable-night_button_left.xml.flat",
+        "source": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-main-46:/drawable-night/button_left.xml"
+    },
+    {
+        "merged": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-merged_res-44:/drawable_button_middle.xml.flat",
+        "source": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-main-46:/drawable/button_middle.xml"
     },
     {
         "merged": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-merged_res-44:/drawable-xhdpi_ic_info_white.png.flat",
@@ -68,6 +80,10 @@
         "source": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-main-46:/drawable/ic_container_main.xml"
     },
     {
+        "merged": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-merged_res-44:/drawable_github.xml.flat",
+        "source": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-main-46:/drawable/github.xml"
+    },
+    {
         "merged": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-merged_res-44:/drawable_legacy_item_background.xml.flat",
         "source": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-main-46:/drawable/legacy_item_background.xml"
     },
@@ -76,12 +92,16 @@
         "source": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-main-46:/drawable/color_selector.xml"
     },
     {
-        "merged": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-merged_res-44:/drawable-xhdpi_ic_done_white.png.flat",
-        "source": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-main-46:/drawable-xhdpi/ic_done_white.png"
+        "merged": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-merged_res-44:/drawable-xhdpi_ic_support.png.flat",
+        "source": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-main-46:/drawable-xhdpi/ic_support.png"
     },
     {
         "merged": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-merged_res-44:/layout_simple_loader_dialog.xml.flat",
         "source": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-main-46:/layout/simple_loader_dialog.xml"
+    },
+    {
+        "merged": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-merged_res-44:/drawable-xhdpi_ic_done_white.png.flat",
+        "source": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-main-46:/drawable-xhdpi/ic_done_white.png"
     },
     {
         "merged": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-merged_res-44:/drawable-xhdpi_ic_file_black.png.flat",
@@ -172,6 +192,10 @@
         "source": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-main-46:/layout/custom_material_dialog_signing_options.xml"
     },
     {
+        "merged": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-merged_res-44:/drawable_button_left.xml.flat",
+        "source": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-main-46:/drawable/button_left.xml"
+    },
+    {
         "merged": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-merged_res-44:/layout_login.xml.flat",
         "source": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-main-46:/layout/login.xml"
     },
@@ -184,6 +208,10 @@
         "source": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-main-46:/drawable/drawable_dialog.xml"
     },
     {
+        "merged": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-merged_res-44:/drawable-night_links_drawable.xml.flat",
+        "source": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-main-46:/drawable-night/links_drawable.xml"
+    },
+    {
         "merged": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-merged_res-44:/layout_update.xml.flat",
         "source": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-main-46:/layout/update.xml"
     },
@@ -194,6 +222,14 @@
     {
         "merged": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-merged_res-44:/drawable-xhdpi_ic_tester_4.png.flat",
         "source": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-main-46:/drawable-xhdpi/ic_tester_4.png"
+    },
+    {
+        "merged": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-merged_res-44:/drawable_background_drawable_opaque.xml.flat",
+        "source": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-main-46:/drawable/background_drawable_opaque.xml"
+    },
+    {
+        "merged": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-merged_res-44:/drawable-night_button_middle.xml.flat",
+        "source": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-main-46:/drawable-night/button_middle.xml"
     },
     {
         "merged": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-merged_res-44:/layout_key_import_dialog.xml.flat",
@@ -240,16 +276,16 @@
         "source": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-main-46:/drawable-xhdpi/ic_themed_adaptive.png"
     },
     {
-        "merged": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-merged_res-44:/drawable-xhdpi_icon_vip.png.flat",
-        "source": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-main-46:/drawable-xhdpi/icon_vip.png"
+        "merged": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-merged_res-44:/drawable-xhdpi_ic_tester_1.png.flat",
+        "source": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-main-46:/drawable-xhdpi/ic_tester_1.png"
     },
     {
         "merged": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-merged_res-44:/drawable-xhdpi_app_logo.png.flat",
         "source": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-main-46:/drawable-xhdpi/app_logo.png"
     },
     {
-        "merged": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-merged_res-44:/drawable-xhdpi_ic_tester_1.png.flat",
-        "source": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-main-46:/drawable-xhdpi/ic_tester_1.png"
+        "merged": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-merged_res-44:/drawable-xhdpi_icon_vip.png.flat",
+        "source": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-main-46:/drawable-xhdpi/icon_vip.png"
     },
     {
         "merged": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-merged_res-44:/drawable_legacy_top_item_ripple.xml.flat",
@@ -260,12 +296,12 @@
         "source": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-main-46:/drawable-xhdpi/ic_tester_3.png"
     },
     {
-        "merged": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-merged_res-44:/drawable-xhdpi_ic_launcher.png.flat",
-        "source": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-main-46:/drawable-xhdpi/ic_launcher.png"
-    },
-    {
         "merged": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-merged_res-44:/layout_file_signing_progress.xml.flat",
         "source": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-main-46:/layout/file_signing_progress.xml"
+    },
+    {
+        "merged": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-merged_res-44:/drawable-xhdpi_ic_launcher.png.flat",
+        "source": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-main-46:/drawable-xhdpi/ic_launcher.png"
     },
     {
         "merged": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-merged_res-44:/drawable-xhdpi_ic_vpn_key_black.png.flat",
@@ -276,6 +312,10 @@
         "source": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-main-46:/drawable-night/legacy_dialog_positive_ripple.xml"
     },
     {
+        "merged": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-merged_res-44:/drawable_button_right.xml.flat",
+        "source": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-main-46:/drawable/button_right.xml"
+    },
+    {
         "merged": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-merged_res-44:/drawable-xhdpi_ic_file_add_black.png.flat",
         "source": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-main-46:/drawable-xhdpi/ic_file_add_black.png"
     },
@@ -284,8 +324,12 @@
         "source": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-main-46:/drawable-xhdpi/ic_arrow_right.png"
     },
     {
-        "merged": "com.xapps.utility.xsigner.app-merged_res-44:/layout_key_import_dialog.xml.flat",
-        "source": "com.xapps.utility.xsigner.app-main-46:/layout/key_import_dialog.xml"
+        "merged": "com.xapps.utility.xsigner.app-merged_res-44:/layout_info.xml.flat",
+        "source": "com.xapps.utility.xsigner.app-main-46:/layout/info.xml"
+    },
+    {
+        "merged": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-merged_res-44:/drawable-night_button_right.xml.flat",
+        "source": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-main-46:/drawable-night/button_right.xml"
     },
     {
         "merged": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-merged_res-44:/drawable-night_color_selector.xml.flat",

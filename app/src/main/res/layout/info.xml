@@ -1,661 +1,208 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout
-     xmlns:android="http://schemas.android.com/apk/res/android"
-     xmlns:app="http://schemas.android.com/apk/res-auto"
-     xmlns:tools="http://schemas.android.com/tools"
-     android:layout_height="match_parent"
-     android:layout_width="match_parent"
-     android:background="?colorSurface"
-     android:transitionGroup="true"
-     android:id="@+id/_coordinator">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?colorSurface"
+    android:transitionGroup="true"
+    android:id="@+id/_coordinator">
 
     <com.google.android.material.appbar.AppBarLayout
-         android:layout_height="wrap_content"
-         android:layout_width="match_parent"
-         app:layout_behavior="com.google.android.material.appbar.AppBarLayout$Behavior"
-         style="@style/Widget.Material3.AppBarLayout"
-         android:id="@+id/_app_bar">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$Behavior"
+        style="@style/Widget.Material3.AppBarLayout"
+        android:id="@+id/_app_bar">
 
-        <com.google.android.material.appbar.CollapsingToolbarLayout
-             android:layout_height="160dp"
-             android:layout_width="match_parent"
-             app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
-             android:fitsSystemWindows="true"
-             app:titleCollapseMode="scale"
-             style="@style/Widget.Material3.CollapsingToolbar"
-             android:id="@+id/collapsingtoolbar">
-
-            <com.google.android.material.appbar.MaterialToolbar
-                 android:layout_height="?attr/actionBarSize"
-                 android:layout_width="match_parent"
-                 app:liftOnScrollColor="?colorOnSurfaceInverse"
-                 app:layout_collapseMode="pin"
-                 android:id="@+id/_toolbar" />
-
-            <ImageView
-                 android:layout_height="80dp"
-                 android:layout_width="80dp"
-                 android:scaleType="fitCenter"
-                 android:src="@mipmap/launcher_icon"
-                 android:id="@+id/idk"
-                 android:layout_gravity="bottom|left" />
-
-        </com.google.android.material.appbar.CollapsingToolbarLayout>
+        <com.google.android.material.appbar.MaterialToolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:liftOnScrollColor="?colorOnSurfaceInverse"
+            app:layout_collapseMode="pin"
+            android:id="@+id/_toolbar" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
     <LinearLayout
-         android:layout_height="match_parent"
-         android:layout_width="match_parent"
-         app:layout_behavior="@string/appbar_scrolling_view_behavior"
-         android:orientation="vertical">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:orientation="vertical">
 
         <androidx.core.widget.NestedScrollView
-             android:layout_height="wrap_content"
-             android:layout_width="match_parent"
-             android:background="?colorSurface"
-             android:layout_weight="1"
-             android:id="@+id/Scroller">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?colorSurface"
+            android:id="@+id/Scroller">
 
             <LinearLayout
-                 android:layout_height="wrap_content"
-                 android:layout_width="match_parent"
-                 android:paddingRight="15dp"
-                 android:orientation="vertical"
-                 android:paddingBottom="8dp"
-                 android:paddingLeft="15dp"
-                 android:id="@+id/BG"
-                 android:paddingTop="35dp">
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@mipmap/launcher_icon"
+                    android:layout_marginTop="12dp"
+                    android:layout_gravity="center_horizontal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:layout_marginTop="5dp"
+                    android:textColor="?colorOnSecondaryContainer"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/app_name" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/version_text"
+                    android:layout_marginTop="3dp"
+                    android:textSize="15sp"
+                    android:textColor="?colorOnSurface"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Version" />
 
                 <LinearLayout
-                     android:layout_height="wrap_content"
-                     android:layout_width="match_parent"
-                     android:background="@drawable/legacy_item_ripple"
-                     android:orientation="vertical"
-                     android:id="@+id/VersionsLinear">
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="15dp">
 
                     <LinearLayout
-                         android:layout_height="wrap_content"
-                         android:layout_width="match_parent"
-                         android:background="@drawable/legacy_top_item_ripple"
-                         android:paddingRight="8dp"
-                         android:orientation="horizontal"
-                         android:paddingBottom="12dp"
-                         android:paddingLeft="8dp"
-                         android:id="@+id/VersionLinear"
-                         android:paddingTop="12dp">
-
-                        <TextView
-                             android:layout_height="wrap_content"
-                             android:layout_width="wrap_content"
-                             android:gravity="center_vertical"
-                             android:padding="8dp"
-                             android:textSize="18sp"
-                             android:fontFamily="@font/product_sans_regular"
-                             android:textColor="@color/md_theme_textMain"
-                             android:layout_weight="1"
-                             android:id="@+id/VersionNameText"
-                             android:text="Version name :" />
-
-                        <TextView
-                             android:layout_height="wrap_content"
-                             android:layout_width="wrap_content"
-                             android:padding="8dp"
-                             android:textSize="18sp"
-                             android:fontFamily="@font/product_sans_regular"
-                             android:textColor="@color/colorTextSecondary"
-                             android:id="@+id/VersionNameDetails"
-                             android:text="Loading..."
-                             android:layout_gravity="center_vertical" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                         android:layout_height="1dp"
-                         android:layout_width="match_parent"
-                         android:background="@color/colorTextSecondary"
-                         android:scaleY="0.1"
-                         android:orientation="horizontal"
-                         android:layout_marginLeft="15dp"
-                         android:layout_marginRight="15dp"
-                         android:id="@+id/Dv1">
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                         android:layout_height="wrap_content"
-                         android:layout_width="match_parent"
-                         android:paddingRight="8dp"
-                         android:orientation="horizontal"
-                         android:paddingBottom="12dp"
-                         android:paddingLeft="8dp"
-                         android:id="@+id/VersionCodeLinear"
-                         android:paddingTop="12dp">
-
-                        <TextView
-                             android:layout_height="wrap_content"
-                             android:layout_width="wrap_content"
-                             android:gravity="center_vertical"
-                             android:padding="8dp"
-                             android:textSize="18sp"
-                             android:fontFamily="@font/product_sans_regular"
-                             android:textColor="@color/md_theme_textMain"
-                             android:layout_weight="1"
-                             android:id="@+id/VersionCodeText"
-                             android:text="Version code :" />
-
-                        <TextView
-                             android:layout_height="wrap_content"
-                             android:layout_width="wrap_content"
-                             android:padding="8dp"
-                             android:textSize="18sp"
-                             android:fontFamily="@font/product_sans_regular"
-                             android:textColor="@color/colorTextSecondary"
-                             android:id="@+id/VersionCodeDetails"
-                             android:text="Loading..."
-                             android:layout_gravity="center_vertical" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                         android:layout_height="1dp"
-                         android:layout_width="match_parent"
-                         android:background="@color/colorTextSecondary"
-                         android:scaleY="0.1"
-                         android:orientation="horizontal"
-                         android:layout_marginLeft="15dp"
-                         android:layout_marginRight="15dp"
-                         android:id="@+id/Dv2">
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                         android:layout_height="wrap_content"
-                         android:layout_width="match_parent"
-                         android:paddingRight="8dp"
-                         android:orientation="horizontal"
-                         android:paddingBottom="12dp"
-                         android:paddingLeft="8dp"
-                         android:id="@+id/ProductionPhaseLinear"
-                         android:paddingTop="12dp">
-
-                        <TextView
-                             android:layout_height="wrap_content"
-                             android:layout_width="wrap_content"
-                             android:gravity="center_vertical"
-                             android:padding="8dp"
-                             android:textSize="18sp"
-                             android:fontFamily="@font/product_sans_regular"
-                             android:textColor="@color/md_theme_textMain"
-                             android:layout_weight="1"
-                             android:id="@+id/ProductioPhaseText"
-                             android:text="Production phase :" />
-
-                        <TextView
-                             android:layout_height="wrap_content"
-                             android:layout_width="wrap_content"
-                             android:padding="8dp"
-                             android:textSize="18sp"
-                             android:fontFamily="@font/product_sans_regular"
-                             android:textColor="@color/colorTextSecondary"
-                             android:id="@+id/ProductionPhaseDetails"
-                             android:text="Alpha"
-                             android:layout_gravity="center_vertical" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                         android:layout_height="1dp"
-                         android:layout_width="match_parent"
-                         android:background="@color/colorTextSecondary"
-                         android:scaleY="0.1"
-                         android:orientation="horizontal"
-                         android:layout_marginLeft="15dp"
-                         android:layout_marginRight="15dp"
-                         android:id="@+id/Dv10">
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                         android:layout_height="wrap_content"
-                         android:layout_width="match_parent"
-                         android:gravity="center_vertical"
-                         android:background="@drawable/legacy_bottom_item_ripple"
-                         android:paddingRight="8dp"
-                         android:orientation="horizontal"
-                         android:paddingBottom="12dp"
-                         android:paddingLeft="8dp"
-                         android:transitionName="transition2"
-                         android:id="@+id/UpdateLinear"
-                         android:paddingTop="12dp">
-
-                        <TextView
-                             android:layout_height="wrap_content"
-                             android:layout_width="wrap_content"
-                             android:gravity="center_vertical"
-                             android:padding="8dp"
-                             android:textSize="18sp"
-                             android:fontFamily="@font/product_sans_regular"
-                             android:textColor="@color/md_theme_textMain"
-                             android:layout_weight="1"
-                             android:id="@+id/UpdateText"
-                             android:text="Check for updates" />
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingVertical="8dp"
+                        android:minWidth="110dp"
+                        android:minHeight="80dp"
+                        android:background="@drawable/button_left"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:id="@+id/linear_telegram">
 
                         <ImageView
-                             android:layout_height="24dp"
-                             android:layout_width="24dp"
-                             android:src="@drawable/ic_arrow_right"
-                             android:scaleType="fitCenter"
-                             android:id="@+id/UpdateIcon" />
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:src="@drawable/telegram"
+                            android:tint="?colorOnSurface" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/telegram_text"
+                            android:layout_marginVertical="5dp"
+                            android:textSize="13sp"
+                            android:textColor="?colorOnSurface"
+                            android:layout_gravity="center_horizontal"
+                            android:text="Community" />
 
                     </LinearLayout>
+                    
+                    <LinearLayout
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="?colorSurface"/>
+                    
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingVertical="8dp"
+                        android:minWidth="110dp"
+                        android:minHeight="80dp"
+                        android:background="@drawable/button_middle"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:id="@+id/linear_github">
 
+                        <ImageView
+                            android:layout_width="26dp"
+                            android:layout_height="26dp"
+                            android:src="@drawable/github"
+                            android:tint="?colorOnSurface" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/github_text"
+                            android:layout_marginVertical="5dp"
+                            android:textSize="13sp"
+                            android:textColor="?colorOnSurface"
+                            android:layout_gravity="center_horizontal"
+                            android:text="GitHub" />
+
+                    </LinearLayout>
+                    
+                    <LinearLayout
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="?colorSurface"/>
+                    
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingVertical="8dp"
+                        android:minWidth="110dp"
+                        android:minHeight="80dp"
+                        android:background="@drawable/button_right"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:id="@+id/linear_support">
+
+                        <ImageView
+                            android:layout_width="26dp"
+                            android:layout_height="26dp"
+                            android:src="@drawable/ic_support"
+                            android:tint="?colorOnSurface" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/support_text"
+                            android:layout_marginVertical="5dp"
+                            android:textSize="13sp"
+                            android:textColor="?colorOnSurface"
+                            android:layout_gravity="center_horizontal"
+                            android:text="Support" />
+
+                    </LinearLayout>
+                    
                 </LinearLayout>
 
                 <LinearLayout
-                     android:layout_height="wrap_content"
-                     android:layout_width="match_parent"
-                     android:background="@drawable/legacy_item_ripple"
-                     android:orientation="vertical"
-                     android:layout_marginTop="25dp"
-                     android:id="@+id/XEngineVersionLinear">
-
-                    <LinearLayout
-                         android:layout_height="wrap_content"
-                         android:layout_width="match_parent"
-                         android:gravity="center_vertical"
-                         android:background="@drawable/legacy_top_item_ripple"
-                         android:paddingRight="8dp"
-                         android:orientation="horizontal"
-                         android:paddingBottom="12dp"
-                         android:paddingLeft="8dp"
-                         android:id="@+id/EngineNameLinear"
-                         android:paddingTop="12dp">
-
-                        <TextView
-                             android:layout_height="wrap_content"
-                             android:layout_width="wrap_content"
-                             android:gravity="center_vertical"
-                             android:padding="8dp"
-                             android:textSize="18sp"
-                             android:fontFamily="@font/product_sans_regular"
-                             android:textColor="@color/md_theme_textMain"
-                             android:layout_weight="1"
-                             android:id="@+id/PoweredByTitle"
-                             android:text="Powered By"
-                             android:layout_gravity="center_horizontal" />
-
-                        <com.mursaat.extendedtextview.AnimatedGradientTextView
-                             android:layout_height="wrap_content"
-                             android:layout_width="wrap_content"
-                             app:angle="0"
-                             android:padding="8dp"
-                             android:orientation="horizontal"
-                             android:textSize="20sp"
-                             app:simultaneousColors="2"
-                             app:customFont="product_sans.ttf"
-                             android:layout_gravity="center_vertical"
-                             app:maxFPS="50"
-                             app:colors="@array/logo_colors"
-                             app:speed="1000"
-                             android:id="@+id/XEngineLogoAnimated"
-                             android:text="X-Engine" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                         android:layout_height="1dp"
-                         android:layout_width="match_parent"
-                         android:background="@color/colorTextSecondary"
-                         android:scaleY="0.1"
-                         android:orientation="horizontal"
-                         android:layout_marginLeft="15dp"
-                         android:layout_marginRight="15dp"
-                         android:id="@+id/Dv3">
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                         android:layout_height="wrap_content"
-                         android:layout_width="match_parent"
-                         android:background="@drawable/legacy_bottom_item_ripple"
-                         android:paddingRight="8dp"
-                         android:orientation="horizontal"
-                         android:paddingBottom="12dp"
-                         android:paddingLeft="8dp"
-                         android:id="@+id/XEngineContainer"
-                         android:paddingTop="12dp">
-
-                        <TextView
-                             android:layout_height="wrap_content"
-                             android:layout_width="wrap_content"
-                             android:gravity="center_vertical"
-                             android:padding="8dp"
-                             android:textSize="18sp"
-                             android:fontFamily="@font/product_sans_regular"
-                             android:textColor="@color/md_theme_textMain"
-                             android:layout_weight="1"
-                             android:id="@+id/XEngineVersionTitle"
-                             android:text="Engine Version" />
-
-                        <TextView
-                             android:layout_height="wrap_content"
-                             android:layout_width="wrap_content"
-                             android:padding="8dp"
-                             android:textSize="18sp"
-                             android:fontFamily="@font/product_sans_regular"
-                             android:textColor="@color/colorTextSecondary"
-                             android:id="@+id/XEngineVersionDetail"
-                             android:text="1.0"
-                             android:layout_gravity="center_vertical" />
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
-                <LinearLayout
-                     android:layout_height="wrap_content"
-                     android:layout_width="match_parent"
-                     android:background="@drawable/legacy_item_ripple"
-                     android:orientation="vertical"
-                     android:layout_marginTop="25dp"
-                     android:id="@+id/ThanksLinear"
-                     android:paddingTop="10dp">
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/main_bg_drawable"
+                    android:gravity="center_vertical"
+                    android:layout_margin="10dp"
+                    android:paddingVertical="20dp"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="10dp">
 
                     <TextView
-                         android:layout_height="wrap_content"
-                         android:layout_width="wrap_content"
-                         android:gravity="center_vertical"
-                         android:padding="8dp"
-                         android:textSize="20sp"
-                         android:fontFamily="@font/product_sans_regular"
-                         android:layout_marginLeft="8dp"
-                         android:textColor="?colorPrimary"
-                         android:id="@+id/SpecialThanksTitle"
-                         android:text="Special thanks to :"
-                         android:textStyle="bold" />
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="24sp"
+                        android:textColor="?colorPrimary"
+                        android:layout_gravity="center_horizontal"
+                        android:text="• What's New?" />
 
-                    <LinearLayout
-                         android:layout_height="wrap_content"
-                         android:layout_width="match_parent"
-                         android:gravity="center_vertical"
-                         android:background="@drawable/legacy_item_ripple"
-                         android:paddingRight="8dp"
-                         android:orientation="horizontal"
-                         android:paddingBottom="3dp"
-                         android:paddingLeft="8dp"
-                         android:id="@+id/User1"
-                         android:paddingTop="3dp">
-
-                        <de.hdodenhof.circleimageview.CircleImageView
-                             android:layout_height="45dp"
-                             android:layout_width="50dp"
-                             android:src="@drawable/ic_tester_1"
-                             app:civ_circle_background_color="#FFFFFF"
-                             android:layout_marginLeft="6dp"
-                             app:civ_border_width="0dp"
-                             app:civ_border_overlay="true"
-                             app:civ_border_color="#008DCD"
-                             android:id="@+id/Pic1" />
-
-                        <LinearLayout
-                             android:layout_height="wrap_content"
-                             android:layout_width="wrap_content"
-                             android:paddingRight="8dp"
-                             android:orientation="vertical"
-                             android:paddingLeft="8dp"
-                             android:id="@+id/NameAndWhy1">
-
-                            <TextView
-                                 android:layout_height="wrap_content"
-                                 android:layout_width="wrap_content"
-                                 android:gravity="center_vertical"
-                                 android:paddingRight="8dp"
-                                 android:textSize="18sp"
-                                 android:fontFamily="@font/product_sans_regular"
-                                 android:paddingLeft="8dp"
-                                 android:textColor="@color/md_theme_textMain"
-                                 android:id="@+id/Username1"
-                                 android:paddingTop="8dp"
-                                 android:text="Alex" />
-
-                            <TextView
-                                 android:layout_height="wrap_content"
-                                 android:layout_width="wrap_content"
-                                 android:paddingRight="8dp"
-                                 android:paddingBottom="8dp"
-                                 android:textSize="14sp"
-                                 android:fontFamily="@font/product_sans_regular"
-                                 android:paddingLeft="8dp"
-                                 android:textColor="@color/colorTextSecondary"
-                                 android:id="@+id/Role1"
-                                 android:paddingTop="1dp"
-                                 android:text="Special tester"
-                                 android:layout_gravity="center_vertical" />
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                         android:layout_height="1dp"
-                         android:layout_width="match_parent"
-                         android:background="@color/colorTextSecondary"
-                         android:scaleY="0.1"
-                         android:orientation="horizontal"
-                         android:layout_marginLeft="15dp"
-                         android:layout_marginRight="15dp"
-                         android:id="@+id/Dv4">
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                         android:layout_height="wrap_content"
-                         android:layout_width="match_parent"
-                         android:gravity="center_vertical"
-                         android:paddingRight="8dp"
-                         android:orientation="horizontal"
-                         android:paddingBottom="3dp"
-                         android:paddingLeft="8dp"
-                         android:id="@+id/User2"
-                         android:paddingTop="3dp">
-
-                        <de.hdodenhof.circleimageview.CircleImageView
-                             android:layout_height="45dp"
-                             android:layout_width="50dp"
-                             android:src="@drawable/ic_tester_3"
-                             app:civ_circle_background_color="#FFFFFF"
-                             android:layout_marginLeft="6dp"
-                             app:civ_border_width="0dp"
-                             app:civ_border_overlay="true"
-                             app:civ_border_color="#008DCD"
-                             android:id="@+id/Pic2" />
-
-                        <LinearLayout
-                             android:layout_height="wrap_content"
-                             android:layout_width="wrap_content"
-                             android:paddingRight="8dp"
-                             android:orientation="vertical"
-                             android:paddingLeft="8dp"
-                             android:id="@+id/NameAndWhy2">
-
-                            <TextView
-                                 android:layout_height="wrap_content"
-                                 android:layout_width="wrap_content"
-                                 android:gravity="center_vertical"
-                                 android:paddingRight="8dp"
-                                 android:textSize="18sp"
-                                 android:fontFamily="@font/product_sans_regular"
-                                 android:paddingLeft="8dp"
-                                 android:textColor="@color/md_theme_textMain"
-                                 android:id="@+id/Username2"
-                                 android:paddingTop="8dp"
-                                 android:text="NEOAPPS" />
-
-                            <TextView
-                                 android:layout_height="wrap_content"
-                                 android:layout_width="wrap_content"
-                                 android:paddingRight="8dp"
-                                 android:paddingBottom="8dp"
-                                 android:textSize="14sp"
-                                 android:fontFamily="@font/product_sans_regular"
-                                 android:paddingLeft="8dp"
-                                 android:textColor="@color/colorTextSecondary"
-                                 android:id="@+id/Role2"
-                                 android:paddingTop="1dp"
-                                 android:text="Special tester"
-                                 android:layout_gravity="center_vertical" />
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                         android:layout_height="1dp"
-                         android:layout_width="match_parent"
-                         android:background="@color/colorTextSecondary"
-                         android:scaleY="0.1"
-                         android:orientation="horizontal"
-                         android:layout_marginLeft="15dp"
-                         android:layout_marginRight="15dp"
-                         android:id="@+id/Dv5">
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                         android:layout_height="wrap_content"
-                         android:layout_width="match_parent"
-                         android:gravity="center_vertical"
-                         android:paddingRight="8dp"
-                         android:orientation="horizontal"
-                         android:paddingBottom="3dp"
-                         android:paddingLeft="8dp"
-                         android:id="@+id/User4"
-                         android:paddingTop="3dp">
-
-                        <de.hdodenhof.circleimageview.CircleImageView
-                             android:layout_height="45dp"
-                             android:layout_width="50dp"
-                             android:src="@drawable/ic_tester_4"
-                             app:civ_circle_background_color="#FFFFFF"
-                             android:layout_marginLeft="6dp"
-                             app:civ_border_width="0dp"
-                             app:civ_border_overlay="true"
-                             app:civ_border_color="#008DCD"
-                             android:id="@+id/Pic4" />
-
-                        <LinearLayout
-                             android:layout_height="wrap_content"
-                             android:layout_width="wrap_content"
-                             android:paddingRight="8dp"
-                             android:orientation="vertical"
-                             android:paddingLeft="8dp"
-                             android:id="@+id/NameAndWhy4">
-
-                            <TextView
-                                 android:layout_height="wrap_content"
-                                 android:layout_width="wrap_content"
-                                 android:gravity="center_vertical"
-                                 android:paddingRight="8dp"
-                                 android:textSize="18sp"
-                                 android:fontFamily="@font/product_sans_regular"
-                                 android:paddingLeft="8dp"
-                                 android:textColor="@color/md_theme_textMain"
-                                 android:id="@+id/Username4"
-                                 android:paddingTop="8dp"
-                                 android:text="Aquiles Trindade" />
-
-                            <TextView
-                                 android:layout_height="wrap_content"
-                                 android:layout_width="wrap_content"
-                                 android:paddingRight="8dp"
-                                 android:paddingBottom="8dp"
-                                 android:textSize="14sp"
-                                 android:fontFamily="@font/product_sans_regular"
-                                 android:paddingLeft="8dp"
-                                 android:textColor="@color/colorTextSecondary"
-                                 android:id="@+id/Role4"
-                                 android:paddingTop="1dp"
-                                 android:text="Special tester"
-                                 android:layout_gravity="center_vertical" />
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                         android:layout_height="1dp"
-                         android:layout_width="match_parent"
-                         android:background="@color/colorTextSecondary"
-                         android:scaleY="0.1"
-                         android:orientation="horizontal"
-                         android:layout_marginLeft="15dp"
-                         android:layout_marginRight="15dp"
-                         android:id="@+id/Dv6">
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                         android:layout_height="wrap_content"
-                         android:layout_width="match_parent"
-                         android:gravity="center_vertical"
-                         android:background="@drawable/legacy_bottom_item_ripple"
-                         android:paddingRight="8dp"
-                         android:orientation="horizontal"
-                         android:paddingBottom="5dp"
-                         android:paddingLeft="8dp"
-                         android:id="@+id/User3"
-                         android:paddingTop="3dp">
-
-                        <de.hdodenhof.circleimageview.CircleImageView
-                             android:layout_height="45dp"
-                             android:layout_width="50dp"
-                             android:src="@drawable/ic_tester_2"
-                             app:civ_circle_background_color="#FFFFFF"
-                             android:layout_marginLeft="6dp"
-                             app:civ_border_width="0dp"
-                             app:civ_border_overlay="true"
-                             app:civ_border_color="#008DCD"
-                             android:id="@+id/Pic3" />
-
-                        <LinearLayout
-                             android:layout_height="wrap_content"
-                             android:layout_width="wrap_content"
-                             android:paddingRight="8dp"
-                             android:orientation="vertical"
-                             android:paddingLeft="8dp"
-                             android:id="@+id/NameAndWhy3">
-
-                            <TextView
-                                 android:layout_height="wrap_content"
-                                 android:layout_width="wrap_content"
-                                 android:gravity="center_vertical"
-                                 android:paddingRight="8dp"
-                                 android:textSize="18sp"
-                                 android:fontFamily="@font/product_sans_regular"
-                                 android:paddingLeft="8dp"
-                                 android:textColor="@color/md_theme_textMain"
-                                 android:id="@+id/Username3"
-                                 android:paddingTop="8dp"
-                                 android:text="Prakhar Doneria" />
-
-                            <TextView
-                                 android:layout_height="wrap_content"
-                                 android:layout_width="wrap_content"
-                                 android:paddingRight="8dp"
-                                 android:paddingBottom="8dp"
-                                 android:textSize="14sp"
-                                 android:fontFamily="@font/product_sans_regular"
-                                 android:paddingLeft="8dp"
-                                 android:textColor="@color/colorTextSecondary"
-                                 android:id="@+id/Role3"
-                                 android:paddingTop="1dp"
-                                 android:text="Special tester"
-                                 android:layout_gravity="center_vertical" />
-
-                        </LinearLayout>
-
-                    </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="12dp"
+                        android:textSize="15sp"
+                        android:textColor="?colorOnSurface"
+                        android:text="•See changelog here MFs" />
 
                 </LinearLayout>
 

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><ripple xmlns:android="http://schemas.android.com/apk/res/android" android:color="?colorSurfaceContainerHighest">
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:bottomLeftRadius="15dp"
+                     android:topLeftRadius="15dp"/>
+            <solid android:color="@drawable/color_selector"/>
+        </shape>
+    </item>
+</ripple>
