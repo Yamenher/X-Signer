@@ -1,26 +1,29 @@
-X-Signer
+# X-Signer
 
-X-Signer is a lightweight Android app designed for signing APK/AAB files with various signature schemes (v1, v2, v3, v4). It provides an easy-to-use interface to help users securely sign their apps without hassle.
+- X-Signer is a lightweight Android app designed for signing APK/AAB files with various signature schemes (v1, v2, v3, v4). It provides an easy-to-use interface to help users securely sign their apps without hassle.
 
-Features
+• Features
 
-Supports signing APKs and AABs with multiple signature versions (v1, v2, v3, v4).
+-Supports signing APKs and AABs with multiple signature versions (v1, v2, v3, v4).
 
-Option to enable both v1 + v2 signatures or all signature versions (v1, v2, v3, v4).
+-Option to enable both v1 + v2 signatures or all signature versions (v1, v2, v3, v4).
 
-Local storage for device data without cloud integration.
+-Local storage for device data without cloud integration.
 
-Encrypts all locally stored data for security.
+-Encrypts all locally stored data for security.
 
-Device information is collected (e.g., model, Android version, brand), but no personal data is ever collected.
+-Device information is collected (e.g., model, Android version, brand), but no personal data is ever collected.
 
-Uses Google Firebase solely for update checks.
+-Uses Google Firebase solely for update checks.
 
 
-How to Use
+##How to Use
 
 1. Install the App
 Download and install the APK on your Android device.
+
+2. Grant Runtime permissions
+Grant the all files access to the app in order to work with files in your device storage
 
 
 2. Select the APK/AAB file
@@ -36,20 +39,20 @@ Tap the 'Sign' button to sign your file. The signed file will be saved locally.
 
 
 
-Permissions
+##Permissions
 
-Storage Access: Required for reading and saving APK/AAB files.
+-Storage Access: Required for reading and saving APK/AAB files.
 
-Internet Access: Used only for checking app updates via Google Firebase.
+-Internet Access: Used only for checking app updates via Google Firebase.
 
 
-Privacy
+##Privacy
 
-The app does not collect or share any personal data.
+-The app does not collect or share any personal data.
 
-All data is stored locally and encrypted for security.
+-All data is stored locally and encrypted for security.
 
-The app does not target children.
+-The app does not target children.
 
 
 License
