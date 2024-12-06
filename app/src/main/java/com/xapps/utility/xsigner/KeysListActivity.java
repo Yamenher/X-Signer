@@ -210,7 +210,7 @@ public class KeysListActivity extends AppCompatActivity {
 		KeyManager = getSharedPreferences("KeysData", Activity.MODE_PRIVATE);
 		
         recyclerview.addOnScrollListener(new RecyclerView.OnScrollListener() {
-            private int lastDy = 0;  // To track previous scroll direction
+            private int lastDy = 0;
             @Override
             public void onScrolled(@NonNull RecyclerView recyclerView, int dx, int dy) {
                 super.onScrolled(recyclerView, dx, dy);
@@ -1181,7 +1181,7 @@ KeyPassTIP.setErrorEnabled(false);
 			_AnimateHeight(DataToExpandLinear, DataToExpandLinear.getHeight(), 0, 0L);
 			try {
 				if (_position == 0) {
-					_SetMarginsStable(KeyInfoLayout, (int)_DpToPx(35), (int)_DpToPx(15));
+					_SetMarginsStable(KeyInfoLayout, (int)_DpToPx(35), (int)_DpToPx(9));
 					if (!FileUtil.isExistFile(KeysMap.get((int)_position).get("path1").toString()) || !FileUtil.isExistFile(KeysMap.get((int)_position).get("path2").toString())) {
 						_ExtractAssets();
 					}

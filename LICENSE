@@ -8,18 +8,16 @@ Copyright 2024 X-Apps
 You are granted a non-exclusive, non-transferable license to use, copy, and modify the software (the “Software”) for non-commercial purposes only.
 
 2. Restrictions
-- You may redistribute or sell the Software or any derivative works based on it.
+- You may not redistribute or sell the Software or any derivative works based on it.
 - You may not use the Software or any derivative works for commercial purposes, including but not limited to selling, licensing, or offering the Software as part of a service.
 - You may not claim the Software or any derivative works as your own.
+- You may fork the software repository only for contributing purposes.
 
-3. Attribution
-If you use this Software in any form, you must provide appropriate credit to the original author in any derived works, including but not limited to documentation, comments, or promotional materials.
-
-4. Termination
+3. Termination
 This license is effective until terminated. Your rights under this license will terminate automatically if you fail to comply with any term of this license. Upon termination, you must cease all use of the Software and destroy all copies of it.
 
-5. Disclaimer of Warranty
+4. Disclaimer of Warranty
 The Software is provided "as is," without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose, and non-infringement. In no event shall the author be liable for any claim, damages, or other liability arising from the use of the Software.
 
-6. Governing Law
+5. Governing Law
 This license shall be governed by and construed in accordance with the laws of Tunisia.

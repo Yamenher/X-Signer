@@ -10,9 +10,9 @@
 
 - Local storage for device data without cloud integration.
 
-- Encrypts all locally stored data for security. (Well not yet :3)
+- Encrypts all locally stored data for security. (Well not implemented yet :3)
 
-- Device information is collected (e.g., model, Android version, brand), but no personal data is ever collected.
+- Only some basic device informations are collected (e.g., model, Android version, brand), but no personal data is ever collected.
 
 - Uses Google Firebase solely for update checks.
 
@@ -27,15 +27,15 @@ Grant the all files access to the app in order to work with files in your device
 
 
 2. Select the APK/AAB file
-Choose the APK or AAB file you want to sign.
+Choose the APK or AAB file you want to sign or pick an app from your installed apps.
 
 
 3. Select Signature Versions
-Choose the desired signature versions (v1, v2, v3, v4) from the app's settings.
+Choose the desired signature versions (v1, v2, v3, v4) from the pre-sign dialog.
 
 
 4. Sign the APK/AAB
-Tap the 'Sign' button to sign your file. The signed file will be saved locally.
+Tap the 'Sign' button to sign your file. a snackbar popup will show the signed file path.
 
 
 
@@ -45,6 +45,8 @@ Tap the 'Sign' button to sign your file. The signed file will be saved locally.
 
 - Internet Access: Used only for checking app updates via Google Firebase.
 
+- Installed packages list access : Used to fetch installed apps lists to extract the APK file from the selected app for signing.
+
 
 ## Privacy
 
@@ -52,9 +54,7 @@ Tap the 'Sign' button to sign your file. The signed file will be saved locally.
 
 - All data is stored locally and encrypted for security.
 
-- The app does not target children.
 
-
-License
+## License
 
 This project is licensed under the custom License - see the [LICENSE](https://github.com/Yamenher/X-Signer/blob/nightly/LICENSE) file for details.

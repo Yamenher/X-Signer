@@ -1790,8 +1790,8 @@ public class MainActivity extends AppCompatActivity {
 	
 	public void _FaqActivity() {
 		ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(this);
-		    Intent intent = new Intent(this, FaqActivity.class);
-		    startActivity(intent, options.toBundle());
+		Intent intent = new Intent(this, FaqActivity.class);
+		startActivity(intent, options.toBundle());
 	}
 	
 	

@@ -22,7 +22,6 @@ import android.util.DisplayMetrics;
 import androidx.core.widget.NestedScrollView;
 import com.google.android.material.appbar.MaterialToolbar;
 import com.xapps.utility.xsigner.databinding.DebugBinding;
-import com.xapps.utility.xsigner.TelegramMessenger;
 import com.xapps.utility.xsigner.XUtil;
 
 

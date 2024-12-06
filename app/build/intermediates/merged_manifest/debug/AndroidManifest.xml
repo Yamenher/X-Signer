@@ -61,12 +61,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.xapps.utility.xsigner.LoginActivity"
-            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
-            android:hardwareAccelerated="true"
-            android:screenOrientation="portrait"
-            android:supportsPictureInPicture="true" />
-        <activity
             android:name="com.xapps.utility.xsigner.KeysListActivity"
             android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
             android:hardwareAccelerated="true"
@@ -100,7 +94,7 @@
             android:theme="@style/Theme.XSigner.Base.Main"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name="com.xapps.utility.xsigner.UpdateActivity"
+            android:name="com.xapps.utility.xsigner.DevInfoActivity"
             android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
             android:hardwareAccelerated="true"
             android:screenOrientation="portrait"

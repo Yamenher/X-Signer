@@ -42,12 +42,6 @@
 			</intent-filter>
 		</activity>
 		<activity
-			android:name=".LoginActivity"
-			android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
-			android:hardwareAccelerated="true"
-			android:supportsPictureInPicture="true"
-			android:screenOrientation="portrait" />
-		<activity
 			android:name=".KeysListActivity"
 			android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
 			android:hardwareAccelerated="true"
@@ -80,8 +74,8 @@
 			android:screenOrientation="portrait"
 			android:theme="@style/Theme.XSigner.Base.Main"
 			android:windowSoftInputMode="stateHidden" />
-		<activity
-			android:name=".UpdateActivity"
+        <activity
+			android:name=".DevInfoActivity"
 			android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
 			android:hardwareAccelerated="true"
 			android:supportsPictureInPicture="true"

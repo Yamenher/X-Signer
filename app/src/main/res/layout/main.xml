@@ -84,8 +84,9 @@
 								android:id="@+id/SSTopTitle"
 								android:layout_width="wrap_content"
 								android:layout_height="wrap_content"
+                                android:textColor="?colorOnSurface"
 								android:padding="8dp"
-								android:text="Sign from storage"
+								android:text="Sign a file"
 								android:textSize="20sp" />
 						</LinearLayout>
 						<TextView
@@ -93,24 +94,45 @@
 							android:layout_width="wrap_content"
 							android:layout_height="wrap_content"
 							android:padding="8dp"
-							android:text="Pick an APK/AAB file from your device's internal storage to sign it (No access to 'Android/data' and 'Android/obb' folders is available)"
+                            android:textColor="?colorSecondary"
+							android:text="Pick an APK/AAB file from your device's internal storage or from installed apps list to sign it (No support currently for the 'Android/data' and 'Android/obb' folders is available)"
 							android:textSize="14sp" />
-						<com.google.android.material.button.MaterialButton
-							android:id="@+id/SSPickButton"
-							android:layout_width="match_parent"
-							android:layout_height="wrap_content"
-							android:layout_marginHorizontal="15dp"
-							android:layout_marginVertical="7dp"
-							android:paddingVertical="8dp"
-							android:gravity="center_horizontal|center_vertical"
-							android:text="Pick file"
-							android:textSize="16sp"
-							android:layout_gravity="right"
-							android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
-							app:cornerRadius="100dp"
-							style="@style/Widget.Material3.Button"
-							app:textAllCaps="false"
-							android:letterSpacing="0.0" />
+                        <LinearLayout
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:weightSum="2"
+                            android:orientation="horizontal">
+						    <com.google.android.material.button.MaterialButton
+                                android:id="@+id/SSPickButton"
+							    android:layout_width="0dp"
+							    android:layout_height="wrap_content"
+							    android:layout_marginHorizontal="6dp"
+							    android:layout_marginVertical="7dp"
+							    android:paddingVertical="8dp"
+                                android:layout_weight="1"
+							    android:gravity="center_horizontal|center_vertical"
+							    android:text="Pick file"
+							    android:textSize="16sp"
+							    android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+							    style="@style/Widget.Material3.Button"
+							    app:textAllCaps="false"
+							    android:letterSpacing="0.0" />
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/ASPickButton"
+							    android:layout_width="0dp"
+							    android:layout_height="wrap_content"
+							    android:layout_marginHorizontal="6dp"
+							    android:layout_marginVertical="7dp"
+							    android:paddingVertical="8dp"
+                                android:layout_weight="1"
+							    android:gravity="center_horizontal|center_vertical"
+							    android:text="Select an app"
+							    android:textSize="16sp"
+							    android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+							    style="@style/Widget.Material3.Button.TonalButton"
+							    app:textAllCaps="false"
+							    android:letterSpacing="0.0" />
+                        </LinearLayout>
 					</LinearLayout>
 					<LinearLayout
 						android:id="@+id/RecentsLinear"
@@ -151,6 +173,7 @@
 								android:layout_height="wrap_content"
 								android:padding="8dp"
 								android:text="Recently signed files"
+                                android:textColor="?colorOnSurface"
 								android:textSize="20sp" />
 						</LinearLayout>
 						<TextView
@@ -158,6 +181,7 @@
 							android:layout_width="wrap_content"
 							android:layout_height="wrap_content"
 							android:padding="8dp"
+                            android:textColor="?colorSecondary"
 							android:text="View your recently signed apk/aab files with all details you may need like Signing time, used signing key and signed apk signature digests."
 							android:textSize="14sp" />
 						<com.google.android.material.button.MaterialButton

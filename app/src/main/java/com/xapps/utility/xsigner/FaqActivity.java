@@ -11,6 +11,11 @@ import android.view.*;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.widget.LinearLayout;
+import android.window.OnBackAnimationCallback;
+import android.window.OnBackInvokedCallback;
+import android.window.OnBackInvokedDispatcher;
+import androidx.activity.OnBackPressedCallback;
+import androidx.activity.OnBackPressedDispatcher;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
@@ -29,6 +34,7 @@ import com.google.android.material.shape.CornerFamily;
 import com.google.android.material.transition.platform.MaterialContainerTransformSharedElementCallback;
 import androidx.core.app.ActivityOptionsCompat;
 import com.google.android.material.appbar.MaterialToolbar;
+import android.window.OnBackInvokedCallback;
 
 
 
@@ -48,7 +54,7 @@ public class FaqActivity extends AppCompatActivity {
         setExitSharedElementCallback(new MaterialContainerTransformSharedElementCallback());
         getWindow().setAllowEnterTransitionOverlap(true);
         findViewById(android.R.id.content).setTransitionName("transition");
-        MaterialSharedAxis enterTransition = new MaterialSharedAxis(MaterialSharedAxis.Y, true);
+        MaterialSharedAxis enterTransition = new MaterialSharedAxis(MaterialSharedAxis.X, true);
         enterTransition.addTarget(android.R.id.content);
         enterTransition.setDuration(300L);
         getWindow().setEnterTransition(enterTransition);
@@ -56,6 +62,7 @@ public class FaqActivity extends AppCompatActivity {
         returnTransition.addTarget(android.R.id.content);
         returnTransition.setDuration(300L);
         getWindow().setReturnTransition(returnTransition);
+        getWindow().setSharedElementsUseOverlay(false);
 		super.onCreate(_savedInstanceState);
 		setContentView(R.layout.faq);
 		initialize(_savedInstanceState);
@@ -119,8 +126,7 @@ public class FaqActivity extends AppCompatActivity {
 	
 	public void _SetMargins(final View _layout, final int _leftMargin, final int _TopMargin, final int _RightMargin, final int _BottomMargin) {
 		ViewGroup.MarginLayoutParams layoutParams = (ViewGroup.MarginLayoutParams) _layout.getLayoutParams();
-		
-		   layoutParams.setMargins(_leftMargin, _TopMargin, _RightMargin, _BottomMargin);
+	    layoutParams.setMargins(_leftMargin, _TopMargin, _RightMargin, _BottomMargin);
 		_layout.setLayoutParams(layoutParams);
 	}
 	

@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:2:1-103:12
-INJECTED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:2:1-103:12
-INJECTED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:2:1-103:12
-INJECTED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:2:1-103:12
+ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:2:1-97:12
+INJECTED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:2:1-97:12
+INJECTED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:2:1-97:12
+INJECTED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:2:1-97:12
 MERGED from [androidx.databinding:viewbinding:8.2.2] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/425fdb9b6862b9f2d39498101e84d4e8/transformed/viewbinding-8.2.2/AndroidManifest.xml:2:1-7:12
 MERGED from [de.hdodenhof:circleimageview:3.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/053dd12d28545787c8828eeee1e46084/transformed/circleimageview-3.1.0/AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.core:core-splashscreen:1.0.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/b0c4a24825d809208abe75d5d5b7f726/transformed/core-splashscreen-1.0.0/AndroidManifest.xml:17:1-24:12
@@ -131,8 +131,8 @@ ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidM
 	android:name
 		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:12:19-89
 application
-ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:13:2-102:16
-INJECTED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:13:2-102:16
+ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:13:2-96:16
+INJECTED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:13:2-96:16
 MERGED from [de.hdodenhof:circleimageview:3.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/053dd12d28545787c8828eeee1e46084/transformed/circleimageview-3.1.0/AndroidManifest.xml:9:5-20
 MERGED from [de.hdodenhof:circleimageview:3.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/053dd12d28545787c8828eeee1e46084/transformed/circleimageview-3.1.0/AndroidManifest.xml:9:5-20
 MERGED from [com.google.android.material:material:1.12.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/432a96c68207bd26f27667819f27750e/transformed/material-1.12.0/AndroidManifest.xml:22:5-20
@@ -243,122 +243,110 @@ category#android.intent.category.LAUNCHER
 ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:41:5-65
 	android:name
 		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:41:15-62
-activity#com.xapps.utility.xsigner.LoginActivity
-ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:44:3-49:43
+activity#com.xapps.utility.xsigner.KeysListActivity
+ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:44:3-51:49
 	android:screenOrientation
 		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:49:4-40
 	android:hardwareAccelerated
 		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:47:4-38
+	android:windowSoftInputMode
+		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:51:7-46
 	android:supportsPictureInPicture
 		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:48:4-43
 	android:configChanges
 		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:46:4-97
-	android:name
-		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:45:4-33
-activity#com.xapps.utility.xsigner.KeysListActivity
-ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:50:3-57:49
-	android:screenOrientation
-		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:55:4-40
-	android:hardwareAccelerated
-		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:53:4-38
-	android:windowSoftInputMode
-		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:57:7-46
-	android:supportsPictureInPicture
-		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:54:4-43
-	android:configChanges
-		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:52:4-97
 	android:theme
-		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:56:4-50
+		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:50:4-50
 	android:name
-		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:51:4-36
+		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:45:4-36
 activity#com.xapps.utility.xsigner.DebugActivity
-ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:58:3-66:48
+ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:52:3-60:48
 	android:screenOrientation
-		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:64:4-40
+		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:58:4-40
 	android:launchMode
-		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:60:13-44
+		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:54:13-44
 	android:hardwareAccelerated
-		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:62:4-38
+		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:56:4-38
 	android:windowSoftInputMode
-		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:66:4-45
+		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:60:4-45
 	android:supportsPictureInPicture
-		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:63:4-43
+		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:57:4-43
 	android:configChanges
-		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:61:4-97
+		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:55:4-97
 	android:theme
-		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:65:4-50
+		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:59:4-50
 	android:name
-		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:59:4-33
+		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:53:4-33
 activity#com.xapps.utility.xsigner.FaqActivity
-ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:67:9-74:48
+ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:61:9-68:48
 	android:screenOrientation
-		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:72:4-40
+		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:66:4-40
 	android:hardwareAccelerated
-		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:70:4-38
+		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:64:4-38
 	android:windowSoftInputMode
-		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:74:4-45
+		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:68:4-45
 	android:supportsPictureInPicture
-		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:71:4-43
+		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:65:4-43
 	android:configChanges
-		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:69:4-97
+		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:63:4-97
 	android:theme
-		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:73:4-50
+		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:67:4-50
 	android:name
-		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:68:4-31
+		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:62:4-31
 activity#com.xapps.utility.xsigner.InfoActivity
-ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:75:9-82:48
+ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:69:9-76:48
 	android:screenOrientation
-		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:80:4-40
+		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:74:4-40
 	android:hardwareAccelerated
-		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:78:4-38
+		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:72:4-38
 	android:windowSoftInputMode
-		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:82:4-45
+		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:76:4-45
 	android:supportsPictureInPicture
-		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:79:4-43
+		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:73:4-43
 	android:configChanges
-		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:77:4-97
+		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:71:4-97
 	android:theme
-		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:81:4-50
+		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:75:4-50
 	android:name
-		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:76:4-32
-activity#com.xapps.utility.xsigner.UpdateActivity
-ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:83:3-90:48
+		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:70:4-32
+activity#com.xapps.utility.xsigner.DevInfoActivity
+ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:77:9-84:48
 	android:screenOrientation
-		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:88:4-40
+		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:82:4-40
 	android:hardwareAccelerated
-		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:86:4-38
+		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:80:4-38
 	android:windowSoftInputMode
-		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:90:4-45
+		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:84:4-45
 	android:supportsPictureInPicture
-		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:87:4-43
+		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:81:4-43
 	android:configChanges
-		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:85:4-97
+		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:79:4-97
 	android:theme
-		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:89:4-50
+		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:83:4-50
 	android:name
-		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:84:4-34
+		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:78:4-35
 activity#com.xapps.utility.xsigner.KeyCreatingActivity
-ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:91:3-98:48
+ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:85:3-92:48
 	android:screenOrientation
-		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:96:4-40
+		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:90:4-40
 	android:hardwareAccelerated
-		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:94:4-38
+		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:88:4-38
 	android:windowSoftInputMode
-		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:98:4-45
+		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:92:4-45
 	android:supportsPictureInPicture
-		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:95:4-43
+		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:89:4-43
 	android:configChanges
-		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:93:4-97
+		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:87:4-97
 	android:theme
-		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:97:4-50
+		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:91:4-50
 	android:name
-		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:92:4-39
+		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:86:4-39
 uses-library#org.apache.http.legacy
-ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:99:3-101:31
+ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:93:3-95:31
 	android:required
-		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:101:4-28
+		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:95:4-28
 	android:name
-		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:100:4-41
+		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:94:4-41
 uses-sdk
 INJECTED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml

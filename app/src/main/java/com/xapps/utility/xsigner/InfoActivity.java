@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.content.res.*;
 import android.view.*;
 import android.os.Build;
+import android.window.OnBackInvokedCallback;
+import android.window.OnBackInvokedDispatcher;
 import androidx.activity.OnBackPressedDispatcher;
 import android.graphics.*;
 import android.net.Uri;
@@ -26,6 +28,9 @@ import com.google.android.material.internal.EdgeToEdgeUtils;
 import com.google.android.material.shape.*;
 import androidx.core.app.ActivityOptionsCompat;
 import com.xapps.utility.xsigner.databinding.InfoBinding;
+import androidx.activity.OnBackPressedCallback;
+import android.window.OnBackInvokedCallback;
+import android.window.BackEvent;
 
 
 
@@ -34,6 +39,8 @@ public class InfoActivity extends AppCompatActivity {
     private InfoBinding binding;
 	private String versionName = "";
 	private String versionCode = "";
+    private MaterialSharedAxis enterTransition;
+    private MaterialSharedAxis returnTransition;
 	
 	private Intent UserViewIntent = new Intent();
 	
@@ -41,11 +48,11 @@ public class InfoActivity extends AppCompatActivity {
 	protected void onCreate(Bundle _savedInstanceState) {
         binding = InfoBinding.inflate(getLayoutInflater());
         getWindow().setAllowEnterTransitionOverlap(true);
-        MaterialSharedAxis enterTransition = new MaterialSharedAxis(MaterialSharedAxis.Y, true);
+        enterTransition = new MaterialSharedAxis(MaterialSharedAxis.X, true);
         enterTransition.addTarget(R.id._coordinator);
         enterTransition.setDuration(300L);
         getWindow().setEnterTransition(enterTransition);
-        MaterialSharedAxis returnTransition = new MaterialSharedAxis(MaterialSharedAxis.Y, false);
+        returnTransition = new MaterialSharedAxis(MaterialSharedAxis.X, false);
         returnTransition.setDuration(300L);
         returnTransition.addTarget(R.id._coordinator);
         getWindow().setReturnTransition(returnTransition);
@@ -101,7 +108,9 @@ public class InfoActivity extends AppCompatActivity {
         binding.linearTelegram.setOnClickListener(v -> openLink("https://t.me/xsignercommunity"));
         binding.linearGithub.setOnClickListener(v -> openLink("https://github.com/Yamenher/X-Signer"));
         binding.linearSupport.setOnClickListener(v -> sendMail());
-		
+        binding.linearPeople.setOnClickListener(v -> android.util.Log.i("wlw","idk"));
+        binding.linearPolicy.setOnClickListener(v -> android.util.Log.i("wlw","idk"));
+        binding.Toolbar.setTitleCentered(true);
 	}
 	
 	
