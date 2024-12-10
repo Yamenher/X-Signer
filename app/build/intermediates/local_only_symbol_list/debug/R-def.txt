@@ -158,12 +158,14 @@ drawable button_left
 drawable button_middle
 drawable button_right
 drawable color_selector
+drawable color_surface
 drawable default_image
 drawable drawable_dialog
 drawable drawable_drawer
 drawable drawable_progress_dialog
 drawable drawer_highlight_item
 drawable github
+drawable handle_drawable
 drawable ic_add_white
 drawable ic_android
 drawable ic_arrow_right
@@ -190,6 +192,7 @@ drawable ic_themed_adaptive
 drawable ic_vpn_key_black
 drawable ic_wrong
 drawable icon_vip
+drawable item_active_ripple
 drawable legacy_bottom_item_ripple
 drawable legacy_dialog_positive_ripple
 drawable legacy_drawer_item_ripple
@@ -199,6 +202,7 @@ drawable legacy_top_item_ripple
 drawable links_drawable
 drawable logo_anonymous
 drawable main_bg_drawable
+drawable snackbar_shape
 drawable telegram
 drawable vector_home
 font product_sans_regular
@@ -335,6 +339,7 @@ id linear_people
 id linear_policy
 id linear_support
 id linear_telegram
+id linear_transition
 id nested_scroll_view
 id note
 id p
@@ -348,6 +353,7 @@ id textview
 id textview3
 id textview4
 id title
+id title_people
 id toolbar
 id v1
 id v1l

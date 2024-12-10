@@ -20,13 +20,13 @@
 			<com.google.android.material.appbar.CollapsingToolbarLayout
 				android:id="@+id/collapsingtoolbar"
 				android:layout_width="match_parent"
-				android:layout_height="200dp"
+				android:layout_height="150dp"
 				android:fitsSystemWindows="true"
 				app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
 				app:titleCollapseMode="scale"
 				style="@style/Style.XSigner.CollapsingToolbar">
 				<androidx.appcompat.widget.Toolbar
-					android:id="@+id/_toolbar"
+					android:id="@+id/toolbar"
 					android:layout_height="?attr/actionBarSize"
 					android:layout_width="match_parent"
 					app:layout_collapseMode="pin"/>

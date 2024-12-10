@@ -13,6 +13,7 @@
 		android:layout_marginRight="5dp"
 		android:padding="5dp"
 		android:gravity="center_vertical"
+        android:background="@drawable/snackbar_shape"
 		android:orientation="horizontal">
 		<ImageView
 			android:id="@+id/Icon"
@@ -21,6 +22,7 @@
 			android:layout_height="40dp"
 			android:layout_marginLeft="5dp"
 			android:src="@drawable/icon_vip"
+            android:tint="?colorOnSurface"
 			android:scaleType="fitCenter" />
 		<TextView
 			android:id="@+id/Message"
@@ -29,9 +31,9 @@
 			android:layout_height="wrap_content"
 			android:layout_marginLeft="5dp"
 			android:padding="5dp"
-			android:text="Subscribe to our premium plan to sign files larger than 200MB"
+			android:text=""
 			android:textSize="16sp"
-			android:textColor="#000000"
+			android:textColor="?colorOnSurface"
 			android:fontFamily="@font/product_sans_regular" />
 	</LinearLayout>
 </LinearLayout>

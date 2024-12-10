@@ -92,7 +92,7 @@
 					android:paddingBottom="13dp"
 					android:text="Cancel"
 					android:textSize="14sp"
-					android:textColor="@color/colorAccent"
+					android:textColor="?colorPrimary"
 					android:fontFamily="@font/product_sans_regular" />
 			</LinearLayout>
 			<LinearLayout

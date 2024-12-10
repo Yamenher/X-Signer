@@ -92,7 +92,7 @@
 					android:paddingBottom="13dp"
 					android:text="Cancel"
 					android:textSize="14sp"
-					android:textColor="@color/colorAccent"
+					android:textColor="?colorPrimary"
 					android:fontFamily="@font/product_sans_regular" />
 			</LinearLayout>
 			<LinearLayout
@@ -105,15 +105,17 @@
 				<TextView
 					android:id="@+id/RightText"
 					android:focusable="false"
+                    android:gravity="center"
 					android:layout_width="wrap_content"
 					android:layout_height="wrap_content"
 					android:paddingLeft="20dp"
 					android:paddingTop="13dp"
 					android:paddingRight="20dp"
 					android:paddingBottom="13dp"
+                    android:minWidth="65dp"
 					android:text="Yes"
 					android:textSize="14sp"
-					android:textColor="@color/colorAccent"
+					android:textColor="?colorPrimary"
 					android:fontFamily="@font/product_sans_regular" />
 			</LinearLayout>
 		</LinearLayout>

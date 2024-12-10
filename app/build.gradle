@@ -13,12 +13,13 @@ android {
 		namespace "com.xapps.utility.xsigner"
 		minSdkVersion 26
 		targetSdkVersion 35
-		versionCode 700
-		versionName "0.7.0 Alpha"
+		versionCode 800
+		versionName "0.8.0 Alpha"
 	}
 	
     buildFeatures {
         viewBinding = true
+        buildConfig = true
     }
     
     

@@ -2,7 +2,7 @@
     <item>
         <shape android:shape="rectangle">
             <corners android:radius="20dp"/>
-            <solid android:color="@drawable/color_selector"/>
+            <solid android:color="?colorSurface"/>
         </shape>
     </item>
 </ripple>

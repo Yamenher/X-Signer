@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><ripple xmlns:android="http://schemas.android.com/apk/res/android" android:color="?colorSurfaceContainerHighest">
+<?xml version="1.0" encoding="UTF-8"?><ripple xmlns:android="http://schemas.android.com/apk/res/android" android:color="@drawable/color_selector">
     <item>
         <shape android:shape="rectangle">
             <corners android:radius="99dp"/>

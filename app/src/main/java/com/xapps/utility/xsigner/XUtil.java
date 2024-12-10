@@ -1,4 +1,9 @@
 package com.xapps.utility.xsigner;
+
+import androidx.appcompat.app.AppCompatActivity;
+import com.google.android.material.snackbar.Snackbar;
+import android.graphics.*;
+import com.xapps.utility.xsigner.R;
 import android.app.*;
 import android.content.*;
 import android.graphics.drawable.*;
@@ -7,6 +12,9 @@ import android.util.*;
 import android.view.*;
 import android.view.inputmethod.*;
 import android.widget.*;
+import android.view.WindowInsets;
+import android.graphics.Insets;
+import android.os.*;
 
 import java.io.*;
 import java.util.*;
@@ -95,4 +103,47 @@ public class XUtil {
             _output.add(_entry.getKey());
         }
     }
+    
+    public static void ApplyMarginToView(View view, boolean isTop) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+            view.setOnApplyWindowInsetsListener((v, insets) -> {
+                Insets systemBars = insets.getInsets(WindowInsets.Type.systemBars());
+                ViewGroup.MarginLayoutParams params = (ViewGroup.MarginLayoutParams) v.getLayoutParams();
+
+                if (isTop) {
+                    params.topMargin = systemBars.top;
+                } else {
+                    params.bottomMargin = systemBars.bottom;
+                }
+
+                v.setLayoutParams(params);
+                return insets;
+            });
+        } else {
+            Context context = view.getContext();
+            int barHeight = 0;
+
+            if (isTop) {
+                int resourceId = context.getResources().getIdentifier("status_bar_height", "dimen", "android");
+                if (resourceId > 0) {
+                    barHeight = context.getResources().getDimensionPixelSize(resourceId);
+                }
+            } else {
+                // Get navigation bar height
+                int resourceId = context.getResources().getIdentifier("navigation_bar_height", "dimen", "android");
+                if (resourceId > 0) {
+                    barHeight = context.getResources().getDimensionPixelSize(resourceId);
+                }
+            }
+
+            ViewGroup.MarginLayoutParams params = (ViewGroup.MarginLayoutParams) view.getLayoutParams();
+            if (isTop) {
+                params.topMargin = barHeight;
+            } else {
+                params.bottomMargin = barHeight;
+            }
+            view.setLayoutParams(params);
+        }
+    }
+    
 }

@@ -18,7 +18,7 @@
 			android:layout_height="4dp"
 			android:layout_marginTop="10dp"
 			android:padding="8dp"
-			android:background="#BBC8D4"
+			android:background="@drawable/handle_drawable"
 			android:orientation="horizontal"
 			android:layout_gravity="center_horizontal" />
 		<TextView
@@ -26,13 +26,13 @@
 			android:focusable="false"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
-			android:layout_marginTop="15dp"
+			android:layout_marginTop="8dp"
 			android:padding="8dp"
 			android:text="Allow files access"
-			android:textSize="25sp"
+			android:textSize="22sp"
 			android:layout_gravity="center_horizontal"
 			android:fontFamily="@font/product_sans_regular"
-			android:textColor="@color/md_theme_textMain" />
+			android:textColor="?colorOnSurface" />
 		<TextView
 			android:id="@+id/Description"
 			android:focusable="false"
@@ -42,7 +42,7 @@
 			android:text="Allow X-Signer to write and read files the device's storage in order to pick files from the storage and saved signed outputs to the app's folder"
 			android:textSize="14sp"
 			android:fontFamily="@font/product_sans_regular"
-			android:textColor="@color/colorTextSecondary" />
+			android:textColor="?colorOnSecondaryContainer" />
 		<com.google.android.material.button.MaterialButton
 			android:id="@+id/Button"
 			android:layout_width="match_parent"

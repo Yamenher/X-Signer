@@ -31,6 +31,7 @@ import com.xapps.utility.xsigner.databinding.InfoBinding;
 import androidx.activity.OnBackPressedCallback;
 import android.window.OnBackInvokedCallback;
 import android.window.BackEvent;
+import com.google.android.material.transition.platform.MaterialContainerTransformSharedElementCallback;
 
 
 
@@ -47,6 +48,7 @@ public class InfoActivity extends AppCompatActivity {
     @Override
 	protected void onCreate(Bundle _savedInstanceState) {
         binding = InfoBinding.inflate(getLayoutInflater());
+        setExitSharedElementCallback(new MaterialContainerTransformSharedElementCallback());
         getWindow().setAllowEnterTransitionOverlap(true);
         enterTransition = new MaterialSharedAxis(MaterialSharedAxis.X, true);
         enterTransition.addTarget(R.id._coordinator);
@@ -108,7 +110,7 @@ public class InfoActivity extends AppCompatActivity {
         binding.linearTelegram.setOnClickListener(v -> openLink("https://t.me/xsignercommunity"));
         binding.linearGithub.setOnClickListener(v -> openLink("https://github.com/Yamenher/X-Signer"));
         binding.linearSupport.setOnClickListener(v -> sendMail());
-        binding.linearPeople.setOnClickListener(v -> android.util.Log.i("wlw","idk"));
+        binding.linearPeople.setOnClickListener(v -> DevInfoPage());
         binding.linearPolicy.setOnClickListener(v -> android.util.Log.i("wlw","idk"));
         binding.Toolbar.setTitleCentered(true);
 	}
@@ -145,6 +147,12 @@ public class InfoActivity extends AppCompatActivity {
 		intent.putExtra("version", versionName);
 		ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation(this, UpdateLinear, "transition2");
 		startActivity(intent, options.toBundle());*/
+	}
+    
+    public void DevInfoPage() {
+		Intent intent = new Intent(this, DevInfoActivity.class);
+		ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation(this, binding.linearTransition, "transition_dev");
+		startActivity(intent, options.toBundle());
 	}
     
     public void openLink(String link) {

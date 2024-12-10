@@ -1,6 +1,8 @@
 package com.xapps.utility.xsigner;
 
 import android.Manifest;
+import android.opengl.Visibility;
+import android.transition.TransitionManager;
 import android.animation.*;
 import android.animation.ObjectAnimator;
 import android.app.*;
@@ -267,7 +269,7 @@ public class KeysListActivity extends AppCompatActivity {
 				});
 			}
 		};
-		_timer.schedule(UITimer, (int)(0));
+		_timer.schedule(UITimer, (0));
 		_fab2.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View _view) {
@@ -354,7 +356,7 @@ public class KeysListActivity extends AppCompatActivity {
 												    }
 										final AlertDialog KeyImportDialog = new AlertDialog.Builder(KeysListActivity.this).create();
 										LayoutInflater KeyImportDialogLI = getLayoutInflater();
-										View KeyImportDialogCV = (View) KeyImportDialogLI.inflate(R.layout.key_import_dialog, null);
+										View KeyImportDialogCV = KeyImportDialogLI.inflate(R.layout.key_import_dialog, null);
 										KeyImportDialog.setView(KeyImportDialogCV);
 										KeyImportDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 										final com.google.android.material.textfield.TextInputEditText AliasE = (com.google.android.material.textfield.TextInputEditText)
@@ -698,10 +700,10 @@ KeyPassTIP.setErrorEnabled(false);
 																						AsyncTask.execute(new Runnable() {
 																								   @Override
 																								   public void run() {
-																										if (Uri.parse(LowerCasePath).getLastPathSegment().substring((int)(Uri.parse(LowerCasePath).getLastPathSegment().length() - ".".concat("jks").length()), (int)(Uri.parse(LowerCasePath).getLastPathSegment().length())).equals(".".concat("jks"))) {
+																										if (Uri.parse(LowerCasePath).getLastPathSegment().substring((Uri.parse(LowerCasePath).getLastPathSegment().length() - ".".concat("jks").length()), (int)(Uri.parse(LowerCasePath).getLastPathSegment().length())).equals(".".concat("jks"))) {
 																												_SignWithReleaseKey("/data/data/com.xapps.utility.xsigner/blank.apk", "/data/data/com.xapps.utility.xsigner/blank_signed.apk", dataPath +"/"+ FileName, AliasE.getText().toString(), KeyStoreE.getText().toString(), KeyPassE.getText().toString(), "JKS", true, true, true, false, true);
 																										}
-																										if (Uri.parse(LowerCasePath).getLastPathSegment().substring((int)(Uri.parse(LowerCasePath).getLastPathSegment().length() - ".".concat("bks").length()), (int)(Uri.parse(LowerCasePath).getLastPathSegment().length())).equals(".".concat("bks"))) {
+																										if (Uri.parse(LowerCasePath).getLastPathSegment().substring((Uri.parse(LowerCasePath).getLastPathSegment().length() - ".".concat("bks").length()), (int)(Uri.parse(LowerCasePath).getLastPathSegment().length())).equals(".".concat("bks"))) {
 																												_SignWithReleaseKey("/data/data/com.xapps.utility.xsigner/blank.apk", "/data/data/com.xapps.utility.xsigner/blank_signed.apk", dataPath +"/"+ FileName, AliasE.getText().toString(), KeyStoreE.getText().toString(), KeyPassE.getText().toString(), "BKS", true, true, true, false, true);
 																										}
 																										if (IsPkcs12) {
@@ -714,7 +716,7 @@ KeyPassTIP.setErrorEnabled(false);
 																		});
 																}
 														};
-														_timer.schedule(LoadingTimer, (int)(1500));
+														_timer.schedule(LoadingTimer, (1500));
 												}
 										});
 										LeftButton.setOnClickListener(new View.OnClickListener() {
@@ -1163,11 +1165,13 @@ KeyPassTIP.setErrorEnabled(false);
 					if (KeysMap.get((int)_position).containsKey("expansion")) {
 						if (KeysMap.get((int)_position).get("expansion").toString().equals("true")) {
 							_AnimateHeight(DataToExpandLinear, DataToExpandLinear.getHeight(), 0, 350L);
+                            KeyInfoLayout.setBackground(getDrawable(R.drawable.legacy_item_ripple));    
 							KeysMap.get((int)_position).put("expansion", "false");
 						}
 						else {
 							if (KeysMap.get((int)_position).get("expansion").toString().equals("false")) {
 								_AnimateHeight(DataToExpandLinear, DataToExpandLinear.getHeight(), targetHeight, 350L);
+                                KeyInfoLayout.setBackground(getDrawable(R.drawable.item_active_ripple));
 								KeysMap.get((int)_position).put("expansion", "true");
 							}
 						}
@@ -1182,12 +1186,12 @@ KeyPassTIP.setErrorEnabled(false);
 			try {
 				if (_position == 0) {
 					_SetMarginsStable(KeyInfoLayout, (int)_DpToPx(35), (int)_DpToPx(9));
-					if (!FileUtil.isExistFile(KeysMap.get((int)_position).get("path1").toString()) || !FileUtil.isExistFile(KeysMap.get((int)_position).get("path2").toString())) {
+					if (!FileUtil.isExistFile(KeysMap.get(_position).get("path1").toString()) || !FileUtil.isExistFile(KeysMap.get((int)_position).get("path2").toString())) {
 						_ExtractAssets();
 					}
 				}
 				else {
-					if (!FileUtil.isExistFile(KeysMap.get((int)_position).get("path").toString())) {
+					if (!FileUtil.isExistFile(KeysMap.get(_position).get("path").toString())) {
 						_DeleteItem(_position);
 						NeedToRefresh = true;
 					}
@@ -1226,17 +1230,17 @@ KeyPassTIP.setErrorEnabled(false);
 							});
 						}
 					};
-					_timer.scheduleAtFixedRate(UITimer, (int)(0), (int)(50));
+					_timer.scheduleAtFixedRate(UITimer, (0), (50));
 					   }
 			});
 			try {
-				KeyName.setText(KeysMap.get((int)_position).get("keyname").toString());
-				TypeDesc.setText(KeysMap.get((int)_position).get("type").toString());
-				AliasDesc.setText(KeysMap.get((int)_position).get("alias").toString());
-				Sha1Desc.setText(KeysMap.get((int)_position).get("sha1").toString());
-				Sha256Desc.setText(KeysMap.get((int)_position).get("sha256").toString());
-				Sha512Desc.setText(KeysMap.get((int)_position).get("sha512").toString());
-				KeyExpiryDesc.setText(KeysMap.get((int)_position).get("expiry").toString());
+				KeyName.setText(KeysMap.get(_position).get("keyname").toString());
+				TypeDesc.setText(KeysMap.get(_position).get("type").toString());
+				AliasDesc.setText(KeysMap.get(_position).get("alias").toString());
+				Sha1Desc.setText(KeysMap.get(_position).get("sha1").toString());
+				Sha256Desc.setText(KeysMap.get(_position).get("sha256").toString());
+				Sha512Desc.setText(KeysMap.get(_position).get("sha512").toString());
+				KeyExpiryDesc.setText(KeysMap.get(_position).get("expiry").toString());
 			} catch (Exception e) {
 				_RefreshList();
 			}

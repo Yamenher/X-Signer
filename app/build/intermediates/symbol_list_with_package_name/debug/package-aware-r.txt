@@ -3121,6 +3121,7 @@ drawable button_left
 drawable button_middle
 drawable button_right
 drawable color_selector
+drawable color_surface
 drawable common_full_open_on_phone
 drawable common_google_signin_btn_icon_dark
 drawable common_google_signin_btn_icon_dark_focused
@@ -3155,6 +3156,7 @@ drawable drawer_highlight_item
 drawable github
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
+drawable handle_drawable
 drawable ic_add_white
 drawable ic_android
 drawable ic_arrow_back_black_24
@@ -3204,6 +3206,7 @@ drawable ic_wrong
 drawable icon_background
 drawable icon_vip
 drawable indeterminate_static
+drawable item_active_ripple
 drawable legacy_bottom_item_ripple
 drawable legacy_dialog_positive_ripple
 drawable legacy_drawer_item_ripple
@@ -3285,6 +3288,7 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable snackbar_shape
 drawable telegram
 drawable test_level_drawable
 drawable tooltip_frame_dark
@@ -3644,6 +3648,7 @@ id linear_people
 id linear_policy
 id linear_support
 id linear_telegram
+id linear_transition
 id listMode
 id list_item
 id m3_side_sheet
@@ -3866,6 +3871,7 @@ id textview4
 id time
 id title
 id titleDividerNoCustom
+id title_people
 id title_template
 id toggle
 id toolbar

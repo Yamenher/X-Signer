@@ -11,9 +11,7 @@ import android.view.*;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.widget.LinearLayout;
-import android.window.OnBackAnimationCallback;
-import android.window.OnBackInvokedCallback;
-import android.window.OnBackInvokedDispatcher;
+import android.window.*;
 import androidx.activity.OnBackPressedCallback;
 import androidx.activity.OnBackPressedDispatcher;
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,32 +22,25 @@ import com.google.android.material.appbar.AppBarLayout;
 import androidx.core.content.ContextCompat;
 import androidx.core.widget.NestedScrollView;
 import com.google.android.material.transition.platform.MaterialSharedAxis;
-import android.animation.ValueAnimator;
+import android.animation.*;
 import com.google.android.material.internal.EdgeToEdgeUtils;
-import android.animation.ArgbEvaluator;
-import com.google.android.material.transition.platform.MaterialContainerTransform;
-import com.google.android.material.transition.platform.MaterialArcMotion;
-import com.google.android.material.shape.ShapeAppearanceModel;
-import com.google.android.material.shape.CornerFamily;
-import com.google.android.material.transition.platform.MaterialContainerTransformSharedElementCallback;
+import com.google.android.material.transition.platform.*;
+import com.google.android.material.shape.*;
 import androidx.core.app.ActivityOptionsCompat;
 import com.google.android.material.appbar.MaterialToolbar;
 import android.window.OnBackInvokedCallback;
+import com.xapps.utility.xsigner.databinding.FaqBinding;
 
 
 
 public class FaqActivity extends AppCompatActivity {
 	
-	private Toolbar _toolbar;
-	private AppBarLayout _app_bar;
-	private CoordinatorLayout _coordinator;
 	private boolean isLifted = false;
-	private TextView FaqText;
-	private NestedScrollView Scroller;
-	private LinearLayout Container;
+    private FaqBinding binding;
 	
 	@Override
 	protected void onCreate(Bundle _savedInstanceState) {
+        binding = FaqBinding.inflate(getLayoutInflater());
         getWindow().requestFeature(Window.FEATURE_ACTIVITY_TRANSITIONS);
         setExitSharedElementCallback(new MaterialContainerTransformSharedElementCallback());
         getWindow().setAllowEnterTransitionOverlap(true);
@@ -64,31 +55,25 @@ public class FaqActivity extends AppCompatActivity {
         getWindow().setReturnTransition(returnTransition);
         getWindow().setSharedElementsUseOverlay(false);
 		super.onCreate(_savedInstanceState);
-		setContentView(R.layout.faq);
+		setContentView(binding.getRoot());
 		initialize(_savedInstanceState);
 		initializeLogic();
 	}
 	
 	private void initialize(Bundle _savedInstanceState) {
-		_app_bar = findViewById(R.id._app_bar);
-        FaqText = findViewById(R.id.FaqText);
-		_coordinator = findViewById(R.id._coordinator);
-		_toolbar = findViewById(R.id._toolbar);
-		setSupportActionBar(_toolbar);
+		setSupportActionBar(binding.Toolbar);
 		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 		getSupportActionBar().setHomeButtonEnabled(true);
-		_toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+		binding.Toolbar.setNavigationOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View _v) {
 				getOnBackPressedDispatcher().onBackPressed();
 			}
 		});
-		Scroller = findViewById(R.id.Scroller);
-		Container = findViewById(R.id.Container);
 	}
 	
 	private void initializeLogic() {
-		_toolbar.setTitle("FAQ");
+		binding.Toolbar.setTitle("FAQ");
 		EdgeToEdgeUtils.applyEdgeToEdge(getWindow(), true);
 		int navigationBarHeight = 0;
 		int statusBarHeight= 0;
@@ -100,15 +85,15 @@ public class FaqActivity extends AppCompatActivity {
 		if (r2 > 0) {
 			    statusBarHeight = getResources().getDimensionPixelSize(r2);
 		}
-		_SetMargins(_toolbar, 0, statusBarHeight, 0, 0);
+		_SetMargins(binding.Toolbar, 0, statusBarHeight, 0, 0);
         String keysInfo = "Q : What's the differnce between JKS, BKS, and PKCS12 keys? \n\nA : In the realm of cryptographic key management, three prominent keystore formats are commonly utilized: JKS (Java KeyStore), BKS (Bouncy Castle KeyStore), and PKCS12 (Public-Key Cryptography Standards #12). Each of these formats serves unique purposes and offers different features tailored to specific application needs.\n\n" +
         "JKS (Java KeyStore) is the default keystore format in Java, primarily used for storing private keys, public keys, and certificates. While it is straightforward and convenient for Java applications, it is less secure due to its proprietary format and limited encryption support, making it suitable for simple applications where high security is not a primary concern.\n\n" +
         "BKS (Bouncy Castle KeyStore) is part of the Bouncy Castle library and is designed for enhanced security, supporting various encryption algorithms. This makes it an excellent choice for mobile applications, especially on Android, where robust security measures are essential.\n\n" +
         "PKCS12 (Public-Key Cryptography Standards #12) is a widely recognized standard that provides strong encryption and password protection, making it ideal for cross-platform compatibility. It is suitable for both personal and enterprise use, especially in scenarios where secure key management and interoperability between different systems are crucial.\n\n" +
         "Each keystore type serves specific needs, so choosing the right one depends on the application's requirements and security considerations.";
         SpannableStringBuilder firstInfo = TextFormatter.formatText(keysInfo, "Q : What's the differnce between JKS, BKS, and PKCS12 keys?", "BC", getColor(R.color.primary_color));
-        FaqText.setText(firstInfo);
-	    
+        binding.FaqText.setText(firstInfo);
+	    XUtil.ApplyMarginToView(binding.FaqText, false);
     }
 	
 	

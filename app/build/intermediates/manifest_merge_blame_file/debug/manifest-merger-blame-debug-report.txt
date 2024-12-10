@@ -1,8 +1,8 @@
 1<?xml version="1.0" encoding="utf-8"?>
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
 3    package="com.xapps.utility.xsigner"
-4    android:versionCode="700"
-5    android:versionName="0.7.0 Alpha" >
+4    android:versionCode="800"
+5    android:versionName="0.8.0 Alpha" >
 6
 7    <uses-sdk
 8        android:minSdkVersion="26"
