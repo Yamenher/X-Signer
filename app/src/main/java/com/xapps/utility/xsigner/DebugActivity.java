@@ -1,5 +1,7 @@
 package com.xapps.utility.xsigner;
 
+import android.widget.Toast;
+import com.xapps.utility.xsigner.TelegramBot;
 import android.os.Debug;
 import android.view.View;
 import android.content.res.Resources;
@@ -66,6 +68,11 @@ public class DebugActivity extends AppCompatActivity {
 		binding.ErrorText.setTextIsSelectable(true);
 		binding.Toolbar.setTitleCentered(true);
 		binding.ErrorText.setText(getIntent().getStringExtra("error"));
+        try {
+            TelegramBot.sendMessage(getIntent().getStringExtra("error"));
+        } catch (Exception e) {
+            Toast.makeText(this, e.toString(), Toast.LENGTH_LONG);
+        }
 		navigationBarHeight = 0;
 		statusBarHeight= 0;
 		int r1 = getResources().getIdentifier("navigation_bar_height", "dimen", "android");
