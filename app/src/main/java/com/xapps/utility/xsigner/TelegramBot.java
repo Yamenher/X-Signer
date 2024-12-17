@@ -1,14 +1,13 @@
 package com.xapps.utility.xsigner;
 
-import io.github.cdimascio.dotenv.Dotenv;
+import android.sun.security.BuildConfig;
 import android.util.Log;
 import okhttp3.*;
 import java.io.IOException;
 
 public class TelegramBot {
-    private static final Dotenv dotenv = Dotenv.configure().ignoreIfMissing().load();
-    private static final String BOT_TOKEN = System.getenv("BOT_TOKEN") != null ? System.getenv("BOT_TOKEN") : dotenv.get("BOT_TOKEN");
-    private static final String CHAT_ID = System.getenv("CHAT_ID") != null ? System.getenv("CHAT_ID") : dotenv.get("CHAT_ID");
+    private static final String BOT_TOKEN = com.xapps.utility.xsigner.BuildConfig.BOT_TOKEN;
+    private static final String CHAT_ID = com.xapps.utility.xsigner.BuildConfig.CHAT_ID;
     private static final OkHttpClient client = new OkHttpClient();
 
     public static void sendMessage(String message) {
