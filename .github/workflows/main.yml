@@ -1,3 +1,16 @@
+name: Android CI
+
+on:
+  push:
+    branches: [ "**" ]
+    paths-ignore:
+      - '**/*.md'
+  pull_request:
+    branches: [ "**" ]
+    paths-ignore:
+      - '**/*.md'
+  workflow_dispatch:
+
 jobs:
   init:
     name: Init
@@ -11,7 +24,7 @@ jobs:
         continue-on-error: true
         with:
           bot_token: ${{ secrets.bot_token }}
-          chat_id: ${{ secrets.chat_id }}
+          chat_id: -1002479736701
           topic_id: 4
           
   build_debug_apk:
@@ -37,9 +50,9 @@ jobs:
 
       - name: Build with Gradle
         id: gradle_build_debug
-        env:
-          BOT_TOKEN: ${{ secrets.bot_token }}  # Pass GitHub Secret as env var
-          CHAT_ID: ${{ secrets.chat_id }}      # Pass GitHub Secret as env var
+        env :
+            BOT_TOKEN: ${{ secrets.bot_token }}
+            CHAT_ID: ${{ secrets.chat_id }}
         run: ./gradlew assembleDebug 
 
       - name: Upload debug apk
