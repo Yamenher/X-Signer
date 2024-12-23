@@ -64,10 +64,6 @@
         "source": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-main-46:/layout/debug.xml"
     },
     {
-        "merged": "com.xapps.utility.xsigner.app-merged_res-44:/layout_material_dialog_layout_custom.xml.flat",
-        "source": "com.xapps.utility.xsigner.app-main-46:/layout/material_dialog_layout_custom.xml"
-    },
-    {
         "merged": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-merged_res-44:/layout_key_loading_dialog.xml.flat",
         "source": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-main-46:/layout/key_loading_dialog.xml"
     },
@@ -256,6 +252,10 @@
         "source": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-main-46:/drawable/legacy_bottom_item_ripple.xml"
     },
     {
+        "merged": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-merged_res-44:/drawable_key_linear_animation.xml.flat",
+        "source": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-main-46:/drawable/key_linear_animation.xml"
+    },
+    {
         "merged": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-merged_res-44:/drawable_ic_android.xml.flat",
         "source": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-main-46:/drawable/ic_android.xml"
     },
@@ -322,6 +322,10 @@
     {
         "merged": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-merged_res-44:/drawable-night_legacy_dialog_positive_ripple.xml.flat",
         "source": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-main-46:/drawable-night/legacy_dialog_positive_ripple.xml"
+    },
+    {
+        "merged": "com.xapps.utility.xsigner.app-merged_res-44:/layout_keys_list_custom_view.xml.flat",
+        "source": "com.xapps.utility.xsigner.app-main-46:/layout/keys_list_custom_view.xml"
     },
     {
         "merged": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-merged_res-44:/drawable-xhdpi_ic_file_add_black.png.flat",

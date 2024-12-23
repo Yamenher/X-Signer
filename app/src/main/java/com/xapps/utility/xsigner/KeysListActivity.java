@@ -89,6 +89,7 @@ import com.google.android.material.floatingactionbutton.ExtendedFloatingActionBu
 import android.database.Cursor;
 import android.provider.OpenableColumns;
 import com.google.android.material.progressindicator.CircularProgressIndicator;
+import android.transition.TransitionManager;
 
 
 public class KeysListActivity extends AppCompatActivity {
@@ -1159,30 +1160,23 @@ public class KeysListActivity extends AppCompatActivity {
             final TextView textview3 = _view.findViewById(R.id.textview3);
             final TextView textview4 = _view.findViewById(R.id.textview4);
 
-            KeyInfoLayout.measure(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-            targetHeight = KeyInfoLayout.getMeasuredHeight();
+            TransitionDrawable transitionDrawable = (TransitionDrawable) ContextCompat.getDrawable(KeyInfoLayout.getContext(), R.drawable.key_linear_animation);
+            KeyInfoLayout.setBackground(transitionDrawable); 
             KeyInfoLayout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View _view) {
-                    if (KeysMap.get((int) _position).containsKey("expansion")) {
-                        if (KeysMap.get((int) _position).get("expansion").toString().equals("true")) {
-                            _AnimateHeight(DataToExpandLinear, DataToExpandLinear.getHeight(), 0, 350L);
-                            KeyInfoLayout.setBackground(getDrawable(R.drawable.legacy_item_ripple));
-                            KeysMap.get((int) _position).put("expansion", "false");
-                        } else {
-                            if (KeysMap.get((int) _position).get("expansion").toString().equals("false")) {
-                                _AnimateHeight(DataToExpandLinear, DataToExpandLinear.getHeight(), targetHeight, 350L);
-                                KeyInfoLayout.setBackground(getDrawable(R.drawable.item_active_ripple));
-                                KeysMap.get((int) _position).put("expansion", "true");
-                            }
-                        }
-                    } else {
-                        _AnimateHeight(DataToExpandLinear, DataToExpandLinear.getHeight(), targetHeight, 350L);
-                        KeysMap.get((int) _position).put("expansion", "true");
-                    }
+                     if (DataToExpandLinear.getVisibility() == View.GONE) {
+                         TransitionManager.beginDelayedTransition(_coordinator);
+                         transitionDrawable.startTransition(350);      
+                         DataToExpandLinear.setVisibility(View.VISIBLE);
+                     } else {
+                         TransitionManager.beginDelayedTransition(_coordinator);
+                         transitionDrawable.reverseTransition(350);     
+                         DataToExpandLinear.setVisibility(View.GONE);
+                     }
                 }
             });
-            _AnimateHeight(DataToExpandLinear, DataToExpandLinear.getHeight(), 0, 0L);
+            DataToExpandLinear.setVisibility(View.GONE);
             try {
                 if (_position == 0) {
                     _SetMarginsStable(KeyInfoLayout, (int) _DpToPx(35), (int) _DpToPx(9));

@@ -98,10 +98,12 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.OnApplyWindowInsetsListener;
 import android.view.inputmethod.InputMethodManager;
 import android.view.inputmethod.EditorInfo;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 
 
-public class KeyCreatingActivity extends AppCompatActivity {
+public class KeyCreatingActivity extends BaseActivity {
 	
 	private Timer _timer = new Timer();
 	
@@ -316,72 +318,14 @@ public class KeyCreatingActivity extends AppCompatActivity {
 					SildeOut.setFloatValues((float)(400));
 					SildeOut.setDuration((int)(500));
 					SildeOut.start();
-					class WorkAsync extends AsyncTask<Void, Void, Void> { 
-						@Override
-						protected void onPreExecute() {
-							FinishTimer = new TimerTask() {
-								@Override
-								public void run() {
-									runOnUiThread(new Runnable() {
-										@Override
-										public void run() {
-											if (IsCreated) {
-												FinishTimer.cancel();
-												final AlertDialog FinishDialog = new AlertDialog.Builder(KeyCreatingActivity.this).create();
-												LayoutInflater FinishDialogLI = getLayoutInflater();
-												View FinishDialogCV = (View) FinishDialogLI.inflate(R.layout.material_dialog_layout_custom, null);
-												FinishDialog.setView(FinishDialogCV);
-												FinishDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-												final TextView DTitle = (TextView)
-												FinishDialogCV.findViewById(R.id.Title);
-												final TextView DMessage = (TextView)
-												FinishDialogCV.findViewById(R.id.Message);
-												final TextView RightText = (TextView)
-												FinishDialogCV.findViewById(R.id.RightText);
-												final LinearLayout LeftButton = (LinearLayout)
-												FinishDialogCV.findViewById(R.id.LeftButton);
-												final LinearLayout RightButton = (LinearLayout)
-												FinishDialogCV.findViewById(R.id.RightButton);
-												DTitle.setText("Keystore created!");
-												DMessage.setText("Your".concat(extension.toUpperCase().concat(" keystore was successfully created and saved in path :\n".concat(OutputPath))));
-												RightText.setText("Finish");
-												LeftButton.setVisibility(View.GONE);
-												RightButton.setOnClickListener(new View.OnClickListener() {
-													@Override
-													public void onClick(View _view) {
-														FinishDialog.dismiss();
-														finish();
-													}
-												});
-												FinishDialog.setCancelable(false);
-												FinishDialog.show();
-											}
-										}
-									});
-								}
-							};
-							_timer.scheduleAtFixedRate(FinishTimer, (int)(1000), (int)(100));
-							return ;
-						}
-
-
-						protected Void doInBackground(Void... arg0) {
-							
-							_CreateSigningKey(KeyTypeE.getText().toString(), OutputPath, KeyStorePassE.getText().toString().trim(), AliasE.getText().toString().trim(), AliasPassE.getText().toString().trim(), "CN=".concat(AliasE.getText().toString().trim().concat(", ").concat("OU=".concat(OrUnitE.getText().toString().trim().concat(", ").concat("O=".concat(OrNameE.getText().toString().trim().concat(", ").concat("L=".concat(CityE.getText().toString().trim().concat(", ").concat("ST=".concat(StateE.getText().toString().trim().concat(", ").concat("C=".concat(CountryE.getText().toString().trim()))))))))))), (int)ValidityYears, (int)KeySizeBits);
-							
-							return null;
-							 }
-
-
-						protected void onPostExecute(Void result) {
-							IsCreated = true;
-											return ;
-											    }
-					}
-					new WorkAsync().execute();
-				}
-				else {
-					
+					new Handler(Looper.getMainLooper()).post(() -> {
+                        new Thread(() -> {
+                            _CreateSigningKey(KeyTypeE.getText().toString(), OutputPath, KeyStorePassE.getText().toString().trim(), AliasE.getText().toString().trim(), AliasPassE.getText().toString().trim(),"CN=".concat(AliasE.getText().toString().trim().concat(", ").concat("OU=".concat(OrUnitE.getText().toString().trim().concat(", ").concat("O=".concat(OrNameE.getText().toString().trim().concat(", ").concat("L=".concat(CityE.getText().toString().trim().concat(", ").concat("ST=".concat(StateE.getText().toString().trim().concat(", ").concat("C=".concat(CountryE.getText().toString().trim()))))))))))), (int) ValidityYears, (int) KeySizeBits);
+                            runOnUiThread(() -> {
+                                ShowSingleButtonDialog(KeyCreatingActivity.this, "Keystore created!", "Your".concat(extension.toUpperCase().concat(" keystore was successfully created and saved in path :\n".concat(OutputPath))), "Finish", 1);
+                            });
+                        }).start();
+                    });
 				}
 			}
 		});
@@ -654,4 +598,16 @@ public class KeyCreatingActivity extends AppCompatActivity {
 		    DisplayMetrics metrics = resources.getDisplayMetrics();
 		    return (double)Math.round(_dp * (metrics.densityDpi / DisplayMetrics.DENSITY_DEFAULT));
 	}
+    
+    @Override
+    public void singleClickAction(AlertDialog dialog, int eventId) {
+        switch (eventId) {
+            case 1 :
+                dialog.dismiss();
+                finish();
+            break;
+            default :
+                dialog.dismiss();
+        }
+    }
 }

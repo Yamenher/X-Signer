@@ -206,6 +206,7 @@
 						android:padding="8dp"
 						android:text="Loading"
 						android:textSize="14sp"
+                        android:gravity="center_vertical"
 						android:layout_gravity="center_vertical"
 						android:fontFamily="@font/product_sans_regular"
 						android:textColor="?colorOnSurface" />

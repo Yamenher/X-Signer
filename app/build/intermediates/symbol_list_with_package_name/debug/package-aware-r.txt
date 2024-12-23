@@ -3207,6 +3207,7 @@ drawable icon_background
 drawable icon_vip
 drawable indeterminate_static
 drawable item_active_ripple
+drawable key_linear_animation
 drawable legacy_bottom_item_ripple
 drawable legacy_dialog_positive_ripple
 drawable legacy_drawer_item_ripple

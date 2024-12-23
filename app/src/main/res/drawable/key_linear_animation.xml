@@ -1,0 +1,4 @@
+<transition xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/legacy_item_ripple" />
+    <item android:drawable="@drawable/item_active_ripple" />
+</transition>
