@@ -179,6 +179,10 @@
     <string name="stringOrganizationName">Organization name</string>
     <string name="stringOrganizationalUnit">Organizational Unit</string>
     <string name="stringState">State or Province</string>
+    <style name="CircleImageView"> 
+        <item name="cornerFamily">rounded</item> 
+        <item name="cornerSize">50%</item> 
+    </style>
     <style name="Style.XSigner.CollapsingToolbar" parent="Widget.Material3.CollapsingToolbar">
         <item name="expandedTitleTextAppearance">@style/Style.XSigner.CollapsingToolbar.TitleExpanded</item>
         <item name="collapsedTitleTextAppearance">@style/Style.XSigner.CollapsingToolbar.TitleCollapsed</item>
