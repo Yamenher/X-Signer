@@ -39,6 +39,7 @@ public class DevInfoActivity extends AppCompatActivity {
         InitUi();
         GlideL();
         SocialYamen();
+        SocialSyntax();
     }
     
     public void InitUi() {
