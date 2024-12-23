@@ -25,10 +25,184 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
-
-        <!-- Your content below appbar right here -->
-
-
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:orientation="vertical">
+        <!--YamenHer Github Layout-->
+        <LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:padding="8dp"
+		android:orientation="vertical">
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:paddingTop="4dp"
+			android:paddingRight="4dp"
+			android:paddingBottom="4dp"
+			android:gravity="center_vertical"
+			android:orientation="horizontal">
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:padding="8dp"
+				android:orientation="vertical"
+				android:layout_weight="1">
+				<TextView
+					android:id="@+id/textview1"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:padding="2dp"
+					android:text="Founder"
+					android:textSize="12sp"/>
+				<TextView
+					android:id="@+id/tv_1"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:padding="2dp"
+					android:text="YamenHer"
+					android:textSize="22sp" />
+			</LinearLayout>
+			<com.google.android.material.imageview.ShapeableImageView
+				android:id="@+id/Yamenpic"
+				android:layout_width="80dp"
+				android:layout_height="80dp"
+				android:padding="8dp"
+                app:shapeAppearance="@style/CircleImageView"/>
+		</LinearLayout>
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:orientation="horizontal"
+            android:layout_marginTop="3dp">
+			<com.google.android.material.button.MaterialButton
+				android:id="@+id/github"
+				android:layout_width="75dp"
+				android:layout_height="wrap_content"
+				android:gravity="center_horizontal|center_vertical"
+				android:text="Github"
+				android:textSize="11.5sp"
+				android:textColor="?colorPrimary"
+				style="@style/Widget.Material3.Button.TextButton"
+				app:icon="@drawable/github"
+				app:iconGravity="top" />
+			<com.google.android.material.button.MaterialButton
+				android:id="@+id/discord"
+				android:layout_width="75dp"
+				android:layout_height="wrap_content"
+				android:gravity="center_horizontal|center_vertical"
+				android:text="Discord"
+				android:textSize="11.5sp"
+				android:textColor="?colorPrimary"
+				style="@style/Widget.Material3.Button.TextButton"
+				app:icon="@drawable/discord"
+				app:iconGravity="top" />
+			<com.google.android.material.button.MaterialButton
+				android:id="@+id/telegram"
+				android:layout_width="75dp"
+				android:layout_height="wrap_content"
+				android:gravity="center_horizontal|center_vertical"
+				android:text="Telegram"
+				android:textSize="11.5sp"
+				android:textColor="?colorPrimary"
+				style="@style/Widget.Material3.Button.TextButton"
+				app:icon="@drawable/telegram"
+				app:iconGravity="top" />
+            <com.google.android.material.button.MaterialButton
+				android:id="@+id/instagram"
+				android:layout_width="75dp"
+				android:layout_height="wrap_content"
+				android:gravity="center_horizontal|center_vertical"
+				android:text="Instagram"
+				android:textSize="11.5sp"
+				android:textColor="?colorPrimary"
+				style="@style/Widget.Material3.Button.TextButton"
+				app:icon="@drawable/instagram"
+				app:iconGravity="top" />    
+		</LinearLayout>
+	</LinearLayout>
+        <!--SyntaxSpin Github Layout-->
+<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:padding="8dp"
+		android:orientation="vertical">
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:paddingTop="4dp"
+			android:paddingRight="4dp"
+			android:paddingBottom="4dp"
+			android:gravity="center_vertical"
+			android:orientation="horizontal">
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:padding="8dp"
+				android:orientation="vertical"
+				android:layout_weight="1">
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:padding="2dp"
+					android:text="Developer &amp; Designer"
+					android:textSize="12sp"/>
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:padding="2dp"
+					android:text="SyntaxSpin"
+					android:textSize="22sp" />
+			</LinearLayout>
+			<com.google.android.material.imageview.ShapeableImageView
+				android:id="@+id/syntaxpic"
+				android:layout_width="80dp"
+				android:layout_height="80dp"
+				android:padding="8dp"
+                app:shapeAppearance="@style/CircleImageView"/>
+		</LinearLayout>
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:orientation="horizontal"
+            android:layout_marginTop="3dp">
+			<com.google.android.material.button.MaterialButton
+				android:id="@+id/Sgithub"
+				android:layout_width="75dp"
+				android:layout_height="wrap_content"
+				android:gravity="center_horizontal|center_vertical"
+				android:text="Github"
+				android:textSize="11.5sp"
+				android:textColor="?colorPrimary"
+				style="@style/Widget.Material3.Button.TextButton"
+				app:icon="@drawable/github"
+				app:iconGravity="top" />
+			<com.google.android.material.button.MaterialButton
+				android:id="@+id/bsky"
+				android:layout_width="75dp"
+				android:layout_height="wrap_content"
+				android:gravity="center_horizontal|center_vertical"
+				android:text="BlueSky"
+				android:textSize="11.5sp"
+				android:textColor="?colorPrimary"
+				style="@style/Widget.Material3.Button.TextButton"
+				app:icon="@drawable/bsky"
+				app:iconGravity="top" />
+			<com.google.android.material.button.MaterialButton
+				android:id="@+id/mastodon"
+				android:layout_width="75dp"
+				android:layout_height="wrap_content"
+				android:gravity="center_horizontal|center_vertical"
+				android:text="Mastodon"
+				android:textSize="11.5sp"
+				android:textColor="?colorPrimary"
+				style="@style/Widget.Material3.Button.TextButton"
+				app:icon="@drawable/mastodon"
+				app:iconGravity="top" />
+		</LinearLayout>
+	</LinearLayout>
+        </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -3109,6 +3109,7 @@ drawable avd_hide_password
 drawable avd_show_password
 drawable avd_splashanim
 drawable background_drawable_opaque
+drawable bsky
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -3149,6 +3150,7 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable discord
 drawable drawable_dialog
 drawable drawable_drawer
 drawable drawable_progress_dialog
@@ -3206,6 +3208,7 @@ drawable ic_wrong
 drawable icon_background
 drawable icon_vip
 drawable indeterminate_static
+drawable instagram
 drawable item_active_ripple
 drawable key_linear_animation
 drawable legacy_bottom_item_ripple
@@ -3228,6 +3231,7 @@ drawable m3_tabs_line_indicator
 drawable m3_tabs_rounded_line_indicator
 drawable m3_tabs_transparent_background
 drawable main_bg_drawable
+drawable mastodon
 drawable material_cursor_drawable
 drawable material_ic_calendar_black_24dp
 drawable material_ic_clear_black_24dp
@@ -3397,6 +3401,7 @@ id SSTopLinear
 id SSTopTitle
 id SYM
 id Scroller
+id Sgithub
 id Sha1Desc
 id Sha1Linear
 id Sha1Title
@@ -3423,6 +3428,7 @@ id TypeTitle
 id UserIcon
 id Username
 id ViewRecentsButton
+id Yamenpic
 id _app_bar
 id _coordinator
 id _drawer
@@ -3512,6 +3518,7 @@ id browser_actions_menu_item_icon
 id browser_actions_menu_item_text
 id browser_actions_menu_items
 id browser_actions_menu_view
+id bsky
 id buttonPanel
 id cancel_button
 id center
@@ -3562,6 +3569,7 @@ id direct
 id disableHome
 id disablePostScroll
 id disableScroll
+id discord
 id disjoint
 id dragDown
 id dragEnd
@@ -3604,7 +3612,9 @@ id fragment_container_view_tag
 id fullscreen_header
 id ghost_view
 id ghost_view_holder
+id github
 id github_text
+id glide_custom_view_target_tag
 id gone
 id graph
 id graph_wrap
@@ -3625,6 +3635,7 @@ id ignoreRequest
 id image
 id indeterminate
 id info
+id instagram
 id invisible
 id inward
 id italic
@@ -3655,6 +3666,7 @@ id list_item
 id m3_side_sheet
 id marquee
 id masked
+id mastodon
 id match_parent
 id material_clock_display
 id material_clock_display_and_toggle
@@ -3835,6 +3847,7 @@ id stretch
 id submenuarrow
 id submit_area
 id support_text
+id syntaxpic
 id tabMode
 id tag_accessibility_actions
 id tag_accessibility_clickable_spans
@@ -3849,6 +3862,7 @@ id tag_transition_group
 id tag_unhandled_key_event_manager
 id tag_unhandled_key_listeners
 id tag_window_insets_animation_callback
+id telegram
 id telegram_text
 id text
 id text2
@@ -3867,6 +3881,7 @@ id textinput_placeholder
 id textinput_prefix_text
 id textinput_suffix_text
 id textview
+id textview1
 id textview3
 id textview4
 id time
@@ -3890,6 +3905,7 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
+id tv_1
 id unchecked
 id uniform
 id unlabeled
@@ -4648,6 +4664,7 @@ style Base_v27_Theme_SplashScreen_Light
 style CardView
 style CardView_Dark
 style CardView_Light
+style CircleImageView
 style MaterialAlertDialog_Material3
 style MaterialAlertDialog_Material3_Animation
 style MaterialAlertDialog_Material3_Body_Text

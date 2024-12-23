@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.xapps.utility.xsigner.app-mergeDebugResources-42:/values-w400dp-port-v13/values-w400dp-port-v13.xml",
+            "outputFile": "com.xapps.utility.xsigner.app-mergeDebugResources-43:/values-w400dp-port-v13/values-w400dp-port-v13.xml",
             "map": [
                 {
-                    "source": "/data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/432a96c68207bd26f27667819f27750e/transformed/material-1.12.0/res/values-w400dp-port-v13/values-w400dp-port-v13.xml",
+                    "source": "/data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/432a96c68207bd26f27667819f27750e/transformed/material-1.12.0/res/values-w400dp-port-v13/values-w400dp-port-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",
