@@ -428,6 +428,7 @@ style CircleImageView
 style Style.XSigner.CollapsingToolbar
 style Style.XSigner.CollapsingToolbar.TitleCollapsed
 style Style.XSigner.CollapsingToolbar.TitleExpanded
+style Style.XSigner.LinkButton
 style ThemeOverlay.AppTheme.HighContrast
 style ThemeOverlay.AppTheme.MediumContrast
 style Theme.XSigner.Base.Main

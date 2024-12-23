@@ -4,7 +4,7 @@
             "outputFile": "com.xapps.utility.xsigner.app-mergeDebugResources-43:/values-en-rCA/values-en-rCA.xml",
             "map": [
                 {
-                    "source": "/data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/28360851d00e2db98295438a3ca90c83/transformed/credentials-1.2.0-rc01/res/values-en-rCA/values-en-rCA.xml",
+                    "source": "/data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/28360851d00e2db98295438a3ca90c83/transformed/credentials-1.2.0-rc01/res/values-en-rCA/values-en-rCA.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
@@ -21,24 +21,7 @@
                     }
                 },
                 {
-                    "source": "/data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/4a96a0e96d29d8a6cf0caa15a5ca44c2/transformed/core-1.13.0/res/values-en-rCA/values-en-rCA.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,151,253,352,451,555,657,773",
-                        "endColumns": "95,101,98,98,103,101,115,100",
-                        "endOffsets": "146,248,347,446,550,652,768,869"
-                    },
-                    "to": {
-                        "startLines": "31,32,33,34,35,36,37,43",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "2988,3084,3186,3285,3384,3488,3590,4192",
-                        "endColumns": "95,101,98,98,103,101,115,100",
-                        "endOffsets": "3079,3181,3280,3379,3483,3585,3701,4288"
-                    }
-                },
-                {
-                    "source": "/data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/77a2d9da4ba8863814c5fc1a4b14f00d/transformed/browser-1.4.0/res/values-en-rCA/values-en-rCA.xml",
+                    "source": "/data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/77a2d9da4ba8863814c5fc1a4b14f00d/transformed/browser-1.4.0/res/values-en-rCA/values-en-rCA.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
@@ -55,7 +38,24 @@
                     }
                 },
                 {
-                    "source": "/data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/f8df54b1c78df95846ede98b7a1ba0b7/transformed/appcompat-1.6.1/res/values-en-rCA/values-en-rCA.xml",
+                    "source": "/data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/4a96a0e96d29d8a6cf0caa15a5ca44c2/transformed/core-1.13.0/res/values-en-rCA/values-en-rCA.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,151,253,352,451,555,657,773",
+                        "endColumns": "95,101,98,98,103,101,115,100",
+                        "endOffsets": "146,248,347,446,550,652,768,869"
+                    },
+                    "to": {
+                        "startLines": "31,32,33,34,35,36,37,43",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "2988,3084,3186,3285,3384,3488,3590,4192",
+                        "endColumns": "95,101,98,98,103,101,115,100",
+                        "endOffsets": "3079,3181,3280,3379,3483,3585,3701,4288"
+                    }
+                },
+                {
+                    "source": "/data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/f8df54b1c78df95846ede98b7a1ba0b7/transformed/appcompat-1.6.1/res/values-en-rCA/values-en-rCA.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",

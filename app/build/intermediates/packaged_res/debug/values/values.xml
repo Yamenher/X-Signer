@@ -198,6 +198,14 @@
         <item name="android:fontFamily">@font/product_sans_regular</item>
         <item name="android:textColor">?colorOnSurface</item>
     </style>
+    <style name="Style.XSigner.LinkButton" parent="Widget.Material3.Button.TextButton">
+        <item name="cornerRadius">12dp</item>
+        <item name="android:paddingHorizontal">15dp</item>
+        <item name="android:paddingVertical">12dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="iconSize">22dp</item>
+        <item name="android:textSize">14sp</item>
+    </style>
     <style name="Theme.XSigner.Base.Main" parent="Theme.Material3.Light.NoActionBar">
         <item name="colorPrimary">@color/md_theme_primary</item>
         <item name="colorOnPrimary">@color/md_theme_onPrimary</item>

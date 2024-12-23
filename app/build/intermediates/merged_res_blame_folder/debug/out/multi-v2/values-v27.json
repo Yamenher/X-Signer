@@ -4,7 +4,7 @@
             "outputFile": "com.xapps.utility.xsigner.app-mergeDebugResources-43:/values-v27/values-v27.xml",
             "map": [
                 {
-                    "source": "/data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/b0c4a24825d809208abe75d5d5b7f726/transformed/core-splashscreen-1.0.0/res/values-v27/values-v27.xml",
+                    "source": "/data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/b0c4a24825d809208abe75d5d5b7f726/transformed/core-splashscreen-1.0.0/res/values-v27/values-v27.xml",
                     "from": {
                         "startLines": "2,3,4,7",
                         "startColumns": "4,4,4,4",

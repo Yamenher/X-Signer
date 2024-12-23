@@ -3,14 +3,12 @@
         <item name="expandedTitleTextAppearance">@style/Style.XSigner.CollapsingToolbar.TitleExpanded</item>
         <item name="collapsedTitleTextAppearance">@style/Style.XSigner.CollapsingToolbar.TitleCollapsed</item>
     </style>
-    
     <style name="Style.XSigner.CollapsingToolbar.TitleExpanded">
         <item name="android:textSize">34dp</item>
         <item name="fontFamily">@font/product_sans_regular</item>
         <item name="android:fontFamily">@font/product_sans_regular</item>
         <item name="android:textColor">?colorOnSurface</item>
     </style>
-    
     <style name="Style.XSigner.CollapsingToolbar.TitleCollapsed">
         <item name="fontFamily">@font/product_sans_regular</item>
         <item name="android:fontFamily">@font/product_sans_regular</item>
@@ -19,5 +17,13 @@
      <style name="CircleImageView"> 
         <item name="cornerFamily">rounded</item> 
         <item name="cornerSize">50%</item> 
-    </style> 
+    </style>
+    <style name="Style.XSigner.LinkButton" parent="Widget.Material3.Button.TextButton" >
+        <item name="cornerRadius">12dp</item>
+        <item name="android:paddingHorizontal">15dp</item>
+        <item name="android:paddingVertical">12dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="iconSize">22dp</item>
+        <item name="android:textSize">14sp</item>
+    </style>
 </resources>
