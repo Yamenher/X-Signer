@@ -11,6 +11,6 @@ jobs:
       - name: Notify Telegram
         uses: EverythingSuckz/github-telegram-notify@main
         with:
-          token: ${{ secrets.bot_token }}
+          bot_token: ${{ secrets.bot_token }}
           chat_id: -1002295019134
           topic_id : 8
