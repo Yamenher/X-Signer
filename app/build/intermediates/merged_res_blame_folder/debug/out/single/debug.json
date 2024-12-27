@@ -20,16 +20,20 @@
         "source": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-main-47:/drawable/key_linear_animation.xml"
     },
     {
+        "merged": "com.xapps.utility.xsigner.app-merged_res-45:/layout_keys_list_custom_view.xml.flat",
+        "source": "com.xapps.utility.xsigner.app-main-47:/layout/keys_list_custom_view.xml"
+    },
+    {
         "merged": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-merged_res-45:/drawable-xhdpi_ic_key.png.flat",
         "source": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-main-47:/drawable-xhdpi/ic_key.png"
     },
     {
-        "merged": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-merged_res-45:/layout_file_signing_progress.xml.flat",
-        "source": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-main-47:/layout/file_signing_progress.xml"
-    },
-    {
         "merged": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-merged_res-45:/drawable_snackbar_shape.xml.flat",
         "source": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-main-47:/drawable/snackbar_shape.xml"
+    },
+    {
+        "merged": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-merged_res-45:/layout_file_signing_progress.xml.flat",
+        "source": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-main-47:/layout/file_signing_progress.xml"
     },
     {
         "merged": "/data/data/com.itsaky.androidide/files/home/.gradle/daemon/8.2/com.xapps.utility.xsigner.app-merged_res-45:/drawable_discord.xml.flat",

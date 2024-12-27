@@ -4,4 +4,6 @@ pluginManagement {
         google()
     }
 }
+
 include ':app'
+include ':expandablelayout'

@@ -92,7 +92,7 @@
 				android:fontFamily="@font/product_sans_regular"
 				android:textColor="?colorOnSurface" />
 		</LinearLayout>
-		<LinearLayout
+		<com.kyo.expandablelayout.ExpandableLayout
 			android:id="@+id/FixContainer"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
@@ -100,6 +100,8 @@
 			<LinearLayout
 				android:id="@+id/DataToExpandLinear"
 				android:layout_width="match_parent"
+                app:canExpand="true"
+                app:startExpanded="false"
 				android:layout_height="wrap_content"
 				android:orientation="vertical">
 				<LinearLayout
@@ -309,6 +311,6 @@
 						android:textColor="?colorOnSurface" />
 				</LinearLayout>
 			</LinearLayout>
-		</LinearLayout>
+		</com.kyo.expandablelayout.ExpandableLayout>
 	</LinearLayout>
 </LinearLayout>

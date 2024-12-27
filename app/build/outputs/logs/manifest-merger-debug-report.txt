@@ -4,6 +4,7 @@ ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidM
 INJECTED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:2:1-97:12
 INJECTED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:2:1-97:12
 INJECTED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:2:1-97:12
+MERGED from [:expandablelayout] /storage/emulated/0/AndroidIDEProjects/X-Signer/expandablelayout/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-12:12
 MERGED from [androidx.databinding:viewbinding:8.2.2] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/425fdb9b6862b9f2d39498101e84d4e8/transformed/viewbinding-8.2.2/AndroidManifest.xml:2:1-7:12
 MERGED from [de.hdodenhof:circleimageview:3.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/053dd12d28545787c8828eeee1e46084/transformed/circleimageview-3.1.0/AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.core:core-splashscreen:1.0.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/b0c4a24825d809208abe75d5d5b7f726/transformed/core-splashscreen-1.0.0/AndroidManifest.xml:17:1-24:12
@@ -136,6 +137,8 @@ ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidM
 application
 ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:13:2-96:16
 INJECTED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:13:2-96:16
+MERGED from [:expandablelayout] /storage/emulated/0/AndroidIDEProjects/X-Signer/expandablelayout/build/intermediates/merged_manifest/debug/AndroidManifest.xml:7:5-10:19
+MERGED from [:expandablelayout] /storage/emulated/0/AndroidIDEProjects/X-Signer/expandablelayout/build/intermediates/merged_manifest/debug/AndroidManifest.xml:7:5-10:19
 MERGED from [de.hdodenhof:circleimageview:3.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/053dd12d28545787c8828eeee1e46084/transformed/circleimageview-3.1.0/AndroidManifest.xml:9:5-20
 MERGED from [de.hdodenhof:circleimageview:3.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/053dd12d28545787c8828eeee1e46084/transformed/circleimageview-3.1.0/AndroidManifest.xml:9:5-20
 MERGED from [com.google.android.material:material:1.12.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/432a96c68207bd26f27667819f27750e/transformed/material-1.12.0/AndroidManifest.xml:22:5-20
@@ -188,6 +191,8 @@ MERGED from [com.google.android.play:core-common:2.0.3] /data/data/com.itsaky.an
 		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:17:3-46
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.13.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/4a96a0e96d29d8a6cf0caa15a5ca44c2/transformed/core-1.13.0/AndroidManifest.xml:28:18-86
+	android:supportsRtl
+		ADDED from [:expandablelayout] /storage/emulated/0/AndroidIDEProjects/X-Signer/expandablelayout/build/intermediates/merged_manifest/debug/AndroidManifest.xml:9:9-35
 	android:label
 		ADDED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:16:3-35
 	android:icon
@@ -354,6 +359,8 @@ uses-sdk
 INJECTED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml
 INJECTED from /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml
+MERGED from [:expandablelayout] /storage/emulated/0/AndroidIDEProjects/X-Signer/expandablelayout/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:expandablelayout] /storage/emulated/0/AndroidIDEProjects/X-Signer/expandablelayout/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [androidx.databinding:viewbinding:8.2.2] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/425fdb9b6862b9f2d39498101e84d4e8/transformed/viewbinding-8.2.2/AndroidManifest.xml:5:5-44
 MERGED from [androidx.databinding:viewbinding:8.2.2] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/425fdb9b6862b9f2d39498101e84d4e8/transformed/viewbinding-8.2.2/AndroidManifest.xml:5:5-44
 MERGED from [de.hdodenhof:circleimageview:3.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/053dd12d28545787c8828eeee1e46084/transformed/circleimageview-3.1.0/AndroidManifest.xml:5:5-7:41

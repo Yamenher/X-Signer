@@ -46,3 +46,4 @@ com.xapps.utility.xsigner.app-packageDebugResources-44 /storage/emulated/0/Andro
 com.xapps.utility.xsigner.app-merged_res-45 /storage/emulated/0/AndroidIDEProjects/X-Signer/app/build/intermediates/merged_res/debug
 com.xapps.utility.xsigner.app-debug-46 /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/debug/res
 com.xapps.utility.xsigner.app-main-47 /storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/res
+com.xapps.utility.xsigner.app-packaged_res-48 /storage/emulated/0/AndroidIDEProjects/X-Signer/expandablelayout/build/intermediates/packaged_res/debug

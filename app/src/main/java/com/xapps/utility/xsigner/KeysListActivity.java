@@ -69,6 +69,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import com.kyo.expandablelayout.ExpandableLayout;
 import com.mursaat.extendedtextview.*;
 import java.io.*;
 import java.text.*;
@@ -1133,7 +1134,7 @@ public class KeysListActivity extends AppCompatActivity {
             final LinearLayout KeyInfoLayout = _view.findViewById(R.id.KeyInfoLayout);
             final LinearLayout TopLayout = _view.findViewById(R.id.TopLayout);
             final LinearLayout TypeLinear = _view.findViewById(R.id.TypeLinear);
-            final LinearLayout FixContainer = _view.findViewById(R.id.FixContainer);
+            final ExpandableLayout FixContainer = _view.findViewById(R.id.FixContainer);
             final LinearLayout KeyFrame = _view.findViewById(R.id.KeyFrame);
             final TextView KeyName = _view.findViewById(R.id.KeyName);
             final ImageView KeyIcon = _view.findViewById(R.id.KeyIcon);
@@ -1165,18 +1166,17 @@ public class KeysListActivity extends AppCompatActivity {
             KeyInfoLayout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View _view) {
-                     if (DataToExpandLinear.getVisibility() == View.GONE) {
-                         TransitionManager.beginDelayedTransition(_coordinator);
-                         transitionDrawable.startTransition(350);      
-                         DataToExpandLinear.setVisibility(View.VISIBLE);
+                     if (!FixContainer.isExpanded()) {
+                        if (FixContainer.toggleExpansion()){
+                            transitionDrawable.startTransition(350);
+                        }   
                      } else {
-                         TransitionManager.beginDelayedTransition(_coordinator);
-                         transitionDrawable.reverseTransition(350);     
-                         DataToExpandLinear.setVisibility(View.GONE);
+                         if (FixContainer.toggleExpansion()) {
+                            transitionDrawable.reverseTransition(350);     
+                         }        
                      }
                 }
             });
-            DataToExpandLinear.setVisibility(View.GONE);
             try {
                 if (_position == 0) {
                     _SetMarginsStable(KeyInfoLayout, (int) _DpToPx(35), (int) _DpToPx(9));

@@ -24,8 +24,8 @@ jobs:
         continue-on-error: true
         with:
           bot_token: ${{ secrets.bot_token }}
-          chat_id: -1002479736701
-          topic_id: 4
+          chat_id: -1002295019134
+          topic_id: 8
           
   build_debug_apk:
     name: Build App Debug APK
@@ -96,7 +96,7 @@ jobs:
         continue-on-error: true
         run: |
           curl -X POST "https://api.telegram.org/bot${{ secrets.bot_token }}/sendDocument" \
-            -F chat_id="-1002479736701" \
-            -F message_thread_id="4" \
+            -F chat_id="-1002295019134" \
+            -F message_thread_id="10" \
             -F document=@"xsigner-app-debug.apk" \
             -F caption="${{ github.event.head_commit.message }} by ${{ github.actor }}"

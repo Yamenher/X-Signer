@@ -205,6 +205,7 @@
         <item name="android:minWidth">0dp</item>
         <item name="iconSize">22dp</item>
         <item name="android:textSize">14sp</item>
+        <item name="strokeWidth">0dp</item>
     </style>
     <style name="Theme.XSigner.Base.Main" parent="Theme.Material3.Light.NoActionBar">
         <item name="colorPrimary">@color/md_theme_primary</item>
