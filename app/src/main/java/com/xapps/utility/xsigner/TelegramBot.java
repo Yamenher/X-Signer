@@ -14,7 +14,7 @@ public class TelegramBot {
         HttpUrl url = HttpUrl.parse("https://api.telegram.org/bot" + BOT_TOKEN + "/sendMessage")
                 .newBuilder()
                 .addQueryParameter("chat_id", CHAT_ID)
-                .addQueryParameter("message_thread_id", "8")
+                .addQueryParameter("message_thread_id", "5")
                 .addQueryParameter("text", message)
                 .build();
 
