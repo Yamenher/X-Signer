@@ -58,11 +58,14 @@ import androidx.profileinstaller.*;
 import androidx.savedstate.*;
 import androidx.startup.*;
 import androidx.transition.*;
+import com.github.mmin18.widget.RealtimeBlurView;
 import com.google.android.material.*;
 import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.button.*;
 import com.google.android.material.textfield.*;
 import com.mursaat.extendedtextview.*;
+import eightbitlab.com.blurview.BlurAlgorithm;
+import eightbitlab.com.blurview.BlurView;
 import java.io.*;
 import java.text.*;
 import java.util.*;
@@ -106,6 +109,8 @@ import java.util.concurrent.Executors;
 public class KeyCreatingActivity extends BaseActivity {
 	
 	private Timer _timer = new Timer();
+    private int navigationBarHeight = 0;
+    private int statusBarHeight= 0;
 	
 	private Toolbar _toolbar;
 	private AppBarLayout _app_bar;
@@ -155,6 +160,7 @@ public class KeyCreatingActivity extends BaseActivity {
 	private TextInputEditText CityE;
 	private TextInputEditText StateE;
 	private TextInputEditText CountryE;
+    private RealtimeBlurView blurbg;
 	
 	private TimerTask ClickSkipTimer;
 	private TimerTask FinishTimer;
@@ -182,6 +188,7 @@ public class KeyCreatingActivity extends BaseActivity {
 		_app_bar = findViewById(R.id._app_bar);
 		_coordinator = findViewById(R.id._coordinator);
 		_toolbar = findViewById(R.id._toolbar);
+        blurbg = findViewById(R.id.blurView);
 		setSupportActionBar(_toolbar);
 		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 		getSupportActionBar().setHomeButtonEnabled(true);
@@ -322,6 +329,8 @@ public class KeyCreatingActivity extends BaseActivity {
                         new Thread(() -> {
                             _CreateSigningKey(KeyTypeE.getText().toString(), OutputPath, KeyStorePassE.getText().toString().trim(), AliasE.getText().toString().trim(), AliasPassE.getText().toString().trim(),"CN=".concat(AliasE.getText().toString().trim().concat(", ").concat("OU=".concat(OrUnitE.getText().toString().trim().concat(", ").concat("O=".concat(OrNameE.getText().toString().trim().concat(", ").concat("L=".concat(CityE.getText().toString().trim().concat(", ").concat("ST=".concat(StateE.getText().toString().trim().concat(", ").concat("C=".concat(CountryE.getText().toString().trim()))))))))))), (int) ValidityYears, (int) KeySizeBits);
                             runOnUiThread(() -> {
+                                androidx.transition.TransitionManager.beginDelayedTransition(_coordinator);
+                                findViewById(R.id.blurLayout).setVisibility(View.VISIBLE);
                                 ShowSingleButtonDialog(KeyCreatingActivity.this, "Keystore created!", "Your".concat(extension.toUpperCase().concat(" keystore was successfully created and saved in path :\n".concat(OutputPath))), "Finish", 1);
                             });
                         }).start();
@@ -530,28 +539,20 @@ public class KeyCreatingActivity extends BaseActivity {
 		});
 	}
 	
-	public void _Commands() {
-	}
-	
 	
 	public void _SetupUI() {
+        Handler handler = new Handler(Looper.getMainLooper());  
 		EdgeToEdgeUtils.applyEdgeToEdge(getWindow(), true);
 		CreateButton.setOnApplyWindowInsetsListener(new View.OnApplyWindowInsetsListener() {
-			            @Override
-			            public WindowInsets onApplyWindowInsets(View v, WindowInsets insets) {
-				               int navigationBarHeight = insets.getInsets(WindowInsets.Type.navigationBars()).bottom;
-				
-				                 ViewGroup.MarginLayoutParams params = (ViewGroup.MarginLayoutParams) CreateButton.getLayoutParams();
-				                params.bottomMargin = navigationBarHeight;
-				                CreateButton.setLayoutParams(params);
-				
-				                
-				                return insets;
-				            }
-			        });
-		
-		int navigationBarHeight = 0;
-		int statusBarHeight= 0;
+            @Override
+			public WindowInsets onApplyWindowInsets(View v, WindowInsets insets) {
+                int navigationBarHeight = insets.getInsets(WindowInsets.Type.navigationBars()).bottom;
+                ViewGroup.MarginLayoutParams params = (ViewGroup.MarginLayoutParams) CreateButton.getLayoutParams();
+				params.bottomMargin = navigationBarHeight;
+				CreateButton.setLayoutParams(params);
+			    return insets;
+		    }
+		});
 		int r1 = getResources().getIdentifier("navigation_bar_height", "dimen", "android");
 		if (r1 > 0) {
 			    navigationBarHeight = getResources().getDimensionPixelSize(r1);
@@ -560,26 +561,51 @@ public class KeyCreatingActivity extends BaseActivity {
 		if (r2 > 0) {
 			    statusBarHeight = getResources().getDimensionPixelSize(r2);
 		}
-		_SetMargins(_toolbar, 0, statusBarHeight, 0, 0);
-		AliasTIP.setBoxCornerRadii((float)_DpToPx(20), (float)_DpToPx(20), (float)_DpToPx(20), (float)_DpToPx(20));
-		AliasPassTIP.setBoxCornerRadii((float)_DpToPx(20), (float)_DpToPx(20), (float)_DpToPx(20), (float)_DpToPx(20));
-		KeyStorePassTIP.setBoxCornerRadii((float)_DpToPx(20), (float)_DpToPx(20), (float)_DpToPx(20), (float)_DpToPx(20));
-		KeyTypeTIP.setBoxCornerRadii((float)_DpToPx(20), (float)_DpToPx(20), (float)_DpToPx(20), (float)_DpToPx(20));
-		KeySizeTIP.setBoxCornerRadii((float)_DpToPx(20), (float)_DpToPx(20), (float)_DpToPx(20), (float)_DpToPx(20));
-		KeyValidityTIP.setBoxCornerRadii((float)_DpToPx(20), (float)_DpToPx(20), (float)_DpToPx(20), (float)_DpToPx(20));
-		NameTIP.setBoxCornerRadii((float)_DpToPx(20), (float)_DpToPx(20), (float)_DpToPx(20), (float)_DpToPx(20));
-		OrNameTIP.setBoxCornerRadii((float)_DpToPx(20), (float)_DpToPx(20), (float)_DpToPx(20), (float)_DpToPx(20));
-		OrUnitTIP.setBoxCornerRadii((float)_DpToPx(20), (float)_DpToPx(20), (float)_DpToPx(20), (float)_DpToPx(20));
-		CityTIP.setBoxCornerRadii((float)_DpToPx(20), (float)_DpToPx(20), (float)_DpToPx(20), (float)_DpToPx(20));
-		StateTIP.setBoxCornerRadii((float)_DpToPx(20), (float)_DpToPx(20), (float)_DpToPx(20), (float)_DpToPx(20));
-		CountryTIP.setBoxCornerRadii((float)_DpToPx(20), (float)_DpToPx(20), (float)_DpToPx(20), (float)_DpToPx(20));
+        Runnable runnable2 = new Runnable() {  
+            @Override  
+            public void run() {  
+                if (_toolbar.getHeight() != 0) {
+                    _SetMargins(findViewById(R.id.divider), 0, _toolbar.getHeight(), 0, 0);
+                    ViewGroup.LayoutParams params = blurbg.getLayoutParams();
+                    params.height = _toolbar.getHeight();
+                    blurbg.setLayoutParams(params);
+                } else {
+                    handler.postDelayed(this, 50);  
+                }
+            }  
+        };  
+        handler.post(runnable2);
+		_toolbar.setPadding(_toolbar.getPaddingLeft(),_toolbar.getPaddingTop() + statusBarHeight, _toolbar.getPaddingRight(), _toolbar.getPaddingBottom());
+		AliasTIP.setBoxCornerRadii((float)_DpToPx(15), (float)_DpToPx(15), (float)_DpToPx(15), (float)_DpToPx(15));
+		AliasPassTIP.setBoxCornerRadii((float)_DpToPx(15), (float)_DpToPx(15), (float)_DpToPx(15), (float)_DpToPx(15));
+		KeyStorePassTIP.setBoxCornerRadii((float)_DpToPx(15), (float)_DpToPx(15), (float)_DpToPx(15), (float)_DpToPx(15));
+		KeyTypeTIP.setBoxCornerRadii((float)_DpToPx(15), (float)_DpToPx(15), (float)_DpToPx(15), (float)_DpToPx(15));
+		KeySizeTIP.setBoxCornerRadii((float)_DpToPx(15), (float)_DpToPx(15), (float)_DpToPx(15), (float)_DpToPx(15));
+		KeyValidityTIP.setBoxCornerRadii((float)_DpToPx(15), (float)_DpToPx(15), (float)_DpToPx(15), (float)_DpToPx(15));
+		NameTIP.setBoxCornerRadii((float)_DpToPx(15), (float)_DpToPx(15), (float)_DpToPx(15), (float)_DpToPx(15));
+		OrNameTIP.setBoxCornerRadii((float)_DpToPx(15), (float)_DpToPx(15), (float)_DpToPx(15), (float)_DpToPx(15));
+		OrUnitTIP.setBoxCornerRadii((float)_DpToPx(15), (float)_DpToPx(15), (float)_DpToPx(15), (float)_DpToPx(15));
+		CityTIP.setBoxCornerRadii((float)_DpToPx(15), (float)_DpToPx(15), (float)_DpToPx(15), (float)_DpToPx(15));
+		StateTIP.setBoxCornerRadii((float)_DpToPx(15), (float)_DpToPx(15), (float)_DpToPx(15), (float)_DpToPx(15));
+		CountryTIP.setBoxCornerRadii((float)_DpToPx(15), (float)_DpToPx(15), (float)_DpToPx(15), (float)_DpToPx(15));
+        TopTitle.setPadding(TopTitle.getPaddingLeft(),TopTitle.getPaddingTop() + statusBarHeight, TopTitle.getPaddingRight(), TopTitle.getPaddingBottom());
+        Runnable runnable = new Runnable() {  
+            @Override  
+            public void run() {  
+                if (CreateButton.getHeight() != 0) {
+                    _SetMargins(CountryTIP, 0, 0, 0, CreateButton.getHeight() + navigationBarHeight);
+                } else {
+                    handler.postDelayed(this, 50);  
+                }
+            }  
+        };  
+        handler.post(runnable);
 	}
 	
 	
 	public void _SetMargins(final View _layout, final int _leftMargin, final int _TopMargin, final int _RightMargin, final int _BottomMargin) {
 		ViewGroup.MarginLayoutParams layoutParams = (ViewGroup.MarginLayoutParams) _layout.getLayoutParams();
-		
-		   layoutParams.setMargins(_leftMargin, _TopMargin, _RightMargin, _BottomMargin);
+		layoutParams.setMargins(_leftMargin, _TopMargin, _RightMargin, _BottomMargin);
 		_layout.setLayoutParams(layoutParams);
 	}
 	
@@ -595,8 +621,8 @@ public class KeyCreatingActivity extends BaseActivity {
 	
 	public double _DpToPx(final double _dp) {
 		  Resources resources = this.getResources();
-		    DisplayMetrics metrics = resources.getDisplayMetrics();
-		    return (double)Math.round(_dp * (metrics.densityDpi / DisplayMetrics.DENSITY_DEFAULT));
+		  DisplayMetrics metrics = resources.getDisplayMetrics();
+		  return (double)Math.round(_dp * (metrics.densityDpi / DisplayMetrics.DENSITY_DEFAULT));
 	}
     
     @Override
@@ -604,6 +630,8 @@ public class KeyCreatingActivity extends BaseActivity {
         switch (eventId) {
             case 1 :
                 dialog.dismiss();
+                androidx.transition.TransitionManager.beginDelayedTransition(_coordinator);
+                findViewById(R.id.blurLayout).setVisibility(View.INVISIBLE);
                 finish();
             break;
             default :

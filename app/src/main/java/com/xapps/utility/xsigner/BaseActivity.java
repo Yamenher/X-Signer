@@ -9,6 +9,9 @@ import android.app.Activity;
 import android.content.Context;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.Color;
+import eightbitlab.com.blurview.BlurView;
+import com.xapps.utility.xsigner.BlurUtils;
+import androidx.transition.TransitionManager;
 
 public abstract class BaseActivity extends AppCompatActivity {
     
@@ -28,6 +31,7 @@ public abstract class BaseActivity extends AppCompatActivity {
 		FinishDialogCV.findViewById(R.id.LeftButton);
 		final LinearLayout RightButton = (LinearLayout)
 	    FinishDialogCV.findViewById(R.id.RightButton);
+        final LinearLayout main = FinishDialogCV.findViewById(R.id.dialogContianer);
 		DTitle.setText(title);
 		DMessage.setText(message);
 		RightText.setText(buttonText);

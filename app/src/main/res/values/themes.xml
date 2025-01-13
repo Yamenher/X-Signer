@@ -54,7 +54,6 @@
     
     <style name="Theme.XSigner.Base.Splash" parent="Theme.SplashScreen">
         <item name="windowSplashScreenBackground">?colorOnBackground</item>
-        <item name="windowSplashScreenAnimatedIcon">@drawable/avd_splashanim</item>
         <item name="postSplashScreenTheme">@style/Theme.XSigner.Base.Main</item>
     </style>
 </resources>

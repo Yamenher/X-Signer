@@ -180,6 +180,8 @@ public class MainActivity extends AppCompatActivity {
             public void handleOnBackPressed() {
                 if (binding.Drawer.isDrawerOpen(GravityCompat.START)) {
                     binding.Drawer.closeDrawer(GravityCompat.START);
+                } else {
+                    finishAffinity();
                 }
             }
         });

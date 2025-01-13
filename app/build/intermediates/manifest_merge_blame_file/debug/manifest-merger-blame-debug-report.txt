@@ -36,19 +36,19 @@
 19-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:12:2-92
 19-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:12:19-89
 20    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
-20-->[com.google.android.recaptcha:recaptcha:18.5.1] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/cf9f1373f17884de674fe191bd05f91f/transformed/recaptcha-18.5.1/AndroidManifest.xml:9:5-98
-20-->[com.google.android.recaptcha:recaptcha:18.5.1] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/cf9f1373f17884de674fe191bd05f91f/transformed/recaptcha-18.5.1/AndroidManifest.xml:9:22-95
+20-->[com.google.android.recaptcha:recaptcha:18.5.1] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/cf9f1373f17884de674fe191bd05f91f/transformed/recaptcha-18.5.1/AndroidManifest.xml:9:5-98
+20-->[com.google.android.recaptcha:recaptcha:18.5.1] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/cf9f1373f17884de674fe191bd05f91f/transformed/recaptcha-18.5.1/AndroidManifest.xml:9:22-95
 21
 22    <permission
-22-->[androidx.core:core:1.13.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/4a96a0e96d29d8a6cf0caa15a5ca44c2/transformed/core-1.13.0/AndroidManifest.xml:22:5-24:47
+22-->[androidx.core:core:1.13.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/4a96a0e96d29d8a6cf0caa15a5ca44c2/transformed/core-1.13.0/AndroidManifest.xml:22:5-24:47
 23        android:name="com.xapps.utility.xsigner.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-23-->[androidx.core:core:1.13.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/4a96a0e96d29d8a6cf0caa15a5ca44c2/transformed/core-1.13.0/AndroidManifest.xml:23:9-81
+23-->[androidx.core:core:1.13.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/4a96a0e96d29d8a6cf0caa15a5ca44c2/transformed/core-1.13.0/AndroidManifest.xml:23:9-81
 24        android:protectionLevel="signature" />
-24-->[androidx.core:core:1.13.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/4a96a0e96d29d8a6cf0caa15a5ca44c2/transformed/core-1.13.0/AndroidManifest.xml:24:9-44
+24-->[androidx.core:core:1.13.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/4a96a0e96d29d8a6cf0caa15a5ca44c2/transformed/core-1.13.0/AndroidManifest.xml:24:9-44
 25
 26    <uses-permission android:name="com.xapps.utility.xsigner.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-26-->[androidx.core:core:1.13.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/4a96a0e96d29d8a6cf0caa15a5ca44c2/transformed/core-1.13.0/AndroidManifest.xml:26:5-97
-26-->[androidx.core:core:1.13.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/4a96a0e96d29d8a6cf0caa15a5ca44c2/transformed/core-1.13.0/AndroidManifest.xml:26:22-94
+26-->[androidx.core:core:1.13.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/4a96a0e96d29d8a6cf0caa15a5ca44c2/transformed/core-1.13.0/AndroidManifest.xml:26:5-97
+26-->[androidx.core:core:1.13.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/4a96a0e96d29d8a6cf0caa15a5ca44c2/transformed/core-1.13.0/AndroidManifest.xml:26:22-94
 27
 28    <application
 28-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:13:2-96:16
@@ -57,7 +57,7 @@
 30        android:allowBackup="true"
 30-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:14:3-29
 31        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-31-->[androidx.core:core:1.13.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/4a96a0e96d29d8a6cf0caa15a5ca44c2/transformed/core-1.13.0/AndroidManifest.xml:28:18-86
+31-->[androidx.core:core:1.13.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/4a96a0e96d29d8a6cf0caa15a5ca44c2/transformed/core-1.13.0/AndroidManifest.xml:28:18-86
 32        android:debuggable="true"
 33        android:enableOnBackInvokedCallback="true"
 33-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:21:3-45
@@ -202,7 +202,7 @@
 104            android:windowSoftInputMode="stateHidden" />
 104-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:84:4-45
 105        <activity
-105-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:85:3-92:48
+105-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:85:3-92:46
 106            android:name="com.xapps.utility.xsigner.KeyCreatingActivity"
 106-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:86:4-39
 107            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
@@ -215,8 +215,8 @@
 110-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:89:4-43
 111            android:theme="@style/Theme.XSigner.Base.Main"
 111-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:91:4-50
-112            android:windowSoftInputMode="stateHidden" />
-112-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:92:4-45
+112            android:windowSoftInputMode="adjustPan" />
+112-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:92:4-43
 113
 114        <uses-library
 114-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:93:3-95:31
@@ -226,275 +226,275 @@
 116-->/storage/emulated/0/AndroidIDEProjects/X-Signer/app/src/main/AndroidManifest.xml:95:4-28
 117
 118        <activity
-118-->[com.google.firebase:firebase-auth:23.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:29:9-46:20
+118-->[com.google.firebase:firebase-auth:23.1.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:29:9-46:20
 119            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
-119-->[com.google.firebase:firebase-auth:23.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:30:13-80
+119-->[com.google.firebase:firebase-auth:23.1.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:30:13-80
 120            android:excludeFromRecents="true"
-120-->[com.google.firebase:firebase-auth:23.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:31:13-46
+120-->[com.google.firebase:firebase-auth:23.1.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:31:13-46
 121            android:exported="true"
-121-->[com.google.firebase:firebase-auth:23.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:32:13-36
+121-->[com.google.firebase:firebase-auth:23.1.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:32:13-36
 122            android:launchMode="singleTask"
-122-->[com.google.firebase:firebase-auth:23.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:33:13-44
+122-->[com.google.firebase:firebase-auth:23.1.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:33:13-44
 123            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
-123-->[com.google.firebase:firebase-auth:23.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:34:13-72
+123-->[com.google.firebase:firebase-auth:23.1.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:34:13-72
 124            <intent-filter>
-124-->[com.google.firebase:firebase-auth:23.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:35:13-45:29
+124-->[com.google.firebase:firebase-auth:23.1.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:35:13-45:29
 125                <action android:name="android.intent.action.VIEW" />
-125-->[com.google.firebase:firebase-auth:23.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:36:17-69
-125-->[com.google.firebase:firebase-auth:23.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:36:25-66
+125-->[com.google.firebase:firebase-auth:23.1.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:36:17-69
+125-->[com.google.firebase:firebase-auth:23.1.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:36:25-66
 126
 127                <category android:name="android.intent.category.DEFAULT" />
-127-->[com.google.firebase:firebase-auth:23.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:38:17-76
-127-->[com.google.firebase:firebase-auth:23.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:38:27-73
+127-->[com.google.firebase:firebase-auth:23.1.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:38:17-76
+127-->[com.google.firebase:firebase-auth:23.1.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:38:27-73
 128                <category android:name="android.intent.category.BROWSABLE" />
-128-->[com.google.firebase:firebase-auth:23.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:39:17-78
-128-->[com.google.firebase:firebase-auth:23.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:39:27-75
+128-->[com.google.firebase:firebase-auth:23.1.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:39:17-78
+128-->[com.google.firebase:firebase-auth:23.1.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:39:27-75
 129
 130                <data
-130-->[com.google.firebase:firebase-auth:23.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:41:17-44:51
+130-->[com.google.firebase:firebase-auth:23.1.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:41:17-44:51
 131                    android:host="firebase.auth"
-131-->[com.google.firebase:firebase-auth:23.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:42:21-49
+131-->[com.google.firebase:firebase-auth:23.1.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:42:21-49
 132                    android:path="/"
-132-->[com.google.firebase:firebase-auth:23.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:43:21-37
+132-->[com.google.firebase:firebase-auth:23.1.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:43:21-37
 133                    android:scheme="genericidp" />
-133-->[com.google.firebase:firebase-auth:23.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:44:21-48
+133-->[com.google.firebase:firebase-auth:23.1.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:44:21-48
 134            </intent-filter>
 135        </activity>
 136        <activity
-136-->[com.google.firebase:firebase-auth:23.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:47:9-64:20
+136-->[com.google.firebase:firebase-auth:23.1.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:47:9-64:20
 137            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
-137-->[com.google.firebase:firebase-auth:23.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:48:13-79
+137-->[com.google.firebase:firebase-auth:23.1.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:48:13-79
 138            android:excludeFromRecents="true"
-138-->[com.google.firebase:firebase-auth:23.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:49:13-46
+138-->[com.google.firebase:firebase-auth:23.1.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:49:13-46
 139            android:exported="true"
-139-->[com.google.firebase:firebase-auth:23.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:50:13-36
+139-->[com.google.firebase:firebase-auth:23.1.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:50:13-36
 140            android:launchMode="singleTask"
-140-->[com.google.firebase:firebase-auth:23.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:51:13-44
+140-->[com.google.firebase:firebase-auth:23.1.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:51:13-44
 141            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
-141-->[com.google.firebase:firebase-auth:23.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:52:13-72
+141-->[com.google.firebase:firebase-auth:23.1.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:52:13-72
 142            <intent-filter>
-142-->[com.google.firebase:firebase-auth:23.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:53:13-63:29
+142-->[com.google.firebase:firebase-auth:23.1.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:53:13-63:29
 143                <action android:name="android.intent.action.VIEW" />
-143-->[com.google.firebase:firebase-auth:23.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:36:17-69
-143-->[com.google.firebase:firebase-auth:23.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:36:25-66
+143-->[com.google.firebase:firebase-auth:23.1.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:36:17-69
+143-->[com.google.firebase:firebase-auth:23.1.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:36:25-66
 144
 145                <category android:name="android.intent.category.DEFAULT" />
-145-->[com.google.firebase:firebase-auth:23.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:38:17-76
-145-->[com.google.firebase:firebase-auth:23.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:38:27-73
+145-->[com.google.firebase:firebase-auth:23.1.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:38:17-76
+145-->[com.google.firebase:firebase-auth:23.1.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:38:27-73
 146                <category android:name="android.intent.category.BROWSABLE" />
-146-->[com.google.firebase:firebase-auth:23.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:39:17-78
-146-->[com.google.firebase:firebase-auth:23.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:39:27-75
+146-->[com.google.firebase:firebase-auth:23.1.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:39:17-78
+146-->[com.google.firebase:firebase-auth:23.1.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:39:27-75
 147
 148                <data
-148-->[com.google.firebase:firebase-auth:23.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:41:17-44:51
+148-->[com.google.firebase:firebase-auth:23.1.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:41:17-44:51
 149                    android:host="firebase.auth"
-149-->[com.google.firebase:firebase-auth:23.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:42:21-49
+149-->[com.google.firebase:firebase-auth:23.1.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:42:21-49
 150                    android:path="/"
-150-->[com.google.firebase:firebase-auth:23.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:43:21-37
+150-->[com.google.firebase:firebase-auth:23.1.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:43:21-37
 151                    android:scheme="recaptcha" />
-151-->[com.google.firebase:firebase-auth:23.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:44:21-48
+151-->[com.google.firebase:firebase-auth:23.1.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:44:21-48
 152            </intent-filter>
 153        </activity>
 154
 155        <service
-155-->[com.google.firebase:firebase-auth:23.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:66:9-72:19
+155-->[com.google.firebase:firebase-auth:23.1.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:66:9-72:19
 156            android:name="com.google.firebase.components.ComponentDiscoveryService"
-156-->[com.google.firebase:firebase-auth:23.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:67:13-84
+156-->[com.google.firebase:firebase-auth:23.1.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:67:13-84
 157            android:directBootAware="true"
-157-->[com.google.firebase:firebase-common:21.0.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/66b0f33c7c10062a45669237b77cf5af/transformed/firebase-common-21.0.0/AndroidManifest.xml:32:13-43
+157-->[com.google.firebase:firebase-common:21.0.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/66b0f33c7c10062a45669237b77cf5af/transformed/firebase-common-21.0.0/AndroidManifest.xml:32:13-43
 158            android:exported="false" >
-158-->[com.google.firebase:firebase-auth:23.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:68:13-37
+158-->[com.google.firebase:firebase-auth:23.1.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:68:13-37
 159            <meta-data
-159-->[com.google.firebase:firebase-auth:23.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:69:13-71:85
+159-->[com.google.firebase:firebase-auth:23.1.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:69:13-71:85
 160                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
-160-->[com.google.firebase:firebase-auth:23.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:70:17-109
+160-->[com.google.firebase:firebase-auth:23.1.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:70:17-109
 161                android:value="com.google.firebase.components.ComponentRegistrar" />
-161-->[com.google.firebase:firebase-auth:23.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:71:17-82
+161-->[com.google.firebase:firebase-auth:23.1.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/dd67c1214b2a4f72c12483857993e191/transformed/firebase-auth-23.1.0/AndroidManifest.xml:71:17-82
 162            <meta-data
-162-->[com.google.firebase:firebase-database:21.0.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/ac5e8519b8e057263bf9360deceb1f20/transformed/firebase-database-21.0.0/AndroidManifest.xml:29:13-31:85
+162-->[com.google.firebase:firebase-database:21.0.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/ac5e8519b8e057263bf9360deceb1f20/transformed/firebase-database-21.0.0/AndroidManifest.xml:29:13-31:85
 163                android:name="com.google.firebase.components:com.google.firebase.database.FirebaseDatabaseKtxRegistrar"
-163-->[com.google.firebase:firebase-database:21.0.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/ac5e8519b8e057263bf9360deceb1f20/transformed/firebase-database-21.0.0/AndroidManifest.xml:30:17-120
+163-->[com.google.firebase:firebase-database:21.0.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/ac5e8519b8e057263bf9360deceb1f20/transformed/firebase-database-21.0.0/AndroidManifest.xml:30:17-120
 164                android:value="com.google.firebase.components.ComponentRegistrar" />
-164-->[com.google.firebase:firebase-database:21.0.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/ac5e8519b8e057263bf9360deceb1f20/transformed/firebase-database-21.0.0/AndroidManifest.xml:31:17-82
+164-->[com.google.firebase:firebase-database:21.0.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/ac5e8519b8e057263bf9360deceb1f20/transformed/firebase-database-21.0.0/AndroidManifest.xml:31:17-82
 165            <meta-data
-165-->[com.google.firebase:firebase-database:21.0.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/ac5e8519b8e057263bf9360deceb1f20/transformed/firebase-database-21.0.0/AndroidManifest.xml:32:13-34:85
+165-->[com.google.firebase:firebase-database:21.0.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/ac5e8519b8e057263bf9360deceb1f20/transformed/firebase-database-21.0.0/AndroidManifest.xml:32:13-34:85
 166                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
-166-->[com.google.firebase:firebase-database:21.0.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/ac5e8519b8e057263bf9360deceb1f20/transformed/firebase-database-21.0.0/AndroidManifest.xml:33:17-109
+166-->[com.google.firebase:firebase-database:21.0.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/ac5e8519b8e057263bf9360deceb1f20/transformed/firebase-database-21.0.0/AndroidManifest.xml:33:17-109
 167                android:value="com.google.firebase.components.ComponentRegistrar" />
-167-->[com.google.firebase:firebase-database:21.0.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/ac5e8519b8e057263bf9360deceb1f20/transformed/firebase-database-21.0.0/AndroidManifest.xml:34:17-82
+167-->[com.google.firebase:firebase-database:21.0.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/ac5e8519b8e057263bf9360deceb1f20/transformed/firebase-database-21.0.0/AndroidManifest.xml:34:17-82
 168            <meta-data
-168-->[com.google.firebase:firebase-common-ktx:21.0.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/1a0199e12977048f63670632acbcc33f/transformed/firebase-common-ktx-21.0.0/AndroidManifest.xml:12:13-14:85
+168-->[com.google.firebase:firebase-common-ktx:21.0.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/1a0199e12977048f63670632acbcc33f/transformed/firebase-common-ktx-21.0.0/AndroidManifest.xml:12:13-14:85
 169                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar"
-169-->[com.google.firebase:firebase-common-ktx:21.0.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/1a0199e12977048f63670632acbcc33f/transformed/firebase-common-ktx-21.0.0/AndroidManifest.xml:13:17-116
+169-->[com.google.firebase:firebase-common-ktx:21.0.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/1a0199e12977048f63670632acbcc33f/transformed/firebase-common-ktx-21.0.0/AndroidManifest.xml:13:17-116
 170                android:value="com.google.firebase.components.ComponentRegistrar" />
-170-->[com.google.firebase:firebase-common-ktx:21.0.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/1a0199e12977048f63670632acbcc33f/transformed/firebase-common-ktx-21.0.0/AndroidManifest.xml:14:17-82
+170-->[com.google.firebase:firebase-common-ktx:21.0.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/1a0199e12977048f63670632acbcc33f/transformed/firebase-common-ktx-21.0.0/AndroidManifest.xml:14:17-82
 171            <meta-data
-171-->[com.google.firebase:firebase-common:21.0.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/66b0f33c7c10062a45669237b77cf5af/transformed/firebase-common-21.0.0/AndroidManifest.xml:35:13-37:85
+171-->[com.google.firebase:firebase-common:21.0.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/66b0f33c7c10062a45669237b77cf5af/transformed/firebase-common-21.0.0/AndroidManifest.xml:35:13-37:85
 172                android:name="com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar"
-172-->[com.google.firebase:firebase-common:21.0.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/66b0f33c7c10062a45669237b77cf5af/transformed/firebase-common-21.0.0/AndroidManifest.xml:36:17-109
+172-->[com.google.firebase:firebase-common:21.0.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/66b0f33c7c10062a45669237b77cf5af/transformed/firebase-common-21.0.0/AndroidManifest.xml:36:17-109
 173                android:value="com.google.firebase.components.ComponentRegistrar" />
-173-->[com.google.firebase:firebase-common:21.0.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/66b0f33c7c10062a45669237b77cf5af/transformed/firebase-common-21.0.0/AndroidManifest.xml:37:17-82
+173-->[com.google.firebase:firebase-common:21.0.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/66b0f33c7c10062a45669237b77cf5af/transformed/firebase-common-21.0.0/AndroidManifest.xml:37:17-82
 174        </service>
 175        <service
-175-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/3b15a8cfc93bb38d03834cbcea114d33/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:24:9-32:19
+175-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/3b15a8cfc93bb38d03834cbcea114d33/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:24:9-32:19
 176            android:name="androidx.credentials.playservices.CredentialProviderMetadataHolder"
-176-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/3b15a8cfc93bb38d03834cbcea114d33/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:25:13-94
+176-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/3b15a8cfc93bb38d03834cbcea114d33/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:25:13-94
 177            android:enabled="true"
-177-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/3b15a8cfc93bb38d03834cbcea114d33/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:26:13-35
+177-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/3b15a8cfc93bb38d03834cbcea114d33/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:26:13-35
 178            android:exported="false" >
-178-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/3b15a8cfc93bb38d03834cbcea114d33/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:27:13-37
+178-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/3b15a8cfc93bb38d03834cbcea114d33/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:27:13-37
 179            <meta-data
-179-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/3b15a8cfc93bb38d03834cbcea114d33/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:29:13-31:104
+179-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/3b15a8cfc93bb38d03834cbcea114d33/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:29:13-31:104
 180                android:name="androidx.credentials.CREDENTIAL_PROVIDER_KEY"
-180-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/3b15a8cfc93bb38d03834cbcea114d33/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:30:17-76
+180-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/3b15a8cfc93bb38d03834cbcea114d33/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:30:17-76
 181                android:value="androidx.credentials.playservices.CredentialProviderPlayServicesImpl" />
-181-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/3b15a8cfc93bb38d03834cbcea114d33/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:31:17-101
+181-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/3b15a8cfc93bb38d03834cbcea114d33/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:31:17-101
 182        </service>
 183
 184        <activity
-184-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/3b15a8cfc93bb38d03834cbcea114d33/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:34:9-41:20
+184-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/3b15a8cfc93bb38d03834cbcea114d33/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:34:9-41:20
 185            android:name="androidx.credentials.playservices.HiddenActivity"
-185-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/3b15a8cfc93bb38d03834cbcea114d33/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:35:13-76
+185-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/3b15a8cfc93bb38d03834cbcea114d33/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:35:13-76
 186            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
-186-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/3b15a8cfc93bb38d03834cbcea114d33/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:36:13-87
+186-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/3b15a8cfc93bb38d03834cbcea114d33/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:36:13-87
 187            android:enabled="true"
-187-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/3b15a8cfc93bb38d03834cbcea114d33/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:37:13-35
+187-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/3b15a8cfc93bb38d03834cbcea114d33/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:37:13-35
 188            android:exported="false"
-188-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/3b15a8cfc93bb38d03834cbcea114d33/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:38:13-37
+188-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/3b15a8cfc93bb38d03834cbcea114d33/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:38:13-37
 189            android:fitsSystemWindows="true"
-189-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/3b15a8cfc93bb38d03834cbcea114d33/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:39:13-45
+189-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/3b15a8cfc93bb38d03834cbcea114d33/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:39:13-45
 190            android:theme="@style/Theme.Hidden" >
-190-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/3b15a8cfc93bb38d03834cbcea114d33/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:40:13-48
+190-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/3b15a8cfc93bb38d03834cbcea114d33/transformed/credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:40:13-48
 191        </activity>
 192        <activity
-192-->[com.google.android.gms:play-services-auth:20.7.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/57b4712966d81eefe3a314866edd7205/transformed/play-services-auth-20.7.0/AndroidManifest.xml:23:9-27:75
+192-->[com.google.android.gms:play-services-auth:20.7.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/57b4712966d81eefe3a314866edd7205/transformed/play-services-auth-20.7.0/AndroidManifest.xml:23:9-27:75
 193            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
-193-->[com.google.android.gms:play-services-auth:20.7.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/57b4712966d81eefe3a314866edd7205/transformed/play-services-auth-20.7.0/AndroidManifest.xml:24:13-93
+193-->[com.google.android.gms:play-services-auth:20.7.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/57b4712966d81eefe3a314866edd7205/transformed/play-services-auth-20.7.0/AndroidManifest.xml:24:13-93
 194            android:excludeFromRecents="true"
-194-->[com.google.android.gms:play-services-auth:20.7.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/57b4712966d81eefe3a314866edd7205/transformed/play-services-auth-20.7.0/AndroidManifest.xml:25:13-46
+194-->[com.google.android.gms:play-services-auth:20.7.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/57b4712966d81eefe3a314866edd7205/transformed/play-services-auth-20.7.0/AndroidManifest.xml:25:13-46
 195            android:exported="false"
-195-->[com.google.android.gms:play-services-auth:20.7.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/57b4712966d81eefe3a314866edd7205/transformed/play-services-auth-20.7.0/AndroidManifest.xml:26:13-37
+195-->[com.google.android.gms:play-services-auth:20.7.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/57b4712966d81eefe3a314866edd7205/transformed/play-services-auth-20.7.0/AndroidManifest.xml:26:13-37
 196            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-196-->[com.google.android.gms:play-services-auth:20.7.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/57b4712966d81eefe3a314866edd7205/transformed/play-services-auth-20.7.0/AndroidManifest.xml:27:13-72
+196-->[com.google.android.gms:play-services-auth:20.7.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/57b4712966d81eefe3a314866edd7205/transformed/play-services-auth-20.7.0/AndroidManifest.xml:27:13-72
 197        <!--
 198            Service handling Google Sign-In user revocation. For apps that do not integrate with
 199            Google Sign-In, this service will never be started.
 200        -->
 201        <service
-201-->[com.google.android.gms:play-services-auth:20.7.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/57b4712966d81eefe3a314866edd7205/transformed/play-services-auth-20.7.0/AndroidManifest.xml:33:9-37:51
+201-->[com.google.android.gms:play-services-auth:20.7.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/57b4712966d81eefe3a314866edd7205/transformed/play-services-auth-20.7.0/AndroidManifest.xml:33:9-37:51
 202            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
-202-->[com.google.android.gms:play-services-auth:20.7.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/57b4712966d81eefe3a314866edd7205/transformed/play-services-auth-20.7.0/AndroidManifest.xml:34:13-89
+202-->[com.google.android.gms:play-services-auth:20.7.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/57b4712966d81eefe3a314866edd7205/transformed/play-services-auth-20.7.0/AndroidManifest.xml:34:13-89
 203            android:exported="true"
-203-->[com.google.android.gms:play-services-auth:20.7.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/57b4712966d81eefe3a314866edd7205/transformed/play-services-auth-20.7.0/AndroidManifest.xml:35:13-36
+203-->[com.google.android.gms:play-services-auth:20.7.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/57b4712966d81eefe3a314866edd7205/transformed/play-services-auth-20.7.0/AndroidManifest.xml:35:13-36
 204            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
-204-->[com.google.android.gms:play-services-auth:20.7.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/57b4712966d81eefe3a314866edd7205/transformed/play-services-auth-20.7.0/AndroidManifest.xml:36:13-107
+204-->[com.google.android.gms:play-services-auth:20.7.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/57b4712966d81eefe3a314866edd7205/transformed/play-services-auth-20.7.0/AndroidManifest.xml:36:13-107
 205            android:visibleToInstantApps="true" />
-205-->[com.google.android.gms:play-services-auth:20.7.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/57b4712966d81eefe3a314866edd7205/transformed/play-services-auth-20.7.0/AndroidManifest.xml:37:13-48
+205-->[com.google.android.gms:play-services-auth:20.7.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/57b4712966d81eefe3a314866edd7205/transformed/play-services-auth-20.7.0/AndroidManifest.xml:37:13-48
 206
 207        <provider
-207-->[com.google.firebase:firebase-common:21.0.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/66b0f33c7c10062a45669237b77cf5af/transformed/firebase-common-21.0.0/AndroidManifest.xml:23:9-28:39
+207-->[com.google.firebase:firebase-common:21.0.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/66b0f33c7c10062a45669237b77cf5af/transformed/firebase-common-21.0.0/AndroidManifest.xml:23:9-28:39
 208            android:name="com.google.firebase.provider.FirebaseInitProvider"
-208-->[com.google.firebase:firebase-common:21.0.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/66b0f33c7c10062a45669237b77cf5af/transformed/firebase-common-21.0.0/AndroidManifest.xml:24:13-77
+208-->[com.google.firebase:firebase-common:21.0.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/66b0f33c7c10062a45669237b77cf5af/transformed/firebase-common-21.0.0/AndroidManifest.xml:24:13-77
 209            android:authorities="com.xapps.utility.xsigner.firebaseinitprovider"
-209-->[com.google.firebase:firebase-common:21.0.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/66b0f33c7c10062a45669237b77cf5af/transformed/firebase-common-21.0.0/AndroidManifest.xml:25:13-72
+209-->[com.google.firebase:firebase-common:21.0.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/66b0f33c7c10062a45669237b77cf5af/transformed/firebase-common-21.0.0/AndroidManifest.xml:25:13-72
 210            android:directBootAware="true"
-210-->[com.google.firebase:firebase-common:21.0.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/66b0f33c7c10062a45669237b77cf5af/transformed/firebase-common-21.0.0/AndroidManifest.xml:26:13-43
+210-->[com.google.firebase:firebase-common:21.0.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/66b0f33c7c10062a45669237b77cf5af/transformed/firebase-common-21.0.0/AndroidManifest.xml:26:13-43
 211            android:exported="false"
-211-->[com.google.firebase:firebase-common:21.0.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/66b0f33c7c10062a45669237b77cf5af/transformed/firebase-common-21.0.0/AndroidManifest.xml:27:13-37
+211-->[com.google.firebase:firebase-common:21.0.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/66b0f33c7c10062a45669237b77cf5af/transformed/firebase-common-21.0.0/AndroidManifest.xml:27:13-37
 212            android:initOrder="100" />
-212-->[com.google.firebase:firebase-common:21.0.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/66b0f33c7c10062a45669237b77cf5af/transformed/firebase-common-21.0.0/AndroidManifest.xml:28:13-36
+212-->[com.google.firebase:firebase-common:21.0.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/66b0f33c7c10062a45669237b77cf5af/transformed/firebase-common-21.0.0/AndroidManifest.xml:28:13-36
 213
 214        <activity
-214-->[com.google.android.gms:play-services-base:18.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/5a973faa43e1245f07cc58353c88e0b4/transformed/play-services-base-18.1.0/AndroidManifest.xml:20:9-22:45
+214-->[com.google.android.gms:play-services-base:18.1.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/5a973faa43e1245f07cc58353c88e0b4/transformed/play-services-base-18.1.0/AndroidManifest.xml:20:9-22:45
 215            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-215-->[com.google.android.gms:play-services-base:18.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/5a973faa43e1245f07cc58353c88e0b4/transformed/play-services-base-18.1.0/AndroidManifest.xml:20:19-85
+215-->[com.google.android.gms:play-services-base:18.1.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/5a973faa43e1245f07cc58353c88e0b4/transformed/play-services-base-18.1.0/AndroidManifest.xml:20:19-85
 216            android:exported="false"
-216-->[com.google.android.gms:play-services-base:18.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/5a973faa43e1245f07cc58353c88e0b4/transformed/play-services-base-18.1.0/AndroidManifest.xml:22:19-43
+216-->[com.google.android.gms:play-services-base:18.1.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/5a973faa43e1245f07cc58353c88e0b4/transformed/play-services-base-18.1.0/AndroidManifest.xml:22:19-43
 217            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-217-->[com.google.android.gms:play-services-base:18.1.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/5a973faa43e1245f07cc58353c88e0b4/transformed/play-services-base-18.1.0/AndroidManifest.xml:21:19-78
+217-->[com.google.android.gms:play-services-base:18.1.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/5a973faa43e1245f07cc58353c88e0b4/transformed/play-services-base-18.1.0/AndroidManifest.xml:21:19-78
 218
 219        <provider
-219-->[androidx.emoji2:emoji2:1.2.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/9624e31c87251539e8b33940da4c4235/transformed/emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+219-->[androidx.emoji2:emoji2:1.2.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/9624e31c87251539e8b33940da4c4235/transformed/emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
 220            android:name="androidx.startup.InitializationProvider"
-220-->[androidx.emoji2:emoji2:1.2.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/9624e31c87251539e8b33940da4c4235/transformed/emoji2-1.2.0/AndroidManifest.xml:25:13-67
+220-->[androidx.emoji2:emoji2:1.2.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/9624e31c87251539e8b33940da4c4235/transformed/emoji2-1.2.0/AndroidManifest.xml:25:13-67
 221            android:authorities="com.xapps.utility.xsigner.androidx-startup"
-221-->[androidx.emoji2:emoji2:1.2.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/9624e31c87251539e8b33940da4c4235/transformed/emoji2-1.2.0/AndroidManifest.xml:26:13-68
+221-->[androidx.emoji2:emoji2:1.2.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/9624e31c87251539e8b33940da4c4235/transformed/emoji2-1.2.0/AndroidManifest.xml:26:13-68
 222            android:exported="false" >
-222-->[androidx.emoji2:emoji2:1.2.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/9624e31c87251539e8b33940da4c4235/transformed/emoji2-1.2.0/AndroidManifest.xml:27:13-37
+222-->[androidx.emoji2:emoji2:1.2.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/9624e31c87251539e8b33940da4c4235/transformed/emoji2-1.2.0/AndroidManifest.xml:27:13-37
 223            <meta-data
-223-->[androidx.emoji2:emoji2:1.2.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/9624e31c87251539e8b33940da4c4235/transformed/emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+223-->[androidx.emoji2:emoji2:1.2.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/9624e31c87251539e8b33940da4c4235/transformed/emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
 224                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-224-->[androidx.emoji2:emoji2:1.2.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/9624e31c87251539e8b33940da4c4235/transformed/emoji2-1.2.0/AndroidManifest.xml:30:17-75
+224-->[androidx.emoji2:emoji2:1.2.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/9624e31c87251539e8b33940da4c4235/transformed/emoji2-1.2.0/AndroidManifest.xml:30:17-75
 225                android:value="androidx.startup" />
-225-->[androidx.emoji2:emoji2:1.2.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/9624e31c87251539e8b33940da4c4235/transformed/emoji2-1.2.0/AndroidManifest.xml:31:17-49
+225-->[androidx.emoji2:emoji2:1.2.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/9624e31c87251539e8b33940da4c4235/transformed/emoji2-1.2.0/AndroidManifest.xml:31:17-49
 226            <meta-data
-226-->[androidx.lifecycle:lifecycle-process:2.6.2] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/91152f9242e440658c3815c264c5a1f0/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:29:13-31:52
+226-->[androidx.lifecycle:lifecycle-process:2.6.2] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/91152f9242e440658c3815c264c5a1f0/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:29:13-31:52
 227                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-227-->[androidx.lifecycle:lifecycle-process:2.6.2] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/91152f9242e440658c3815c264c5a1f0/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:30:17-78
+227-->[androidx.lifecycle:lifecycle-process:2.6.2] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/91152f9242e440658c3815c264c5a1f0/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:30:17-78
 228                android:value="androidx.startup" />
-228-->[androidx.lifecycle:lifecycle-process:2.6.2] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/91152f9242e440658c3815c264c5a1f0/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:31:17-49
+228-->[androidx.lifecycle:lifecycle-process:2.6.2] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/91152f9242e440658c3815c264c5a1f0/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:31:17-49
 229            <meta-data
-229-->[androidx.profileinstaller:profileinstaller:1.3.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/a3dc8dd193e7649ea2e426b887130cb5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:29:13-31:52
+229-->[androidx.profileinstaller:profileinstaller:1.3.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/a3dc8dd193e7649ea2e426b887130cb5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:29:13-31:52
 230                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-230-->[androidx.profileinstaller:profileinstaller:1.3.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/a3dc8dd193e7649ea2e426b887130cb5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:30:17-85
+230-->[androidx.profileinstaller:profileinstaller:1.3.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/a3dc8dd193e7649ea2e426b887130cb5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:30:17-85
 231                android:value="androidx.startup" />
-231-->[androidx.profileinstaller:profileinstaller:1.3.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/a3dc8dd193e7649ea2e426b887130cb5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:31:17-49
+231-->[androidx.profileinstaller:profileinstaller:1.3.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/a3dc8dd193e7649ea2e426b887130cb5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:31:17-49
 232        </provider>
 233
 234        <meta-data
-234-->[com.google.android.gms:play-services-basement:18.4.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/3ce93d61e01504dfd8ea849b9c6dd3b0/transformed/play-services-basement-18.4.0/AndroidManifest.xml:6:9-122
+234-->[com.google.android.gms:play-services-basement:18.4.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/3ce93d61e01504dfd8ea849b9c6dd3b0/transformed/play-services-basement-18.4.0/AndroidManifest.xml:6:9-122
 235            android:name="com.google.android.gms.version"
-235-->[com.google.android.gms:play-services-basement:18.4.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/3ce93d61e01504dfd8ea849b9c6dd3b0/transformed/play-services-basement-18.4.0/AndroidManifest.xml:6:20-65
+235-->[com.google.android.gms:play-services-basement:18.4.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/3ce93d61e01504dfd8ea849b9c6dd3b0/transformed/play-services-basement-18.4.0/AndroidManifest.xml:6:20-65
 236            android:value="@integer/google_play_services_version" />
-236-->[com.google.android.gms:play-services-basement:18.4.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/3ce93d61e01504dfd8ea849b9c6dd3b0/transformed/play-services-basement-18.4.0/AndroidManifest.xml:6:66-119
+236-->[com.google.android.gms:play-services-basement:18.4.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/3ce93d61e01504dfd8ea849b9c6dd3b0/transformed/play-services-basement-18.4.0/AndroidManifest.xml:6:66-119
 237
 238        <receiver
-238-->[androidx.profileinstaller:profileinstaller:1.3.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/a3dc8dd193e7649ea2e426b887130cb5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:34:9-52:20
+238-->[androidx.profileinstaller:profileinstaller:1.3.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/a3dc8dd193e7649ea2e426b887130cb5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:34:9-52:20
 239            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-239-->[androidx.profileinstaller:profileinstaller:1.3.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/a3dc8dd193e7649ea2e426b887130cb5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:35:13-76
+239-->[androidx.profileinstaller:profileinstaller:1.3.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/a3dc8dd193e7649ea2e426b887130cb5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:35:13-76
 240            android:directBootAware="false"
-240-->[androidx.profileinstaller:profileinstaller:1.3.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/a3dc8dd193e7649ea2e426b887130cb5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:36:13-44
+240-->[androidx.profileinstaller:profileinstaller:1.3.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/a3dc8dd193e7649ea2e426b887130cb5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:36:13-44
 241            android:enabled="true"
-241-->[androidx.profileinstaller:profileinstaller:1.3.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/a3dc8dd193e7649ea2e426b887130cb5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:37:13-35
+241-->[androidx.profileinstaller:profileinstaller:1.3.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/a3dc8dd193e7649ea2e426b887130cb5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:37:13-35
 242            android:exported="true"
-242-->[androidx.profileinstaller:profileinstaller:1.3.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/a3dc8dd193e7649ea2e426b887130cb5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:38:13-36
+242-->[androidx.profileinstaller:profileinstaller:1.3.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/a3dc8dd193e7649ea2e426b887130cb5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:38:13-36
 243            android:permission="android.permission.DUMP" >
-243-->[androidx.profileinstaller:profileinstaller:1.3.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/a3dc8dd193e7649ea2e426b887130cb5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:39:13-57
+243-->[androidx.profileinstaller:profileinstaller:1.3.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/a3dc8dd193e7649ea2e426b887130cb5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:39:13-57
 244            <intent-filter>
-244-->[androidx.profileinstaller:profileinstaller:1.3.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/a3dc8dd193e7649ea2e426b887130cb5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:40:13-42:29
+244-->[androidx.profileinstaller:profileinstaller:1.3.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/a3dc8dd193e7649ea2e426b887130cb5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:40:13-42:29
 245                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-245-->[androidx.profileinstaller:profileinstaller:1.3.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/a3dc8dd193e7649ea2e426b887130cb5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:17-91
-245-->[androidx.profileinstaller:profileinstaller:1.3.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/a3dc8dd193e7649ea2e426b887130cb5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:25-88
+245-->[androidx.profileinstaller:profileinstaller:1.3.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/a3dc8dd193e7649ea2e426b887130cb5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:17-91
+245-->[androidx.profileinstaller:profileinstaller:1.3.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/a3dc8dd193e7649ea2e426b887130cb5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:25-88
 246            </intent-filter>
 247            <intent-filter>
-247-->[androidx.profileinstaller:profileinstaller:1.3.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/a3dc8dd193e7649ea2e426b887130cb5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:43:13-45:29
+247-->[androidx.profileinstaller:profileinstaller:1.3.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/a3dc8dd193e7649ea2e426b887130cb5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:43:13-45:29
 248                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-248-->[androidx.profileinstaller:profileinstaller:1.3.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/a3dc8dd193e7649ea2e426b887130cb5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:17-85
-248-->[androidx.profileinstaller:profileinstaller:1.3.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/a3dc8dd193e7649ea2e426b887130cb5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:25-82
+248-->[androidx.profileinstaller:profileinstaller:1.3.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/a3dc8dd193e7649ea2e426b887130cb5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:17-85
+248-->[androidx.profileinstaller:profileinstaller:1.3.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/a3dc8dd193e7649ea2e426b887130cb5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:25-82
 249            </intent-filter>
 250            <intent-filter>
-250-->[androidx.profileinstaller:profileinstaller:1.3.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/a3dc8dd193e7649ea2e426b887130cb5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:46:13-48:29
+250-->[androidx.profileinstaller:profileinstaller:1.3.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/a3dc8dd193e7649ea2e426b887130cb5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:46:13-48:29
 251                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
-251-->[androidx.profileinstaller:profileinstaller:1.3.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/a3dc8dd193e7649ea2e426b887130cb5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:17-88
-251-->[androidx.profileinstaller:profileinstaller:1.3.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/a3dc8dd193e7649ea2e426b887130cb5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:25-85
+251-->[androidx.profileinstaller:profileinstaller:1.3.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/a3dc8dd193e7649ea2e426b887130cb5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:17-88
+251-->[androidx.profileinstaller:profileinstaller:1.3.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/a3dc8dd193e7649ea2e426b887130cb5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:25-85
 252            </intent-filter>
 253            <intent-filter>
-253-->[androidx.profileinstaller:profileinstaller:1.3.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/a3dc8dd193e7649ea2e426b887130cb5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:49:13-51:29
+253-->[androidx.profileinstaller:profileinstaller:1.3.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/a3dc8dd193e7649ea2e426b887130cb5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:49:13-51:29
 254                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
-254-->[androidx.profileinstaller:profileinstaller:1.3.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/a3dc8dd193e7649ea2e426b887130cb5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:17-95
-254-->[androidx.profileinstaller:profileinstaller:1.3.0] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/a3dc8dd193e7649ea2e426b887130cb5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:25-92
+254-->[androidx.profileinstaller:profileinstaller:1.3.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/a3dc8dd193e7649ea2e426b887130cb5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:17-95
+254-->[androidx.profileinstaller:profileinstaller:1.3.0] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/a3dc8dd193e7649ea2e426b887130cb5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:25-92
 255            </intent-filter>
 256        </receiver> <!-- The activities will be merged into the manifest of the hosting app. -->
 257        <activity
-257-->[com.google.android.play:core-common:2.0.3] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/fa53c24836cf657849631b5e5410820e/transformed/core-common-2.0.3/AndroidManifest.xml:14:9-18:65
+257-->[com.google.android.play:core-common:2.0.3] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/fa53c24836cf657849631b5e5410820e/transformed/core-common-2.0.3/AndroidManifest.xml:14:9-18:65
 258            android:name="com.google.android.play.core.common.PlayCoreDialogWrapperActivity"
-258-->[com.google.android.play:core-common:2.0.3] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/fa53c24836cf657849631b5e5410820e/transformed/core-common-2.0.3/AndroidManifest.xml:15:13-93
+258-->[com.google.android.play:core-common:2.0.3] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/fa53c24836cf657849631b5e5410820e/transformed/core-common-2.0.3/AndroidManifest.xml:15:13-93
 259            android:exported="false"
-259-->[com.google.android.play:core-common:2.0.3] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/fa53c24836cf657849631b5e5410820e/transformed/core-common-2.0.3/AndroidManifest.xml:16:13-37
+259-->[com.google.android.play:core-common:2.0.3] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/fa53c24836cf657849631b5e5410820e/transformed/core-common-2.0.3/AndroidManifest.xml:16:13-37
 260            android:stateNotNeeded="true"
-260-->[com.google.android.play:core-common:2.0.3] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/fa53c24836cf657849631b5e5410820e/transformed/core-common-2.0.3/AndroidManifest.xml:17:13-42
+260-->[com.google.android.play:core-common:2.0.3] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/fa53c24836cf657849631b5e5410820e/transformed/core-common-2.0.3/AndroidManifest.xml:17:13-42
 261            android:theme="@style/Theme.PlayCore.Transparent" />
-261-->[com.google.android.play:core-common:2.0.3] /data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/fa53c24836cf657849631b5e5410820e/transformed/core-common-2.0.3/AndroidManifest.xml:18:13-62
+261-->[com.google.android.play:core-common:2.0.3] /data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/fa53c24836cf657849631b5e5410820e/transformed/core-common-2.0.3/AndroidManifest.xml:18:13-62
 262    </application>
 263
 264</manifest>

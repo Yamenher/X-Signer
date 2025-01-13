@@ -208,7 +208,9 @@ drawable logo_anonymous
 drawable main_bg_drawable
 drawable mastodon
 drawable snackbar_shape
+drawable surface_with_alpha
 drawable telegram
+drawable toolbar_bg
 drawable vector_home
 font product_sans_regular
 id ASPickButton
@@ -334,10 +336,14 @@ id _fab2
 id _nav_view
 id _toolbar
 id appbar
+id blurLayout
+id blurView
 id bsky
 id collapsingtoolbar
 id coordinator
+id dialogContianer
 id discord
+id divider
 id github
 id github_text
 id instagram

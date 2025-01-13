@@ -6,11 +6,13 @@ import okhttp3.*;
 import java.io.IOException;
 
 public class TelegramBot {
-    private static final String BOT_TOKEN = com.xapps.utility.xsigner.BuildConfig.BOT_TOKEN;
-    private static final String CHAT_ID = com.xapps.utility.xsigner.BuildConfig.CHAT_ID;
+    public static final String BOT_TOKEN = com.xapps.utility.xsigner.BuildConfig.BOT_TOKEN;
+    public static final String CHAT_ID = com.xapps.utility.xsigner.BuildConfig.CHAT_ID;
     private static final OkHttpClient client = new OkHttpClient();
+    private static boolean isSent = false;
 
     public static void sendMessage(String message) {
+        isSent = false;
         HttpUrl url = HttpUrl.parse("https://api.telegram.org/bot" + BOT_TOKEN + "/sendMessage")
                 .newBuilder()
                 .addQueryParameter("chat_id", CHAT_ID)
@@ -34,9 +36,14 @@ public class TelegramBot {
                     Log.e("TelegramBot", "Error response: " + response.toString());
                 } else {
                     Log.d("TelegramBot", "Message sent successfully!");
+                    isSent = true;    
                 }
                 response.close();
             }
         });
+    }
+    
+    public static boolean isMessageSent() {
+        return isSent;
     }
 }

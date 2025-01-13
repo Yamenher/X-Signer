@@ -1,10 +1,78 @@
 {
     "logs": [
         {
-            "outputFile": "com.xapps.utility.xsigner.app-mergeDebugResources-43:/values-uk/values-uk.xml",
+            "outputFile": "com.xapps.utility.xsigner.app-mergeDebugResources-45:/values-uk/values-uk.xml",
             "map": [
                 {
-                    "source": "/data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/432a96c68207bd26f27667819f27750e/transformed/material-1.12.0/res/values-uk/values-uk.xml",
+                    "source": "/data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/3ce93d61e01504dfd8ea849b9c6dd3b0/transformed/play-services-basement-18.4.0/res/values-uk/values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "195",
+                        "endColumns": "141",
+                        "endOffsets": "336"
+                    },
+                    "to": {
+                        "startLines": "60",
+                        "startColumns": "4",
+                        "startOffsets": "5853",
+                        "endColumns": "145",
+                        "endOffsets": "5994"
+                    }
+                },
+                {
+                    "source": "/data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/77a2d9da4ba8863814c5fc1a4b14f00d/transformed/browser-1.4.0/res/values-uk/values-uk.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,165,272,392",
+                        "endColumns": "109,106,119,107",
+                        "endOffsets": "160,267,387,495"
+                    },
+                    "to": {
+                        "startLines": "70,74,75,76",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "7068,7408,7515,7635",
+                        "endColumns": "109,106,119,107",
+                        "endOffsets": "7173,7510,7630,7738"
+                    }
+                },
+                {
+                    "source": "/data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/4a96a0e96d29d8a6cf0caa15a5ca44c2/transformed/core-1.13.0/res/values-uk/values-uk.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,155,257,358,459,564,669,782",
+                        "endColumns": "99,101,100,100,104,104,112,100",
+                        "endOffsets": "150,252,353,454,559,664,777,878"
+                    },
+                    "to": {
+                        "startLines": "42,43,44,45,46,47,48,142",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "3820,3920,4022,4123,4224,4329,4434,12914",
+                        "endColumns": "99,101,100,100,104,104,112,100",
+                        "endOffsets": "3915,4017,4118,4219,4324,4429,4542,13010"
+                    }
+                },
+                {
+                    "source": "/data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/5a973faa43e1245f07cc58353c88e0b4/transformed/play-services-base-18.1.0/res/values-uk/values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
+                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+                        "startOffsets": "193,297,456,579,685,835,960,1071,1172,1336,1438,1596,1717,1860,1998,2064,2121",
+                        "endColumns": "103,158,122,105,149,124,110,100,163,101,157,120,142,137,65,56,83",
+                        "endOffsets": "296,455,578,684,834,959,1070,1171,1335,1437,1595,1716,1859,1997,2063,2120,2204"
+                    },
+                    "to": {
+                        "startLines": "52,53,54,55,56,57,58,59,61,62,63,64,65,66,67,68,69",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "4842,4950,5113,5240,5350,5504,5633,5748,5999,6167,6273,6435,6560,6707,6849,6919,6980",
+                        "endColumns": "107,162,126,109,153,128,114,104,167,105,161,124,146,141,69,60,87",
+                        "endOffsets": "4945,5108,5235,5345,5499,5628,5743,5848,6162,6268,6430,6555,6702,6844,6914,6975,7063"
+                    }
+                },
+                {
+                    "source": "/data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/432a96c68207bd26f27667819f27750e/transformed/material-1.12.0/res/values-uk/values-uk.xml",
                     "from": {
                         "startLines": "2,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -23,75 +91,7 @@
                     }
                 },
                 {
-                    "source": "/data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/28360851d00e2db98295438a3ca90c83/transformed/credentials-1.2.0-rc01/res/values-uk/values-uk.xml",
-                    "from": {
-                        "startLines": "2,3",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,165",
-                        "endColumns": "109,118",
-                        "endOffsets": "160,279"
-                    },
-                    "to": {
-                        "startLines": "35,36",
-                        "startColumns": "4,4",
-                        "startOffsets": "3148,3258",
-                        "endColumns": "109,118",
-                        "endOffsets": "3253,3372"
-                    }
-                },
-                {
-                    "source": "/data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/5a973faa43e1245f07cc58353c88e0b4/transformed/play-services-base-18.1.0/res/values-uk/values.xml",
-                    "from": {
-                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
-                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
-                        "startOffsets": "193,297,456,579,685,835,960,1071,1172,1336,1438,1596,1717,1860,1998,2064,2121",
-                        "endColumns": "103,158,122,105,149,124,110,100,163,101,157,120,142,137,65,56,83",
-                        "endOffsets": "296,455,578,684,834,959,1070,1171,1335,1437,1595,1716,1859,1997,2063,2120,2204"
-                    },
-                    "to": {
-                        "startLines": "52,53,54,55,56,57,58,59,61,62,63,64,65,66,67,68,69",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "4842,4950,5113,5240,5350,5504,5633,5748,5999,6167,6273,6435,6560,6707,6849,6919,6980",
-                        "endColumns": "107,162,126,109,153,128,114,104,167,105,161,124,146,141,69,60,87",
-                        "endOffsets": "4945,5108,5235,5345,5499,5628,5743,5848,6162,6268,6430,6555,6702,6844,6914,6975,7063"
-                    }
-                },
-                {
-                    "source": "/data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/3ce93d61e01504dfd8ea849b9c6dd3b0/transformed/play-services-basement-18.4.0/res/values-uk/values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "195",
-                        "endColumns": "141",
-                        "endOffsets": "336"
-                    },
-                    "to": {
-                        "startLines": "60",
-                        "startColumns": "4",
-                        "startOffsets": "5853",
-                        "endColumns": "145",
-                        "endOffsets": "5994"
-                    }
-                },
-                {
-                    "source": "/data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/4a96a0e96d29d8a6cf0caa15a5ca44c2/transformed/core-1.13.0/res/values-uk/values-uk.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,155,257,358,459,564,669,782",
-                        "endColumns": "99,101,100,100,104,104,112,100",
-                        "endOffsets": "150,252,353,454,559,664,777,878"
-                    },
-                    "to": {
-                        "startLines": "42,43,44,45,46,47,48,142",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "3820,3920,4022,4123,4224,4329,4434,12914",
-                        "endColumns": "99,101,100,100,104,104,112,100",
-                        "endOffsets": "3915,4017,4118,4219,4324,4429,4542,13010"
-                    }
-                },
-                {
-                    "source": "/data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/f8df54b1c78df95846ede98b7a1ba0b7/transformed/appcompat-1.6.1/res/values-uk/values-uk.xml",
+                    "source": "/data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/f8df54b1c78df95846ede98b7a1ba0b7/transformed/appcompat-1.6.1/res/values-uk/values-uk.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -108,20 +108,20 @@
                     }
                 },
                 {
-                    "source": "/data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/77a2d9da4ba8863814c5fc1a4b14f00d/transformed/browser-1.4.0/res/values-uk/values-uk.xml",
+                    "source": "/data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/28360851d00e2db98295438a3ca90c83/transformed/credentials-1.2.0-rc01/res/values-uk/values-uk.xml",
                     "from": {
-                        "startLines": "2,3,4,5",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "55,165,272,392",
-                        "endColumns": "109,106,119,107",
-                        "endOffsets": "160,267,387,495"
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,165",
+                        "endColumns": "109,118",
+                        "endOffsets": "160,279"
                     },
                     "to": {
-                        "startLines": "70,74,75,76",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "7068,7408,7515,7635",
-                        "endColumns": "109,106,119,107",
-                        "endOffsets": "7173,7510,7630,7738"
+                        "startLines": "35,36",
+                        "startColumns": "4,4",
+                        "startOffsets": "3148,3258",
+                        "endColumns": "109,118",
+                        "endOffsets": "3253,3372"
                     }
                 }
             ]

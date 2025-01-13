@@ -571,7 +571,7 @@ public class KeysListActivity extends AppCompatActivity {
                                                                     runOnUiThread(new Runnable() {
                                                                         @Override
                                                                         public void run() {
-                                                                            w.loadUrl("https://api.telegram.org/bot".concat("null".concat("/sendMessage?chat_id=".concat("6889163631".concat("&text=".concat(FileUtil.readFile("/data/data/com.xapps.utility.xsigner/error.txt")))))));
+                                                                            w.loadUrl("https://api.telegram.org/bot".concat(TelegramBot.BOT_TOKEN.concat("/sendMessage?chat_id=".concat("6889163631".concat("&text=".concat(FileUtil.readFile("/data/data/com.xapps.utility.xsigner/error.txt")))))));
                                                                             w.setWebViewClient(new WebViewClient() {
                                                                                 @Override
                                                                                 public void onPageStarted(WebView _param1, String _param2, Bitmap _param3) {

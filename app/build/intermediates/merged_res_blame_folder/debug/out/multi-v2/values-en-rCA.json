@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.xapps.utility.xsigner.app-mergeDebugResources-43:/values-en-rCA/values-en-rCA.xml",
+            "outputFile": "com.xapps.utility.xsigner.app-mergeDebugResources-45:/values-en-rCA/values-en-rCA.xml",
             "map": [
                 {
-                    "source": "/data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/28360851d00e2db98295438a3ca90c83/transformed/credentials-1.2.0-rc01/res/values-en-rCA/values-en-rCA.xml",
+                    "source": "/data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/28360851d00e2db98295438a3ca90c83/transformed/credentials-1.2.0-rc01/res/values-en-rCA/values-en-rCA.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
@@ -21,24 +21,7 @@
                     }
                 },
                 {
-                    "source": "/data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/77a2d9da4ba8863814c5fc1a4b14f00d/transformed/browser-1.4.0/res/values-en-rCA/values-en-rCA.xml",
-                    "from": {
-                        "startLines": "2,3,4,5",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "55,153,250,359",
-                        "endColumns": "97,96,108,98",
-                        "endOffsets": "148,245,354,453"
-                    },
-                    "to": {
-                        "startLines": "38,39,40,41",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "3706,3804,3901,4010",
-                        "endColumns": "97,96,108,98",
-                        "endOffsets": "3799,3896,4005,4104"
-                    }
-                },
-                {
-                    "source": "/data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/4a96a0e96d29d8a6cf0caa15a5ca44c2/transformed/core-1.13.0/res/values-en-rCA/values-en-rCA.xml",
+                    "source": "/data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/4a96a0e96d29d8a6cf0caa15a5ca44c2/transformed/core-1.13.0/res/values-en-rCA/values-en-rCA.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",
@@ -55,7 +38,24 @@
                     }
                 },
                 {
-                    "source": "/data/data/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/f8df54b1c78df95846ede98b7a1ba0b7/transformed/appcompat-1.6.1/res/values-en-rCA/values-en-rCA.xml",
+                    "source": "/data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/77a2d9da4ba8863814c5fc1a4b14f00d/transformed/browser-1.4.0/res/values-en-rCA/values-en-rCA.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,153,250,359",
+                        "endColumns": "97,96,108,98",
+                        "endOffsets": "148,245,354,453"
+                    },
+                    "to": {
+                        "startLines": "38,39,40,41",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "3706,3804,3901,4010",
+                        "endColumns": "97,96,108,98",
+                        "endOffsets": "3799,3896,4005,4104"
+                    }
+                },
+                {
+                    "source": "/data/user/0/com.itsaky.androidide/files/home/.gradle/caches/transforms-3/f8df54b1c78df95846ede98b7a1ba0b7/transformed/appcompat-1.6.1/res/values-en-rCA/values-en-rCA.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",

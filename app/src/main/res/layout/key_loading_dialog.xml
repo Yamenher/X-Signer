@@ -29,7 +29,7 @@
 			android:indeterminate="true" 
 			app:indicatorSize="40dp"
 			app:trackThickness="4dp"
-			app:indicatorColor="@color/colorAccent"
+			app:indicatorColor="?colorPrimary"
 			app:trackColor="#FFFFFFFF" />
 		<TextView
 			android:id="@+id/textview"

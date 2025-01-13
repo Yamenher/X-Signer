@@ -89,7 +89,7 @@
 			android:supportsPictureInPicture="true"
 			android:screenOrientation="portrait"
 			android:theme="@style/Theme.XSigner.Base.Main"
-			android:windowSoftInputMode="stateHidden" />
+			android:windowSoftInputMode="adjustPan" />
 		<uses-library
 			android:name="org.apache.http.legacy"
 			android:required="false" />
