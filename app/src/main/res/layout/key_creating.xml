@@ -397,7 +397,7 @@
         app:realtimeBlurRadius="20dp"
         app:realtimeOverlayColor="@drawable/surface_with_alpha"
         app:layout_collapseMode="pin">
-        </com.github.mmin18.widget.RealtimeBlurView>
+    </com.github.mmin18.widget.RealtimeBlurView>
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/_toolbar"
         android:layout_width="match_parent"

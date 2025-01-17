@@ -78,11 +78,14 @@ import androidx.core.view.*;
 import com.xapps.utility.xsigner.databinding.MainBinding;
 import androidx.activity.result.*;
 import androidx.activity.result.contract.ActivityResultContracts;
+import com.xapps.utility.xsigner.databinding.DrawerMainBinding;
 
 public class MainActivity extends AppCompatActivity {
     
     private MainBinding binding;
 
+    private LinearLayout layout;
+    
     private Timer _timer = new Timer();
     
     private int statusBarHeight;
@@ -122,24 +125,6 @@ public class MainActivity extends AppCompatActivity {
     private ArrayList < HashMap < String, Object >> KeysList = new ArrayList < > ();
     private ArrayList < String > AppDataFiles = new ArrayList < > ();
 
-    private LinearLayout _drawer_DrawerContainer;
-    private ImageView _drawer_UserIcon;
-    private TextView _drawer_Username;
-    private TextView _drawer_EmailAdress;
-    private LinearLayout _drawer_Divider;
-    private LinearLayout _drawer_HomeLinear;
-    private LinearLayout _drawer_KeysLinear;
-    private LinearLayout _drawer_FaqLinear;
-    private LinearLayout _drawer_AboutLinear;
-    private ImageView _drawer_HomeIcon;
-    private TextView _drawer_HomeText;
-    private ImageView _drawer_KeysIcon;
-    private TextView _drawer_KeysText;
-    private ImageView _drawer_FaqIcon;
-    private TextView _drawer_FaqText;
-    private ImageView _drawer_AboutIcon;
-    private TextView _drawer_AboutText;
-
     private TimerTask PermissionTimer;
     private com.google.android.material.bottomsheet.BottomSheetDialog BS;
     private Intent PickIntent = new Intent();
@@ -175,16 +160,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
         initialize(_savedInstanceState);
         initializeLogic();
-        getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
-            @Override
-            public void handleOnBackPressed() {
-                if (binding.Drawer.isDrawerOpen(GravityCompat.START)) {
-                    binding.Drawer.closeDrawer(GravityCompat.START);
-                } else {
-                    finishAffinity();
-                }
-            }
-        });
         dataPath = "/data/data/" + getApplicationContext().getPackageName();
         filePicker = registerForActivityResult(new ActivityResultContracts.GetContent(), new ActivityResultCallback<Uri>() {
             @Override
@@ -207,28 +182,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         ActionBarDrawerToggle _toggle = new ActionBarDrawerToggle(MainActivity.this, binding.Drawer, binding.toolbar, R.string.app_name, R.string.app_name);
-        binding.Drawer.addDrawerListener(_toggle);
         _toggle.syncState();
 
-        LinearLayout _nav_view = findViewById(R.id._nav_view);
-
-        _drawer_DrawerContainer = _nav_view.findViewById(R.id.DrawerContainer);
-        _drawer_UserIcon = _nav_view.findViewById(R.id.UserIcon);
-        _drawer_Username = _nav_view.findViewById(R.id.Username);
-        _drawer_EmailAdress = _nav_view.findViewById(R.id.EmailAdress);
-        _drawer_Divider = _nav_view.findViewById(R.id.Divider);
-        _drawer_HomeLinear = _nav_view.findViewById(R.id.HomeLinear);
-        _drawer_KeysLinear = _nav_view.findViewById(R.id.KeysLinear);
-        _drawer_FaqLinear = _nav_view.findViewById(R.id.FaqLinear);
-        _drawer_AboutLinear = _nav_view.findViewById(R.id.AboutLinear);
-        _drawer_HomeIcon = _nav_view.findViewById(R.id.HomeIcon);
-        _drawer_HomeText = _nav_view.findViewById(R.id.HomeText);
-        _drawer_KeysIcon = _nav_view.findViewById(R.id.KeysIcon);
-        _drawer_KeysText = _nav_view.findViewById(R.id.KeysText);
-        _drawer_FaqIcon = _nav_view.findViewById(R.id.FaqIcon);
-        _drawer_FaqText = _nav_view.findViewById(R.id.FaqText);
-        _drawer_AboutIcon = _nav_view.findViewById(R.id.AboutIcon);
-        _drawer_AboutText = _nav_view.findViewById(R.id.AboutText);
         KeysManager = getSharedPreferences("KeysData", Activity.MODE_PRIVATE);
         Tmp = getSharedPreferences("TmpData", Activity.MODE_PRIVATE);
         AppData = getSharedPreferences("XSignerAppData", Activity.MODE_PRIVATE);
@@ -251,21 +206,21 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        _drawer_DrawerContainer.setOnClickListener(new View.OnClickListener() {
+        binding.NavView.findViewById(R.id.DrawerContainer).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View _view) {
 
             }
         });
 
-        _drawer_HomeLinear.setOnClickListener(new View.OnClickListener() {
+        binding.NavView.findViewById(R.id.SettingsLinear).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View _view) {
                 binding.Drawer.closeDrawer(GravityCompat.START);
             }
         });
 
-        _drawer_KeysLinear.setOnClickListener(new View.OnClickListener() {
+        binding.NavView.findViewById(R.id.KeysLinear).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View _view) {
                 binding.Drawer.closeDrawer(GravityCompat.START);
@@ -283,8 +238,9 @@ public class MainActivity extends AppCompatActivity {
                 _timer.schedule(AnimationTimer, (300));
             }
         });
+        
 
-        _drawer_FaqLinear.setOnClickListener(new View.OnClickListener() {
+        binding.NavView.findViewById(R.id.FaqLinear).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View _view) {
                 binding.Drawer.closeDrawer(GravityCompat.START);
@@ -303,7 +259,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        _drawer_AboutLinear.setOnClickListener(new View.OnClickListener() {
+        binding.NavView.findViewById(R.id.AboutLinear).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View _view) {
                 binding.Drawer.closeDrawer(GravityCompat.START);
@@ -1049,9 +1005,8 @@ public class MainActivity extends AppCompatActivity {
         if (r2 > 0) {
             statusBarHeight = getResources().getDimensionPixelSize(r2);
         }
+        binding.NavView.setPadding(binding.NavView.getPaddingLeft(), statusBarHeight, binding.NavView.getPaddingRight(), binding.NavView.getPaddingBottom());
         XUtil.ApplyMarginToView(binding.AppBar, true);
-        _SetMargins(_drawer_UserIcon, (int) _DpToPx(23), 0, 0, 0);
-        XUtil.ApplyMarginToView(_drawer_UserIcon, true);
         binding.collapsingtoolbar.setTitle("X-Signer");
         binding.toolbar.setElevation((float) 0);
         EdgeToEdgeUtils.applyEdgeToEdge(getWindow(), true);

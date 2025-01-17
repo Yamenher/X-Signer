@@ -30,6 +30,7 @@ import androidx.core.app.ActivityOptionsCompat;
 import com.google.android.material.appbar.MaterialToolbar;
 import android.window.OnBackInvokedCallback;
 import com.xapps.utility.xsigner.databinding.FaqBinding;
+import android.os.*;
 
 
 
@@ -37,6 +38,8 @@ public class FaqActivity extends AppCompatActivity {
 	
 	private boolean isLifted = false;
     private FaqBinding binding;
+    int navigationBarHeight = 0;
+	int statusBarHeight= 0;
 	
 	@Override
 	protected void onCreate(Bundle _savedInstanceState) {
@@ -45,7 +48,7 @@ public class FaqActivity extends AppCompatActivity {
         setExitSharedElementCallback(new MaterialContainerTransformSharedElementCallback());
         getWindow().setAllowEnterTransitionOverlap(true);
         findViewById(android.R.id.content).setTransitionName("transition");
-        MaterialSharedAxis enterTransition = new MaterialSharedAxis(MaterialSharedAxis.X, true);
+        MaterialSharedAxis enterTransition = new MaterialSharedAxis(MaterialSharedAxis.Y, true);
         enterTransition.addTarget(android.R.id.content);
         enterTransition.setDuration(300L);
         getWindow().setEnterTransition(enterTransition);
@@ -75,8 +78,6 @@ public class FaqActivity extends AppCompatActivity {
 	private void initializeLogic() {
 		binding.Toolbar.setTitle("FAQ");
 		EdgeToEdgeUtils.applyEdgeToEdge(getWindow(), true);
-		int navigationBarHeight = 0;
-		int statusBarHeight= 0;
 		int r1 = getResources().getIdentifier("navigation_bar_height", "dimen", "android");
 		if (r1 > 0) {
 			    navigationBarHeight = getResources().getDimensionPixelSize(r1);
@@ -94,6 +95,22 @@ public class FaqActivity extends AppCompatActivity {
         SpannableStringBuilder firstInfo = TextFormatter.formatText(keysInfo, "Q : What's the differnce between JKS, BKS, and PKCS12 keys?", "BC", getColor(R.color.primary_color));
         binding.FaqText.setText(firstInfo);
 	    XUtil.ApplyMarginToView(binding.FaqText, false);
+        Handler handler = new Handler(Looper.getMainLooper()); 
+        Runnable runnable2 = new Runnable() {  
+            @Override  
+            public void run() {  
+                if (binding.Toolbar.getHeight() != 0) {
+                    _SetMargins(binding.divider, 0, binding.Toolbar.getHeight() + statusBarHeight, 0, 0);
+                    ViewGroup.LayoutParams params = binding.blurView.getLayoutParams();
+                    params.height = binding.Toolbar.getHeight() + statusBarHeight;
+                    binding.blurView.setLayoutParams(params);
+                    _SetMargins(binding.FaqText, 0, binding.Toolbar.getHeight() + statusBarHeight, 0, navigationBarHeight);
+                } else {
+                    handler.postDelayed(this, 50);  
+                }
+            }  
+        };  
+        handler.post(runnable2);
     }
 	
 	

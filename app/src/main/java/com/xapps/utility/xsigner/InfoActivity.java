@@ -50,11 +50,11 @@ public class InfoActivity extends AppCompatActivity {
         binding = InfoBinding.inflate(getLayoutInflater());
         setExitSharedElementCallback(new MaterialContainerTransformSharedElementCallback());
         getWindow().setAllowEnterTransitionOverlap(true);
-        enterTransition = new MaterialSharedAxis(MaterialSharedAxis.X, true);
+        enterTransition = new MaterialSharedAxis(MaterialSharedAxis.Y, true);
         enterTransition.addTarget(R.id._coordinator);
         enterTransition.setDuration(300L);
         getWindow().setEnterTransition(enterTransition);
-        returnTransition = new MaterialSharedAxis(MaterialSharedAxis.X, false);
+        returnTransition = new MaterialSharedAxis(MaterialSharedAxis.Y, false);
         returnTransition.setDuration(300L);
         returnTransition.addTarget(R.id._coordinator);
         getWindow().setReturnTransition(returnTransition);

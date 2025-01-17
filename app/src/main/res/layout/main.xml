@@ -22,7 +22,7 @@
 				android:layout_width="match_parent"
 				android:layout_height="150dp"
 				android:fitsSystemWindows="true"
-				app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+				app:layout_scrollFlags=""
 				app:titleCollapseMode="scale"
 				style="@style/Style.XSigner.CollapsingToolbar">
 				<androidx.appcompat.widget.Toolbar
@@ -205,12 +205,12 @@
 			</androidx.core.widget.NestedScrollView>
 		</LinearLayout>
 	</androidx.coordinatorlayout.widget.CoordinatorLayout>
-	<LinearLayout
+	<com.google.android.material.navigation.NavigationView
 		android:id="@+id/_nav_view"
 		android:layout_width="320dp"
 		android:layout_height="match_parent"
 		android:layout_gravity="start"
 		android:background="@drawable/drawable_drawer">
-		<include layout="@layout/_drawer_main" />
-	</LinearLayout>
+        <include layout="@layout/_drawer_main" />
+	</com.google.android.material.navigation.NavigationView>
 </androidx.drawerlayout.widget.DrawerLayout>

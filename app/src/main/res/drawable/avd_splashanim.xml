@@ -22,7 +22,7 @@
                     android:strokeColor="@color/md_theme_onSplash"
                     android:strokeWidth="0.6"
                     android:strokeLineCap="square"
-                    android:strokeLineJoin="round"/>
+                    android:strokeLineJoin="round" />
                 <path
                     android:name="path_1"
                     android:pathData="M 9.43 10.87 L 8.62 9.36"
@@ -30,7 +30,7 @@
                     android:strokeColor="@color/md_theme_onSplash"
                     android:strokeWidth="0.48"
                     android:strokeLineCap="round"
-                    android:strokeLineJoin="round"/>
+                    android:strokeLineJoin="round" />
                 <path
                     android:name="path_2"
                     android:pathData="M 14.88 10.88 L 15.69 9.36"
@@ -38,7 +38,7 @@
                     android:strokeColor="@color/md_theme_onSplash"
                     android:strokeWidth="0.48"
                     android:strokeLineCap="round"
-                    android:strokeLineJoin="round"/>
+                    android:strokeLineJoin="round" />
             </group>
         </vector>
     </aapt:attr>
@@ -47,36 +47,36 @@
             <set>
                 <objectAnimator
                     android:propertyName="scaleX"
-                    android:startOffset="100"
-                    android:duration="636"
+                    android:startOffset="225"
+                    android:duration="400"
                     android:valueFrom="0"
                     android:valueTo="1"
                     android:valueType="floatType"
-                    android:interpolator="@android:anim/overshoot_interpolator"/>
+                    android:interpolator="@android:interpolator/fast_out_slow_in" />
                 <objectAnimator
                     android:propertyName="scaleY"
-                    android:startOffset="100"
-                    android:duration="636"
-                    android:valueFrom="0.1"
+                    android:startOffset="225"
+                    android:duration="400"
+                    android:valueFrom="0"
                     android:valueTo="1"
                     android:valueType="floatType"
-                    android:interpolator="@android:anim/overshoot_interpolator"/>
+                    android:interpolator="@android:interpolator/fast_out_slow_in" />
                 <objectAnimator
                     android:propertyName="translateX"
-                    android:startOffset="100"
-                    android:duration="636"
+                    android:startOffset="225"
+                    android:duration="400"
                     android:valueFrom="10"
                     android:valueTo="-2"
                     android:valueType="floatType"
-                    android:interpolator="@android:anim/overshoot_interpolator"/>
+                    android:interpolator="@android:interpolator/fast_out_slow_in" />
                 <objectAnimator
                     android:propertyName="translateY"
-                    android:startOffset="100"
-                    android:duration="636"
-                    android:valueFrom="23.5"
+                    android:startOffset="225"
+                    android:duration="400"
+                    android:valueFrom="10"
                     android:valueTo="-2"
                     android:valueType="floatType"
-                    android:interpolator="@android:anim/overshoot_interpolator"/>
+                    android:interpolator="@android:interpolator/fast_out_slow_in" />
             </set>
         </aapt:attr>
     </target>
@@ -84,12 +84,12 @@
         <aapt:attr name="android:animation">
             <objectAnimator
                 android:propertyName="alpha"
-                android:startOffset="100"
-                android:duration="150"
+                android:startOffset="0"
+                android:duration="00"
                 android:valueFrom="0"
                 android:valueTo="1"
                 android:valueType="floatType"
-                android:interpolator="@android:interpolator/linear_out_slow_in"/>
+                android:interpolator="@android:interpolator/linear_out_slow_in" />
         </aapt:attr>
     </target>
 </animated-vector>
