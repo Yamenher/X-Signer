@@ -247,28 +247,12 @@ public class KeysListActivity extends AppCompatActivity {
     private void initializeLogic() {
         _SetupUI();
         try {
-            AsyncTask.execute(new Runnable() {
-                @Override
-                public void run() {
-                    KeysMap = new Gson().fromJson(KeyManager.getString("KeysData", ""), new TypeToken < ArrayList < HashMap < String, Object >>> () {}.getType());
-                }
-            });
+            KeysMap = new Gson().fromJson(KeyManager.getString("KeysData", ""), new TypeToken < ArrayList < HashMap < String, Object >>> () {}.getType());
             binding.recyclerview.setLayoutManager(new LinearLayoutManager(this));
+            _LoadListMap();
         } catch (Exception e) {
 
         }
-        UITimer = new TimerTask() {
-            @Override
-            public void run() {
-                runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        _LoadListMap();
-                    }
-                });
-            }
-        };
-        _timer.schedule(UITimer, (0));
         binding.Fab2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View _view) {

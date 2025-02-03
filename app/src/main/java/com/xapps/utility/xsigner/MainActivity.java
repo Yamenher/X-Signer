@@ -175,12 +175,6 @@ public class MainActivity extends AppCompatActivity {
 
     private void initialize(Bundle _savedInstanceState) {
         setSupportActionBar(binding.toolbar);
-        binding.toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View _v) {
-                getOnBackPressedDispatcher().onBackPressed();
-            }
-        });
         ActionBarDrawerToggle _toggle = new ActionBarDrawerToggle(MainActivity.this, binding.Drawer, binding.toolbar, R.string.app_name, R.string.app_name);
         _toggle.syncState();
 

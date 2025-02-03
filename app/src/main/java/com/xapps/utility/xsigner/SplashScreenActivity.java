@@ -1,5 +1,6 @@
 package com.xapps.utility.xsigner;
 
+import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
 import android.os.Bundle;
@@ -28,6 +29,7 @@ public class SplashScreenActivity extends AppCompatActivity {
     private HandlerThread handlerThread;
     private Handler handler;
     private FirebaseUser user;
+    private final Context context = this;
 	
 	@Override
 	protected void onCreate(Bundle _savedInstanceState) {
@@ -64,6 +66,8 @@ public class SplashScreenActivity extends AppCompatActivity {
                                     finish();    
                                 } else {
                                     isLoggingIn = false;
+                                    handler.removeCallbacks(runnable);
+                                    handlerThread.quitSafely();
                                 }
                             }       
                         });
