@@ -4,4 +4,6 @@
         <item>#2196F3</item>
         <item>#03A9F4</item>
     </array>
+    <attr name="shit">#919280</attr>
+    <attr name="colorSurface" format="reference" />
 </resources>

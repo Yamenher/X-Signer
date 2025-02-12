@@ -1,5 +1,6 @@
 package com.xapps.utility.xsigner;
 
+import android.graphics.drawable.Drawable;
 import android.text.SpannableString;
 import android.text.SpannableStringBuilder;
 import android.text.Spanned;
@@ -31,36 +32,75 @@ import com.google.android.material.appbar.MaterialToolbar;
 import android.window.OnBackInvokedCallback;
 import com.xapps.utility.xsigner.databinding.FaqBinding;
 import android.os.*;
+import android.view.animation.*;
+import androidx.activity.OnBackPressedCallback;
+import androidx.activity.BackEventCompat;
+import android.content.Context;
+import com.xapps.utility.xsigner.XUtil;
 
 
 
 public class FaqActivity extends AppCompatActivity {
 	
+    private final Context context = this;    
 	private boolean isLifted = false;
     private FaqBinding binding;
     int navigationBarHeight = 0;
 	int statusBarHeight= 0;
+    private Drawable bg;
 	
 	@Override
 	protected void onCreate(Bundle _savedInstanceState) {
         binding = FaqBinding.inflate(getLayoutInflater());
         getWindow().requestFeature(Window.FEATURE_ACTIVITY_TRANSITIONS);
-        setExitSharedElementCallback(new MaterialContainerTransformSharedElementCallback());
         getWindow().setAllowEnterTransitionOverlap(true);
-        findViewById(android.R.id.content).setTransitionName("transition");
-        MaterialSharedAxis enterTransition = new MaterialSharedAxis(MaterialSharedAxis.Y, true);
-        enterTransition.addTarget(android.R.id.content);
-        enterTransition.setDuration(300L);
-        getWindow().setEnterTransition(enterTransition);
-        MaterialSharedAxis returnTransition = new MaterialSharedAxis(MaterialSharedAxis.Y, false);
-        returnTransition.addTarget(android.R.id.content);
-        returnTransition.setDuration(300L);
-        getWindow().setReturnTransition(returnTransition);
-        getWindow().setSharedElementsUseOverlay(false);
+        setExitSharedElementCallback(new MaterialContainerTransformSharedElementCallback());
 		super.onCreate(_savedInstanceState);
 		setContentView(binding.getRoot());
 		initialize(_savedInstanceState);
 		initializeLogic();
+        GradientDrawable drawable = new GradientDrawable();
+        drawable.setShape(GradientDrawable.RECTANGLE);
+        drawable.setColor(androidx.core.content.ContextCompat.getColor(context, R.drawable.color_surface));
+        binding.Coordinator.setBackground(drawable);
+        binding.AppBar.setOutlineProvider(android.view.ViewOutlineProvider.BACKGROUND);
+        binding.AppBar.setClipToOutline(true);
+        OnBackPressedCallback callback = new OnBackPressedCallback(true)  {
+            
+            @Override
+            public void handleOnBackStarted(BackEventCompat backEvent) {
+                bg = binding.AppBar.getBackground();
+            }
+            
+            @Override
+            public void handleOnBackProgressed(BackEventCompat backEvent) {
+                    binding.Coordinator.setScaleY(1f-0.15f*backEvent.getProgress());
+                    binding.Coordinator.setScaleX(1f-0.15f*backEvent.getProgress());
+                    GradientDrawable drawable = new GradientDrawable();
+                    drawable.setShape(GradientDrawable.RECTANGLE);
+                    drawable.setColor(androidx.core.content.ContextCompat.getColor(context, R.drawable.color_surface));
+                    drawable.setCornerRadius(65f*backEvent.getProgress());
+                    binding.Coordinator.setBackground(drawable);
+                    GradientDrawable drawable2 = new GradientDrawable();
+                    drawable2.setShape(GradientDrawable.RECTANGLE);
+                    drawable2.setColor(XUtil.extractColorFromView(context, binding.AppBar));
+                    float topCornerRadius = 65f * backEvent.getProgress();
+                    drawable2.setCornerRadii(new float[]{ topCornerRadius, topCornerRadius, topCornerRadius, topCornerRadius, 0f, 0f, 0f, 0f});
+                    binding.AppBar.setBackground(drawable2);
+            }
+
+            @Override
+            public void handleOnBackPressed() {
+                finish();
+                overridePendingTransition(0, R.anim.fade);
+            }
+
+            public void handleOnBackCancelled() {
+               binding.AppBar.setBackground(bg);
+            }
+        };
+
+        getOnBackPressedDispatcher().addCallback(this, callback);
 	}
 	
 	private void initialize(Bundle _savedInstanceState) {
@@ -95,22 +135,6 @@ public class FaqActivity extends AppCompatActivity {
         SpannableStringBuilder firstInfo = TextFormatter.formatText(keysInfo, "Q : What's the differnce between JKS, BKS, and PKCS12 keys?", "BC", getColor(R.color.primary_color));
         binding.FaqText.setText(firstInfo);
 	    XUtil.ApplyMarginToView(binding.FaqText, false);
-        Handler handler = new Handler(Looper.getMainLooper()); 
-        Runnable runnable2 = new Runnable() {  
-            @Override  
-            public void run() {  
-                if (binding.Toolbar.getHeight() != 0) {
-                    _SetMargins(binding.divider, 0, binding.Toolbar.getHeight() + statusBarHeight, 0, 0);
-                    ViewGroup.LayoutParams params = binding.blurView.getLayoutParams();
-                    params.height = binding.Toolbar.getHeight() + statusBarHeight;
-                    binding.blurView.setLayoutParams(params);
-                    _SetMargins(binding.FaqText, 0, binding.Toolbar.getHeight() + statusBarHeight, 0, navigationBarHeight);
-                } else {
-                    handler.postDelayed(this, 50);  
-                }
-            }  
-        };  
-        handler.post(runnable2);
     }
 	
 	

@@ -65,6 +65,8 @@
                 style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
                 app:hintEnabled="true"
                 app:hintAnimationEnabled="true"
+                app:placeholderText="Password for the alias"
+                app:placeholderTextColor="?colorOutline"
                 android:hint="@string/stringKeyPass">
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/AliasPassE"
@@ -88,6 +90,8 @@
                 style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
                 app:hintEnabled="true"
                 app:hintAnimationEnabled="true"
+                app:placeholderText="Password for the whole keystore"
+                app:placeholderTextColor="?colorOutline"
                 android:hint="@string/stringKeyStore">
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/KeyStorePassE"
@@ -178,6 +182,8 @@
                 style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
                 app:hintEnabled="true"
                 app:hintAnimationEnabled="true"
+                app:placeholderText="Validity time in years"
+                app:placeholderTextColor="?colorOutline"
                 android:hint="@string/stringKeyValidity">
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/KeyValidityE"
@@ -216,6 +222,8 @@
                 style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
                 app:hintEnabled="true"
                 app:hintAnimationEnabled="true"
+                app:placeholderText="E.g : Joey Kyles"
+                app:placeholderTextColor="?colorOutline"
                 android:hint="@string/stringNameDetails">
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/NameE"
@@ -247,6 +255,8 @@
                     style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
                     app:hintEnabled="true"
                     app:hintAnimationEnabled="true"
+                    app:placeholderText="Idk about this :P"
+                    app:placeholderTextColor="?colorOutline"
                     android:hint="@string/stringOrganizationalUnit">
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/OrUnitE"
@@ -273,6 +283,8 @@
                     style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
                     app:hintEnabled="true"
                     app:hintAnimationEnabled="true"
+                    app:placeholderText="E.g Google LLC"
+                app:placeholderTextColor="?colorOutline"
                     android:hint="@string/stringOrganizationName">
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/OrNameE"
@@ -305,6 +317,8 @@
                     style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
                     app:hintEnabled="true"
                     app:hintAnimationEnabled="true"
+                    app:placeholderText="E.g : New York"
+                    app:placeholderTextColor="?colorOutline"
                     android:hint="@string/stringCity">
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/CityE"
@@ -331,6 +345,8 @@
                     style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
                     app:hintEnabled="true"
                     app:hintAnimationEnabled="true"
+                    app:placeholderText="E.g : California"
+                    app:placeholderTextColor="?colorOutline"
                     android:hint="@string/stringState">
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/StateE"
@@ -357,6 +373,8 @@
                 style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
                 app:hintEnabled="true"
                 app:hintAnimationEnabled="true"
+                app:placeholderText="E.g : France = FR"
+                app:placeholderTextColor="?colorOutline"
                 android:hint="@string/stringCountry">
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/CountryE"
@@ -390,25 +408,22 @@
         style="@style/Widget.Material3.Button"
         app:textAllCaps="false"
         android:letterSpacing="0.0" />
-    <com.github.mmin18.widget.RealtimeBlurView
-        android:id="@+id/blurView"
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:realtimeBlurRadius="20dp"
-        app:realtimeOverlayColor="@drawable/surface_with_alpha"
-        app:layout_collapseMode="pin">
-    </com.github.mmin18.widget.RealtimeBlurView>
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/_toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@android:color/transparent" />
-    <LinearLayout
-        android:id="@+id/divider"
-        android:layout_height="3dp"
-        android:layout_width="match_parent"
-        android:background="?colorSurfaceContainer"
-        app:layout_collapseMode="pin" />
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$Behavior"
+        style="@style/Widget.Material3.AppBarLayout"
+        app:liftOnScroll="true"
+        android:id="@+id/_app_bar">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:liftOnScrollColor="?colorOnSurfaceInverse"
+            app:layout_collapseMode="pin"
+            android:id="@+id/_toolbar" />
+
+    </com.google.android.material.appbar.AppBarLayout>
     <com.github.mmin18.widget.RealtimeBlurView
         android:id="@+id/blurLayout"
         android:layout_width="match_parent"

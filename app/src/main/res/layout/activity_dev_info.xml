@@ -33,6 +33,7 @@
             android:orientation="vertical">
             <!-- YamenHer Github Layout -->
             <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="25dp"
@@ -211,6 +212,103 @@
                             android:textColor="?colorPrimary"
                             style="@style/Style.XSigner.LinkButton"
                             app:icon="@drawable/mastodon"
+                            app:iconGravity="top" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:padding="20dp"
+                android:theme="@style/Widget.Material3.CardView.Outlined"
+                app:cardCornerRadius="24dp"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="4dp"
+                        android:paddingRight="4dp"
+                        android:paddingBottom="4dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="8dp"
+                            android:orientation="vertical"
+                            android:layout_weight="1">
+                            <TextView
+                                android:id="@+id/textview3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="2dp"
+                                android:text="Github Pro"
+                                android:textSize="12sp" />
+                            <TextView
+                                android:id="@+id/tv_3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="2dp"
+                                android:text="Aquiles Trindade"
+                                android:textSize="22sp" />
+                        </LinearLayout>
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/Aquilespic"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:padding="8dp"
+                            app:shapeAppearance="@style/CircleImageView" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="3dp">
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/githubt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:text="Github"
+                            android:textColor="?colorPrimary"
+                            style="@style/Style.XSigner.LinkButton"
+                            app:icon="@drawable/github"
+                            app:iconGravity="top" />
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/discordt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:text="Discord"
+                            android:textColor="?colorPrimary"
+                            style="@style/Style.XSigner.LinkButton"
+                            app:icon="@drawable/discord"
+                            app:iconGravity="top" />
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/telegramt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:text="Telegram"
+                            android:textColor="?colorPrimary"
+                            style="@style/Style.XSigner.LinkButton"
+                            app:icon="@drawable/telegram"
+                            app:iconGravity="top" />
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/instagramt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:text="Instagram"
+                            android:textColor="?colorPrimary"
+                            style="@style/Style.XSigner.LinkButton"
+                            app:icon="@drawable/instagram"
                             app:iconGravity="top" />
                     </LinearLayout>
                 </LinearLayout>

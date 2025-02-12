@@ -1,0 +1,3 @@
+<rotate xmlns:android="http://schemas.android.com/apk/res/android" android:fromDegrees="0" android:toDegrees="135">
+    <bitmap android:src="@drawable/ic_add_white"/>
+</rotate>

@@ -160,7 +160,6 @@ public class KeyCreatingActivity extends BaseActivity {
 	private TextInputEditText CityE;
 	private TextInputEditText StateE;
 	private TextInputEditText CountryE;
-    private RealtimeBlurView blurbg;
 	
 	private TimerTask ClickSkipTimer;
 	private TimerTask FinishTimer;
@@ -188,7 +187,6 @@ public class KeyCreatingActivity extends BaseActivity {
 		_app_bar = findViewById(R.id._app_bar);
 		_coordinator = findViewById(R.id._coordinator);
 		_toolbar = findViewById(R.id._toolbar);
-        blurbg = findViewById(R.id.blurView);
 		setSupportActionBar(_toolbar);
 		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 		getSupportActionBar().setHomeButtonEnabled(true);
@@ -561,21 +559,7 @@ public class KeyCreatingActivity extends BaseActivity {
 		if (r2 > 0) {
 			    statusBarHeight = getResources().getDimensionPixelSize(r2);
 		}
-        Runnable runnable2 = new Runnable() {  
-            @Override  
-            public void run() {  
-                if (_toolbar.getHeight() != 0) {
-                    _SetMargins(findViewById(R.id.divider), 0, _toolbar.getHeight(), 0, 0);
-                    ViewGroup.LayoutParams params = blurbg.getLayoutParams();
-                    params.height = _toolbar.getHeight();
-                    blurbg.setLayoutParams(params);
-                } else {
-                    handler.postDelayed(this, 50);  
-                }
-            }  
-        };  
-        handler.post(runnable2);
-		_toolbar.setPadding(_toolbar.getPaddingLeft(),_toolbar.getPaddingTop() + statusBarHeight, _toolbar.getPaddingRight(), _toolbar.getPaddingBottom());
+		_app_bar.setPadding(_app_bar.getPaddingLeft(),_app_bar.getPaddingTop() + statusBarHeight, _app_bar.getPaddingRight(), _app_bar.getPaddingBottom());
 		AliasTIP.setBoxCornerRadii((float)_DpToPx(15), (float)_DpToPx(15), (float)_DpToPx(15), (float)_DpToPx(15));
 		AliasPassTIP.setBoxCornerRadii((float)_DpToPx(15), (float)_DpToPx(15), (float)_DpToPx(15), (float)_DpToPx(15));
 		KeyStorePassTIP.setBoxCornerRadii((float)_DpToPx(15), (float)_DpToPx(15), (float)_DpToPx(15), (float)_DpToPx(15));

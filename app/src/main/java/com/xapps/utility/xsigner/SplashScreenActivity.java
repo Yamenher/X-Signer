@@ -18,6 +18,8 @@ import java.util.Timer;
 import java.util.TimerTask;
 import android.os.HandlerThread;
 import androidx.annotation.NonNull;
+import com.google.android.material.color.DynamicColors;
+import android.content.SharedPreferences;
 
 public class SplashScreenActivity extends AppCompatActivity {
 	
@@ -29,10 +31,12 @@ public class SplashScreenActivity extends AppCompatActivity {
     private HandlerThread handlerThread;
     private Handler handler;
     private FirebaseUser user;
+    private SharedPreferences prefs;
     private final Context context = this;
 	
 	@Override
 	protected void onCreate(Bundle _savedInstanceState) {
+        prefs = getSharedPreferences("XSignerAppPrefs", Context.MODE_PRIVATE);
         final SplashScreen  splashScreen = SplashScreen.installSplashScreen(this);
         splashScreen.setKeepOnScreenCondition(() -> ShowSplash );
 		super.onCreate(_savedInstanceState);
@@ -68,6 +72,9 @@ public class SplashScreenActivity extends AppCompatActivity {
                                     isLoggingIn = false;
                                     handler.removeCallbacks(runnable);
                                     handlerThread.quitSafely();
+                                    Intent intent = new Intent(context, OfflineScreenActivity.class);
+                                    startActivity(intent);
+                                    finish();
                                 }
                             }       
                         });

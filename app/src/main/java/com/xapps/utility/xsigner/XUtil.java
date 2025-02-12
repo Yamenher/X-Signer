@@ -15,6 +15,13 @@ import android.widget.*;
 import android.view.WindowInsets;
 import android.graphics.Insets;
 import android.os.*;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.Drawable;
+import android.graphics.drawable.GradientDrawable;
+import android.graphics.drawable.StateListDrawable;
+import android.view.View;
+import com.google.android.material.shape.MaterialShapeDrawable;
 
 import java.io.*;
 import java.util.*;
@@ -146,4 +153,49 @@ public class XUtil {
         }
     }
     
+    public static void addMargin(View view, int left, int top, int right, int bottom) {
+        ViewGroup.LayoutParams params = view.getLayoutParams();
+        if (params instanceof ViewGroup.MarginLayoutParams) {
+            ViewGroup.MarginLayoutParams layoutParams = (ViewGroup.MarginLayoutParams) params;
+            layoutParams.setMargins(
+                layoutParams.leftMargin + left,
+                layoutParams.topMargin + top,
+                layoutParams.rightMargin + right,
+                layoutParams.bottomMargin + bottom
+            );
+            view.setLayoutParams(layoutParams);
+        }
+    }
+
+    public static int extractColorFromView(Context c, View view) {
+        if (view == null) {
+            return Color.TRANSPARENT;
+        }
+
+        Drawable background = view.getBackground();
+
+        if (background instanceof ColorDrawable) {
+            return ((ColorDrawable) background).getColor();
+
+        } else if (background instanceof GradientDrawable) {
+            GradientDrawable gradientDrawable = (GradientDrawable) background;
+            return gradientDrawable
+                    .getColor()
+                    .getDefaultColor();
+
+        } else if (background instanceof StateListDrawable) {
+            StateListDrawable stateListDrawable = (StateListDrawable) background;
+            Drawable stateDrawable = stateListDrawable.getCurrent();
+            if (stateDrawable instanceof ColorDrawable) {
+                return ((ColorDrawable) stateDrawable).getColor();
+            }
+
+        } else if (background instanceof MaterialShapeDrawable) {
+            MaterialShapeDrawable bg = (MaterialShapeDrawable) background;
+            return bg.getFillColor().getDefaultColor();
+        }
+        
+        showMessage(XApplication.getContext(), background.getClass().getSimpleName());
+        return Color.TRANSPARENT;
+    }
 }

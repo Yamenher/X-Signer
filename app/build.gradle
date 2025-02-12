@@ -13,8 +13,8 @@ android {
 		namespace "com.xapps.utility.xsigner"
 		minSdkVersion 26
 		targetSdkVersion 35
-		versionCode 800
-		versionName "0.8.0 Alpha"
+		versionCode 900
+		versionName "0.9.0 Alpha"
         renderscriptTargetApi 26
 		renderscriptSupportModeEnabled true
 	}
@@ -32,6 +32,11 @@ android {
     
     buildTypes.each { buildType ->
         def botToken = localProperties['BOT_TOKEN'] ?: System.getenv('BOT_TOKEN')
+        def firebaseApiKey = localProperties['FIREBASE_API_KEY'] ?: System.getenv('FIREBASE_API_KEY')
+        def firebaseProjectId = localProperties['FIREBASE_PROJECT_ID'] ?: System.getenv('FIREBASE_PROJECT_ID')
+        def firebaseAppId = localProperties['FIREBASE_APP_ID'] ?: System.getenv('FIREBASE_APP_ID')
+        def firebaseDatabaseUrl = localProperties['FIREBASE_DATABASE_URL'] ?: System.getenv('FIREBASE_DATABASE_URL')
+        def firebaseStorageBucket = localProperties['FIREBASE_STORAGE_BUCKET'] ?: System.getenv('FIREBASE_STORAGE_BUCKET')
         def chatId = localProperties['CHAT_ID'] ?: System.getenv('CHAT_ID')
         buildType.buildConfigField "String", "BOT_TOKEN", "\"${botToken}\""
         buildType.buildConfigField "String", "CHAT_ID", "\"${chatId}\""
@@ -70,5 +75,7 @@ dependencies {
     implementation 'com.github.bumptech.glide:glide:4.16.0'
     implementation 'com.github.Dimezis:BlurView:version-2.0.6'
     implementation 'com.github.mmin18:realtimeblurview:f54dc3c34d'
+    implementation "com.leinardi.android:speed-dial:3.3.0"
+    implementation "com.jakewharton:process-phoenix:2.0.0"
     implementation(project(":expandablelayout"))
 }

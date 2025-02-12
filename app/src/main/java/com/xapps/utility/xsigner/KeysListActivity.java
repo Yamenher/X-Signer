@@ -30,6 +30,8 @@ import android.view.animation.AccelerateInterpolator;
 import android.view.animation.BounceInterpolator;
 import android.view.animation.DecelerateInterpolator;
 import android.view.animation.LinearInterpolator;
+import android.graphics.drawable.AnimatedVectorDrawable;
+import androidx.appcompat.content.res.AppCompatResources;
 import android.webkit.*;
 import android.widget.*;
 import android.widget.LinearLayout;
@@ -72,6 +74,7 @@ import com.google.firebase.database.Transaction;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.kyo.expandablelayout.ExpandableLayout;
+import com.leinardi.android.speeddial.SpeedDialActionItem;
 import com.mursaat.extendedtextview.*;
 import java.io.*;
 import java.text.*;
@@ -94,15 +97,30 @@ import android.provider.OpenableColumns;
 import com.google.android.material.progressindicator.CircularProgressIndicator;
 import android.transition.TransitionManager;
 import com.xapps.utility.xsigner.databinding.KeysListBinding;
-import java.util.concurrent.CountDownLatch;
-import java.util.concurrent.CompletableFuture;
+import android.view.animation.*;
+import androidx.activity.OnBackPressedCallback;
+import androidx.activity.BackEventCompat;
+import android.content.Context;
+import com.xapps.utility.xsigner.XUtil;
+import com.google.android.material.color.MaterialColors;
+import com.xapps.utility.xsigner.R;
+import android.content.res.Resources;
+import android.graphics.Color;
+import android.util.TypedValue;
+import android.content.res.Resources.Theme;
+import androidx.annotation.ColorInt;
 
 
 public class KeysListActivity extends AppCompatActivity {
 
     private Timer _timer = new Timer();
+    private Drawable bg;
+    private Drawable bg2;
+    private Drawable bg3;
     
     private KeysListBinding binding;
+    private Context context = this;
+    private final Handler handler = new Handler(Looper.getMainLooper());
 
     private int statusBarHeight;
     private int navigationBarHeight;
@@ -114,6 +132,7 @@ public class KeysListActivity extends AppCompatActivity {
     private boolean IsSent = false;
     private boolean IsNotSent = false;
     private boolean IsSupportedKey = false;
+    private boolean isMenuShown = false;
     private String path = "";
     private String KeyHashResult = "";
     private String Alias = "";
@@ -166,19 +185,11 @@ public class KeysListActivity extends AppCompatActivity {
     protected void onCreate(Bundle _savedInstanceState) {
         getWindow().setAllowEnterTransitionOverlap(true);
         EdgeToEdgeUtils.applyEdgeToEdge(getWindow(), true);
-        MaterialSharedAxis enterTransition = new MaterialSharedAxis(MaterialSharedAxis.Y, true);
-        enterTransition.addTarget(R.id._coordinator);
-        enterTransition.setDuration(300L);
-        getWindow().setEnterTransition(enterTransition);
-        MaterialSharedAxis returnTransition = new MaterialSharedAxis(MaterialSharedAxis.Y, false);
-        returnTransition.setDuration(300L);
-        returnTransition.addTarget(R.id._coordinator);
-        getWindow().setReturnTransition(returnTransition);
         super.onCreate(_savedInstanceState);
         binding = KeysListBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         initialize(_savedInstanceState);
-        binding.collapsingtoolbar.setTitle("Saved keys");
+        binding.Toolbar.setTitle("Saved keys");
         navigationBarHeight = 0;
         statusBarHeight = 0;
         int r1 = getResources().getIdentifier("navigation_bar_height", "dimen", "android");
@@ -190,11 +201,57 @@ public class KeysListActivity extends AppCompatActivity {
             statusBarHeight = getResources().getDimensionPixelSize(r2);
         }
         _SetMargins(binding.Toolbar, 0, statusBarHeight, 0, 0);
+        XUtil.addMargin(binding.fab, 0, 0, 0, navigationBarHeight);
         new Handler(Looper.getMainLooper()).postDelayed(() -> {
             runOnUiThread(() -> {
                 initializeLogic();
             });
         }, 500);
+        GradientDrawable drawable = new GradientDrawable();
+        drawable.setShape(GradientDrawable.RECTANGLE);
+        drawable.setColor(androidx.core.content.ContextCompat.getColor(context, R.drawable.color_surface));
+        binding.Coordinator.setBackground(drawable);
+        binding.AppBar.setOutlineProvider(android.view.ViewOutlineProvider.BACKGROUND);
+        binding.AppBar.setClipToOutline(true);
+        OnBackPressedCallback callback = new OnBackPressedCallback(true)  {
+            
+            @Override
+            public void handleOnBackStarted(BackEventCompat backEvent) {
+                bg = binding.AppBar.getBackground();
+                bg2 = binding.Toolbar.getBackground();
+            }
+            
+            @Override
+            public void handleOnBackProgressed(BackEventCompat backEvent) {
+                    binding.Coordinator.setScaleY(1f-0.15f*backEvent.getProgress());
+                    binding.Coordinator.setScaleX(1f-0.15f*backEvent.getProgress());
+                    GradientDrawable drawable = new GradientDrawable();
+                    drawable.setShape(GradientDrawable.RECTANGLE);
+                    drawable.setColor(androidx.core.content.ContextCompat.getColor(context, R.drawable.color_surface));
+                    drawable.setCornerRadius(65f*backEvent.getProgress());
+                    binding.Coordinator.setBackground(drawable);
+                    float topCornerRadius = 65f * backEvent.getProgress();
+                    GradientDrawable drawable3 = new GradientDrawable();
+                    drawable3.setShape(GradientDrawable.RECTANGLE);
+                    drawable3.setColor(XUtil.extractColorFromView(context, binding.AppBar));
+                    drawable3.setCornerRadii(new float[]{ topCornerRadius, topCornerRadius, topCornerRadius, topCornerRadius, 0f, 0f, 0f, 0f});
+                    binding.AppBar.setBackground(drawable3);
+                    binding.Toolbar.setBackground(drawable3);
+            }
+
+            @Override
+            public void handleOnBackPressed() {
+                finish();
+                overridePendingTransition(0, R.anim.fade);
+            }
+
+            public void handleOnBackCancelled() {
+               binding.AppBar.setBackground(bg);
+               binding.Toolbar.setBackground(bg2);
+            }
+        };
+
+        getOnBackPressedDispatcher().addCallback(this, callback);
 
     }
 
@@ -215,37 +272,111 @@ public class KeysListActivity extends AppCompatActivity {
             @Override
             public void onScrolled(@NonNull RecyclerView recyclerView, int dx, int dy) {
                 super.onScrolled(recyclerView, dx, dy);
-                if (recyclerView.canScrollVertically(-1)) {
+                /*if (recyclerView.canScrollVertically(-1)) {
                     binding.AppBar.setLifted(true);
+                    TransitionManager.beginDelayedTransition(binding.Coordinator);
                 } else {
                     binding.AppBar.setLifted(false);
-                }
-
-                if (dy > 10) {
-                    binding.Fab.shrink();
-                    binding.Fab2.shrink();
-                } else if (dy < -10) {
-                    binding.Fab.extend();
-                    binding.Fab2.extend();
-                }
-            }
-        });
-
-        binding.Fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View _view) {
-                Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
-                intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION | Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
-                intent.addCategory(Intent.CATEGORY_OPENABLE);
-                intent.setType("*/*");
-
-                startActivityForResult(intent, 911);
+                }*/
             }
         });
     }
 
     private void initializeLogic() {
         _SetupUI();
+        ObjectAnimator animator = ObjectAnimator.ofFloat(binding.fab, "scaleY", 0f, 1f);
+        animator.setInterpolator(new DecelerateInterpolator());
+        animator.setDuration(200L);
+        ObjectAnimator animator2 = ObjectAnimator.ofFloat(binding.fab, "scaleX", 0f, 1f);
+        animator2.setInterpolator(new DecelerateInterpolator());
+        animator2.setDuration(200L);
+        ObjectAnimator animator3 = ObjectAnimator.ofInt(binding.fab.getDrawable(), "level", 0, 10000);
+        animator3.setDuration(200);
+        animator3.setInterpolator(new DecelerateInterpolator());
+        ObjectAnimator animator4 = ObjectAnimator.ofInt(binding.fab.getDrawable(), "level", 10000, 0);
+        animator4.setDuration(200);
+        animator4.setInterpolator(new DecelerateInterpolator());
+        ScaleAnimation scaleIn = new ScaleAnimation(
+        0f, 1f,
+        0f, 1f,
+        Animation.RELATIVE_TO_SELF, 0.5f,
+        Animation.RELATIVE_TO_SELF, 0.5f);
+        scaleIn.setDuration(150);
+        scaleIn.setInterpolator(new DecelerateInterpolator());
+        Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                animator.start();
+                animator2.start();
+            }
+        }, 150);
+        
+        View popupView = LayoutInflater.from(this).inflate(R.layout.popup_menu_custom, null);
+        popupView.measure(View.MeasureSpec.UNSPECIFIED, View.MeasureSpec.UNSPECIFIED);
+        ViewGroup.MarginLayoutParams layoutParams = (ViewGroup.MarginLayoutParams) binding.fab.getLayoutParams();
+        int rightMargin = layoutParams.rightMargin;
+        int bottomMargin = layoutParams.bottomMargin;
+        int popupWidth = popupView.getMeasuredWidth();
+        int popupHeight = popupView.getMeasuredHeight();
+        int offsetX = (int) -popupWidth+(rightMargin/2)*3+binding.fab.getWidth()/2;
+        int offsetY = (int) -popupHeight+(bottomMargin/2)*3+binding.fab.getHeight()/2;
+        
+        PopupWindow popupWindow = new PopupWindow(
+        popupView,
+        ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT, false);
+        popupWindow.setOutsideTouchable(true);
+        popupWindow.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        popupWindow.setTouchInterceptor((v, event) -> {
+            if (isTouchInsideView(binding.fab, event)) {
+                return true;
+            }
+                return false;
+        });
+        popupWindow.setOnDismissListener(() -> {
+            isMenuShown = !isMenuShown;
+            animator4.start();
+            binding.recyclerview.animate().alpha(1f).setDuration(150L);
+            binding.AppBar.animate().alpha(1f).setDuration(150L);
+        });
+        popupView.findViewById(R.id.create_fab).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View _view) {
+                _KeyCreatingActivity();
+                popupWindow.dismiss();
+            }
+        });
+        popupView.findViewById(R.id.import_fab).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View _view) {
+                Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
+                intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION | Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
+                intent.addCategory(Intent.CATEGORY_OPENABLE);
+                intent.setType("*/*");
+                startActivityForResult(intent, 911);
+                popupWindow.dismiss();
+            }
+        });
+        binding.fab.setOnClickListener(v -> {
+            if (!isMenuShown) {
+                animator3.start();
+                popupWindow.showAsDropDown(binding.fab, offsetX, -binding.fab.getHeight()*2-(bottomMargin/4)*5);
+                popupView.findViewById(R.id.import_fab).startAnimation(scaleIn);
+                popupView.findViewById(R.id.import_text).startAnimation(scaleIn);
+                popupView.findViewById(R.id.create_fab).startAnimation(scaleIn);
+                popupView.findViewById(R.id.create_text).startAnimation(scaleIn);
+                isMenuShown = true;
+                binding.recyclerview.animate().alpha(0.05f).setDuration(150L);
+                binding.AppBar.animate().alpha(0.05f).setDuration(150L);
+            } else {
+                popupWindow.dismiss();
+                animator4.start();
+                isMenuShown = false;
+                binding.recyclerview.animate().alpha(1f).setDuration(150L);
+                binding.AppBar.animate().alpha(1f).setDuration(150L);
+            }
+        });
+        
         try {
             KeysMap = new Gson().fromJson(KeyManager.getString("KeysData", ""), new TypeToken < ArrayList < HashMap < String, Object >>> () {}.getType());
             binding.recyclerview.setLayoutManager(new LinearLayoutManager(this));
@@ -253,12 +384,6 @@ public class KeysListActivity extends AppCompatActivity {
         } catch (Exception e) {
 
         }
-        binding.Fab2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View _view) {
-                _KeyCreatingActivity();
-            }
-        });
     }
 
     @Override
@@ -755,36 +880,7 @@ public class KeysListActivity extends AppCompatActivity {
         if (r2 > 0) {
             statusBarHeight = getResources().getDimensionPixelSize(r2);
         }
-        binding.Fab.setOnApplyWindowInsetsListener(new View.OnApplyWindowInsetsListener() {
-            @Override
-            public WindowInsets onApplyWindowInsets(View v, WindowInsets insets) {
-                navigationBarHeight = insets.getInsets(WindowInsets.Type.navigationBars()).bottom;
-                ViewGroup.MarginLayoutParams params = (ViewGroup.MarginLayoutParams) binding.Fab.getLayoutParams();
-                if (!isApplied) {
-                    FabMarginToUse = params.bottomMargin;
-                    NeededMargin = params.bottomMargin * 2 + binding.Fab.getHeight() + navigationBarHeight;
-                    isApplied = true;
-                    params.bottomMargin = navigationBarHeight + params.bottomMargin;
-                }
-                binding.Fab.setLayoutParams(params);
-                return insets;
-            }
-        });
-        binding.Fab2.setOnApplyWindowInsetsListener(new View.OnApplyWindowInsetsListener() {
-            @Override
-            public WindowInsets onApplyWindowInsets(View v, WindowInsets insets) {
-                navigationBarHeight = insets.getInsets(WindowInsets.Type.navigationBars()).bottom;
-                ViewGroup.MarginLayoutParams params3 = (ViewGroup.MarginLayoutParams) binding.Fab2.getLayoutParams();
-                if (!isApplied2) {
-                    params3.bottomMargin = params3.bottomMargin + navigationBarHeight;
-                    NeededMargin = FabMarginToUse * 3 + binding.Fab.getHeight() * 2 + navigationBarHeight;
-                    isApplied2 = true;
-                }
-                binding.Fab2.setLayoutParams(params3);
-                return insets;
-            }
-        });
-        _SetMargins(binding.recyclerview, 0, 0, 0, OldMargin * 2 + binding.Fab.getHeight());
+        _SetMargins(binding.recyclerview, 0, 0, 0, navigationBarHeight);
     }
 
 
@@ -964,38 +1060,23 @@ public class KeysListActivity extends AppCompatActivity {
 
 
     public void _LoadListMap() {
-        NonNullTimer = new TimerTask() {
+        handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        NonNullTimer.cancel();
-                        if (KeysMap != null) {
-                            try {
-                                binding.recyclerview.setAdapter(new RecyclerviewAdapter(KeysMap));
-                                binding.LoadingLinear.setVisibility(View.GONE);
-                                binding.recyclerview.setVisibility(View.VISIBLE);
-                            } catch (Exception e) {
-                                ErrorTimer = new TimerTask() {
-                                    @Override
-                                    public void run() {
-                                        runOnUiThread(new Runnable() {
-                                            @Override
-                                            public void run() {
-                                                _LoadListMap();
-                                            }
-                                        });
-                                    }
-                                };
-                                _timer.schedule(ErrorTimer, (int)(100));
-                            }
-                        }
+                if (KeysMap != null) {
+                    try {
+                        binding.recyclerview.setAdapter(new RecyclerviewAdapter(KeysMap));
+                        binding.LoadingLinear.setVisibility(View.GONE);
+                        binding.recyclerview.setVisibility(View.VISIBLE);
+                    } catch (Exception e) {
+                        handler.postDelayed(this, 100);
                     }
-                });
+                } else {
+                    KeysMap = new Gson().fromJson(KeyManager.getString("KeysData", ""), new TypeToken < ArrayList < HashMap < String, Object >>> () {}.getType());
+                    handler.postDelayed(this, 100);
+                }
             }
-        };
-        _timer.scheduleAtFixedRate(NonNullTimer, (int)(0), (int)(25));
+        }, 50);
     }
 
 
@@ -1142,6 +1223,8 @@ public class KeysListActivity extends AppCompatActivity {
                      }
                 }
             });
+            ViewGroup.MarginLayoutParams lp = (ViewGroup.MarginLayoutParams) KeyInfoLayout.getLayoutParams();
+            int tm = lp.topMargin;
             try {
                 if (_position == 0) {
                     _SetMarginsStable(KeyInfoLayout, (int) _DpToPx(35), (int) _DpToPx(9));
@@ -1155,14 +1238,10 @@ public class KeysListActivity extends AppCompatActivity {
                     }
                 }
                 if ((_position == (KeysMap.size() - 1)) && (KeysMap.size() > 1)) {
-                    _SetMarginsStable(KeyInfoLayout, (int) _DpToPx(10), NeededMargin);
+                    _SetMarginsStable(KeyInfoLayout, tm, binding.fab.getHeight()*2);
                 }
             } catch (Exception e) {
                 _RefreshList();
-            }
-            if (KeysMap.size() == 1) {
-                binding.Fab.extend();
-                binding.Fab2.extend();
             }
             if (NeedToRefresh) {
                 _RefreshList();
@@ -1220,4 +1299,11 @@ public class KeysListActivity extends AppCompatActivity {
         }
     }
 
+    public boolean isTouchInsideView(View view, MotionEvent event) {
+        int[] location = new int[2];
+        view.getLocationOnScreen(location);
+        int x = (int) event.getRawX();
+        int y = (int) event.getRawY();
+        return x >= location[0] && x <= location[0] + view.getWidth() && y >= location[1] && y <= location[1] + view.getHeight();
+    }
 }

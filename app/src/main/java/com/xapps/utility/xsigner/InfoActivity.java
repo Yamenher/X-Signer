@@ -1,8 +1,10 @@
 package com.xapps.utility.xsigner;
 
 import android.animation.ArgbEvaluator;
+import android.content.Context;
 import android.content.Intent;
 import android.content.res.*;
+import android.graphics.drawable.ColorDrawable;
 import android.view.*;
 import android.os.Build;
 import android.window.OnBackInvokedCallback;
@@ -32,12 +34,17 @@ import androidx.activity.OnBackPressedCallback;
 import android.window.OnBackInvokedCallback;
 import android.window.BackEvent;
 import com.google.android.material.transition.platform.MaterialContainerTransformSharedElementCallback;
+import android.view.animation.Animation;
+import android.view.animation.ScaleAnimation;
+import android.widget.FrameLayout;
+import androidx.activity.OnBackPressedCallback;
 
 
 
 public class InfoActivity extends AppCompatActivity {
 	
     private InfoBinding binding;
+    private final Context context = this;
 	private String versionName = "";
 	private String versionCode = "";
     private MaterialSharedAxis enterTransition;
@@ -50,18 +57,51 @@ public class InfoActivity extends AppCompatActivity {
         binding = InfoBinding.inflate(getLayoutInflater());
         setExitSharedElementCallback(new MaterialContainerTransformSharedElementCallback());
         getWindow().setAllowEnterTransitionOverlap(true);
-        enterTransition = new MaterialSharedAxis(MaterialSharedAxis.Y, true);
-        enterTransition.addTarget(R.id._coordinator);
-        enterTransition.setDuration(300L);
-        getWindow().setEnterTransition(enterTransition);
-        returnTransition = new MaterialSharedAxis(MaterialSharedAxis.Y, false);
-        returnTransition.setDuration(300L);
-        returnTransition.addTarget(R.id._coordinator);
-        getWindow().setReturnTransition(returnTransition);
 		super.onCreate(_savedInstanceState);
 		setContentView(binding.getRoot());
 		initialize(_savedInstanceState);
 		initializeLogic();
+        GradientDrawable drawable = new GradientDrawable();
+        drawable.setShape(GradientDrawable.RECTANGLE);
+        drawable.setColor(androidx.core.content.ContextCompat.getColor(context, R.drawable.color_surface));
+        binding.Coordinator.setBackground(drawable);
+        OnBackPressedCallback callback = new OnBackPressedCallback(true)  {
+            
+            @Override
+            public void handleOnBackStarted(BackEventCompat backEvent) {
+                
+            }
+            
+            @Override
+            public void handleOnBackProgressed(BackEventCompat backEvent) {
+                    binding.Coordinator.setScaleY(1f-0.15f*backEvent.getProgress());
+                    binding.Coordinator.setScaleX(1f-0.15f*backEvent.getProgress());
+                    GradientDrawable drawable = new GradientDrawable();
+                    drawable.setShape(GradientDrawable.RECTANGLE);
+                    drawable.setColor(androidx.core.content.ContextCompat.getColor(context, R.drawable.color_surface));
+                    drawable.setCornerRadius(65f*backEvent.getProgress());
+                    binding.Coordinator.setBackground(drawable);
+                    GradientDrawable drawable2 = new GradientDrawable();
+                    drawable2.setShape(GradientDrawable.RECTANGLE);
+                    drawable2.setColor(XUtil.extractColorFromView(context, binding.AppBar));
+                    float topCornerRadius = 65f * backEvent.getProgress();
+                    drawable2.setCornerRadii(new float[]{ topCornerRadius, topCornerRadius, topCornerRadius, topCornerRadius, 0f, 0f, 0f, 0f});
+                    binding.AppBar.setBackground(drawable2);
+            }
+
+            @Override
+            public void handleOnBackPressed() {
+                finish();
+                overridePendingTransition(0, R.anim.fade);
+            }
+
+            public void handleOnBackCancelled() {
+               
+            }
+        };
+
+        getOnBackPressedDispatcher().addCallback(this, callback);
+    
     }
 	
 	private void initialize(Bundle _savedInstanceState) {
@@ -162,7 +202,7 @@ public class InfoActivity extends AppCompatActivity {
     
     public void sendMail() {
         Intent emailIntent = new Intent(Intent.ACTION_SENDTO);
-        emailIntent.setData(Uri.parse("mailto:xapps.feedback@gmail.com"));
+        emailIntent.setData(Uri.parse("mailto:xapps.feedback365@gmail.com"));
         emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Feedback on X-Signer");
         emailIntent.putExtra(Intent.EXTRA_TEXT, "Hello, I wanted to share my feedback regarding X-Signer...");
         try {

@@ -12,8 +12,21 @@ import android.graphics.Color;
 import eightbitlab.com.blurview.BlurView;
 import com.xapps.utility.xsigner.BlurUtils;
 import androidx.transition.TransitionManager;
+import androidx.appcompat.app.AppCompatDelegate;
+import android.content.SharedPreferences;
+import android.content.res.Configuration;
+import android.content.Context;
 
 public abstract class BaseActivity extends AppCompatActivity {
+
+    private static SharedPreferences sharedPreferences;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        sharedPreferences = getSharedPreferences("XSignerAppPrefs", Context.MODE_PRIVATE);
+        setThemeMode(getThemeMode());
+    }
     
     public void ShowSingleButtonDialog(Context context, String title, String message, String buttonText, int uniqueId) {
         final AlertDialog FinishDialog = new AlertDialog.Builder(context).create();
@@ -47,4 +60,26 @@ public abstract class BaseActivity extends AppCompatActivity {
     }
     
     public abstract void singleClickAction(AlertDialog dialog, int eventId);
+    
+    public String getThemeMode() {
+        String mode = sharedPreferences.getString("ThemeMode", "auto");
+        return mode;
+    }
+    
+    public void setThemeMode(String theme) {
+        sharedPreferences.edit().putString("ThemeMode", theme).apply();
+        switch (theme) {
+            case "light" :
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+                break;
+            case "dark" :
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+                break;
+            case "auto" :
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM);
+                break;
+        }
+                
+    }
+
 }

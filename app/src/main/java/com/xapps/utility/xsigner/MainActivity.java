@@ -80,9 +80,10 @@ import androidx.activity.result.*;
 import androidx.activity.result.contract.ActivityResultContracts;
 import com.xapps.utility.xsigner.databinding.DrawerMainBinding;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
     
     private MainBinding binding;
+    private final Context context = this;
 
     private LinearLayout layout;
     
@@ -211,6 +212,18 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View _view) {
                 binding.Drawer.closeDrawer(GravityCompat.START);
+                AnimationTimer = new TimerTask() {
+                    @Override
+                    public void run() {
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                _SettingsActivity();
+                            }
+                        });
+                    }
+                };
+                _timer.schedule(AnimationTimer, (300));
             }
         });
 
@@ -487,10 +500,7 @@ public class MainActivity extends AppCompatActivity {
                 CanAccessStorage = false;
             }
         }
-        if (IsPaused) {
-            _StorageAccessCheck();
-            IsPaused = false;
-        }
+        _StorageAccessCheck();
     }
 
     @Override
@@ -951,6 +961,7 @@ public class MainActivity extends AppCompatActivity {
         if (CanAccessStorage) {
             getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
             FileUtil.makeDir("/storage/emulated/0/X-Signer/Keys/");
+            maybeRestart();
         } else {
             getWindow().addFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
             if (!IsBSBeingShow) {
@@ -1009,9 +1020,8 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void _KeyActivity() {
-        ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(this);
         Intent intent = new Intent(this, KeysListActivity.class);
-        startActivity(intent, options.toBundle());
+        startActivity(intent);
     }
 
 
@@ -1246,14 +1256,6 @@ public class MainActivity extends AppCompatActivity {
                                                 VipSnackbarView.findViewById(R.id.Icon);
                                                 Icon.setImageResource(R.drawable.ic_error_white);
                                                 Message.setText("Failed to copy ".concat(filePath.substring((filePath.length() - 3), (filePath.length())).toUpperCase().concat(" file : Input file being copied no longer exists in app data")));
-                                                SBG.setBackground(new GradientDrawable() {
-                                                    public GradientDrawable getIns(int a, int b) {
-                                                        this.setCornerRadius(a);
-                                                        this.setColor(b);
-                                                        return this;
-                                                    }
-                                                }.getIns((int) _DpToPx(10), 0xFF27313A));
-                                                Message.setTextColor(0xFFFFFFFF);
                                                 VipSnackbar.getView().setBackgroundColor(Color.TRANSPARENT);
                                                 Snackbar.SnackbarLayout VipSnackbarView2 = (Snackbar.SnackbarLayout) VipSnackbar.getView();
                                                 VipSnackbarView2.addView(VipSnackbarView, 0);
@@ -1566,9 +1568,13 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void _InfoActivity() {
-        ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(this);
         Intent intent = new Intent(this, InfoActivity.class);
-        startActivity(intent, options.toBundle());
+        startActivity(intent);
+    }
+    
+    public void _SettingsActivity() {
+        Intent intent = new Intent(this, SettingsActivity.class);
+        startActivity(intent);
     }
 
 
@@ -1583,9 +1589,8 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void _FaqActivity() {
-        ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(this);
         Intent intent = new Intent(this, FaqActivity.class);
-        startActivity(intent, options.toBundle());
+        startActivity(intent);
     }
 
     public void showSnackbar(String message, int icon) {
@@ -1600,6 +1605,32 @@ public class MainActivity extends AppCompatActivity {
         Snackbar.SnackbarLayout VipSnackbarView2 = (Snackbar.SnackbarLayout) VipSnackbar.getView();
         VipSnackbarView2.addView(VipSnackbarView, 0);
         VipSnackbar.show();
+    }
+    
+    public void maybeRestart() {
+        SharedPreferences sharedPreferences = getSharedPreferences("XSignerAppPrefs", Context.MODE_PRIVATE);
+        boolean isDataFetched = sharedPreferences.getBoolean("isDataFetched", false);
+        if (CanAccessStorage && !isDataFetched) {
+            getWindow().setFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE,  
+            WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.putBoolean("isDataFetched", true);
+            editor.apply();
+            new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    ShowSingleButtonDialog(context, "Restart required", "Data fetching done, the app needs to restart to apply some changes", "Restart", 19);
+                }
+            }, 100);
+        }
+    }
+    
+    @Override
+    public void singleClickAction(android.app.AlertDialog dialog, int eventId) {
+        if (eventId == 19) {
+            finishAffinity();
+            System.exit(0);
+        }
     }
 
 }

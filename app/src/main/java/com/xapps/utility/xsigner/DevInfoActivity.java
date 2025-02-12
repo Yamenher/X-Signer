@@ -32,7 +32,7 @@ public class DevInfoActivity extends AppCompatActivity {
         setEnterSharedElementCallback(new MaterialContainerTransformSharedElementCallback());
         getWindow().setSharedElementEnterTransition(enterAnim);
         returnAnim = new MaterialContainerTransform();
-        returnAnim.addTarget(android.R.id.content);
+        returnAnim.addTarget(binding.coordinator);
         returnAnim.setEndContainerColor(getColor(R.drawable.color_surface));
         returnAnim.setDuration(250L);
         getWindow().setSharedElementExitTransition(returnAnim);
@@ -40,6 +40,7 @@ public class DevInfoActivity extends AppCompatActivity {
         GlideL();
         SocialYamen();
         SocialSyntax();
+        SocialTrindade();
     }
     
     public void InitUi() {
@@ -50,11 +51,14 @@ public class DevInfoActivity extends AppCompatActivity {
         setTitle("About the developer");
         XUtil.ApplyMarginToView(binding.toolbar, true);
     }
+    
     public void GlideL(){
         Glide.with(getApplicationContext()).load(Uri.parse("https://github.com/yamenher.png")).into(binding.Yamenpic);
-         Glide.with(getApplicationContext()).load(Uri.parse("https://github.com/syntaxspins.png")).into(binding.syntaxpic);
+        Glide.with(getApplicationContext()).load(Uri.parse("https://github.com/syntaxspins.png")).into(binding.syntaxpic);
+        Glide.with(getApplicationContext()).load(Uri.parse("https://github.com/trindadedev13.png")).into(binding.Aquilespic);
         
     }
+    
     public void SocialYamen(){
         binding.github.setOnClickListener(v->{
             Uri uri = Uri.parse("http://github.com/yamenher");
@@ -62,7 +66,7 @@ public class DevInfoActivity extends AppCompatActivity {
             startActivity(intent);
         });
         binding.discord.setOnClickListener(v->{
-            Uri uri2 = Uri.parse("https://discord.gg/vUZAGfeV");
+            Uri uri2 = Uri.parse("https://discordapp.com/users/1093275547397800027");
             Intent intent2 = new Intent(Intent.ACTION_VIEW, uri2);
             startActivity(intent2);
             
@@ -80,6 +84,7 @@ public class DevInfoActivity extends AppCompatActivity {
             
         });
     }
+    
     public void SocialSyntax(){
         binding.Sgithub.setOnClickListener(v->{
             Uri uri5 = Uri.parse("http://github.com/syntaxspins");
@@ -97,6 +102,32 @@ public class DevInfoActivity extends AppCompatActivity {
             Uri uri7 = Uri.parse("https://mastodon.social/@SyntaxSpin");
             Intent intent7 = new Intent(Intent.ACTION_VIEW, uri7);
             startActivity(intent7);
+            
+        });
+    }
+    
+    public void SocialTrindade(){
+        binding.githubt.setOnClickListener(v->{
+            Uri uri = Uri.parse("http://github.com/trindadedev13");
+            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+            startActivity(intent);
+        });
+        binding.discordt.setOnClickListener(v->{
+            Uri uri2 = Uri.parse("https://discordapp.com/users/1275905691512475740");
+            Intent intent2 = new Intent(Intent.ACTION_VIEW, uri2);
+            startActivity(intent2);
+            
+        });
+        binding.instagramt.setOnClickListener(v->{
+            Uri uri3 = Uri.parse("https://www.instagram.com/maybetrindade/");
+            Intent intent3 = new Intent(Intent.ACTION_VIEW, uri3);
+            startActivity(intent3);
+            
+        });
+        binding.telegramt.setOnClickListener(v->{
+            Uri uri4 = Uri.parse("http://t.me/trindadedev");
+            Intent intent4 = new Intent(Intent.ACTION_VIEW, uri4);
+            startActivity(intent4);
             
         });
     }
