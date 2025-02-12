@@ -2,6 +2,7 @@ package com.xapps.utility.xsigner;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.os.Build;
 import androidx.appcompat.app.AppCompatActivity;
 import com.xapps.utility.xsigner.databinding.SettingsActivityBinding;
 import android.content.res.Resources;
@@ -13,6 +14,7 @@ import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.widget.LinearLayout;
 import android.window.*;
+import androidx.annotation.ChecksSdkIntAtLeast;
 import androidx.activity.OnBackPressedCallback;
 import androidx.activity.OnBackPressedDispatcher;
 import androidx.appcompat.app.AppCompatActivity;
@@ -50,6 +52,9 @@ import com.xapps.utility.xsigner.XUtil;
 public class SettingsActivity extends PrefsActivity {
     
     private SettingsActivityBinding binding;
+    
+    @ChecksSdkIntAtLeast(api = Build.VERSION_CODES.S)
+    private static final boolean ATLEAST_S = Build.VERSION.SDK_INT >= Build.VERSION_CODES.S;
     
     private int statusBarHeight = 0;
     private Drawable bg;
@@ -134,6 +139,14 @@ public class SettingsActivity extends PrefsActivity {
 		if (r2 > 0) {
 			    statusBarHeight = getResources().getDimensionPixelSize(r2);
 		}
+		
+    // disable dynamic colors pref if not android 12
+    if (!ATLEAST_S) {
+        binding.dynamicColorsSwitch.setEnabled(false);
+        binding.dynamicColorsLinear.setEnabled(false);
+        binding.dynamicColorsTitle.setEnabled(false);
+        binding.dynamicColorsDesc.setEnabled(false);
+    }
 		SetMargins(binding.toolbar, 0, statusBarHeight, 0, 0);
         binding.themeChoiceLinear.setOnClickListener(v -> {
             showThemeBottomSheet();
