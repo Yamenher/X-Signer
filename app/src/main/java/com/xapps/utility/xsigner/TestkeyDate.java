@@ -1,16 +1,15 @@
 package com.xapps.utility.xsigner;
 
 import java.io.BufferedReader;
+import java.io.ByteArrayInputStream;
 import java.io.FileReader;
 import java.io.IOException;
-import java.io.StringReader;
 import java.security.cert.CertificateException;
 import java.security.cert.CertificateFactory;
 import java.security.cert.X509Certificate;
-import java.util.Base64;
 import java.text.SimpleDateFormat;
+import java.util.Base64;
 import java.util.Date;
-import java.io.ByteArrayInputStream;
 
 public class TestkeyDate {
 
@@ -34,8 +33,8 @@ public class TestkeyDate {
         try (BufferedReader br = new BufferedReader(new FileReader(pemFilePath))) {
             String line;
             while ((line = br.readLine()) != null) {
-                if (!line.startsWith("-----BEGIN CERTIFICATE-----") &&
-                    !line.startsWith("-----END CERTIFICATE-----")) {
+                if (!line.startsWith("-----BEGIN CERTIFICATE-----")
+                        && !line.startsWith("-----END CERTIFICATE-----")) {
                     pemContent.append(line);
                 }
             }
@@ -49,6 +48,7 @@ public class TestkeyDate {
 
     private static X509Certificate parseCertificate(byte[] derBytes) throws CertificateException {
         CertificateFactory certificateFactory = CertificateFactory.getInstance("X.509");
-        return (X509Certificate) certificateFactory.generateCertificate(new ByteArrayInputStream(derBytes));
+        return (X509Certificate)
+                certificateFactory.generateCertificate(new ByteArrayInputStream(derBytes));
     }
 }
