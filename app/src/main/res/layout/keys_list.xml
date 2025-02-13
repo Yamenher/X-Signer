@@ -3,74 +3,74 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/_coordinator"
-    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="?colorSurface"
-    android:transitionGroup="true">
+    android:layout_width="match_parent"
+    android:transitionGroup="true"
+    android:id="@+id/_coordinator">
 
     <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/_app_bar"
-        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        style="@style/Widget.Material3.AppBarLayout"
         app:liftOnScroll="true"
         app:liftOnScrollTargetViewId="@id/recyclerview"
-        style="@style/Widget.Material3.AppBarLayout">
+        android:id="@+id/_app_bar">
 
-        <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/_toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?actionBarSize"
-            app:layout_collapseMode="pin" />
+            <com.google.android.material.appbar.MaterialToolbar
+                android:layout_height="?actionBarSize"
+                android:layout_width="match_parent"
+                app:layout_collapseMode="pin"
+                android:id="@+id/_toolbar" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        android:layout_width="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:orientation="vertical">
 
         <LinearLayout
-            android:id="@+id/LoadingLinear"
-            android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_width="match_parent"
             android:gravity="center_horizontal|center_vertical"
             android:padding="8dp"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:id="@+id/LoadingLinear">
 
             <com.google.android.material.progressindicator.CircularProgressIndicator
-                android:id="@+id/progressbar1"
-                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
                 android:indeterminate="true"
-                android:padding="8dp"
                 app:indicatorSize="40dp"
+                android:padding="8dp"
                 app:trackColor="#FFFFFFFF"
                 app:trackThickness="4dp"
+                android:id="@+id/progressbar1"
                 app:indicatorColor="?colorPrimary" />
 
         </LinearLayout>
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerview"
-            android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_width="match_parent"
             android:visibility="gone"
-            android:nestedScrollingEnabled="true"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:id="@+id/recyclerview"
+            android:nestedScrollingEnabled="true" />
 
     </LinearLayout>
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|right"
-        android:layout_margin="16dp"
-        android:scaleX="0"
-        android:scaleY="0"
-        app:srcCompat="@drawable/rotate_ic"
-        style="@style/Widget.Material3.FloatingActionButton.Primary" />
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.Material3.FloatingActionButton.Primary"
+            app:srcCompat="@drawable/rotate_ic"
+            android:layout_gravity="bottom|right"
+            android:layout_margin="16dp"
+            android:scaleX="0"
+            android:scaleY="0" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

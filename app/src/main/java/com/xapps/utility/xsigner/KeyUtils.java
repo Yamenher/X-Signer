@@ -1,10 +1,9 @@
 package com.xapps.utility.xsigner;
 
 import android.sun.security.provider.JavaKeyStoreProvider;
-
+import org.bouncycastle.jce.provider.BouncyCastleProvider;
 import org.bouncycastle.cert.jcajce.JcaX509CertificateConverter;
 import org.bouncycastle.cert.jcajce.JcaX509v3CertificateBuilder;
-import org.bouncycastle.jce.provider.BouncyCastleProvider;
 import org.bouncycastle.operator.ContentSigner;
 import org.bouncycastle.operator.jcajce.JcaContentSignerBuilder;
 
@@ -14,7 +13,6 @@ import java.security.*;
 import java.security.cert.Certificate;
 import java.security.cert.X509Certificate;
 import java.util.Date;
-
 import javax.security.auth.x500.X500Principal;
 
 public class KeyUtils {
@@ -27,16 +25,7 @@ public class KeyUtils {
         Security.addProvider(new JavaKeyStoreProvider());
     }
 
-    public static void createKeyStore(
-            String type,
-            String filename,
-            String keystorePassword,
-            String alias,
-            String aliasPassword,
-            String dn,
-            int validityYears,
-            int keySize)
-            throws Exception {
+    public static void createKeyStore(String type, String filename, String keystorePassword, String alias, String aliasPassword, String dn, int validityYears, int keySize) throws Exception {
         KeyStore keyStore;
 
         if ("JKS".equalsIgnoreCase(type)) {
@@ -55,13 +44,10 @@ public class KeyUtils {
         KeyPair keyPair = keyPairGenerator.generateKeyPair();
 
         // Generate self-signed certificate
-        Certificate[] certificateChain = {
-            generateSelfSignedCertificate(keyPair, dn, validityYears)
-        };
+        Certificate[] certificateChain = {generateSelfSignedCertificate(keyPair, dn, validityYears)};
 
         // Store the key pair in the KeyStore with alias password
-        keyStore.setKeyEntry(
-                alias, keyPair.getPrivate(), aliasPassword.toCharArray(), certificateChain);
+        keyStore.setKeyEntry(alias, keyPair.getPrivate(), aliasPassword.toCharArray(), certificateChain);
 
         // Save the KeyStore to a file
         try (FileOutputStream fos = new FileOutputStream(filename)) {
@@ -71,24 +57,22 @@ public class KeyUtils {
         System.out.println(type + " KeyStore created successfully: " + filename);
     }
 
-    private static X509Certificate generateSelfSignedCertificate(
-            KeyPair keyPair, String dn, int validityYears) throws Exception {
+    private static X509Certificate generateSelfSignedCertificate(KeyPair keyPair, String dn, int validityYears) throws Exception {
         long now = System.currentTimeMillis();
         Date startDate = new Date(now);
         Date endDate = new Date(now + (long) validityYears * 365 * 24 * 60 * 60 * 1000L);
 
         X500Principal subject = new X500Principal(dn);
-        JcaX509v3CertificateBuilder certBuilder =
-                new JcaX509v3CertificateBuilder(
-                        subject,
-                        BigInteger.valueOf(now),
-                        startDate,
-                        endDate,
-                        subject,
-                        keyPair.getPublic());
+        JcaX509v3CertificateBuilder certBuilder = new JcaX509v3CertificateBuilder(
+                subject,
+                BigInteger.valueOf(now),
+                startDate,
+                endDate,
+                subject,
+                keyPair.getPublic()
+        );
 
-        ContentSigner contentSigner =
-                new JcaContentSignerBuilder("SHA256WithRSAEncryption").build(keyPair.getPrivate());
+        ContentSigner contentSigner = new JcaContentSignerBuilder("SHA256WithRSAEncryption").build(keyPair.getPrivate());
         return new JcaX509CertificateConverter().getCertificate(certBuilder.build(contentSigner));
     }
 }

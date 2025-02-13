@@ -1,24 +1,26 @@
 package com.xapps.utility.xsigner;
 
+import androidx.appcompat.app.AppCompatActivity;
+import com.google.android.material.snackbar.Snackbar;
+import android.graphics.*;
+import com.xapps.utility.xsigner.R;
 import android.app.*;
 import android.content.*;
-import android.graphics.*;
-import android.graphics.Color;
-import android.graphics.Insets;
 import android.graphics.drawable.*;
+import android.net.*;
+import android.util.*;
+import android.view.*;
+import android.view.inputmethod.*;
+import android.widget.*;
+import android.view.WindowInsets;
+import android.graphics.Insets;
+import android.os.*;
+import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
 import android.graphics.drawable.StateListDrawable;
-import android.net.*;
-import android.os.*;
-import android.util.*;
-import android.view.*;
 import android.view.View;
-import android.view.WindowInsets;
-import android.view.inputmethod.*;
-import android.widget.*;
-
 import com.google.android.material.shape.MaterialShapeDrawable;
 
 import java.io.*;
@@ -30,78 +32,57 @@ public class XUtil {
     public static int CENTER = 2;
     public static int BOTTOM = 3;
 
-    public static void sortListMap(
-            final ArrayList<HashMap<String, Object>> listMap,
-            final String key,
-            final boolean isNumber,
-            final boolean ascending) {
-        Collections.sort(
-                listMap,
-                new Comparator<HashMap<String, Object>>() {
-                    public int compare(
-                            HashMap<String, Object> _compareMap1,
-                            HashMap<String, Object> _compareMap2) {
-                        if (isNumber) {
-                            int _count1 = Integer.valueOf(_compareMap1.get(key).toString());
-                            int _count2 = Integer.valueOf(_compareMap2.get(key).toString());
-                            if (ascending) {
-                                return _count1 < _count2 ? -1 : _count1 < _count2 ? 1 : 0;
-                            } else {
-                                return _count1 > _count2 ? -1 : _count1 > _count2 ? 1 : 0;
-                            }
-                        } else {
-                            if (ascending) {
-                                return (_compareMap1.get(key).toString())
-                                        .compareTo(_compareMap2.get(key).toString());
-                            } else {
-                                return (_compareMap2.get(key).toString())
-                                        .compareTo(_compareMap1.get(key).toString());
-                            }
-                        }
+    public static void sortListMap(final ArrayList<HashMap<String, Object>> listMap, final String key, final boolean isNumber, final boolean ascending) {
+        Collections.sort(listMap, new Comparator<HashMap<String, Object>>() {
+            public int compare(HashMap<String, Object> _compareMap1, HashMap<String, Object> _compareMap2) {
+                if (isNumber) {
+                    int _count1 = Integer.valueOf(_compareMap1.get(key).toString());
+                    int _count2 = Integer.valueOf(_compareMap2.get(key).toString());
+                    if (ascending) {
+                        return _count1 < _count2 ? -1 : _count1 < _count2 ? 1 : 0;
+                    } else {
+                        return _count1 > _count2 ? -1 : _count1 > _count2 ? 1 : 0;
                     }
-                });
+                } else {
+                    if (ascending) {
+                        return (_compareMap1.get(key).toString()).compareTo(_compareMap2.get(key).toString());
+                    } else {
+                        return (_compareMap2.get(key).toString()).compareTo(_compareMap1.get(key).toString());
+                    }
+                }
+            }
+        });
     }
 
     public static boolean isConnected(Context context) {
-        ConnectivityManager connectivityManager =
-                (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
+        ConnectivityManager connectivityManager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
         if (connectivityManager != null) {
             Network network = connectivityManager.getActiveNetwork();
             if (network != null) {
-                NetworkCapabilities networkCapabilities =
-                        connectivityManager.getNetworkCapabilities(network);
-                return networkCapabilities != null
-                        && (networkCapabilities.hasTransport(NetworkCapabilities.TRANSPORT_WIFI)
-                                || networkCapabilities.hasTransport(
-                                        NetworkCapabilities.TRANSPORT_CELLULAR)
-                                || networkCapabilities.hasTransport(
-                                        NetworkCapabilities.TRANSPORT_ETHERNET)
-                                || networkCapabilities.hasTransport(
-                                        NetworkCapabilities.TRANSPORT_BLUETOOTH));
+                NetworkCapabilities networkCapabilities = connectivityManager.getNetworkCapabilities(network);
+                return networkCapabilities != null && (networkCapabilities.hasTransport(NetworkCapabilities.TRANSPORT_WIFI) || networkCapabilities.hasTransport(NetworkCapabilities.TRANSPORT_CELLULAR) || networkCapabilities.hasTransport(NetworkCapabilities.TRANSPORT_ETHERNET) || networkCapabilities.hasTransport(NetworkCapabilities.TRANSPORT_BLUETOOTH));
             }
         }
         return false;
     }
-
+    
     public static void showKeyboard(Activity activity) {
         View view = activity.getCurrentFocus();
         if (view != null) {
-            InputMethodManager imm =
-                    (InputMethodManager) activity.getSystemService(Context.INPUT_METHOD_SERVICE);
+            InputMethodManager imm = (InputMethodManager) activity.getSystemService(Context.INPUT_METHOD_SERVICE);
             imm.showSoftInput(view, InputMethodManager.SHOW_IMPLICIT);
         }
     }
-
+    
     public static void hideKeyboard(Activity activity) {
-        InputMethodManager imm =
-                (InputMethodManager) activity.getSystemService(Context.INPUT_METHOD_SERVICE);
+        InputMethodManager imm = (InputMethodManager) activity.getSystemService(Context.INPUT_METHOD_SERVICE);
         View view = activity.getCurrentFocus();
         if (view == null) {
             view = new View(activity);
         }
         imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
     }
-
+    
     public static void showMessage(Context _context, String _s) {
         Toast.makeText(_context, _s, Toast.LENGTH_SHORT).show();
     }
@@ -115,7 +96,8 @@ public class XUtil {
         ArrayList<Double> _result = new ArrayList<Double>();
         SparseBooleanArray _arr = _list.getCheckedItemPositions();
         for (int _iIdx = 0; _iIdx < _arr.size(); _iIdx++) {
-            if (_arr.valueAt(_iIdx)) _result.add((double) _arr.keyAt(_iIdx));
+            if (_arr.valueAt(_iIdx))
+                _result.add((double) _arr.keyAt(_iIdx));
         }
         return _result;
     }
@@ -128,47 +110,40 @@ public class XUtil {
             _output.add(_entry.getKey());
         }
     }
-
+    
     public static void ApplyMarginToView(View view, boolean isTop) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-            view.setOnApplyWindowInsetsListener(
-                    (v, insets) -> {
-                        Insets systemBars = insets.getInsets(WindowInsets.Type.systemBars());
-                        ViewGroup.MarginLayoutParams params =
-                                (ViewGroup.MarginLayoutParams) v.getLayoutParams();
+            view.setOnApplyWindowInsetsListener((v, insets) -> {
+                Insets systemBars = insets.getInsets(WindowInsets.Type.systemBars());
+                ViewGroup.MarginLayoutParams params = (ViewGroup.MarginLayoutParams) v.getLayoutParams();
 
-                        if (isTop) {
-                            params.topMargin = systemBars.top;
-                        } else {
-                            params.bottomMargin = systemBars.bottom;
-                        }
+                if (isTop) {
+                    params.topMargin = systemBars.top;
+                } else {
+                    params.bottomMargin = systemBars.bottom;
+                }
 
-                        v.setLayoutParams(params);
-                        return insets;
-                    });
+                v.setLayoutParams(params);
+                return insets;
+            });
         } else {
             Context context = view.getContext();
             int barHeight = 0;
 
             if (isTop) {
-                int resourceId =
-                        context.getResources()
-                                .getIdentifier("status_bar_height", "dimen", "android");
+                int resourceId = context.getResources().getIdentifier("status_bar_height", "dimen", "android");
                 if (resourceId > 0) {
                     barHeight = context.getResources().getDimensionPixelSize(resourceId);
                 }
             } else {
                 // Get navigation bar height
-                int resourceId =
-                        context.getResources()
-                                .getIdentifier("navigation_bar_height", "dimen", "android");
+                int resourceId = context.getResources().getIdentifier("navigation_bar_height", "dimen", "android");
                 if (resourceId > 0) {
                     barHeight = context.getResources().getDimensionPixelSize(resourceId);
                 }
             }
 
-            ViewGroup.MarginLayoutParams params =
-                    (ViewGroup.MarginLayoutParams) view.getLayoutParams();
+            ViewGroup.MarginLayoutParams params = (ViewGroup.MarginLayoutParams) view.getLayoutParams();
             if (isTop) {
                 params.topMargin = barHeight;
             } else {
@@ -177,16 +152,17 @@ public class XUtil {
             view.setLayoutParams(params);
         }
     }
-
+    
     public static void addMargin(View view, int left, int top, int right, int bottom) {
         ViewGroup.LayoutParams params = view.getLayoutParams();
         if (params instanceof ViewGroup.MarginLayoutParams) {
             ViewGroup.MarginLayoutParams layoutParams = (ViewGroup.MarginLayoutParams) params;
             layoutParams.setMargins(
-                    layoutParams.leftMargin + left,
-                    layoutParams.topMargin + top,
-                    layoutParams.rightMargin + right,
-                    layoutParams.bottomMargin + bottom);
+                layoutParams.leftMargin + left,
+                layoutParams.topMargin + top,
+                layoutParams.rightMargin + right,
+                layoutParams.bottomMargin + bottom
+            );
             view.setLayoutParams(layoutParams);
         }
     }
@@ -203,7 +179,9 @@ public class XUtil {
 
         } else if (background instanceof GradientDrawable) {
             GradientDrawable gradientDrawable = (GradientDrawable) background;
-            return gradientDrawable.getColor().getDefaultColor();
+            return gradientDrawable
+                    .getColor()
+                    .getDefaultColor();
 
         } else if (background instanceof StateListDrawable) {
             StateListDrawable stateListDrawable = (StateListDrawable) background;
@@ -216,7 +194,7 @@ public class XUtil {
             MaterialShapeDrawable bg = (MaterialShapeDrawable) background;
             return bg.getFillColor().getDefaultColor();
         }
-
+        
         showMessage(XApplication.getContext(), background.getClass().getSimpleName());
         return Color.TRANSPARENT;
     }

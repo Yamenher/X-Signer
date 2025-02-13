@@ -2,42 +2,43 @@
 <androidx.coordinatorlayout.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/coordinator"
-    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="?colorSurface">
+    android:layout_width="match_parent"
+    android:background="?colorSurface"
+    android:id="@+id/coordinator">
 
     <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appbar"
-        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_width="match_parent"
         app:layout_behavior="com.google.android.material.appbar.AppBarLayout$Behavior"
         app:liftOnScroll="true"
-        style="@style/Widget.Material3.AppBarLayout">
+        style="@style/Widget.Material3.AppBarLayout"
+        android:id="@+id/appbar">
 
-        <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            app:layout_collapseMode="pin" />
+            <com.google.android.material.appbar.MaterialToolbar
+                android:layout_height="?attr/actionBarSize"
+                android:layout_width="match_parent"
+                app:layout_collapseMode="pin"
+                android:id="@+id/toolbar" />
+
 
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.core.widget.NestedScrollView
-        android:id="@+id/nested_scroll_view"
-        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+        android:layout_width="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+        android:id="@+id/nested_scroll_view">
 
         <LinearLayout
-            android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_width="match_parent"
             android:paddingHorizontal="0dp"
             android:orientation="vertical">
 
             <TextView
-                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
                 android:layout_marginBottom="6dp"
                 android:textSize="14sp"
                 android:textColor="?colorPrimary"
@@ -47,16 +48,16 @@
 
             <LinearLayout
                 android:id="@+id/theme_choice_linear"
-                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_width="match_parent"
                 android:background="?selectableItemBackground"
                 android:orientation="horizontal"
                 android:layout_marginTop="12dp"
                 android:gravity="center_vertical">
 
                 <LinearLayout
-                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
                     android:orientation="vertical"
                     android:gravity="center_vertical"
                     android:paddingVertical="6dp"
@@ -64,36 +65,37 @@
                     android:paddingEnd="15dp">
 
                     <TextView
-                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
                         android:textColor="?colorOnSurface"
                         android:textSize="16sp"
                         android:text="Default theme"
-                        android:layout_marginVertical="4dp" />
+                        android:layout_marginVertical="4dp"
+                    />
 
                     <TextView
-                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
                         android:textColor="?colorOutline"
                         android:textSize="14sp"
                         android:text="Choose your favorite display mode among Light, Dark or system theme"
-                        android:layout_marginBottom="4dp" />
+                        android:layout_marginBottom="4dp"
+                    />
 
                 </LinearLayout>
 
             </LinearLayout>
-
             <LinearLayout
                 android:id="@+id/dynamic_colors_linear"
-                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_width="match_parent"
                 android:background="?selectableItemBackground"
                 android:orientation="horizontal"
                 android:gravity="center_vertical">
 
                 <LinearLayout
-                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
                     android:orientation="vertical"
                     android:layout_weight="1"
                     android:gravity="center_vertical"
@@ -102,29 +104,29 @@
                     android:paddingEnd="15dp">
 
                     <TextView
-                        android:id="@+id/dynamic_colors_title"
-                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
                         android:textColor="?colorOnSurface"
                         android:textSize="16sp"
                         android:text="Dynamic Colors"
-                        android:layout_marginVertical="4dp" />
+                        android:layout_marginVertical="4dp"
+                    />
 
                     <TextView
-                        android:id="@+id/dynamic_colors_desc"
-                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
                         android:textColor="?colorOutline"
                         android:textSize="14sp"
                         android:text="Whether to use Dynamic colorsbor default app theme"
-                        android:layout_marginBottom="4dp" />
+                        android:layout_marginBottom="4dp"
+                    />
 
                 </LinearLayout>
 
                 <com.google.android.material.materialswitch.MaterialSwitch
                     android:id="@+id/dynamic_colors_switch"
-                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
                     android:layout_marginHorizontal="15dp"
                     android:clickable="false"
                     android:focusable="false" />

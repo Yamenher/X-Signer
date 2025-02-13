@@ -1,20 +1,17 @@
-<?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/_coordinator"
+    android:background="?colorSurface"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="?colorSurface"
     android:transitionGroup="true">
-
     <androidx.core.widget.NestedScrollView
         android:id="@+id/Scroller"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1">
-
         <LinearLayout
             android:id="@+id/BG"
             android:layout_width="match_parent"
@@ -22,7 +19,6 @@
             android:paddingHorizontal="18dp"
             android:paddingVertical="8dp"
             android:orientation="vertical">
-
             <TextView
                 android:id="@+id/TopTitle"
                 android:layout_width="wrap_content"
@@ -35,20 +31,18 @@
                 android:textStyle="bold"
                 android:fontFamily="@font/product_sans_regular"
                 android:textColor="?colorPrimary" />
-
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/AliasTIP"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="8dp"
                 android:paddingVertical="5dp"
-                android:hint="Key alias"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
                 app:placeholderTextColor="?colorOutline"
                 app:hintEnabled="true"
                 app:hintAnimationEnabled="true"
                 app:placeholderText="E.g : Company name"
-                style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
-
+                android:hint="Key alias">
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/AliasE"
                     android:layout_width="match_parent"
@@ -61,9 +55,7 @@
                     android:imeOptions="actionNext"
                     android:focusable="true"
                     android:singleLine="true" />
-
             </com.google.android.material.textfield.TextInputLayout>
-
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/AliasPassTIP"
                 android:layout_width="match_parent"
@@ -71,13 +63,12 @@
                 android:layout_marginRight="8dp"
                 android:paddingTop="5dp"
                 android:paddingBottom="5dp"
-                android:hint="@string/stringKeyPass"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
                 app:hintEnabled="true"
                 app:hintAnimationEnabled="true"
                 app:placeholderText="Password for the alias"
                 app:placeholderTextColor="?colorOutline"
-                style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
-
+                android:hint="@string/stringKeyPass">
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/AliasPassE"
                     android:layout_width="match_parent"
@@ -89,9 +80,7 @@
                     android:textColor="@color/md_theme_textMain"
                     android:imeOptions="actionNext"
                     android:singleLine="true" />
-
             </com.google.android.material.textfield.TextInputLayout>
-
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/KeyStorePassTIP"
                 android:layout_width="match_parent"
@@ -99,13 +88,12 @@
                 android:layout_marginRight="8dp"
                 android:paddingTop="5dp"
                 android:paddingBottom="5dp"
-                android:hint="@string/stringKeyStore"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
                 app:hintEnabled="true"
                 app:hintAnimationEnabled="true"
                 app:placeholderText="Password for the whole keystore"
                 app:placeholderTextColor="?colorOutline"
-                style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
-
+                android:hint="@string/stringKeyStore">
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/KeyStorePassE"
                     android:layout_width="match_parent"
@@ -118,9 +106,7 @@
                     android:focusable="true"
                     android:imeOptions="actionNext"
                     android:singleLine="true" />
-
             </com.google.android.material.textfield.TextInputLayout>
-
             <TextView
                 android:id="@+id/MiddleTitle"
                 android:layout_width="wrap_content"
@@ -133,7 +119,6 @@
                 android:textStyle="bold"
                 android:fontFamily="@font/product_sans_regular"
                 android:textColor="?colorPrimary" />
-
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/KeyTypeTIP"
                 android:layout_width="match_parent"
@@ -141,11 +126,10 @@
                 android:layout_marginRight="8dp"
                 android:paddingTop="5dp"
                 android:paddingBottom="5dp"
-                android:hint="@string/stringKeyType"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
                 app:hintEnabled="true"
                 app:hintAnimationEnabled="true"
-                style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
-
+                android:hint="@string/stringKeyType">
                 <AutoCompleteTextView
                     android:id="@+id/KeyTypeE"
                     android:layout_width="match_parent"
@@ -155,15 +139,13 @@
                     android:paddingRight="20dp"
                     android:paddingBottom="18dp"
                     android:textSize="16sp"
+                    app:simpleItems="@array/keyTypes"
+                    style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox"
                     android:inputType="none"
                     android:textColor="@color/md_theme_textMain"
                     android:imeOptions="actionNext"
-                    android:singleLine="true"
-                    app:simpleItems="@array/keyTypes"
-                    style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox" />
-
+                    android:singleLine="true" />
             </com.google.android.material.textfield.TextInputLayout>
-
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/KeySizeTIP"
                 android:layout_width="match_parent"
@@ -171,11 +153,10 @@
                 android:layout_marginRight="8dp"
                 android:paddingTop="5dp"
                 android:paddingBottom="5dp"
-                android:hint="@string/stringKeySize"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
                 app:hintEnabled="true"
                 app:hintAnimationEnabled="true"
-                style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
-
+                android:hint="@string/stringKeySize">
                 <AutoCompleteTextView
                     android:id="@+id/KeySizeE"
                     android:layout_width="match_parent"
@@ -185,15 +166,13 @@
                     android:paddingRight="20dp"
                     android:paddingBottom="18dp"
                     android:textSize="16sp"
+                    app:simpleItems="@array/keySizes"
+                    style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox"
                     android:inputType="none"
                     android:textColor="@color/md_theme_textMain"
                     android:imeOptions="actionNext"
-                    android:singleLine="true"
-                    app:simpleItems="@array/keySizes"
-                    style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox" />
-
+                    android:singleLine="true" />
             </com.google.android.material.textfield.TextInputLayout>
-
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/KeyValidityTIP"
                 android:layout_width="match_parent"
@@ -201,13 +180,12 @@
                 android:layout_marginRight="8dp"
                 android:paddingTop="5dp"
                 android:paddingBottom="5dp"
-                android:hint="@string/stringKeyValidity"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
                 app:hintEnabled="true"
                 app:hintAnimationEnabled="true"
                 app:placeholderText="Validity time in years"
                 app:placeholderTextColor="?colorOutline"
-                style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
-
+                android:hint="@string/stringKeyValidity">
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/KeyValidityE"
                     android:layout_width="match_parent"
@@ -222,9 +200,7 @@
                     android:textColor="@color/md_theme_textMain"
                     android:imeOptions="actionNext"
                     android:singleLine="true" />
-
             </com.google.android.material.textfield.TextInputLayout>
-
             <TextView
                 android:id="@+id/TypeTitle"
                 android:layout_width="wrap_content"
@@ -237,7 +213,6 @@
                 android:textStyle="bold"
                 android:fontFamily="@font/product_sans_regular"
                 android:textColor="?colorPrimary" />
-
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/NameTIP"
                 android:layout_width="match_parent"
@@ -245,13 +220,12 @@
                 android:layout_marginRight="8dp"
                 android:paddingTop="5dp"
                 android:paddingBottom="5dp"
-                android:hint="@string/stringNameDetails"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
                 app:hintEnabled="true"
                 app:hintAnimationEnabled="true"
                 app:placeholderText="E.g : Joey Kyles"
                 app:placeholderTextColor="?colorOutline"
-                style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
-
+                android:hint="@string/stringNameDetails">
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/NameE"
                     android:layout_width="match_parent"
@@ -265,15 +239,12 @@
                     android:textColor="@color/md_theme_textMain"
                     android:imeOptions="actionNext"
                     android:singleLine="true" />
-
             </com.google.android.material.textfield.TextInputLayout>
-
             <LinearLayout
                 android:id="@+id/OrganizationContainer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
-
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/OrUnitTIP"
                     android:layout_width="match_parent"
@@ -282,13 +253,12 @@
                     android:paddingTop="5dp"
                     android:paddingBottom="5dp"
                     android:layout_weight="1"
-                    android:hint="@string/stringOrganizationalUnit"
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
                     app:hintEnabled="true"
                     app:hintAnimationEnabled="true"
                     app:placeholderText="Idk about this :P"
                     app:placeholderTextColor="?colorOutline"
-                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
-
+                    android:hint="@string/stringOrganizationalUnit">
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/OrUnitE"
                         android:layout_width="match_parent"
@@ -302,9 +272,7 @@
                         android:textColor="@color/md_theme_textMain"
                         android:imeOptions="actionNext"
                         android:singleLine="true" />
-
                 </com.google.android.material.textfield.TextInputLayout>
-
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/OrNameTIP"
                     android:layout_width="match_parent"
@@ -313,13 +281,12 @@
                     android:paddingTop="5dp"
                     android:paddingBottom="5dp"
                     android:layout_weight="1"
-                    android:hint="@string/stringOrganizationName"
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
                     app:hintEnabled="true"
                     app:hintAnimationEnabled="true"
                     app:placeholderText="E.g Google LLC"
-                    app:placeholderTextColor="?colorOutline"
-                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
-
+                app:placeholderTextColor="?colorOutline"
+                    android:hint="@string/stringOrganizationName">
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/OrNameE"
                         android:layout_width="match_parent"
@@ -333,17 +300,13 @@
                         android:textColor="@color/md_theme_textMain"
                         android:imeOptions="actionNext"
                         android:singleLine="true" />
-
                 </com.google.android.material.textfield.TextInputLayout>
-
             </LinearLayout>
-
             <LinearLayout
                 android:id="@+id/LocationContainer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
-
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/CityTIP"
                     android:layout_width="match_parent"
@@ -352,13 +315,12 @@
                     android:paddingTop="5dp"
                     android:paddingBottom="5dp"
                     android:layout_weight="1"
-                    android:hint="@string/stringCity"
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
                     app:hintEnabled="true"
                     app:hintAnimationEnabled="true"
                     app:placeholderText="E.g : New York"
                     app:placeholderTextColor="?colorOutline"
-                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
-
+                    android:hint="@string/stringCity">
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/CityE"
                         android:layout_width="match_parent"
@@ -372,9 +334,7 @@
                         android:textColor="@color/md_theme_textMain"
                         android:imeOptions="actionNext"
                         android:singleLine="true" />
-
                 </com.google.android.material.textfield.TextInputLayout>
-
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/StateTIP"
                     android:layout_width="match_parent"
@@ -383,13 +343,12 @@
                     android:paddingTop="5dp"
                     android:paddingBottom="5dp"
                     android:layout_weight="1"
-                    android:hint="@string/stringState"
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
                     app:hintEnabled="true"
                     app:hintAnimationEnabled="true"
                     app:placeholderText="E.g : California"
                     app:placeholderTextColor="?colorOutline"
-                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
-
+                    android:hint="@string/stringState">
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/StateE"
                         android:layout_width="match_parent"
@@ -403,11 +362,8 @@
                         android:textColor="@color/md_theme_textMain"
                         android:imeOptions="actionNext"
                         android:singleLine="true" />
-
                 </com.google.android.material.textfield.TextInputLayout>
-
             </LinearLayout>
-
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/CountryTIP"
                 android:layout_width="match_parent"
@@ -415,13 +371,12 @@
                 android:layout_marginRight="8dp"
                 android:paddingTop="5dp"
                 android:paddingBottom="5dp"
-                android:hint="@string/stringCountry"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
                 app:hintEnabled="true"
                 app:hintAnimationEnabled="true"
                 app:placeholderText="E.g : France = FR"
                 app:placeholderTextColor="?colorOutline"
-                style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
-
+                android:hint="@string/stringCountry">
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/CountryE"
                     android:layout_width="match_parent"
@@ -435,13 +390,9 @@
                     android:textColor="@color/md_theme_textMain"
                     android:imeOptions="actionDone"
                     android:singleLine="true" />
-
             </com.google.android.material.textfield.TextInputLayout>
-
         </LinearLayout>
-
     </androidx.core.widget.NestedScrollView>
-
     <com.google.android.material.button.MaterialButton
         android:id="@+id/CreateButton"
         android:layout_width="match_parent"
@@ -454,34 +405,32 @@
         android:text="Create"
         android:textSize="16sp"
         android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
-        android:letterSpacing="0.0"
         app:cornerRadius="100dp"
+        style="@style/Widget.Material3.Button"
         app:textAllCaps="false"
-        style="@style/Widget.Material3.Button" />
-
+        android:letterSpacing="0.0" />
     <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/_app_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_behavior="com.google.android.material.appbar.AppBarLayout$Behavior"
+        style="@style/Widget.Material3.AppBarLayout"
         app:liftOnScroll="true"
-        style="@style/Widget.Material3.AppBarLayout">
+        android:id="@+id/_app_bar">
 
         <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/_toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             app:liftOnScrollColor="?colorOnSurfaceInverse"
-            app:layout_collapseMode="pin" />
+            app:layout_collapseMode="pin"
+            android:id="@+id/_toolbar" />
 
     </com.google.android.material.appbar.AppBarLayout>
-
     <com.github.mmin18.widget.RealtimeBlurView
         android:id="@+id/blurLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:visibility="invisible"
         app:realtimeBlurRadius="20dp"
-        app:realtimeOverlayColor="#11BDBDBD" />
-
+        app:realtimeOverlayColor="#11BDBDBD">
+    </com.github.mmin18.widget.RealtimeBlurView>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

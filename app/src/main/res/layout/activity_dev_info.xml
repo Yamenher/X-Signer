@@ -10,8 +10,8 @@
         android:id="@+id/appbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$Behavior"
-        style="@style/Widget.Material3.AppBarLayout">
+        style="@style/Widget.Material3.AppBarLayout"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$Behavior">
 
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/toolbar"
@@ -27,12 +27,10 @@
         android:layout_height="match_parent"
         android:paddingHorizontal="10dp"
         app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
-
             <!-- YamenHer Github Layout -->
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/card"
@@ -41,15 +39,13 @@
                 android:layout_marginTop="25dp"
                 android:padding="20dp"
                 android:theme="@style/Widget.Material3.CardView.Outlined"
-                android:orientation="vertical"
-                app:cardCornerRadius="24dp">
-
+                app:cardCornerRadius="24dp"
+                android:orientation="vertical">
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="8dp"
                     android:orientation="vertical">
-
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -58,14 +54,12 @@
                         android:paddingBottom="4dp"
                         android:gravity="center_vertical"
                         android:orientation="horizontal">
-
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:padding="8dp"
                             android:orientation="vertical"
                             android:layout_weight="1">
-
                             <TextView
                                 android:id="@+id/textview1"
                                 android:layout_width="wrap_content"
@@ -73,7 +67,6 @@
                                 android:padding="2dp"
                                 android:text="Founder"
                                 android:textSize="12sp" />
-
                             <TextView
                                 android:id="@+id/tv_1"
                                 android:layout_width="wrap_content"
@@ -81,24 +74,19 @@
                                 android:padding="2dp"
                                 android:text="YamenHer"
                                 android:textSize="22sp" />
-
                         </LinearLayout>
-
                         <com.google.android.material.imageview.ShapeableImageView
                             android:id="@+id/Yamenpic"
                             android:layout_width="80dp"
                             android:layout_height="80dp"
                             android:padding="8dp"
                             app:shapeAppearance="@style/CircleImageView" />
-
                     </LinearLayout>
-
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
                         android:layout_marginTop="3dp">
-
                         <com.google.android.material.button.MaterialButton
                             android:id="@+id/github"
                             android:layout_width="wrap_content"
@@ -106,10 +94,9 @@
                             android:gravity="center_horizontal|center_vertical"
                             android:text="Github"
                             android:textColor="?colorPrimary"
+                            style="@style/Style.XSigner.LinkButton"
                             app:icon="@drawable/github"
-                            app:iconGravity="top"
-                            style="@style/Style.XSigner.LinkButton" />
-
+                            app:iconGravity="top" />
                         <com.google.android.material.button.MaterialButton
                             android:id="@+id/discord"
                             android:layout_width="wrap_content"
@@ -117,10 +104,9 @@
                             android:gravity="center_horizontal|center_vertical"
                             android:text="Discord"
                             android:textColor="?colorPrimary"
+                            style="@style/Style.XSigner.LinkButton"
                             app:icon="@drawable/discord"
-                            app:iconGravity="top"
-                            style="@style/Style.XSigner.LinkButton" />
-
+                            app:iconGravity="top" />
                         <com.google.android.material.button.MaterialButton
                             android:id="@+id/telegram"
                             android:layout_width="wrap_content"
@@ -128,10 +114,9 @@
                             android:gravity="center_horizontal|center_vertical"
                             android:text="Telegram"
                             android:textColor="?colorPrimary"
+                            style="@style/Style.XSigner.LinkButton"
                             app:icon="@drawable/telegram"
-                            app:iconGravity="top"
-                            style="@style/Style.XSigner.LinkButton" />
-
+                            app:iconGravity="top" />
                         <com.google.android.material.button.MaterialButton
                             android:id="@+id/instagram"
                             android:layout_width="wrap_content"
@@ -139,16 +124,12 @@
                             android:gravity="center_horizontal|center_vertical"
                             android:text="Instagram"
                             android:textColor="?colorPrimary"
+                            style="@style/Style.XSigner.LinkButton"
                             app:icon="@drawable/instagram"
-                            app:iconGravity="top"
-                            style="@style/Style.XSigner.LinkButton" />
-
+                            app:iconGravity="top" />
                     </LinearLayout>
-
                 </LinearLayout>
-
             </com.google.android.material.card.MaterialCardView>
-
             <!-- SyntaxSpin Github Layout -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
@@ -156,15 +137,13 @@
                 android:layout_marginTop="25dp"
                 android:padding="20dp"
                 android:theme="@style/Widget.Material3.CardView.Outlined"
-                android:orientation="vertical"
-                app:cardCornerRadius="24dp">
-
+                app:cardCornerRadius="24dp"
+                android:orientation="vertical">
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="8dp"
                     android:orientation="vertical">
-
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -173,45 +152,37 @@
                         android:paddingBottom="4dp"
                         android:gravity="center_vertical"
                         android:orientation="horizontal">
-
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:padding="8dp"
                             android:orientation="vertical"
                             android:layout_weight="1">
-
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:padding="2dp"
                                 android:text="Developer &amp; Designer"
                                 android:textSize="12sp" />
-
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:padding="2dp"
                                 android:text="SyntaxSpin"
                                 android:textSize="22sp" />
-
                         </LinearLayout>
-
                         <com.google.android.material.imageview.ShapeableImageView
                             android:id="@+id/syntaxpic"
                             android:layout_width="80dp"
                             android:layout_height="80dp"
                             android:padding="8dp"
                             app:shapeAppearance="@style/CircleImageView" />
-
                     </LinearLayout>
-
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
                         android:layout_marginTop="3dp">
-
                         <com.google.android.material.button.MaterialButton
                             android:id="@+id/Sgithub"
                             android:layout_width="wrap_content"
@@ -219,10 +190,9 @@
                             android:gravity="center_horizontal|center_vertical"
                             android:text="Github"
                             android:textColor="?colorPrimary"
+                            style="@style/Style.XSigner.LinkButton"
                             app:icon="@drawable/github"
-                            app:iconGravity="top"
-                            style="@style/Style.XSigner.LinkButton" />
-
+                            app:iconGravity="top" />
                         <com.google.android.material.button.MaterialButton
                             android:id="@+id/bsky"
                             android:layout_width="wrap_content"
@@ -230,10 +200,9 @@
                             android:gravity="center_horizontal|center_vertical"
                             android:text="BlueSky"
                             android:textColor="?colorPrimary"
+                            style="@style/Style.XSigner.LinkButton"
                             app:icon="@drawable/bsky"
-                            app:iconGravity="top"
-                            style="@style/Style.XSigner.LinkButton" />
-
+                            app:iconGravity="top" />
                         <com.google.android.material.button.MaterialButton
                             android:id="@+id/mastodon"
                             android:layout_width="wrap_content"
@@ -241,31 +210,25 @@
                             android:gravity="center_horizontal|center_vertical"
                             android:text="Mastodon"
                             android:textColor="?colorPrimary"
+                            style="@style/Style.XSigner.LinkButton"
                             app:icon="@drawable/mastodon"
-                            app:iconGravity="top"
-                            style="@style/Style.XSigner.LinkButton" />
-
+                            app:iconGravity="top" />
                     </LinearLayout>
-
                 </LinearLayout>
-
             </com.google.android.material.card.MaterialCardView>
-
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="25dp"
                 android:padding="20dp"
                 android:theme="@style/Widget.Material3.CardView.Outlined"
-                android:orientation="vertical"
-                app:cardCornerRadius="24dp">
-
+                app:cardCornerRadius="24dp"
+                android:orientation="vertical">
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="8dp"
                     android:orientation="vertical">
-
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -274,14 +237,12 @@
                         android:paddingBottom="4dp"
                         android:gravity="center_vertical"
                         android:orientation="horizontal">
-
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:padding="8dp"
                             android:orientation="vertical"
                             android:layout_weight="1">
-
                             <TextView
                                 android:id="@+id/textview3"
                                 android:layout_width="wrap_content"
@@ -289,7 +250,6 @@
                                 android:padding="2dp"
                                 android:text="Github Pro"
                                 android:textSize="12sp" />
-
                             <TextView
                                 android:id="@+id/tv_3"
                                 android:layout_width="wrap_content"
@@ -297,24 +257,19 @@
                                 android:padding="2dp"
                                 android:text="Aquiles Trindade"
                                 android:textSize="22sp" />
-
                         </LinearLayout>
-
                         <com.google.android.material.imageview.ShapeableImageView
                             android:id="@+id/Aquilespic"
                             android:layout_width="80dp"
                             android:layout_height="80dp"
                             android:padding="8dp"
                             app:shapeAppearance="@style/CircleImageView" />
-
                     </LinearLayout>
-
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
                         android:layout_marginTop="3dp">
-
                         <com.google.android.material.button.MaterialButton
                             android:id="@+id/githubt"
                             android:layout_width="wrap_content"
@@ -322,10 +277,9 @@
                             android:gravity="center_horizontal|center_vertical"
                             android:text="Github"
                             android:textColor="?colorPrimary"
+                            style="@style/Style.XSigner.LinkButton"
                             app:icon="@drawable/github"
-                            app:iconGravity="top"
-                            style="@style/Style.XSigner.LinkButton" />
-
+                            app:iconGravity="top" />
                         <com.google.android.material.button.MaterialButton
                             android:id="@+id/discordt"
                             android:layout_width="wrap_content"
@@ -333,10 +287,9 @@
                             android:gravity="center_horizontal|center_vertical"
                             android:text="Discord"
                             android:textColor="?colorPrimary"
+                            style="@style/Style.XSigner.LinkButton"
                             app:icon="@drawable/discord"
-                            app:iconGravity="top"
-                            style="@style/Style.XSigner.LinkButton" />
-
+                            app:iconGravity="top" />
                         <com.google.android.material.button.MaterialButton
                             android:id="@+id/telegramt"
                             android:layout_width="wrap_content"
@@ -344,10 +297,9 @@
                             android:gravity="center_horizontal|center_vertical"
                             android:text="Telegram"
                             android:textColor="?colorPrimary"
+                            style="@style/Style.XSigner.LinkButton"
                             app:icon="@drawable/telegram"
-                            app:iconGravity="top"
-                            style="@style/Style.XSigner.LinkButton" />
-
+                            app:iconGravity="top" />
                         <com.google.android.material.button.MaterialButton
                             android:id="@+id/instagramt"
                             android:layout_width="wrap_content"
@@ -355,18 +307,13 @@
                             android:gravity="center_horizontal|center_vertical"
                             android:text="Instagram"
                             android:textColor="?colorPrimary"
+                            style="@style/Style.XSigner.LinkButton"
                             app:icon="@drawable/instagram"
-                            app:iconGravity="top"
-                            style="@style/Style.XSigner.LinkButton" />
-
+                            app:iconGravity="top" />
                     </LinearLayout>
-
                 </LinearLayout>
-
             </com.google.android.material.card.MaterialCardView>
-
         </LinearLayout>
-
     </androidx.core.widget.NestedScrollView>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

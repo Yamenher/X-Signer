@@ -1,18 +1,18 @@
 package com.xapps.utility.xsigner;
 
-import android.sun.security.provider.JavaKeyStoreProvider;
-
 import com.android.apksig.ApkSigner;
 import com.android.apksig.ApkSigner.SignerConfig;
 import com.android.apksig.util.DataSources;
-
 import org.bouncycastle.jce.provider.BouncyCastleProvider;
-
+import android.sun.security.provider.JavaKeyStoreProvider;
+import java.security.Security;
+import java.io.PrintWriter;
+import android.util.Log;
+import java.io.FileNotFoundException;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.nio.channels.FileChannel;
 import java.security.KeyStore;
 import java.security.PrivateKey;
@@ -23,21 +23,9 @@ import java.util.Collections;
 import java.util.List;
 
 public class APKSignerUtils {
-    private static KeyStore keyStore;
+    private static KeyStore keyStore; 
 
-    public static void signFile(
-            String inputFile,
-            String outputFile,
-            String keyFile,
-            String keyAlias,
-            String keystorePassword,
-            String keyPassword,
-            boolean v1,
-            boolean v2,
-            boolean v3,
-            boolean v4,
-            boolean zipalign,
-            String type) {
+    public static void signFile(String inputFile, String outputFile, String keyFile, String keyAlias, String keystorePassword, String keyPassword, boolean v1, boolean v2, boolean v3, boolean v4, boolean zipalign, String type) {
         File errorLogFile = new File("/data/data/com.xapps.utility.xsigner/error.txt");
 
         try {
@@ -51,8 +39,7 @@ public class APKSignerUtils {
                 keyStore.load(fis, keystorePassword.toCharArray());
             }
 
-            PrivateKey privateKey =
-                    (PrivateKey) keyStore.getKey(keyAlias, keyPassword.toCharArray());
+            PrivateKey privateKey = (PrivateKey) keyStore.getKey(keyAlias, keyPassword.toCharArray());
             Certificate[] certChain = keyStore.getCertificateChain(keyAlias);
 
             if (certChain == null || certChain.length == 0) {
@@ -69,9 +56,8 @@ public class APKSignerUtils {
             if (certificateList.isEmpty()) {
                 throw new Exception("No valid X509Certificate found in certificate chain.");
             }
-
-            SignerConfig signerConfig =
-                    new SignerConfig.Builder(keyAlias, privateKey, certificateList, true).build();
+            
+            SignerConfig signerConfig = new SignerConfig.Builder(keyAlias, privateKey, certificateList, true).build();
             List<SignerConfig> signerConfigs = Collections.singletonList(signerConfig);
 
             File outputApkFile = new File(outputFile);
@@ -91,16 +77,17 @@ public class APKSignerUtils {
                 builder.setAlignFileSize(zipalign);
                 ApkSigner apkSigner = builder.build();
                 apkSigner.sign();
+                
             }
-
-        } catch (Exception e) {
+        
+        }catch (Exception e) {
             try (FileOutputStream fos = new FileOutputStream(errorLogFile, true);
-                    PrintWriter writer = new PrintWriter(fos)) {
+                 PrintWriter writer = new PrintWriter(fos)) {
                 writer.println("Exception: " + e.toString());
                 e.printStackTrace(writer);
             } catch (IOException ioException) {
                 ioException.printStackTrace();
             }
-        }
+        } 
     }
 }

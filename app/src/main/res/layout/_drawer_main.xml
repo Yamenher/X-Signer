@@ -1,149 +1,149 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/DrawerContainer"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     xmlns:tools="http://schemas.android.com/tools"
+     android:layout_height="match_parent"
+     android:layout_width="match_parent"
+     android:orientation="vertical"
+     android:id="@+id/DrawerContainer">
 
     <TextView
-        android:id="@+id/AppName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingVertical="16dp"
-        android:fontFamily="@font/product_sans_regular"
-        android:textSize="25sp"
-        android:textColor="?colorOnSurface"
-        android:paddingHorizontal="12dp"
-        android:text="X-Signer" />
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         android:paddingVertical="16dp"
+         android:fontFamily="@font/product_sans_regular"
+         android:textSize="25sp"
+         android:textColor="?colorOnSurface"
+         android:paddingHorizontal="12dp"
+         android:id="@+id/AppName"
+         android:text="X-Signer" />
 
     <View
-        android:id="@+id/Divider"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginVertical="8dp"
-        android:background="?colorOutline"
-        android:scaleY="0.25" />
+         android:layout_height="1dp"
+         android:layout_width="match_parent"
+         android:layout_marginVertical="8dp"
+         android:background="?colorOutline"
+         android:scaleY="0.25"
+         android:id="@+id/Divider" />
 
     <LinearLayout
-        android:id="@+id/KeysLinear"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/legacy_drawer_item_ripple"
-        android:gravity="center_vertical"
-        android:padding="15dp"
-        android:orientation="horizontal"
-        android:layout_marginRight="10dp">
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         android:background="@drawable/legacy_drawer_item_ripple"
+         android:gravity="center_vertical"
+         android:padding="15dp"
+         android:orientation="horizontal"
+         android:layout_marginRight="10dp"
+         android:id="@+id/KeysLinear">
 
         <ImageView
-            android:id="@+id/KeysIcon"
-            android:layout_width="22dp"
-            android:layout_height="22dp"
-            android:layout_marginEnd="10dp"
-            android:src="@drawable/key"
-            android:tint="?colorOnSecondaryContainer" />
+             android:layout_height="22dp"
+             android:layout_width="22dp"
+             android:layout_marginEnd="10dp"
+             android:src="@drawable/key"
+             android:tint="?colorOnSecondaryContainer"
+             android:id="@+id/KeysIcon" />
 
         <TextView
-            android:id="@+id/KeysText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/product_sans_regular"
-            android:textSize="16sp"
-            android:textColor="?colorOnSecondaryContainer"
-            android:text="Keys"
-            android:textStyle="bold" />
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:fontFamily="@font/product_sans_regular"
+             android:textSize="16sp"
+             android:textColor="?colorOnSecondaryContainer"
+             android:id="@+id/KeysText"
+             android:text="Keys"
+             android:textStyle="bold" />
 
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/SettingsLinear"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/legacy_drawer_item_ripple"
-        android:gravity="center_vertical"
-        android:padding="15dp"
-        android:orientation="horizontal"
-        android:layout_marginRight="10dp">
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         android:background="@drawable/legacy_drawer_item_ripple"
+         android:gravity="center_vertical"
+         android:padding="15dp"
+         android:orientation="horizontal"
+         android:layout_marginRight="10dp"
+         android:id="@+id/SettingsLinear">
 
         <ImageView
-            android:id="@+id/SettingsIcon"
-            android:layout_width="22dp"
-            android:layout_height="22dp"
-            android:layout_marginEnd="10dp"
-            android:src="@drawable/cog"
-            android:tint="?colorOnSecondaryContainer" />
+             android:layout_height="22dp"
+             android:layout_width="22dp"
+             android:layout_marginEnd="10dp"
+             android:src="@drawable/cog"
+             android:tint="?colorOnSecondaryContainer"
+             android:id="@+id/SettingsIcon" />
 
         <TextView
-            android:id="@+id/SettingsText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/product_sans_regular"
-            android:textSize="15sp"
-            android:textColor="?colorOnSecondaryContainer"
-            android:text="Settings"
-            android:textStyle="bold" />
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:fontFamily="@font/product_sans_regular"
+             android:textSize="15sp"
+             android:textColor="?colorOnSecondaryContainer"
+             android:id="@+id/SettingsText"
+             android:text="Settings"
+             android:textStyle="bold" />
 
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/FaqLinear"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/legacy_drawer_item_ripple"
-        android:gravity="center_vertical"
-        android:padding="15dp"
-        android:orientation="horizontal"
-        android:layout_marginRight="10dp">
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         android:background="@drawable/legacy_drawer_item_ripple"
+         android:gravity="center_vertical"
+         android:padding="15dp"
+         android:orientation="horizontal"
+         android:layout_marginRight="10dp"
+         android:id="@+id/FaqLinear">
 
         <ImageView
-            android:id="@+id/FaqIcon"
-            android:layout_width="22dp"
-            android:layout_height="22dp"
-            android:layout_marginEnd="10dp"
-            android:src="@drawable/help_circle"
-            android:tint="?colorOnSecondaryContainer" />
+             android:layout_height="22dp"
+             android:layout_width="22dp"
+             android:layout_marginEnd="10dp"
+             android:src="@drawable/help_circle"
+             android:tint="?colorOnSecondaryContainer"
+             android:id="@+id/FaqIcon" />
 
         <TextView
-            android:id="@+id/FaqText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/product_sans_regular"
-            android:textSize="16sp"
-            android:textColor="?colorOnSecondaryContainer"
-            android:text="FAQ"
-            android:textStyle="bold" />
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:fontFamily="@font/product_sans_regular"
+             android:textSize="16sp"
+             android:textColor="?colorOnSecondaryContainer"
+             android:id="@+id/FaqText"
+             android:text="FAQ"
+             android:textStyle="bold" />
 
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/AboutLinear"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/legacy_drawer_item_ripple"
-        android:gravity="center_vertical"
-        android:padding="15dp"
-        android:orientation="horizontal"
-        android:layout_marginRight="10dp">
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         android:background="@drawable/legacy_drawer_item_ripple"
+         android:gravity="center_vertical"
+         android:padding="15dp"
+         android:orientation="horizontal"
+         android:layout_marginRight="10dp"
+         android:id="@+id/AboutLinear">
 
         <ImageView
-            android:id="@+id/AboutIcon"
-            android:layout_width="22dp"
-            android:layout_height="22dp"
-            android:layout_marginEnd="10dp"
-            android:src="@drawable/information"
-            android:tint="?colorOnSecondaryContainer" />
+             android:layout_height="22dp"
+             android:layout_width="22dp"
+             android:layout_marginEnd="10dp"
+             android:src="@drawable/information"
+             android:tint="?colorOnSecondaryContainer"
+             android:id="@+id/AboutIcon" />
 
         <TextView
-            android:id="@+id/AboutText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/product_sans_regular"
-            android:textSize="16sp"
-            android:textColor="?colorOnSecondaryContainer"
-            android:text="About X-Signer"
-            android:textStyle="bold" />
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:fontFamily="@font/product_sans_regular"
+             android:textSize="16sp"
+             android:textColor="?colorOnSecondaryContainer"
+             android:id="@+id/AboutText"
+             android:text="About X-Signer"
+             android:textStyle="bold" />
 
     </LinearLayout>
 

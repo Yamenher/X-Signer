@@ -2,13 +2,11 @@ package com.xapps.utility.xsigner;
 
 import com.android.apksig.ApkSigner;
 import com.android.apksig.ApkSigner.SignerConfig;
-
 import java.io.BufferedReader;
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileReader;
+import java.io.ByteArrayOutputStream;
 import java.security.KeyFactory;
 import java.security.PrivateKey;
 import java.security.cert.CertificateFactory;
@@ -18,6 +16,7 @@ import java.util.ArrayList;
 import java.util.Base64;
 import java.util.Collections;
 import java.util.List;
+import java.io.ByteArrayInputStream;
 
 public class TestKeySigner {
 
@@ -42,7 +41,7 @@ public class TestKeySigner {
             StringBuilder pemContent = new StringBuilder();
             String line;
             boolean inCertificate = false;
-
+            
             while ((line = reader.readLine()) != null) {
                 if (line.startsWith("-----BEGIN CERTIFICATE-----")) {
                     inCertificate = true;
@@ -50,10 +49,7 @@ public class TestKeySigner {
                     inCertificate = false;
                     String certString = pemContent.toString();
                     byte[] certBytes = Base64.getDecoder().decode(certString);
-                    X509Certificate certificate =
-                            (X509Certificate)
-                                    certFactory.generateCertificate(
-                                            new ByteArrayInputStream(certBytes));
+                    X509Certificate certificate = (X509Certificate) certFactory.generateCertificate(new ByteArrayInputStream(certBytes));
                     certificates.add(certificate);
                     pemContent.setLength(0); // Reset the buffer
                 } else if (inCertificate) {
@@ -64,17 +60,8 @@ public class TestKeySigner {
         return certificates;
     }
 
-    public static void signApk(
-            File apkFile,
-            File pemFile,
-            File pk8File,
-            String outputApkFile,
-            boolean useV1,
-            boolean useV2,
-            boolean useV3,
-            boolean useV4,
-            boolean zipalign)
-            throws Exception {
+    public static void signApk(File apkFile, File pemFile, File pk8File, String outputApkFile,
+                               boolean useV1, boolean useV2, boolean useV3, boolean useV4, boolean zipalign) throws Exception {
 
         List<X509Certificate> certificates = loadCertificates(pemFile);
 
@@ -87,38 +74,26 @@ public class TestKeySigner {
             privateKey = keyFactory.generatePrivate(keySpec);
         }
 
-        SignerConfig.Builder signerBuilder =
-                new ApkSigner.SignerConfig.Builder("testkey", privateKey, certificates);
+        SignerConfig.Builder signerBuilder = new ApkSigner.SignerConfig.Builder("testkey", privateKey, certificates);
         SignerConfig signerConfig = signerBuilder.build();
 
-        ApkSigner.Builder apkSignerBuilder =
-                new ApkSigner.Builder(Collections.singletonList(signerConfig));
-        apkSignerBuilder.setInputApk(apkFile);
-        apkSignerBuilder.setOutputApk(new File(outputApkFile));
-        apkSignerBuilder.setV1SigningEnabled(useV1);
-        apkSignerBuilder.setV2SigningEnabled(useV2);
-        apkSignerBuilder.setV3SigningEnabled(useV3);
-        if (useV4) {
-            apkSignerBuilder.setV4SignatureOutputFile(
-                    new File(outputApkFile.replace("apk", "idsig")));
-            apkSignerBuilder.setV4SigningEnabled(true);
-        }
-        apkSignerBuilder.setAlignFileSize(zipalign);
+        ApkSigner.Builder apkSignerBuilder = new ApkSigner.Builder(Collections.singletonList(signerConfig));
+                apkSignerBuilder.setInputApk(apkFile);
+                apkSignerBuilder.setOutputApk(new File (outputApkFile));
+                apkSignerBuilder.setV1SigningEnabled(useV1);
+                apkSignerBuilder.setV2SigningEnabled(useV2);
+                apkSignerBuilder.setV3SigningEnabled(useV3);
+                if (useV4) {
+		         	apkSignerBuilder.setV4SignatureOutputFile(new File(outputApkFile.replace("apk", "idsig")));
+		         	apkSignerBuilder.setV4SigningEnabled(true);
+                 }
+		     	apkSignerBuilder.setAlignFileSize(zipalign);
 
         ApkSigner apkSigner = apkSignerBuilder.build();
         apkSigner.sign();
     }
 
-    public static void signWithTestkey(
-            String input,
-            String output,
-            String pem,
-            String pk8,
-            boolean v1,
-            boolean v2,
-            boolean v3,
-            boolean v4,
-            boolean zipalign) {
+    public static void signWithTestkey(String input, String output, String pem, String pk8, boolean v1, boolean v2, boolean v3, boolean v4, boolean zipalign) {
         try {
             // Replace with actual paths
             File apkFile = new File(input);

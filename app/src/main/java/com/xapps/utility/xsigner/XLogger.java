@@ -1,44 +1,43 @@
 package com.xapps.utility.xsigner;
 
-import android.content.Context;
 import android.content.Intent;
-
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
+import android.content.Context;
+import android.util.Log;
 
 public class XLogger {
 
-    private static Thread loggerThread =
-            new Thread() {
-                @Override
-                public void run() {
-                    isRunning = true;
 
-                    try {
-                        Runtime.getRuntime().exec("logcat -c");
-                        Process process = Runtime.getRuntime().exec("logcat");
+    private static Thread loggerThread = new Thread() {
+        @Override
+        public void run() {
+            isRunning = true;
 
-                        try (BufferedReader bufferedReader =
-                                new BufferedReader(
-                                        new InputStreamReader(process.getInputStream()))) {
-                            String logTxt = bufferedReader.readLine();
-                            do {
-                                broadcastLog(logTxt);
-                            } while (isRunning && ((logTxt = bufferedReader.readLine()) != null));
+            try {
+                Runtime.getRuntime().exec("logcat -c");
+                Process process = Runtime.getRuntime().exec("logcat");
 
-                            // Thread got stopped, restart if not stopping wantedly
-                            if (isRunning) {
-                                broadcastLog("Logger got killed. Restarting.");
-                                startLogging();
-                            } else {
-                                broadcastLog("Logger stopped.");
-                            }
-                        }
-                    } catch (Exception e) {
-                        broadcastLog(e.toString());
+                try (BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(process.getInputStream()))) {
+                    String logTxt = bufferedReader.readLine();
+                    do {
+                        broadcastLog(logTxt);
+                    } while (isRunning && ((logTxt = bufferedReader.readLine()) != null));
+
+                    // Thread got stopped, restart if not stopping wantedly
+                    if (isRunning) {
+                        broadcastLog("Logger got killed. Restarting.");
+                        startLogging();
+                    } else {
+                        broadcastLog("Logger stopped.");
                     }
                 }
-            };
+            } catch (Exception e) {
+                broadcastLog(e.toString());
+            }
+        }
+    };
 
     private static volatile boolean isRunning = false;
 
