@@ -3,65 +3,65 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/main"
-    android:orientation="vertical"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    android:orientation="vertical"
     android:gravity="right">
-    
+
     <LinearLayout
         android:id="@+id/FirstArea"
-        android:layout_height="wrap_content"
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center_vertical|right">
 
         <TextView
             android:id="@+id/import_text"
-            android:layout_height="wrap_content"
             android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:textSize="12sp"
             android:text="Import"
-            android:color="?colorOnSurface" 
-            android:layout_marginRight="8dp"/>
-        
+            android:color="?colorOnSurface"
+            android:layout_marginRight="8dp" />
+
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/import_fab"
-            android:layout_height="wrap_content"
             android:layout_width="wrap_content"
-            style="@style/Widget.Material3.FloatingActionButton.Small.Primary"
+            android:layout_height="wrap_content"
             app:srcCompat="@drawable/ic_file_add_black"
             app:elevation="1dp"
             app:hoveredFocusedTranslationZ="1dp"
-            app:pressedTranslationZ="2dp"/>
-            
+            app:pressedTranslationZ="2dp"
+            style="@style/Widget.Material3.FloatingActionButton.Small.Primary" />
+
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/SecondArea"
-        android:layout_height="wrap_content"
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center_vertical">
-        
+
         <TextView
             android:id="@+id/create_text"
-            android:layout_height="wrap_content"
             android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:textSize="12sp"
             android:text="New"
             android:color="?colorOnSurface"
-            android:layout_marginRight="8dp"/>
+            android:layout_marginRight="8dp" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/create_fab"
-            android:layout_height="wrap_content"
             android:layout_width="wrap_content"
-            style="@style/Widget.Material3.FloatingActionButton.Small.Primary"
+            android:layout_height="wrap_content"
             app:srcCompat="@drawable/ic_create_white"
             app:elevation="1dp"
             app:hoveredFocusedTranslationZ="1dp"
-            app:pressedTranslationZ="2dp"/>
-            
+            app:pressedTranslationZ="2dp"
+            style="@style/Widget.Material3.FloatingActionButton.Small.Primary" />
+
     </LinearLayout>
 
 </LinearLayout>
