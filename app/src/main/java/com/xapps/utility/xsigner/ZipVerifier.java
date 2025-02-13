@@ -1,13 +1,12 @@
 package com.xapps.utility.xsigner;
 
 import java.io.File;
-import java.io.IOException;
 import java.util.Enumeration;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
 
 public class ZipVerifier {
-    
+
     private static boolean isAab;
     private static boolean isApk;
     private static boolean hasMF;
@@ -19,7 +18,7 @@ public class ZipVerifier {
 
         try (ZipFile zipFile = new ZipFile(new File(apkFile))) {
             Enumeration<? extends ZipEntry> entries = zipFile.entries();
-            
+
             while (entries.hasMoreElements()) {
                 ZipEntry entry = entries.nextElement();
                 String entryName = entry.getName();
@@ -32,7 +31,7 @@ public class ZipVerifier {
                     hasBundle = true;
                 } else if (entryName.startsWith("base/") && entryName.endsWith("resources.pb")) {
                     hasRes = true;
-                }    
+                }
                 if (hasMF && hasArsc) {
                     isApk = true;
                     break;
@@ -46,14 +45,14 @@ public class ZipVerifier {
             e.printStackTrace();
         }
     }
-    
+
     public static boolean isApkFile(String path) {
         checkType(path);
         return (isApk);
-    }   
-    
+    }
+
     public static boolean isAabFile(String path) {
         checkType(path);
         return (isAab);
-    }   
+    }
 }

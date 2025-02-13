@@ -1,12 +1,9 @@
 package com.xapps.utility.xsigner;
 
-import android.Manifest;
-import android.widget.ScrollView;
 import android.animation.*;
 import android.animation.ObjectAnimator;
 import android.app.*;
 import android.content.*;
-import android.content.pm.PackageManager;
 import android.content.res.*;
 import android.graphics.*;
 import android.graphics.drawable.*;
@@ -23,32 +20,24 @@ import android.view.*;
 import android.view.View;
 import android.view.View.*;
 import android.view.animation.*;
-import android.view.animation.AccelerateDecelerateInterpolator;
-import android.view.animation.AccelerateInterpolator;
-import android.view.animation.BounceInterpolator;
-import android.view.animation.DecelerateInterpolator;
-import android.view.animation.LinearInterpolator;
+import android.view.inputmethod.EditorInfo;
 import android.webkit.*;
 import android.widget.*;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
 import androidx.activity.*;
 import androidx.annotation.*;
 import androidx.appcompat.*;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.resources.*;
 import androidx.appcompat.widget.Toolbar;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.core.*;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
 import androidx.core.ktx.*;
 import androidx.core.splashscreen.*;
+import androidx.core.widget.NestedScrollView;
 import androidx.emoji2.*;
 import androidx.emoji2.viewsintegration.*;
-import androidx.fragment.app.DialogFragment;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
 import androidx.lifecycle.livedata.core.*;
 import androidx.lifecycle.process.*;
 import androidx.lifecycle.runtime.*;
@@ -58,14 +47,17 @@ import androidx.profileinstaller.*;
 import androidx.savedstate.*;
 import androidx.startup.*;
 import androidx.transition.*;
-import com.github.mmin18.widget.RealtimeBlurView;
+
 import com.google.android.material.*;
 import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.button.*;
+import com.google.android.material.internal.EdgeToEdgeUtils;
 import com.google.android.material.textfield.*;
+import com.google.android.material.transition.platform.MaterialSharedAxis;
 import com.mursaat.extendedtextview.*;
-import eightbitlab.com.blurview.BlurAlgorithm;
-import eightbitlab.com.blurview.BlurView;
+
+import org.json.*;
+
 import java.io.*;
 import java.text.*;
 import java.util.*;
@@ -126,39 +118,6 @@ public class KeyCreatingActivity extends BaseActivity {
 	private String OutputPath = "";
 	
 	private ArrayList<String> SupportedKeyTypes = new ArrayList<>();
-	
-	private NestedScrollView Scroller;
-	private MaterialButton CreateButton;
-	private LinearLayout BG;
-	private TextView TopTitle;
-	private TextInputLayout AliasTIP;
-	private TextInputLayout AliasPassTIP;
-	private TextInputLayout KeyStorePassTIP;
-	private TextView MiddleTitle;
-	private TextInputLayout KeyTypeTIP;
-	private TextInputLayout KeySizeTIP;
-	private TextInputLayout KeyValidityTIP;
-	private TextView TypeTitle;
-	private TextInputLayout NameTIP;
-	private LinearLayout OrganizationContainer;
-	private LinearLayout LocationContainer;
-	private TextInputLayout CountryTIP;
-	private TextInputEditText AliasE;
-	private TextInputEditText AliasPassE;
-	private TextInputEditText KeyStorePassE;
-	private AutoCompleteTextView KeyTypeE;
-	private AutoCompleteTextView KeySizeE;
-	private TextInputEditText KeyValidityE;
-	private TextInputEditText NameE;
-	private TextInputLayout OrUnitTIP;
-	private TextInputLayout OrNameTIP;
-	private TextInputEditText OrUnitE;
-	private TextInputEditText OrNameE;
-	private TextInputLayout CityTIP;
-	private TextInputLayout StateTIP;
-	private TextInputEditText CityE;
-	private TextInputEditText StateE;
-	private TextInputEditText CountryE;
 	
 	private TimerTask ClickSkipTimer;
 	private TimerTask FinishTimer;
@@ -223,7 +182,7 @@ public class KeyCreatingActivity extends BaseActivity {
 					}
 				}
 				if (!IsDetectedEmpty) {
-					if (binding.KeyValidityE.getText().toString().trim().isEmpty() || (KeyValidityE.getText().toString().trim().length() > 3)) {
+					if (binding.KeyValidityE.getText().toString().trim().isEmpty() || (binding.KeyValidityE.getText().toString().trim().length() > 3)) {
 						binding.KeyValidityE.requestFocus();
 						IsDetectedEmpty = true;
 					}
@@ -259,24 +218,24 @@ public class KeyCreatingActivity extends BaseActivity {
 					}
 				}
 				if (!IsDetectedEmpty) {
-					if (binding.CountryE.getText().toString().trim().isEmpty() || (CountryE.getText().toString().trim().length() > 2)) {
+					if (binding.CountryE.getText().toString().trim().isEmpty() || (binding.CountryE.getText().toString().trim().length() > 2)) {
 						binding.CountryE.requestFocus();
 						IsDetectedEmpty = true;
 					}
 				}
 				if (!IsDetectedEmpty) {
-					if (KeyTypeE.getText().toString().equals("JKS")) {
+					if (binding.KeyTypeE.getText().toString().equals("JKS")) {
 						extension = "jks";
 					}
-					if (KeyTypeE.getText().toString().equals("BKS")) {
+					if (binding.KeyTypeE.getText().toString().equals("BKS")) {
 						extension = "bks";
 					}
-					if (KeyTypeE.getText().toString().equals("PKCS12")) {
+					if (binding.KeyTypeE.getText().toString().equals("PKCS12")) {
 						extension = "pkcs12";
 					}
-					OutputPath = "/storage/emulated/0/X-Signer/Keys/".concat(NameE.getText().toString().trim().replace(" ", "_").concat(".".concat(extension)));
-					ValidityYears = Double.parseDouble(KeyValidityE.getText().toString());
-					KeySizeBits = Double.parseDouble(KeySizeE.getText().toString());
+					OutputPath = "/storage/emulated/0/X-Signer/Keys/".concat(binding.NameE.getText().toString().trim().replace(" ", "_").concat(".".concat(extension)));
+					ValidityYears = Double.parseDouble(binding.KeyValidityE.getText().toString());
+					KeySizeBits = Double.parseDouble(binding.KeySizeE.getText().toString());
 					SildeOut.setTarget(binding.CreateButton);
 					SildeOut.setPropertyName("translationY");
 					SildeOut.setFloatValues((float)(400));
@@ -284,10 +243,12 @@ public class KeyCreatingActivity extends BaseActivity {
 					SildeOut.start();
 					new Handler(Looper.getMainLooper()).post(() -> {
                         new Thread(() -> {
-                            _CreateSigningKey(KeyTypeE.getText().toString(), OutputPath, KeyStorePassE.getText().toString().trim(), AliasE.getText().toString().trim(), AliasPassE.getText().toString().trim(),"CN=".concat(AliasE.getText().toString().trim().concat(", ").concat("OU=".concat(OrUnitE.getText().toString().trim().concat(", ").concat("O=".concat(OrNameE.getText().toString().trim().concat(", ").concat("L=".concat(CityE.getText().toString().trim().concat(", ").concat("ST=".concat(StateE.getText().toString().trim().concat(", ").concat("C=".concat(CountryE.getText().toString().trim()))))))))))), (int) ValidityYears, (int) KeySizeBits);
+                            _CreateSigningKey(binding.KeyTypeE.getText().toString(), OutputPath, binding.KeyStorePassE.getText().toString().trim(), binding.AliasE.getText().toString().trim(), binding.AliasPassE.getText().toString().trim(),"CN=".concat(binding.AliasE.getText().toString().trim().concat(", ").concat("OU=".concat(binding.OrUnitE.getText().toString().trim().concat(", ").concat("O=".concat(binding.OrNameE.getText().toString().trim().concat(", ").concat("L=".concat(binding.CityE.getText().toString().trim().concat(", ").concat("ST=".concat(binding.StateE.getText().toString().trim().concat(", ").concat("C=".concat(binding.CountryE.getText().toString().trim()))))))))))), (int) ValidityYears, (int) KeySizeBits);
                             runOnUiThread(() -> {
                                 binding.blurLayout.animate().alpha(1f).setDuration(100L).start();
-                                ShowSingleButtonDialog(KeyCreatingActivity.this, "Keystore created!", "Your".concat(extension.toUpperCase().concat(" keystore was successfully created and saved in path :\n".concat(OutputPath))), "Finish", 1);
+                                try {
+                                    ShowSingleButtonDialog(KeyCreatingActivity.this, "Keystore created!", "Your".concat(extension.toUpperCase().concat(" keystore was successfully created and saved in path :\n".concat(OutputPath))), "Finish", 1);
+                                } catch (Exception e) {}
                             });
                         }).start();
                     });
@@ -299,7 +260,7 @@ public class KeyCreatingActivity extends BaseActivity {
 			@Override
 			public void onTextChanged(CharSequence _param1, int _param2, int _param3, int _param4) {
 				final String _charSeq = _param1.toString();
-				if (KeyValidityE.getText().toString().length() > 3) {
+				if (binding.KeyValidityE.getText().toString().length() > 3) {
 					binding.KeyValidityTIP.setError("Too big value entered (I mean why?)");
 					binding.KeyValidityTIP.setErrorEnabled(true);
 				}
@@ -342,7 +303,6 @@ public class KeyCreatingActivity extends BaseActivity {
 			}
 		});
 	}
-
     private void initializeLogic() {
         setTitle("Create a new key");
         _SetupUI();

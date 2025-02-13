@@ -1,12 +1,10 @@
 package com.xapps.utility.xsigner;
 
-import java.nio.ByteBuffer;
 
 class HexEncoding {
     private static final char[] HEX_DIGITS = "0123456789abcdef".toCharArray();
 
-    private HexEncoding() {
-    }
+    private HexEncoding() {}
 
     public static String encode(byte[] bArr) {
         return encode(bArr, 0, bArr.length);

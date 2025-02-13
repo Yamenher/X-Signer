@@ -94,8 +94,7 @@ public class FileUtil {
             e.printStackTrace();
         } finally {
             try {
-                if (fileWriter != null)
-                    fileWriter.close();
+                if (fileWriter != null) fileWriter.close();
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -260,8 +259,10 @@ public class FileUtil {
                     }
                 }
 
-                final Uri contentUri = ContentUris
-                        .withAppendedId(Uri.parse("content://downloads/public_downloads"), Long.valueOf(id));
+                final Uri contentUri =
+                        ContentUris.withAppendedId(
+                                Uri.parse("content://downloads/public_downloads"),
+                                Long.valueOf(id));
 
                 path = getDataColumn(context, contentUri, null, null);
             } else if (isMediaDocument(uri)) {
@@ -279,9 +280,7 @@ public class FileUtil {
                 }
 
                 final String selection = "_id=?";
-                final String[] selectionArgs = new String[]{
-                        split[1]
-                };
+                final String[] selectionArgs = new String[] {split[1]};
 
                 path = getDataColumn(context, contentUri, selection, selectionArgs);
             }
@@ -294,20 +293,21 @@ public class FileUtil {
         if (path != null) {
             try {
                 return URLDecoder.decode(path, "UTF-8");
-            } catch(Exception e) {
+            } catch (Exception e) {
                 return null;
             }
         }
         return null;
     }
 
-    private static String getDataColumn(Context context, Uri uri, String selection, String[] selectionArgs) {
+    private static String getDataColumn(
+            Context context, Uri uri, String selection, String[] selectionArgs) {
         final String column = MediaStore.Images.Media.DATA;
-        final String[] projection = {
-                column
-        };
+        final String[] projection = {column};
 
-        try (Cursor cursor = context.getContentResolver().query(uri, projection, selection, selectionArgs, null)) {
+        try (Cursor cursor =
+                context.getContentResolver()
+                        .query(uri, projection, selection, selectionArgs, null)) {
             if (cursor != null && cursor.moveToFirst()) {
                 final int column_index = cursor.getColumnIndexOrThrow(column);
                 return cursor.getString(column_index);
@@ -317,7 +317,6 @@ public class FileUtil {
         }
         return null;
     }
-
 
     private static boolean isExternalStorageDocument(Uri uri) {
         return "com.android.externalstorage.documents".equals(uri.getAuthority());
@@ -360,7 +359,8 @@ public class FileUtil {
         return Bitmap.createScaledBitmap(src, width, height, true);
     }
 
-    public static int calculateInSampleSize(BitmapFactory.Options options, int reqWidth, int reqHeight) {
+    public static int calculateInSampleSize(
+            BitmapFactory.Options options, int reqWidth, int reqHeight) {
         final int width = options.outWidth;
         final int height = options.outHeight;
         int inSampleSize = 1;
@@ -369,7 +369,8 @@ public class FileUtil {
             final int halfHeight = height / 2;
             final int halfWidth = width / 2;
 
-            while ((halfHeight / inSampleSize) >= reqHeight && (halfWidth / inSampleSize) >= reqWidth) {
+            while ((halfHeight / inSampleSize) >= reqHeight
+                    && (halfWidth / inSampleSize) >= reqWidth) {
                 inSampleSize *= 2;
             }
         }
@@ -404,8 +405,8 @@ public class FileUtil {
     public static void resizeBitmapFileToCircle(String fromPath, String destPath) {
         if (!isExistFile(fromPath)) return;
         Bitmap src = BitmapFactory.decodeFile(fromPath);
-        Bitmap bitmap = Bitmap.createBitmap(src.getWidth(),
-                src.getHeight(), Bitmap.Config.ARGB_8888);
+        Bitmap bitmap =
+                Bitmap.createBitmap(src.getWidth(), src.getHeight(), Bitmap.Config.ARGB_8888);
         Canvas canvas = new Canvas(bitmap);
 
         final int color = 0xff424242;
@@ -415,19 +416,19 @@ public class FileUtil {
         paint.setAntiAlias(true);
         canvas.drawARGB(0, 0, 0, 0);
         paint.setColor(color);
-        canvas.drawCircle(src.getWidth() / 2, src.getHeight() / 2,
-                src.getWidth() / 2, paint);
+        canvas.drawCircle(src.getWidth() / 2, src.getHeight() / 2, src.getWidth() / 2, paint);
         paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC_IN));
         canvas.drawBitmap(src, rect, rect, paint);
 
         saveBitmap(bitmap, destPath);
     }
 
-    public static void resizeBitmapFileWithRoundedBorder(String fromPath, String destPath, int pixels) {
+    public static void resizeBitmapFileWithRoundedBorder(
+            String fromPath, String destPath, int pixels) {
         if (!isExistFile(fromPath)) return;
         Bitmap src = BitmapFactory.decodeFile(fromPath);
-        Bitmap bitmap = Bitmap.createBitmap(src.getWidth(), src
-                .getHeight(), Bitmap.Config.ARGB_8888);
+        Bitmap bitmap =
+                Bitmap.createBitmap(src.getWidth(), src.getHeight(), Bitmap.Config.ARGB_8888);
         Canvas canvas = new Canvas(bitmap);
 
         final int color = 0xff424242;
@@ -479,7 +480,8 @@ public class FileUtil {
         Bitmap src = BitmapFactory.decodeFile(fromPath);
         Matrix matrix = new Matrix();
         matrix.postRotate(angle);
-        Bitmap bitmap = Bitmap.createBitmap(src, 0, 0, src.getWidth(), src.getHeight(), matrix, true);
+        Bitmap bitmap =
+                Bitmap.createBitmap(src, 0, 0, src.getWidth(), src.getHeight(), matrix, true);
         saveBitmap(bitmap, destPath);
     }
 
@@ -512,8 +514,7 @@ public class FileUtil {
     public static void setBitmapFileColorFilter(String fromPath, String destPath, int color) {
         if (!isExistFile(fromPath)) return;
         Bitmap src = BitmapFactory.decodeFile(fromPath);
-        Bitmap bitmap = Bitmap.createBitmap(src, 0, 0,
-                src.getWidth() - 1, src.getHeight() - 1);
+        Bitmap bitmap = Bitmap.createBitmap(src, 0, 0, src.getWidth() - 1, src.getHeight() - 1);
         Paint p = new Paint();
         ColorFilter filter = new LightingColorFilter(color, 1);
         p.setColorFilter(filter);
@@ -525,13 +526,14 @@ public class FileUtil {
     public static void setBitmapFileBrightness(String fromPath, String destPath, float brightness) {
         if (!isExistFile(fromPath)) return;
         Bitmap src = BitmapFactory.decodeFile(fromPath);
-        ColorMatrix cm = new ColorMatrix(new float[]
-                {
-                        1, 0, 0, 0, brightness,
-                        0, 1, 0, 0, brightness,
-                        0, 0, 1, 0, brightness,
-                        0, 0, 0, 1, 0
-                });
+        ColorMatrix cm =
+                new ColorMatrix(
+                        new float[] {
+                            1, 0, 0, 0, brightness,
+                            0, 1, 0, 0, brightness,
+                            0, 0, 1, 0, brightness,
+                            0, 0, 0, 1, 0
+                        });
 
         Bitmap bitmap = Bitmap.createBitmap(src.getWidth(), src.getHeight(), src.getConfig());
         Canvas canvas = new Canvas(bitmap);
@@ -544,13 +546,12 @@ public class FileUtil {
     public static void setBitmapFileContrast(String fromPath, String destPath, float contrast) {
         if (!isExistFile(fromPath)) return;
         Bitmap src = BitmapFactory.decodeFile(fromPath);
-        ColorMatrix cm = new ColorMatrix(new float[]
-                {
-                        contrast, 0, 0, 0, 0,
-                        0, contrast, 0, 0, 0,
-                        0, 0, contrast, 0, 0,
-                        0, 0, 0, 1, 0
-                });
+        ColorMatrix cm =
+                new ColorMatrix(
+                        new float[] {
+                            contrast, 0, 0, 0, 0, 0, contrast, 0, 0, 0, 0, 0, contrast, 0, 0, 0, 0,
+                            0, 1, 0
+                        });
 
         Bitmap bitmap = Bitmap.createBitmap(src.getWidth(), src.getHeight(), src.getConfig());
         Canvas canvas = new Canvas(bitmap);
@@ -590,6 +591,9 @@ public class FileUtil {
     public static File createNewPictureFile(Context context) {
         SimpleDateFormat date = new SimpleDateFormat("yyyyMMdd_HHmmss");
         String fileName = date.format(new Date()) + ".jpg";
-        return new File(context.getExternalFilesDir(Environment.DIRECTORY_DCIM).getAbsolutePath() + File.separator + fileName);
+        return new File(
+                context.getExternalFilesDir(Environment.DIRECTORY_DCIM).getAbsolutePath()
+                        + File.separator
+                        + fileName);
     }
 }
