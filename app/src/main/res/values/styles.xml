@@ -27,4 +27,28 @@
         <item name="android:textSize">14sp</item>
         <item name="strokeWidth">0dp</item>
     </style>
+    <style name="Style.XSigner.TextInputLayout" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="boxCornerRadiusTopStart">12dp</item>
+        <item name="boxCornerRadiusTopEnd">12dp</item>
+        <item name="boxCornerRadiusBottomStart">12dp</item>
+        <item name="boxCornerRadiusBottomEnd">12dp</item>
+        <item name="placeholderTextColor">?colorOutline</item>
+        <item name="hintEnabled">true</item>
+        <item name="hintAnimationEnabled">true</item>
+        <item name="placeholderTextColor">?colorOutline</item>
+        <item name="android:layout_marginRight">8dp</item>
+        <item name="android:paddingVertical">5dp</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+    <style name="Style.XSigner.TextInputEditText" parent="Widget.Material3.TextInputEditText.OutlinedBox">
+        <item name="android:paddingStart">20dp</item>
+        <item name="android:paddingTop">18dp</item>
+        <item name="android:paddingEnd">20dp</item>
+        <item name="android:paddingBottom">18dp</item>
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/md_theme_textMain</item>
+        <item name="android:imeOptions">actionDone</item>
+        <item name="android:singleLine">true</item>
+    </style>
 </resources>

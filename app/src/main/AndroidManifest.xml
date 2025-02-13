@@ -105,7 +105,7 @@
 			android:hardwareAccelerated="true"
 			android:supportsPictureInPicture="true"
 			android:screenOrientation="portrait"
-			android:theme="@style/Theme.XSigner.Base.Main.Transparent"
+			android:theme="@style/Theme.XSigner.Base.Main"
 			android:windowSoftInputMode="adjustPan" />
 		<uses-library
 			android:name="org.apache.http.legacy"

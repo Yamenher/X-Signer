@@ -103,18 +103,17 @@ import android.view.inputmethod.InputMethodManager;
 import android.view.inputmethod.EditorInfo;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import com.xapps.utility.xsigner.databinding.KeyCreatingBinding;
 
 
 
 public class KeyCreatingActivity extends BaseActivity {
-	
+
+	private KeyCreatingBinding binding;
 	private Timer _timer = new Timer();
     private int navigationBarHeight = 0;
     private int statusBarHeight= 0;
-	
-	private Toolbar _toolbar;
-	private AppBarLayout _app_bar;
-	private CoordinatorLayout _coordinator;
+
 	private boolean SkipClick = false;
 	private boolean IsFocused = false;
 	private boolean PermitDropDown = false;
@@ -170,138 +169,98 @@ public class KeyCreatingActivity extends BaseActivity {
 	
 	@Override
 	protected void onCreate(Bundle _savedInstanceState) {
+        binding = KeyCreatingBinding.inflate(getLayoutInflater());
         getWindow().setAllowEnterTransitionOverlap(true);
-        MaterialSharedAxis enterTransition = new MaterialSharedAxis(MaterialSharedAxis.X, true);
-        enterTransition.addTarget(R.id._coordinator);
-        getWindow().setEnterTransition(enterTransition);
-        MaterialSharedAxis returnTransition = new MaterialSharedAxis(MaterialSharedAxis.X, false);
-        returnTransition.addTarget(R.id._coordinator);
-        getWindow().setReturnTransition(returnTransition);
 		super.onCreate(_savedInstanceState);
-		setContentView(R.layout.key_creating);
+		setContentView(binding.getRoot());
 		initialize(_savedInstanceState);
 		initializeLogic();
 	}
 	
 	private void initialize(Bundle _savedInstanceState) {
-		_app_bar = findViewById(R.id._app_bar);
-		_coordinator = findViewById(R.id._coordinator);
-		_toolbar = findViewById(R.id._toolbar);
-		setSupportActionBar(_toolbar);
+		setSupportActionBar(binding.Toolbar);
 		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 		getSupportActionBar().setHomeButtonEnabled(true);
-		_toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+		binding.Toolbar.setNavigationOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View _v) {
 				getOnBackPressedDispatcher().onBackPressed();
 			}
 		});
-		Scroller = findViewById(R.id.Scroller);
-		CreateButton = findViewById(R.id.CreateButton);
-		BG = findViewById(R.id.BG);
-		TopTitle = findViewById(R.id.TopTitle);
-		AliasTIP = findViewById(R.id.AliasTIP);
-		AliasPassTIP = findViewById(R.id.AliasPassTIP);
-		KeyStorePassTIP = findViewById(R.id.KeyStorePassTIP);
-		MiddleTitle = findViewById(R.id.MiddleTitle);
-		KeyTypeTIP = findViewById(R.id.KeyTypeTIP);
-		KeySizeTIP = findViewById(R.id.KeySizeTIP);
-		KeyValidityTIP = findViewById(R.id.KeyValidityTIP);
-		TypeTitle = findViewById(R.id.TypeTitle);
-		NameTIP = findViewById(R.id.NameTIP);
-		OrganizationContainer = findViewById(R.id.OrganizationContainer);
-		LocationContainer = findViewById(R.id.LocationContainer);
-		CountryTIP = findViewById(R.id.CountryTIP);
-		AliasE = findViewById(R.id.AliasE);
-		AliasPassE = findViewById(R.id.AliasPassE);
-		KeyStorePassE = findViewById(R.id.KeyStorePassE);
-		KeyTypeE = findViewById(R.id.KeyTypeE);
-		KeySizeE = findViewById(R.id.KeySizeE);
-		KeyValidityE = findViewById(R.id.KeyValidityE);
-		NameE = findViewById(R.id.NameE);
-		OrUnitTIP = findViewById(R.id.OrUnitTIP);
-		OrNameTIP = findViewById(R.id.OrNameTIP);
-		OrUnitE = findViewById(R.id.OrUnitE);
-		OrNameE = findViewById(R.id.OrNameE);
-		CityTIP = findViewById(R.id.CityTIP);
-		StateTIP = findViewById(R.id.StateTIP);
-		CityE = findViewById(R.id.CityE);
-		StateE = findViewById(R.id.StateE);
-		CountryE = findViewById(R.id.CountryE);
 		
-		CreateButton.setOnClickListener(new View.OnClickListener() {
+		binding.CreateButton.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View _view) {
 				IsDetectedEmpty = false;
 				if (!IsDetectedEmpty) {
-					if (AliasE.getText().toString().trim().isEmpty()) {
+					if (binding.AliasE.getText().toString().trim().isEmpty()) {
 						IsDetectedEmpty = true;
-						AliasE.requestFocus();
+						binding.AliasE.requestFocus();
 					}
 				}
 				if (!IsDetectedEmpty) {
-					if (AliasPassE.getText().toString().trim().isEmpty()) {
+					if (binding.AliasPassE.getText().toString().trim().isEmpty()) {
 						IsDetectedEmpty = true;
-						AliasPassE.requestFocus();
+						binding.AliasPassE.requestFocus();
 					}
 				}
 				if (!IsDetectedEmpty) {
-					if (KeyStorePassE.getText().toString().trim().isEmpty()) {
+					if (binding.KeyStorePassE.getText().toString().trim().isEmpty()) {
 						IsDetectedEmpty = true;
-						KeyStorePassE.requestFocus();
+						binding.KeyStorePassE.requestFocus();
 					}
 				}
 				if (!IsDetectedEmpty) {
-					if (KeyTypeE.getText().toString().trim().isEmpty()) {
+					if (binding.KeyTypeE.getText().toString().trim().isEmpty()) {
 						IsDetectedEmpty = true;
-						KeyTypeE.performClick();
+						binding.KeyTypeE.performClick();
 					}
 				}
 				if (!IsDetectedEmpty) {
-					if (KeySizeE.getText().toString().trim().isEmpty()) {
-						KeySizeE.performClick();
-						IsDetectedEmpty = true;
-					}
-				}
-				if (!IsDetectedEmpty) {
-					if (KeyValidityE.getText().toString().trim().isEmpty() || (KeyValidityE.getText().toString().trim().length() > 3)) {
-						KeyValidityE.requestFocus();
+					if (binding.KeySizeE.getText().toString().trim().isEmpty()) {
+						binding.KeySizeE.performClick();
 						IsDetectedEmpty = true;
 					}
 				}
 				if (!IsDetectedEmpty) {
-					if (NameE.getText().toString().trim().isEmpty()) {
-						NameE.requestFocus();
+					if (binding.KeyValidityE.getText().toString().trim().isEmpty() || (KeyValidityE.getText().toString().trim().length() > 3)) {
+						binding.KeyValidityE.requestFocus();
 						IsDetectedEmpty = true;
 					}
 				}
 				if (!IsDetectedEmpty) {
-					if (OrUnitE.getText().toString().trim().isEmpty()) {
-						OrUnitE.requestFocus();
+					if (binding.NameE.getText().toString().trim().isEmpty()) {
+						binding.NameE.requestFocus();
 						IsDetectedEmpty = true;
 					}
 				}
 				if (!IsDetectedEmpty) {
-					if (OrNameE.getText().toString().trim().isEmpty()) {
-						OrNameE.requestFocus();
+					if (binding.OrUnitE.getText().toString().trim().isEmpty()) {
+						binding.OrUnitE.requestFocus();
 						IsDetectedEmpty = true;
 					}
 				}
 				if (!IsDetectedEmpty) {
-					if (CityE.getText().toString().trim().isEmpty()) {
-						CityE.requestFocus();
+					if (binding.OrNameE.getText().toString().trim().isEmpty()) {
+						binding.OrNameE.requestFocus();
 						IsDetectedEmpty = true;
 					}
 				}
 				if (!IsDetectedEmpty) {
-					if (StateE.getText().toString().trim().isEmpty()) {
-						StateE.requestFocus();
+					if (binding.CityE.getText().toString().trim().isEmpty()) {
+						binding.CityE.requestFocus();
 						IsDetectedEmpty = true;
 					}
 				}
 				if (!IsDetectedEmpty) {
-					if (CountryE.getText().toString().trim().isEmpty() || (CountryE.getText().toString().trim().length() > 2)) {
-						CountryE.requestFocus();
+					if (binding.StateE.getText().toString().trim().isEmpty()) {
+						binding.StateE.requestFocus();
+						IsDetectedEmpty = true;
+					}
+				}
+				if (!IsDetectedEmpty) {
+					if (binding.CountryE.getText().toString().trim().isEmpty() || (CountryE.getText().toString().trim().length() > 2)) {
+						binding.CountryE.requestFocus();
 						IsDetectedEmpty = true;
 					}
 				}
@@ -318,7 +277,7 @@ public class KeyCreatingActivity extends BaseActivity {
 					OutputPath = "/storage/emulated/0/X-Signer/Keys/".concat(NameE.getText().toString().trim().replace(" ", "_").concat(".".concat(extension)));
 					ValidityYears = Double.parseDouble(KeyValidityE.getText().toString());
 					KeySizeBits = Double.parseDouble(KeySizeE.getText().toString());
-					SildeOut.setTarget(CreateButton);
+					SildeOut.setTarget(binding.CreateButton);
 					SildeOut.setPropertyName("translationY");
 					SildeOut.setFloatValues((float)(400));
 					SildeOut.setDuration((int)(500));
@@ -327,8 +286,7 @@ public class KeyCreatingActivity extends BaseActivity {
                         new Thread(() -> {
                             _CreateSigningKey(KeyTypeE.getText().toString(), OutputPath, KeyStorePassE.getText().toString().trim(), AliasE.getText().toString().trim(), AliasPassE.getText().toString().trim(),"CN=".concat(AliasE.getText().toString().trim().concat(", ").concat("OU=".concat(OrUnitE.getText().toString().trim().concat(", ").concat("O=".concat(OrNameE.getText().toString().trim().concat(", ").concat("L=".concat(CityE.getText().toString().trim().concat(", ").concat("ST=".concat(StateE.getText().toString().trim().concat(", ").concat("C=".concat(CountryE.getText().toString().trim()))))))))))), (int) ValidityYears, (int) KeySizeBits);
                             runOnUiThread(() -> {
-                                androidx.transition.TransitionManager.beginDelayedTransition(_coordinator);
-                                findViewById(R.id.blurLayout).setVisibility(View.VISIBLE);
+                                binding.blurLayout.animate().alpha(1f).setDuration(100L).start();
                                 ShowSingleButtonDialog(KeyCreatingActivity.this, "Keystore created!", "Your".concat(extension.toUpperCase().concat(" keystore was successfully created and saved in path :\n".concat(OutputPath))), "Finish", 1);
                             });
                         }).start();
@@ -337,16 +295,16 @@ public class KeyCreatingActivity extends BaseActivity {
 			}
 		});
 		
-		KeyValidityE.addTextChangedListener(new TextWatcher() {
+		binding.KeyValidityE.addTextChangedListener(new TextWatcher() {
 			@Override
 			public void onTextChanged(CharSequence _param1, int _param2, int _param3, int _param4) {
 				final String _charSeq = _param1.toString();
 				if (KeyValidityE.getText().toString().length() > 3) {
-					KeyValidityTIP.setError("Too big value entered (I mean why?)");
-					KeyValidityTIP.setErrorEnabled(true);
+					binding.KeyValidityTIP.setError("Too big value entered (I mean why?)");
+					binding.KeyValidityTIP.setErrorEnabled(true);
 				}
 				else {
-					KeyValidityTIP.setErrorEnabled(false);
+					binding.KeyValidityTIP.setErrorEnabled(false);
 				}
 			}
 			
@@ -361,16 +319,15 @@ public class KeyCreatingActivity extends BaseActivity {
 			}
 		});
 		
-		CountryE.addTextChangedListener(new TextWatcher() {
+		binding.CountryE.addTextChangedListener(new TextWatcher() {
 			@Override
 			public void onTextChanged(CharSequence _param1, int _param2, int _param3, int _param4) {
 				final String _charSeq = _param1.toString();
-				if (CountryE.getText().toString().length() > 2) {
-					CountryTIP.setError("The country code must be formed from only 2 characters");
-					CountryTIP.setErrorEnabled(true);
-				}
-				else {
-					CountryTIP.setErrorEnabled(false);
+				if (binding.CountryE.getText().toString().length() > 2) {
+					binding.CountryTIP.setError("The country code must be formed from only 2 characters");
+					binding.CountryTIP.setErrorEnabled(true);
+				} else {
+					binding.CountryTIP.setErrorEnabled(false);
 				}
 			}
 			
@@ -385,169 +342,170 @@ public class KeyCreatingActivity extends BaseActivity {
 			}
 		});
 	}
-	
-	private void initializeLogic() {
-		setTitle("Create a new key");
-		_SetupUI();
-		KeyTypeE.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View _view) {
-				KeyTypeE.showDropDown();
-			}
-		});
-		KeyTypeE.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-			            @Override
-			            public void onFocusChange(View v, boolean hasFocus) {
-				                if (hasFocus) {
-					                   IsFocused = true; KeyTypeE.showDropDown();
-					                } else {
-					                   IsFocused = false;
-					                }
-				            }
-			        });
-		KeySizeE.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View _view) {
-				KeySizeE.showDropDown();
-			}
-		});
-		KeySizeE.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-			            @Override
-			            public void onFocusChange(View v, boolean hasFocus) {
-				                if (hasFocus) {
-					                   IsFocused = true; KeySizeE.showDropDown();
-					                } else {
-					                   IsFocused = false;
-					                }
-				            }
-			        });
-		KeyValidityTIP.setCounterMaxLength(3);
-		KeyValidityTIP.setCounterEnabled(true);
-		CountryTIP.setCounterMaxLength(2);
-		CountryTIP.setCounterEnabled(true);
-		AliasE.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-			    @Override
-			        public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-				            if (actionId == EditorInfo.IME_ACTION_NEXT) {
-					    AliasPassE.requestFocus();
-					    }
-				            return true;
-				            }
-		});
-		AliasPassE.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-			    @Override
-			        public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-				            if (actionId == EditorInfo.IME_ACTION_NEXT) {
-					    KeyStorePassE.requestFocus();
-					    }
-				            return true;
-				            }
-		});
-		KeyStorePassE.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-			    @Override
-			        public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-				            if (actionId == EditorInfo.IME_ACTION_NEXT) {
-					    KeyTypeE.requestFocus();
-					KeyTypeE.performClick();
-					    }
-				            return true;
-				            }
-		});
-		KeyTypeE.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-			    @Override
-			        public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-				            if (actionId == EditorInfo.IME_ACTION_NEXT) {
-					    KeySizeE.requestFocus();
-					KeySizeE.performClick();
-					    }
-				            return true;
-				            }
-		});
-		KeySizeE.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-			    @Override
-			        public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-				            if (actionId == EditorInfo.IME_ACTION_NEXT) {
-					    XUtil.hideKeyboard(KeyCreatingActivity.this);
-					    }
-				            return true;
-				            }
-		});
-		KeyValidityE.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-			    @Override
-			        public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-				            if (actionId == EditorInfo.IME_ACTION_NEXT) {
-					    NameE.requestFocus();
-					    }
-				            return true;
-				            }
-		});
-		NameE.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-			    @Override
-			        public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-				            if (actionId == EditorInfo.IME_ACTION_NEXT) {
-					    OrUnitE.requestFocus();
-					    }
-				            return true;
-				            }
-		});
-		OrUnitE.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-			    @Override
-			        public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-				            if (actionId == EditorInfo.IME_ACTION_NEXT) {
-					    OrNameE.requestFocus();
-					    }
-				            return true;
-				            }
-		});
-		OrNameE.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-			    @Override
-			        public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-				            if (actionId == EditorInfo.IME_ACTION_NEXT) {
-					    CityE.requestFocus();
-					    }
-				            return true;
-				            }
-		});
-		CityE.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-			    @Override
-			        public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-				            if (actionId == EditorInfo.IME_ACTION_NEXT) {
-					    StateE.requestFocus();
-					    }
-				            return true;
-				            }
-		});
-		StateE.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-			    @Override
-			        public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-				            if (actionId == EditorInfo.IME_ACTION_NEXT) {
-					    CountryE.requestFocus();
-					    }
-				            return true;
-				            }
-		});
-		CountryE.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-			    @Override
-			        public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-				            if (actionId == EditorInfo.IME_ACTION_DONE) {
-					    XUtil.hideKeyboard(KeyCreatingActivity.this);
-					    }
-				            return true;
-				            }
-		});
-	}
-	
-	
+
+    private void initializeLogic() {
+        setTitle("Create a new key");
+        _SetupUI();
+        binding.KeyTypeE.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View _view) {
+                binding.KeyTypeE.showDropDown();
+            }
+        });
+        binding.KeyTypeE.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if (hasFocus) {
+                    IsFocused = true;
+                    binding.KeyTypeE.showDropDown();
+                } else {
+                    IsFocused = false;
+                }
+            }
+        });
+        binding.KeySizeE.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View _view) {
+                binding.KeySizeE.showDropDown();
+            }
+        });
+        binding.KeySizeE.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if (hasFocus) {
+                    IsFocused = true;
+                    binding.KeySizeE.showDropDown();
+                } else {
+                    IsFocused = false;
+                }
+            }
+        });
+        binding.KeyValidityTIP.setCounterMaxLength(3);
+        binding.KeyValidityTIP.setCounterEnabled(true);
+        binding.CountryTIP.setCounterMaxLength(2);
+        binding.CountryTIP.setCounterEnabled(true);
+        binding.AliasE.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                if (actionId == EditorInfo.IME_ACTION_NEXT) {
+                    binding.AliasPassE.requestFocus();
+                }
+                return true;
+            }
+        });
+        binding.AliasPassE.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                if (actionId == EditorInfo.IME_ACTION_NEXT) {
+                    binding.KeyStorePassE.requestFocus();
+                }
+                return true;
+            }
+        });
+        binding.KeyStorePassE.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                if (actionId == EditorInfo.IME_ACTION_NEXT) {
+                    binding.KeyTypeE.requestFocus();
+                    binding.KeyTypeE.performClick();
+                }
+                return true;
+            }
+        });
+        binding.KeyTypeE.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                if (actionId == EditorInfo.IME_ACTION_NEXT) {
+                    binding.KeySizeE.requestFocus();
+                    binding.KeySizeE.performClick();
+                }
+                return true;
+            }
+        });
+        binding.KeySizeE.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                if (actionId == EditorInfo.IME_ACTION_NEXT) {
+                    XUtil.hideKeyboard(KeyCreatingActivity.this);
+                }
+                return true;
+            }
+        });
+        binding.KeyValidityE.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                if (actionId == EditorInfo.IME_ACTION_NEXT) {
+                    binding.NameE.requestFocus();
+                }
+                return true;
+            }
+        });
+        binding.NameE.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                if (actionId == EditorInfo.IME_ACTION_NEXT) {
+                    binding.OrUnitE.requestFocus();
+                }
+                return true;
+            }
+        });
+        binding.OrUnitE.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                if (actionId == EditorInfo.IME_ACTION_NEXT) {
+                    binding.OrNameE.requestFocus();
+                }
+                return true;
+            }
+        });
+        binding.OrNameE.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                if (actionId == EditorInfo.IME_ACTION_NEXT) {
+                    binding.CityE.requestFocus();
+                }
+                return true;
+            }
+        });
+        binding.CityE.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                if (actionId == EditorInfo.IME_ACTION_NEXT) {
+                    binding.StateE.requestFocus();
+                }
+                return true;
+            }
+        });
+        binding.StateE.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                if (actionId == EditorInfo.IME_ACTION_NEXT) {
+                    binding.CountryE.requestFocus();
+                }
+                return true;
+            }
+        });
+        binding.CountryE.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                if (actionId == EditorInfo.IME_ACTION_DONE) {
+                    XUtil.hideKeyboard(KeyCreatingActivity.this);
+                }
+                return true;
+            }    
+        });
+  }
+
 	public void _SetupUI() {
         Handler handler = new Handler(Looper.getMainLooper());  
 		EdgeToEdgeUtils.applyEdgeToEdge(getWindow(), true);
-		CreateButton.setOnApplyWindowInsetsListener(new View.OnApplyWindowInsetsListener() {
+		binding.CreateButton.setOnApplyWindowInsetsListener(new View.OnApplyWindowInsetsListener() {
             @Override
 			public WindowInsets onApplyWindowInsets(View v, WindowInsets insets) {
                 int navigationBarHeight = insets.getInsets(WindowInsets.Type.navigationBars()).bottom;
-                ViewGroup.MarginLayoutParams params = (ViewGroup.MarginLayoutParams) CreateButton.getLayoutParams();
+                ViewGroup.MarginLayoutParams params = (ViewGroup.MarginLayoutParams) binding.CreateButton.getLayoutParams();
 				params.bottomMargin = navigationBarHeight;
-				CreateButton.setLayoutParams(params);
+				binding.CreateButton.setLayoutParams(params);
 			    return insets;
 		    }
 		});
@@ -559,25 +517,13 @@ public class KeyCreatingActivity extends BaseActivity {
 		if (r2 > 0) {
 			    statusBarHeight = getResources().getDimensionPixelSize(r2);
 		}
-		_app_bar.setPadding(_app_bar.getPaddingLeft(),_app_bar.getPaddingTop() + statusBarHeight, _app_bar.getPaddingRight(), _app_bar.getPaddingBottom());
-		AliasTIP.setBoxCornerRadii((float)_DpToPx(15), (float)_DpToPx(15), (float)_DpToPx(15), (float)_DpToPx(15));
-		AliasPassTIP.setBoxCornerRadii((float)_DpToPx(15), (float)_DpToPx(15), (float)_DpToPx(15), (float)_DpToPx(15));
-		KeyStorePassTIP.setBoxCornerRadii((float)_DpToPx(15), (float)_DpToPx(15), (float)_DpToPx(15), (float)_DpToPx(15));
-		KeyTypeTIP.setBoxCornerRadii((float)_DpToPx(15), (float)_DpToPx(15), (float)_DpToPx(15), (float)_DpToPx(15));
-		KeySizeTIP.setBoxCornerRadii((float)_DpToPx(15), (float)_DpToPx(15), (float)_DpToPx(15), (float)_DpToPx(15));
-		KeyValidityTIP.setBoxCornerRadii((float)_DpToPx(15), (float)_DpToPx(15), (float)_DpToPx(15), (float)_DpToPx(15));
-		NameTIP.setBoxCornerRadii((float)_DpToPx(15), (float)_DpToPx(15), (float)_DpToPx(15), (float)_DpToPx(15));
-		OrNameTIP.setBoxCornerRadii((float)_DpToPx(15), (float)_DpToPx(15), (float)_DpToPx(15), (float)_DpToPx(15));
-		OrUnitTIP.setBoxCornerRadii((float)_DpToPx(15), (float)_DpToPx(15), (float)_DpToPx(15), (float)_DpToPx(15));
-		CityTIP.setBoxCornerRadii((float)_DpToPx(15), (float)_DpToPx(15), (float)_DpToPx(15), (float)_DpToPx(15));
-		StateTIP.setBoxCornerRadii((float)_DpToPx(15), (float)_DpToPx(15), (float)_DpToPx(15), (float)_DpToPx(15));
-		CountryTIP.setBoxCornerRadii((float)_DpToPx(15), (float)_DpToPx(15), (float)_DpToPx(15), (float)_DpToPx(15));
-        TopTitle.setPadding(TopTitle.getPaddingLeft(),TopTitle.getPaddingTop() + statusBarHeight, TopTitle.getPaddingRight(), TopTitle.getPaddingBottom());
+		_SetMargins(binding.Toolbar, 0, statusBarHeight, 0, 0);
+        _SetMargins(binding.TopTitle, 0, statusBarHeight, 0, 0);
         Runnable runnable = new Runnable() {  
             @Override  
             public void run() {  
-                if (CreateButton.getHeight() != 0) {
-                    _SetMargins(CountryTIP, 0, 0, 0, CreateButton.getHeight() + navigationBarHeight);
+                if (binding.CreateButton.getHeight() != 0) {
+                    _SetMargins(binding.CountryTIP, 0, 0, 0, binding.CreateButton.getHeight() + navigationBarHeight);
                 } else {
                     handler.postDelayed(this, 50);  
                 }
@@ -614,8 +560,7 @@ public class KeyCreatingActivity extends BaseActivity {
         switch (eventId) {
             case 1 :
                 dialog.dismiss();
-                androidx.transition.TransitionManager.beginDelayedTransition(_coordinator);
-                findViewById(R.id.blurLayout).setVisibility(View.INVISIBLE);
+                binding.blurLayout.animate().alpha(0f).setDuration(300L).start();
                 finish();
             break;
             default :

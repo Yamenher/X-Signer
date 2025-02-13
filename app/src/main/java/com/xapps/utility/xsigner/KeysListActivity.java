@@ -1090,16 +1090,14 @@ public class KeysListActivity extends AppCompatActivity {
 
 
     public void _CreateKeyScreen() {
-        ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(this);
         Intent intent = new Intent(this, KeyCreatingActivity.class);
-        startActivity(intent, options.toBundle());
+        startActivity(intent);
     }
 
 
     public void _KeyCreatingActivity() {
-        ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(this);
         Intent intent = new Intent(this, KeyCreatingActivity.class);
-        startActivity(intent, options.toBundle());
+        startActivity(intent);
     }
 
 
