@@ -1,13 +1,12 @@
 package com.xapps.utility.xsigner;
 
 import java.io.File;
-import java.io.IOException;
 import java.util.Enumeration;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
 
 public class SignatureVerifier {
-    
+
     private static boolean isCorrupt;
 
     public static boolean checkSignatureFilesExist(String apkFile) {
@@ -17,7 +16,7 @@ public class SignatureVerifier {
 
         try (ZipFile zipFile = new ZipFile(new File(apkFile))) {
             Enumeration<? extends ZipEntry> entries = zipFile.entries();
-            
+
             while (entries.hasMoreElements()) {
                 ZipEntry entry = entries.nextElement();
                 String entryName = entry.getName();
@@ -43,8 +42,8 @@ public class SignatureVerifier {
 
         return hasMF && hasRSA && hasSF;
     }
-    
+
     public static boolean isValidZipFile() {
         return (!isCorrupt);
-    }   
+    }
 }
