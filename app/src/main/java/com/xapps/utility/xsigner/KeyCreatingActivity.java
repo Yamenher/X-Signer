@@ -303,7 +303,8 @@ public class KeyCreatingActivity extends BaseActivity {
 			}
 		});
 	}
-    private void initializeLogic() {
+    
+  private void initializeLogic() {
         setTitle("Create a new key");
         _SetupUI();
         binding.KeyTypeE.setOnClickListener(new View.OnClickListener() {
