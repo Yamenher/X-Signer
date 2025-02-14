@@ -1,129 +1,130 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/main"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     android:layout_height="match_parent"
+     android:layout_width="match_parent"
+     android:orientation="vertical"
+     android:id="@+id/main">
 
     <com.google.android.material.bottomsheet.BottomSheetDragHandleView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal" />
+         android:layout_height="wrap_content"
+         android:layout_width="wrap_content"
+         android:layout_gravity="center_horizontal" />
 
     <LinearLayout
-        android:id="@+id/auto_mode_linear"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="26dp"
-        android:orientation="horizontal"
-        android:background="@drawable/toggle_bg"
-        android:layout_marginVertical="8dp">
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         android:layout_marginVertical="8dp"
+         android:background="@drawable/toggle_bg"
+         android:layout_marginHorizontal="26dp"
+         android:padding="10dp"
+         android:orientation="horizontal"
+         android:id="@+id/auto_mode_linear">
 
         <com.google.android.material.materialswitch.MaterialSwitch
-            android:id="@+id/auto_switch"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:clickable="false"
-            android:padding="18dp"
-            android:textSize="16dp"
-            android:focusable="false"
-            android:text="Use System default" />
+             android:layout_height="wrap_content"
+             android:layout_width="match_parent"
+             android:clickable="false"
+             android:padding="18dp"
+             android:textSize="19dp"
+             android:layout_weight="1"
+             android:focusable="false"
+             android:id="@+id/auto_switch"
+             android:text="Use System default" />
 
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/main_container"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:orientation="horizontal"
-        android:layout_marginHorizontal="16dp"
-        android:gravity="center_horizontal">
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         android:gravity="center_horizontal"
+         android:layout_marginHorizontal="16dp"
+         android:orientation="horizontal"
+         android:layout_weight="1"
+         android:id="@+id/main_container">
 
         <com.google.android.material.card.MaterialCardView
-            android:id="@+id/card"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:layout_marginRight="10dp"
-            android:theme="@style/Widget.Material3.CardView.Outlined"
-            android:orientation="vertical"
-            android:clickable="true"
-            android:focusable="true"
-            app:cardCornerRadius="20dp"
-            app:checkedIcon="@drawable/check_circle"
-            app:checkedIconGravity="BOTTOM_END">
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:clickable="true"
+             android:orientation="vertical"
+             android:layout_marginRight="10dp"
+             android:layout_marginTop="12dp"
+             app:checkedIcon="@drawable/check_circle"
+             app:cardCornerRadius="20dp"
+             android:theme="@style/Widget.Material3.CardView.Outlined"
+             android:focusable="true"
+             app:checkedIconGravity="BOTTOM_END"
+             android:id="@+id/card">
 
             <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_weight="1"
-                android:layout_margin="12dp"
-                android:gravity="center_horizontal|bottom">
+                 android:layout_height="wrap_content"
+                 android:layout_width="wrap_content"
+                 android:gravity="center_horizontal|bottom"
+                 android:layout_margin="12dp"
+                 android:orientation="vertical"
+                 android:layout_weight="1">
 
                 <ImageView
-                    android:layout_width="120dp"
-                    android:layout_height="200dp"
-                    android:scaleType="fitCenter"
-                    android:layout_marginHorizontal="5dp"
-                    app:srcCompat="@drawable/dark_preview" />
+                     android:layout_height="200dp"
+                     android:layout_width="120dp"
+                     android:scaleType="fitCenter"
+                     android:layout_marginHorizontal="5dp"
+                     app:srcCompat="@drawable/dark_preview" />
 
                 <TextView
-                    android:id="@+id/text1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Dark theme"
-                    android:textColor="?colorOnSurface"
-                    android:textSize="18sp"
-                    android:layout_marginBottom="10dp"
-                    android:layout_marginTop="8dp" />
+                     android:layout_height="wrap_content"
+                     android:layout_width="wrap_content"
+                     android:layout_marginBottom="10dp"
+                     android:textSize="18sp"
+                     android:textColor="?colorOnSurface"
+                     android:layout_marginTop="8dp"
+                     android:id="@+id/text1"
+                     android:text="Dark theme" />
 
             </LinearLayout>
 
         </com.google.android.material.card.MaterialCardView>
 
         <com.google.android.material.card.MaterialCardView
-            android:id="@+id/card2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:theme="@style/Widget.Material3.CardView.Outlined"
-            android:orientation="vertical"
-            android:layout_marginLeft="10dp"
-            android:clickable="true"
-            android:focusable="true"
-            app:cardCornerRadius="20dp"
-            app:checkedIcon="@drawable/check_circle"
-            app:checkedIconGravity="BOTTOM_END">
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:clickable="true"
+             android:orientation="vertical"
+             android:layout_marginLeft="10dp"
+             android:layout_marginTop="12dp"
+             app:checkedIcon="@drawable/check_circle"
+             app:cardCornerRadius="20dp"
+             android:theme="@style/Widget.Material3.CardView.Outlined"
+             android:focusable="true"
+             app:checkedIconGravity="BOTTOM_END"
+             android:id="@+id/card2">
 
             <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_weight="1"
-                android:layout_margin="12dp"
-                android:gravity="center_horizontal|bottom">
+                 android:layout_height="wrap_content"
+                 android:layout_width="wrap_content"
+                 android:gravity="center_horizontal|bottom"
+                 android:layout_margin="12dp"
+                 android:orientation="vertical"
+                 android:layout_weight="1">
 
                 <ImageView
-                    android:layout_width="120dp"
-                    android:layout_height="200dp"
-                    android:scaleType="fitCenter"
-                    android:layout_marginHorizontal="5dp"
-                    app:srcCompat="@drawable/light_preview" />
+                     android:layout_height="200dp"
+                     android:layout_width="120dp"
+                     android:scaleType="fitCenter"
+                     android:layout_marginHorizontal="5dp"
+                     app:srcCompat="@drawable/light_preview" />
 
                 <TextView
-                    android:id="@+id/text2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Light theme"
-                    android:textColor="?colorOnSurface"
-                    android:textSize="18sp"
-                    android:layout_marginBottom="10dp"
-                    android:layout_marginTop="8dp" />
+                     android:layout_height="wrap_content"
+                     android:layout_width="wrap_content"
+                     android:layout_marginBottom="10dp"
+                     android:textSize="18sp"
+                     android:textColor="?colorOnSurface"
+                     android:layout_marginTop="8dp"
+                     android:id="@+id/text2"
+                     android:text="Light theme" />
 
             </LinearLayout>
 
@@ -132,17 +133,17 @@
     </LinearLayout>
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="18dp"
-        android:layout_marginVertical="10dp"
-        android:paddingVertical="8dp"
-        android:gravity="center_horizontal|center_vertical"
-        android:text="Apply"
-        android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
-        android:letterSpacing="0.0"
-        app:textAllCaps="false"
-        style="@style/Widget.Material3.Button" />
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         android:layout_marginVertical="10dp"
+         android:gravity="center_horizontal|center_vertical"
+         android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+         app:textAllCaps="false"
+         android:layout_marginHorizontal="18dp"
+         android:paddingVertical="8dp"
+         style="@style/Widget.Material3.Button"
+         android:letterSpacing="0.0"
+         android:id="@+id/button"
+         android:text="Apply" />
 
 </LinearLayout>
