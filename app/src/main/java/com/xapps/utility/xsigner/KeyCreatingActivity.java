@@ -134,6 +134,7 @@ public class KeyCreatingActivity extends BaseActivity {
 		setContentView(binding.getRoot());
 		initialize(_savedInstanceState);
 		initializeLogic();
+        setTitle("Saved Keys");
 	}
 	
 	private void initialize(Bundle _savedInstanceState) {

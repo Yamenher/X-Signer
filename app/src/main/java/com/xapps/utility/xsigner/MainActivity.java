@@ -2634,6 +2634,7 @@ public class MainActivity extends BaseActivity {
                                                 + " some changes",
                                             "Restart",
                                             19);
+                                     binding.blurLayout.animate().alpha(1f).setDuration(200L);
                                 }
                             },
                             100);
